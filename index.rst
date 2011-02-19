@@ -60,7 +60,7 @@ Python Scientific Lecture Notes
 
 .. only:: html
 
-    Download printable version: :download:`PythonScientific.pdf`
+    印刷版のダウンロード： :download:`PythonScientific.pdf`
 
 
 
