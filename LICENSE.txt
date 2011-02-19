@@ -1,8 +1,11 @@
 Unless otherwise specified by LICENSE.txt files in individual
 directories, all code is licensed under a 
 
-Creative Commons Attribution 3.0 United States License (CC-by)
-http://creativecommons.org/licenses/by/3.0/us
+Creative Commons Attribution 3.0 License (CC-by)
+http://creativecommons.org/licenses/by/3.0/
+
+Copyright (C) 2011 Akihiro Uchida
+<uchida@ike-dyn.ritsumei.ac.jp>
 
 Copyright (C) 2009-2010 Emmanuelle Gouillart
 <emmanuelle.gouillart@normalesup.org>.
