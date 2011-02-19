@@ -1,4 +1,4 @@
-Getting started with Python for science
+科学計算するために Python を始めよう
 ===================================================================
 
 .. raw:: html
