@@ -1,13 +1,26 @@
-A (very short) introduction to Python
-=====================================
+Python 入門（簡略）
+===================
+
+..  A (very short) introduction to Python
+    =====================================
 
 .. only:: latex
 
   :authors: Chris Burns, Christophe Combelles, Emmanuelle Gouillart, Gaël
    Varoquaux
 
-.. topic:: Python for scientific computing
+.. topic:: 科学計算のためのPython
 
+    この章では Python の導入を行います.
+    ここでは, Numpy や Scipy を始めるために必要な最小限のことだけを述べます.
+    言語のことについてもっと学びたければ,
+    素晴しいチュートリアル http://docs.python.org/tutorial
+    （日本語訳 http://www.python.jp/doc/release/tutorial/）
+    を見ることを検討してみましょう.
+    http://diveintopython.org/ のように, 言語を学ぶ専門の本も入手できます.
+
+..  .. topic:: Python for scientific computing
+    
     We introduce here the Python language. Only the bare minimum
     necessary for getting started with Numpy and Scipy is addressed here.
     To learn more about the language, consider going through the
@@ -17,39 +30,66 @@ A (very short) introduction to Python
 .. image:: python-logo.png
    :align: right
 
-Python is a **programming language**, as are C, Fortran, BASIC, PHP,
-etc. Some specific features of Python are as follows:
+Python は C, Fortran, BASIC, PHP 等と同じ **プログラミング言語** です.
+Python は以下のいくつかの機能を持っています：
 
-* an *interpreted* (as opposed to *compiled*) language. Contrary to e.g.
-  C or Fortran, one does not compile Python code before executing it. In
-  addition, Python can be used **interactively**: many Python
-  interpreters are available, from which commands and scripts can be
-  executed.
+* Python は *インタプリタ* 言語（ *コンパイラ* 言語と対照的）です.
+  C や Fortran と対照的に, Python コードは実行前にコンパイルされません.
+  さらに, Pythonは **インタラクティブ**
+  に使うことができます：多くの Python インタプリタが入手でき,
+  コマンドやスクリプトから実行できます.
 
-* a free software released under an **open-source** license: Python can
-  be used and distributed free of charge, even for building commercial
-  software.
+* **オープンソース** ライセンスの元に公開された free ソフトウェア：Python
+  は無料で制限無く利用,配布できます. 商用利用であっても同様です.
 
-* **multi-platform**: Python is available for all major operating
-  systems, Windows, Linux/Unix, MacOS X, most likely your mobile phone
-  OS, etc.
+* **マルチプラットフォーム** ： Pythonはメジャーな OS,
+  Windows, Linux/Unix, Mac OS X, 携帯の OS などでも利用できます.
 
-* a very readable language with clear non-verbose syntax
+* 冗長でなく, 明瞭な構文でとても読みやすい言語です.
 
-* a language for which a large variety of high-quality packages are
-  available for various applications, from web frameworks to scientific
-  computing.
+* web フレームワークから科学計算といった幅広い応用のための高品質で多様なパッケージを持っています.
 
-* a language very easy to interface with other languages, in particular C
-  and C++.
+* 他の言語, 特に C, C++ との連携がとても簡単です.
 
-* Some other features of the language are illustrated just below. For
-  example, Python is an object-oriented language, with dynamic typing
-  (an object's type can change during the course of a program).
+* 他の特徴, 例えばオブジェクト指向言語,
+  ダイナミックタイピング（オブジェクトの型がプログラムの途中で変りうる）などは以下に書かれています.
 
+Python の特徴についてより多くの情報を得たければ, http://www.python.org/about/ をみてみましょう.
 
-See http://www.python.org/about/ for more information about
-distinguishing features of Python.
+..
+    Python is a **programming language**, as are C, Fortran, BASIC, PHP,
+    etc. Some specific features of Python are as follows:
+    
+    * an *interpreted* (as opposed to *compiled*) language. Contrary to e.g.
+      C or Fortran, one does not compile Python code before executing it. In
+      addition, Python can be used **interactively**: many Python
+      interpreters are available, from which commands and scripts can be
+      executed.
+    
+    * a free software released under an **open-source** license: Python can
+      be used and distributed free of charge, even for building commercial
+      software.
+    
+    * **multi-platform**: Python is available for all major operating
+      systems, Windows, Linux/Unix, MacOS X, most likely your mobile phone
+      OS, etc.
+    
+    * a very readable language with clear non-verbose syntax
+    
+    * a language for which a large variety of high-quality packages are
+      available for various applications, from web frameworks to scientific
+      computing.
+    
+    * a language very easy to interface with other languages, in particular C
+      and C++.
+    
+    * Some other features of the language are illustrated just below. For
+      example, Python is an object-oriented language, with dynamic typing
+      (an object's type can change during the course of a program).
+    
+    
+    See http://www.python.org/about/ for more information about
+    distinguishing features of Python.
 
 .. toctree::
     :maxdepth: 1
