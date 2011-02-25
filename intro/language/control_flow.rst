@@ -1,7 +1,12 @@
-Control Flow
-============
+制御フロー
+==========
 
-Controls the order in which the code is executed.
+..  Control Flow
+    ============
+
+コードが実行される順序を制御します.
+
+.. Controls the order in which the code is executed.
 
 if/elif/else
 ------------
@@ -13,14 +18,23 @@ if/elif/else
        ...: 
     Obvious!
 
+**ブロックの範囲はインデントで決められます**
 
-**Blocks are delimited by indentation**
+.. **Blocks are delimited by indentation**
 
-Type the following lines in your Python interpreter, and be careful to
-**respect the indentation depth**. The Ipython shell automatically
-increases the indentation depth after a column ``:`` sign; to
-decrease the indentation depth, go four spaces to the left with the
-Backspace key. Press the Enter key twice to leave the logical block.
+
+以下の行を Python インタプリタで打ち込んで下さい, ただし, 
+**インデントの深さに注意してください**
+IPython はコラム記号 ``:`` の後に自動的にインデントを深くします;
+インデントを減らすにはバックスペースキーでスペース四つ分移動します.
+論理ブロックを抜けるためには二回エンターキーを押します.
+
+..
+    Type the following lines in your Python interpreter, and be careful to
+    **respect the indentation depth**. The Ipython shell automatically
+    increases the indentation depth after a column ``:`` sign; to
+    decrease the indentation depth, go four spaces to the left with the
+    Backspace key. Press the Enter key twice to leave the logical block.
 
 .. sourcecode:: ipython
 
@@ -35,14 +49,23 @@ Backspace key. Press the Enter key twice to leave the logical block.
        ...: 
     A lot
 
-Indentation is compulsory in scripts as well. As an exercise, re-type the
-previous lines with the same indentation in a script ``condition.py``, and
-execute the script with ``run condition.py`` in Ipython.
+インデントはスクリプトを書く場合も必須です.
+練習問題として, 上の行の内容を同じインデントで
+``condition.py`` というスクリプトに打ち込んで, 
+IPython から ``run condition.py``
+としてスクリプトを実行してみましょう.
+
+..
+    Indentation is compulsory in scripts as well. As an exercise, re-type the
+    previous lines with the same indentation in a script ``condition.py``, and
+    execute the script with ``run condition.py`` in Ipython.
 
 for/range
 ----------
 
-Iterating with an index:
+インデクスで反復する：
+
+.. Iterating with an index:
 
 .. sourcecode:: ipython
 
@@ -54,7 +77,9 @@ Iterating with an index:
     2
     3
 
-But most often, it is more readable to iterate over values:
+しかしたいていの場合には, 値に対して反復した方が読みやすいでしょう：
+
+.. But most often, it is more readable to iterate over values:
 
 .. sourcecode:: ipython
 
@@ -69,7 +94,9 @@ But most often, it is more readable to iterate over values:
 while/break/continue
 ---------------------
 
-Typical C-style while loop (Mandelbrot problem):
+典型的な C 形式の while ループ（Mandelbrot の問題）：
+
+.. Typical C-style while loop (Mandelbrot problem):
 
 .. sourcecode:: ipython
 
@@ -82,9 +109,13 @@ Typical C-style while loop (Mandelbrot problem):
     In [8]: z
     Out[8]: (-134+352j)
 
-**More advanced features**
+**より進んだ機能**
 
-``break`` out of enclosing for/while loop:
+.. **More advanced features**
+
+``break`` for/while ループの中から抜ける：
+
+.. ``break`` out of enclosing for/while loop:
 
 .. sourcecode:: ipython
 
@@ -98,7 +129,7 @@ Typical C-style while loop (Mandelbrot problem):
        ....:     
 
 
-``continue`` the next iteration of a loop.::
+``continue`` ループの反復を進める::
 
     >>> a = [1, 0, 2, 4]
     >>> for element in a:
@@ -110,24 +141,55 @@ Typical C-style while loop (Mandelbrot problem):
     0.5
     0.25
 
+..
+    ``continue`` the next iteration of a loop.::
+    
+        >>> a = [1, 0, 2, 4]
+        >>> for element in a:
+        ...     if element == 0:
+        ...         continue
+        ...     print 1. / element
+        ...     
+        1.0
+        0.5
+        0.25
 
 
-Conditional Expressions
------------------------
+条件式
+------
 
-* `if object`
+..  Conditional Expressions
+    -----------------------
 
-  Evaluates to True:
-    * any non-zero value
-    * any sequence with a length > 0
+* `if オブジェクト`
 
-  Evaluates to False:
-    * any zero value
-    * any empty sequence
+  真と評価されるもの：
+    * 0 でない値
+    * 長さが 0 でないシークエンス
 
+  偽と評価されるもの：
+    * 0 となる値
+    * 空のシークエンス
+
+..
+    * `if object`
+    
+      Evaluates to True:
+        * any non-zero value
+        * any sequence with a length > 0
+    
+      Evaluates to False:
+        * any zero value
+        * any empty sequence
+    
 * `a == b`
 
-  Tests equality, with logics:
+  論理的に等価かどうか調べる：
+
+..
+    * `a == b`
+    
+    Tests equality, with logics:
 
   .. sourcecode:: ipython
 
@@ -136,7 +198,12 @@ Conditional Expressions
 
 * `a is b`
 
-  Tests identity: both objects are the same
+  同一かどうか調べる：二つのオブジェクトが同じか
+
+..
+    * `a is b`
+    
+      Tests identity: both objects are the same
 
   .. sourcecode:: ipython
 
@@ -152,7 +219,7 @@ Conditional Expressions
 
 * `a in b`
 
-  For any collection `b`: `b` contains `a` ::
+  `a` がデータの集まり `b` の中に含まれているか::
 
     >>> b = [1, 2, 3]
     >>> 2 in b
@@ -160,17 +227,39 @@ Conditional Expressions
     >>> 5 in b
     False
 
+  
+  `b` が辞書の場合,  `a` 辞書のキーに含まれるか調べます.
 
-  If `b` is a dictionary, this tests that `a` is a key of `b`.
+..
+    * `a in b`
+    
+      For any collection `b`: `b` contains `a` ::
+    
+        >>> b = [1, 2, 3]
+        >>> 2 in b
+        True
+        >>> 5 in b
+        False
+    
+    
+      If `b` is a dictionary, this tests that `a` is a key of `b`.
 
 
-Advanced iteration
--------------------------
+進んだ反復
+----------
 
-Iterate over any *sequence*
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+..  Advanced iteration
+    -------------------------
 
-* You can iterate over any sequence (string, list, dictionary, file, ...)
+あらゆるシークエンスに対する反復
+--------------------------------
+
+..  Iterate over any *sequence*
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+* あらゆるシークエンスに対して反復ができます（文字列, リスト, 辞書, ファイル, ...）
+
+.. * You can iterate over any sequence (string, list, dictionary, file, ...)
 
   .. sourcecode:: ipython
 
@@ -196,21 +285,36 @@ Iterate over any *sequence*
     are
     you?
 
-Few languages (in particular, languages for scienfic computing) allow to
-loop over anything but integers/indices. With Python it is possible to
-loop exactly over the objects of interest without bothering with indices
-you often don't care about.
- 
+整数やインデクスでなく, あらゆるものに対してループできる言語は, 
+（特に科学計算向きの言語では）, 少数です.
+Python を使うことで, 注意深くインデクスについて考えない為に起きる問題に
+悩まされることなく, 
+まさに興味あるオブジェクトに対してループできるようになります.
 
-.. warning:: Not safe to modify the sequence you are iterating over.
+..
+    Few languages (in particular, languages for scienfic computing) allow to
+    loop over anything but integers/indices. With Python it is possible to
+    loop exactly over the objects of interest without bothering with indices
+    you often don't care about.
 
-Keeping track of enumeration number
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+.. warning:: 反復しているシークエンスを変更するのは危険です.
 
-Common task is to iterate over a sequence while keeping track of the
-item number.
+.. .. warning:: Not safe to modify the sequence you are iterating over.
 
-* Could use while loop with a counter as above. Or a for loop:
+反復回数を追跡する
+~~~~~~~~~~~~~~~~~~
+
+..  Keeping track of enumeration number
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+シークエンスの反復中に反復回数を追跡すること場合はよくあります.
+
+..  Common task is to iterate over a sequence while keeping track of the
+    item number.
+
+* 以下のような, カウンター付きの while や for ループを使うこともできます：
+
+..  * Could use while loop with a counter as above. Or a for loop:
 
   .. sourcecode:: ipython
 
@@ -222,7 +326,7 @@ item number.
     1 powerful
     2 readable
 
-* But Python provides **enumerate** for this::
+* しかし, Python はそうするために **enumerate** を提供しています::
 
     >>> words = ('cool', 'powerful', 'readable')
     >>> for index, item in enumerate(words):
@@ -232,12 +336,27 @@ item number.
     1 powerful
     2 readable
 
+..
+    * But Python provides **enumerate** for this::
+    
+        >>> words = ('cool', 'powerful', 'readable')
+        >>> for index, item in enumerate(words):
+        ...     print index, item
+        ...     
+        0 cool
+        1 powerful
+        2 readable
 
 
-Looping over a dictionary
+辞書を使ったループ
 ~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Use **iteritems**:
+..  Looping over a dictionary
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+**iteritems** を使います:
+
+.. Use **iteritems**:
 
 .. sourcecode:: ipython
 
@@ -251,8 +370,11 @@ Use **iteritems**:
     Key: c has value: 1j
     Key: b has value: 1.2
 
-List Comprehensions
+リスト内包表記
 -------------------
+
+..  List Comprehensions
+    -------------------
 
 .. sourcecode:: ipython
 
@@ -261,14 +383,24 @@ List Comprehensions
 
 
 
-.. topic:: Exercise
+.. topic:: 練習問題
 
-    Compute the decimals of Pi using the Wallis formula:
+    Wallis の公式を使って, Pi の値を計算しなさい：
 
     .. image:: pi_formula.png
 	:align: center
 
 .. :ref:`pi_wallis`
+
+..
+    .. topic:: Exercise
+    
+        Compute the decimals of Pi using the Wallis formula:
+    
+        .. image:: pi_formula.png
+    	:align: center
+    
+    .. :ref:`pi_wallis`
 
 
 
