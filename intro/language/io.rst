@@ -1,13 +1,24 @@
-Input and Output
-================
+入出力
+======
 
-To be exhaustive, here are some informations about input and output in Python.
-Since we will use the Numpy methods to read and write files, you may skip this
-chapter at first reading.
+.. Input and Output
+.. ================
 
-We write or read **strings** to/from files (other types must be converted to
-strings). To write in a file::
+もれなく紹介するために, ここでは Python の入出力についての情報について扱います.
+ファイルの読み書きは後で Numpy のメソッドを使うので,
+最初に読むときは飛ばしてもかまいません.
 
+.. To be exhaustive, here are some informations about input and output in Python.
+.. Since we will use the Numpy methods to read and write files, you may skip this
+.. chapter at first reading.
+
+ファイルには **文字列** を読み書きします （他の型も文字列に変換されます）
+ファイルに書き込むには
+
+.. We write or read **strings** to/from files (other types must be converted to
+.. strings). To write in a file::
+
+::
 
     >>> f = open('workfile', 'w') # opens the workfile file
     >>> type(f)
@@ -15,7 +26,9 @@ strings). To write in a file::
     >>> f.write('This is a test \nand another test')
     >>> f.close()
 
-To read from a file
+ファイルから読み込むには
+
+.. To read from a file
 
 .. sourcecode:: ipython
 
@@ -29,11 +42,17 @@ To read from a file
 
     In [4]: f.close()
 
+より詳しくは http://docs.python.org/tutorial/inputoutput.html
 
-For more details: http://docs.python.org/tutorial/inputoutput.html
+日本語訳： http://www.python.jp/doc/release/tutorial/inputoutput.html
 
-Iterating over a file
-~~~~~~~~~~~~~~~~~~~~~
+.. For more details: http://docs.python.org/tutorial/inputoutput.html
+
+ファイルに対して反復
+~~~~~~~~~~~~~~~~~~~~
+
+.. Iterating over a file
+.. ~~~~~~~~~~~~~~~~~~~~~
 
 .. sourcecode:: ipython
 
@@ -49,17 +68,31 @@ Iterating over a file
 
     In [8]: f.close()
 
-File modes
-----------
+ファイルのモード
+----------------
 
-* Read-only: ``r``
-* Write-only: ``w``
+.. File modes
+.. ----------
 
-  * Note: Create a new file or *overwrite* existing file.
+* 読み込みのみ： ``r``
+* 書き込みのみ： ``w``
 
-* Append a file: ``a``
-* Read and Write: ``r+``
-* Binary mode: ``b``
+  * 新しいファイルが作られるか, 存在するファイル上書きされることに注意.
 
-  * Note: Use for binary files, especially on Windows.
+* ファイルに追記： ``a``
+* 読み書き: ``r+``
+* バイナリモード： ``b``
+
+  * バイナリファイルのために使うことに注意, 特に Windows で.
+
+.. * Read-only: ``r``
+.. * Write-only: ``w``
+
+..   * Note: Create a new file or *overwrite* existing file.
+
+.. * Append a file: ``a``
+.. * Read and Write: ``r+``
+.. * Binary mode: ``b``
+
+..   * Note: Use for binary files, especially on Windows.
 
