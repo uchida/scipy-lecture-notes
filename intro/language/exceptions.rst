@@ -1,18 +1,32 @@
-Exceptions handling in Python
-=============================
+Python で例外処理
+=================
 
-It is highly unlikely that you haven't yet raised Exceptions if you have
-typed all the previous commands of the tutorial. For example, you may
-have raised an exception if you entered a command with a typo.  
+.. Exceptions handling in Python
+.. =============================
 
-Exceptions are raised by different kinds of errors arising when executing
-Python code. In you own code, you may also catch errors, or define custom
-error types.
+ここまでチュートリアルでのコマンドを打ち込んでいれば, 例外が送出されているはずです.
+例えば, コマンドを打ち間違えれば例外が送出されます.
 
-Exceptions
------------
+.. It is highly unlikely that you haven't yet raised Exceptions if you have
+.. typed all the previous commands of the tutorial. For example, you may
+.. have raised an exception if you entered a command with a typo.  
 
-Exceptions are raised by errors in Python:
+Python コードを実行したとき, いろいろな種類のエラーによって例外が送出されます.
+あなたはソースコードの中で例外を捉えたり, カスタマイズしたエラー型を定義できます.
+
+.. Exceptions are raised by different kinds of errors arising when executing
+.. Python code. In you own code, you may also catch errors, or define custom
+.. error types.
+
+例外
+----
+
+.. Exceptions
+.. -----------
+
+Python ではエラーは例外を送出します.
+
+.. Exceptions are raised by errors in Python:
 
 .. sourcecode:: ipython
 
@@ -40,10 +54,15 @@ Exceptions are raised by errors in Python:
     ---------------------------------------------------------------------------
     AttributeError: 'list' object has no attribute 'foobar'
 
-**Different types of exceptions for different errors.**
+**異なるエラーは異なる例外型を送出します.**
 
-Catching exceptions
---------------------
+.. **Different types of exceptions for different errors.**
+
+例外を捉える
+------------
+
+.. Catching exceptions
+.. --------------------
 
 try/except
 ~~~~~~~~~~~
@@ -81,11 +100,16 @@ try/finally
     ---------------------------------------------------------------------------
     ValueError: invalid literal for int() with base 10: 'a'
 
-Important for resource management (e.g. closing a file)
+リソース管理に重要な役割を果します（例 ファイルを閉じる）
 
-Easier to ask for forgiveness than for permission
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+.. Important for resource management (e.g. closing a file)
 
+
+許可を得るより謝る方が簡単
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. Easier to ask for forgiveness than for permission
+.. ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. sourcecode:: ipython
 
@@ -108,12 +132,17 @@ Easier to ask for forgiveness than for permission
     132
 
 
-Raising exceptions
-------------------
+例外を送出する
+--------------
 
-* Capturing and reraising an exception:
+.. Raising exceptions
+.. ------------------
 
-  .. sourcecode:: ipython
+* 例外を捉えて再送出する：
+
+.. * Capturing and reraising an exception:
+
+.. sourcecode:: ipython
 
     In [15]: def filter_name(name):
        ....:	try:                      
@@ -134,10 +163,11 @@ Raising exceptions
     ---------------------------------------------------------------------------
     UnicodeDecodeError: 'ascii' codec can't decode byte 0xc3 in position 2: ordinal not in range(128)
 
+* コードのある部分をパスするための例外：
 
-* Exceptions to pass messages between parts of the code:
+.. * Exceptions to pass messages between parts of the code:
 
-  .. sourcecode:: ipython
+.. sourcecode:: ipython
 
     In [17]: def achilles_arrow(x):
        ....:    if abs(x - 1) < 1e-3:
@@ -159,8 +189,9 @@ Raising exceptions
     In [20]: x
     Out[20]: 0.9990234375
 
+**出会った状況を知らせてくれる例外を使いましょう（上の場合でカスタマイズしたエラーではなく StopIteration を使ったように）**
 
-**Use exceptions to notify certain conditions are met (e.g.
-StopIteration) or not (e.g. custom error raising)**
+.. **Use exceptions to notify certain conditions are met (e.g.
+.. StopIteration) or not (e.g. custom error raising)**
 
 
