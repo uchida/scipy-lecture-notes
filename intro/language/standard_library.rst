@@ -1,29 +1,53 @@
-Standard Library
-================
+標準ライブラリ
+==============
 
-.. note:: Reference document for this section:
+.. Standard Library
+.. ================
 
- * The Python Standard Library documentation: 
-   http://docs.python.org/library/index.html
+.. note:: この節の参考文献：
 
- * Python Essential Reference, David Beazley, Addison-Wesley Professional
+  * The Python Standard Library documentation: 
+    http://docs.python.org/library/index.html
 
-``os`` module: operating system functionality
------------------------------------------------
+	日本語訳： http://python.jp/doc/release/library/index.html
 
-*"A portable way of using operating system dependent functionality."*
+  * Python Essential Reference, David Beazley, Addison-Wesley Professional
 
-Directory and file manipulation
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+.. .. note:: Reference document for this section:
 
-Current directory:
+..  * The Python Standard Library documentation: 
+..    http://docs.python.org/library/index.html
+
+..  * Python Essential Reference, David Beazley, Addison-Wesley Professional
+
+``os`` モジュール：OS の機能
+----------------------------
+
+.. ``os`` module: operating system functionality
+.. -----------------------------------------------
+
+*「OS 依存の機能をポータブルな方法で提供します」*
+
+.. *"A portable way of using operating system dependent functionality."*
+
+ディレクトリやファイルの操作
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. Directory and file manipulation
+.. ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+現在のディレクトリ：
+
+.. Current directory:
 
 .. sourcecode:: ipython
 
     In [17]: os.getcwd()
     Out[17]: '/Users/cburns/src/scipy2009/scipy_2009_tutorial/source'
 
-List a directory:
+ディレクトリを一覧する：
+
+.. List a directory:
 
 .. sourcecode:: ipython
 
@@ -40,7 +64,9 @@ List a directory:
      'debugging.rst',
      ...
 
-Make a directory:
+ディレクトリを作る：
+
+.. Make a directory:
 
 .. sourcecode:: ipython
 
@@ -49,7 +75,9 @@ Make a directory:
     In [33]: 'junkdir' in os.listdir(os.curdir)
     Out[33]: True
 
-Rename the directory:
+ディレクトリの名前を変える：
+
+.. Rename the directory:
 
 .. sourcecode:: ipython
 
@@ -66,7 +94,9 @@ Rename the directory:
     In [42]: 'foodir' in os.listdir(os.curdir)
     Out[42]: False
 
-Delete a file:
+ファイルを削除：
+
+.. Delete a file:
 
 .. sourcecode:: ipython
 
@@ -82,10 +112,15 @@ Delete a file:
     In [48]: 'junk.txt' in os.listdir(os.curdir)
     Out[48]: False
 
-``os.path``: path manipulations
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+``os.path``: パスの操作
+~~~~~~~~~~~~~~~~~~~~~~~
 
-``os.path`` provides common operations on pathnames.
+.. ``os.path``: path manipulations
+.. ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+``os.path`` はパスの名前に関する一般的な操作法を提供します.
+
+.. ``os.path`` provides common operations on pathnames.
 
 .. sourcecode:: ipython
 
@@ -126,8 +161,11 @@ Delete a file:
     In [92]: os.path.join(os.path.expanduser('~'), 'local', 'bin')
     Out[92]: '/Users/cburns/local/bin'
 
-Running an external command
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+外部のコマンドを実行
+~~~~~~~~~~~~~~~~~~~~
+
+.. Running an external command
+.. ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. sourcecode:: ipython
 
@@ -136,10 +174,13 @@ Running an external command
   conf.py~  demo2.py	 demo2.pyc  demo.py~  my_file.py  pi_wallis_image.py
 
 
-Walking a directory
-~~~~~~~~~~~~~~~~~~~~
+ディレクトリの走査
+~~~~~~~~~~~~~~~~~~
 
-``os.path.walk`` generates a list of filenames in a directory tree.
+.. Walking a directory
+.. ~~~~~~~~~~~~~~~~~~~~
+
+``os.path.walk`` はディレクトリツリー以下のファイル名を生成します.
 
 .. sourcecode:: ipython
 
@@ -155,8 +196,11 @@ Walking a directory
     /Users/cburns/src/scipy2009/scipy_2009_tutorial/source/control_flow.rst
     ...
 
-Environment variables:
-~~~~~~~~~~~~~~~~~~~~~~
+環境変数：
+~~~~~~~~~~
+
+.. Environment variables:
+.. ~~~~~~~~~~~~~~~~~~~~~~
 
 .. sourcecode:: ipython
 
@@ -190,22 +234,37 @@ Environment variables:
     /usr/local/lib/python2.5/site-packages/:
     /Library/Frameworks/Python.framework/Versions/2.5/lib/python2.5'
 
+``shutil``: 高レベルなファイル操作
+----------------------------------
 
-``shutil``: high-level file operations
----------------------------------------
+.. ``shutil``: high-level file operations
+.. ---------------------------------------
 
-The ``shutil`` provides useful file operations:
+``shutil`` は便利なファイル操作を提供します：
 
-    * ``shutil.rmtree``: Recursively delete a directory tree.
-    * ``shutil.move``: Recursively move a file or directory to another location.
-    * ``shutil.copy``: Copy files or directories.
+	* ``shutil.rmtree`` ： ディレクトリツリーを再帰的に削除します.
+	* ``shutil.move`` ： ファイルやディレクトリを他の場所に再帰的に移動させます.
+	* ``shutil.copy`` ： ファイルやディレクトリをコピーします.
 
-``glob``: Pattern matching on files
--------------------------------------
+.. The ``shutil`` provides useful file operations:
 
-The ``glob`` module provides convenient file pattern matching.
+..     * ``shutil.rmtree``: Recursively delete a directory tree.
+..     * ``shutil.move``: Recursively move a file or directory to another location.
+..     * ``shutil.copy``: Copy files or directories.
 
-Find all files ending in ``.txt``:
+``glob`` ： ファイル名のパターンマッチング
+------------------------------------------
+
+.. ``glob``: Pattern matching on files
+.. -------------------------------------
+
+``glob`` モジュールはファイル名のパターンマッチングに便利なモジュールを提供します.
+
+.. The ``glob`` module provides convenient file pattern matching.
+
+``.txt`` で終わるファイル全てを探す：
+
+.. Find all files ending in ``.txt``:
 
 .. sourcecode:: ipython
 
@@ -215,12 +274,19 @@ Find all files ending in ``.txt``:
     Out[19]: ['holy_grail.txt', 'junk.txt', 'newfile.txt']
 
 
-``sys`` module: system-specific information
---------------------------------------------
+``sys`` モジュール：システム固有の情報
+--------------------------------------
 
-System-specific information related to the Python interpreter.
+.. ``sys`` module: system-specific information
+.. --------------------------------------------
 
-* Which version of python are you running and where is it installed:
+Python インタプリタに関わるシステム固有の情報
+
+.. System-specific information related to the Python interpreter.
+
+* 実行している Python のバージョンやインストールされた場所を調べる：
+
+.. * Which version of python are you running and where is it installed:
 
   .. sourcecode:: ipython
 
@@ -234,16 +300,19 @@ System-specific information related to the Python interpreter.
     In [119]: sys.prefix
     Out[119]: '/Library/Frameworks/Python.framework/Versions/2.5'
 
-* List of command line arguments passed to a Python script:
+* Python スクリプトに渡されたコマンドライン引数のリスト：
+
+.. * List of command line arguments passed to a Python script:
 
   .. sourcecode:: ipython
 
    In [100]: sys.argv
    Out[100]: ['/Users/cburns/local/bin/ipython']
 
+``sys.path`` はモジュールの検索パスを示す文字列のリストで PYTHONPATH によって初期化されます.
 
-``sys.path`` is a list of strings that specifies the search path for
-modules.  Initialized from PYTHONPATH:
+.. ``sys.path`` is a list of strings that specifies the search path for
+.. modules.  Initialized from PYTHONPATH:
 
 .. sourcecode:: ipython
 
@@ -258,10 +327,15 @@ modules.  Initialized from PYTHONPATH:
      '/Users/cburns/local/lib/python2.5/site-packages/virtualenv-1.2-py2.5.egg',
      ...
 
-``pickle``: easy persistence
--------------------------------
+``pickle`` ： 簡単な永続化
 
-Useful to store arbritrary objects to a file. Not safe or fast!
+.. ``pickle``: easy persistence
+.. -------------------------------
+
+任意のオブジェクトをファイルに保存するのに便利です.
+安全, 高速ではありません!
+
+.. Useful to store arbritrary objects to a file. Not safe or fast!
 
 .. sourcecode:: ipython
 
@@ -275,8 +349,12 @@ Useful to store arbritrary objects to a file. Not safe or fast!
   Out[4]: [1, None, 'Stan']
 
 
-.. topic:: Exercise
+.. topic:: 練習問題
 
-    Write a program to search your PYTHONPATH for the module ``site.py``.
+	``site.py`` モジュールが PYTHONPATH のどこにあるか検索するプログラムを書きなさい.
+
+.. .. topic:: Exercise
+
+..     Write a program to search your PYTHONPATH for the module ``site.py``.
 
 :ref:`path_site`
