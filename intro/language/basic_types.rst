@@ -758,29 +758,28 @@ http://docs.python.org/tutorial/datastructures.html#dictionaries
 
 * **タプル**
 
-..  * **Tuples**
+  タプルは要は変化不可能なリストです.
+  タプルの要素はカンマで区切られ, 丸括弧に囲われて書かれます::
+   
+      >>> t = 12345, 54321, 'hello!'
+      >>> t[0]
+      12345
+      >>> t
+      (12345, 54321, 'hello!')
+      >>> u = (0, 2)
 
-タプルは要は変化不可能なリストです.
-タプルの要素はカンマで区切られ, 丸括弧に囲われて書かれます::
+.. * **Tuples**
 
-    >>> t = 12345, 54321, 'hello!'
-    >>> t[0]
-    12345
-    >>> t
-    (12345, 54321, 'hello!')
-    >>> u = (0, 2)
-
-..
-    Tuples are basically immutable lists. The elements of a tuple are written
-    between brackets, or just separated by commas::
-    
-    
-        >>> t = 12345, 54321, 'hello!'
-        >>> t[0]
-        12345
-        >>> t
-        (12345, 54321, 'hello!')
-        >>> u = (0, 2)
+..   Tuples are basically immutable lists. The elements of a tuple are written
+..   between brackets, or just separated by commas::
+  
+  
+..       >>> t = 12345, 54321, 'hello!'
+..       >>> t[0]
+..       12345
+..       >>> t
+..       (12345, 54321, 'hello!')
+..       >>> u = (0, 2)
 
 * **集合：** 順序つきでない, 一意な要素の集まり::
 
@@ -859,5 +858,6 @@ http://docs.python.org/tutorial/datastructures.html#dictionaries
     State          : active
 
 .. rubric:: 脚注
+
 .. [*] あるいは日本語
 

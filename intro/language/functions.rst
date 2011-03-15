@@ -62,8 +62,7 @@ return 文
 
     * 関数の本体；
 
-    * そしてオプションとして値を返すために ``return object``
-      and ``return object`` for optionally returning values.
+    * そしてオプションとして値を返すために ``return object`` する
 
 ..
     .. Note:: Note the syntax to define a function:
@@ -539,5 +538,7 @@ Python ではこのような区別はいくぶん不自然で,
         * ``u_(n+2) = u_(n+1) + u_n``
     
     .. :ref:`fibonacci`
+
+.. rubric:: 脚注
 
 .. [*] C や Java は値渡ししかないので参照渡しはない. ポインタの値渡しのことを参照渡しといっているのかな?

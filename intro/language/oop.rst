@@ -18,7 +18,7 @@ OOP のゴールは：
 ..     * to re-use code in similar contexts.
 
 ここに簡単な例があります：例では Student **class** を作ります. 
-これは独自の関数 (**メソッド (method)**) と変数（**属性 (attribute)**）を集めたオブジェクトで,
+これは独自の関数（ **メソッド (method)** ）と変数（ **属性 (attribute)** ）を集めたオブジェクトで,
 こうやって使うことができます.
 
 .. Here is a small example: we create a Student **class**, which is an object
@@ -43,7 +43,7 @@ OOP のゴールは：
 属性 は ``name``, ``age`` そして ``major`` です.
 メソッドと属性は以下の記法で呼び出すことができます：
 ``classinstance.method`` または ``classinstance.attribute``.
-``__init__`` コンストラクタは特別なメソッドで ``MyClass(init parameters if any)`` のようにして呼びます.
+``__init__`` コンストラクタは特別なメソッドで ``MyClass(初期化のためのパラメータ)`` のようにして呼びます.
 
 .. In the previous example, the Student class has ``__init__``, ``set_age`` and
 .. ``set_major`` methods. Its attributes are ``name``, ``age`` and ``major``. We
