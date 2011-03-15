@@ -97,7 +97,7 @@ IPython ではヘルプとドキュメントのためにウィンドウを分割
 ..   solving ODE, etc. 
 
 
-* Matplotlib の Web サイト http://matplotlib.sourceforge.net/ には多くのプロットを載せた素晴しい
+* Matplotlib の Web サイト http://matplotlib.sourceforge.net/ には多くの作図を載せた素晴しい
   **gallery** があります, それらはソースコードとその結果の図両方が載っています.
   例から学ぶのに最適です. また標準のドキュメントも入手できます.
 
@@ -232,7 +232,7 @@ IPython ではヘルプとドキュメントのためにウィンドウを分割
     * **SciPy Users List** (scipy-user@scipy.org)：Python での科学計算,
       高レベルなデータ処理, 特に scipy パッケージについて
 
-    * matplotlib-users@lists.sourceforge.net matplotlib でのプロットについて
+    * matplotlib-users@lists.sourceforge.net matplotlib での作図について
 
 .. * If everything listed above fails (and Google doesn't have the
 ..   answer)... don't despair! Write to the mailing-list suited to your
