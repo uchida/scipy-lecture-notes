@@ -43,21 +43,21 @@ Pythonで科学計算の積み木を組む
     http://ipython.scipy.org/moin/
 
  
-.. image:: snapshot_ipython.png
-      :align: center
-      :scale: 70
-
-.. sourcecode:: ipython
-
-    In [1]: a = 2
-
-    In [2]: print "hello"
-    hello
-
-    In [3]: %run my_script.py
-
+  .. image:: snapshot_ipython.png
+        :align: center
+        :scale: 70
+   
+  .. sourcecode:: ipython
+   
+      In [1]: a = 2
+   
+      In [2]: print "hello"
+      hello
+   
+      In [3]: %run my_script.py
+ 
 * **Numpy** ： 強力な数値配列オブジェクトとそれらを操作する強力なルーチンを提供
-
+ 
     >>> import numpy as np
     >>> t = np.arange(10)
     >>> t
