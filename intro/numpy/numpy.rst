@@ -169,7 +169,7 @@ Numpy データ配列作成
 .. -----------------------------------------------------
 
 これでデータ配列を学びました, 次は可視化です.
-**Matplotlib** は二次元のプロットパッケージです.
+**Matplotlib** は二次元の作図パッケージです.
 関数は以下のようにしてインポートします.
 
 .. Now that we have our first data arrays, we are going to visualize them.
@@ -266,7 +266,7 @@ LaTeX のフォント, 図の取り込み, ヒストグラム等.
     * an example gallery with corresponding sourcecode
       http://matplotlib.sourceforge.net/gallery.html
 
-**三次元プロット**
+**三次元作図**
 
 .. **3D plotting**
 
@@ -1473,37 +1473,53 @@ Numpy の配列はスライスだけでなく,
 
 * pylab の imshow 関数で画像を表示してみましょう.
 
+  .. sourcecode:: ipython
+      
+      In [3]: import pylab 
+      In [4]: lena = scipy.lena()
+      In [5]: pylab.imshow(lena)
+
 .. * Let's use the imshow function of pylab to display the image.
 
-.. sourcecode:: ipython
-    
-    In [3]: import pylab 
-    In [4]: lena = scipy.lena()
-    In [5]: pylab.imshow(lena)
+..   .. sourcecode:: ipython
+      
+..       In [3]: import pylab 
+..       In [4]: lena = scipy.lena()
+..       In [5]: pylab.imshow(lena)
 
 * そうすると Lena は 擬似カラーで表示されます.
   カラーマップをグレーで表示しましょう.
 
+  .. sourcecode:: ipython
+      
+      In [6]: pylab.imshow(lena, pylab.cm.gray)
+      In [7]: # ou
+      In [8]: gray()
+
 .. * Lena is then displayed in false colors. A colormap must be specified for her
 ..   to be displayed in grey.
 
-.. sourcecode:: ipython
-    
-    In [6]: pylab.imshow(lena, pylab.cm.gray)
-    In [7]: # ou
-    In [8]: gray()
+..   .. sourcecode:: ipython
+      
+..       In [6]: pylab.imshow(lena, pylab.cm.gray)
+..       In [7]: # ou
+..       In [8]: gray()
 
 * 中央揃えしたより幅の狭い画像を作ってみましょう：
   例として画像の境界から 30 ピクセル削ってみましょう.
   結果を確認するためには ``imshow`` で配列を表示してみましょう.
 
+  .. sourcecode:: ipython
+   
+      In [9]: crop_lena = lena[30:-30,30:-30]
+
 .. * Create an array of the image with a narrower centring : for example,
 ..   remove 30 pixels from all the borders of the image. To check the result,
 ..   display this new array with ``imshow``.
 
-.. sourcecode:: ipython
-
-    In [9]: crop_lena = lena[30:-30,30:-30]
+..   .. sourcecode:: ipython
+   
+..       In [9]: crop_lena = lena[30:-30,30:-30]
 
 * Lena の顔を黒いロケットで囲ってみましょう. そのためには
 
