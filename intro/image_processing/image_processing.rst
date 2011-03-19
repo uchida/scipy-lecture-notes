@@ -1,15 +1,24 @@
-The submodule dedicated to image processing in scipy is `scipy.ndimage`. ::
+scipy の画像処理向けのサブモジュールは `scipy.ndimage` です. ::
 
     >>> from scipy import ndimage
 
-Image processing routines may be sorted according to the category of
-processing they perform.
+画像処理ルーチンは実行する処理に応じて分類されています.
+
+.. The submodule dedicated to image processing in scipy is `scipy.ndimage`. ::
+
+..     >>> from scipy import ndimage
+
+.. Image processing routines may be sorted according to the category of
+.. processing they perform.
 
 
-Geometrical transformations on images
-.......................................
+画像の幾何学的変換
+..................
 
-Changing orientation, resolution, .. ::
+.. Geometrical transformations on images
+.. .......................................
+
+方向, 解像度を変える, .. ::
 
     >>> import scipy
     >>> lena = scipy.lena()
@@ -20,6 +29,18 @@ Changing orientation, resolution, .. ::
     >>> zoomed_lena = ndimage.zoom(lena, 2)
     >>> zoomed_lena.shape
     (1024, 1024)
+
+.. Changing orientation, resolution, .. ::
+
+..     >>> import scipy
+..     >>> lena = scipy.lena()
+..     >>> shifted_lena = ndimage.shift(lena, (50, 50))
+..     >>> shifted_lena2 = ndimage.shift(lena, (50, 50), mode='nearest')
+..     >>> rotated_lena = ndimage.rotate(lena, 30)
+..     >>> cropped_lena = lena[50:-50, 50:-50]
+..     >>> zoomed_lena = ndimage.zoom(lena, 2)
+..     >>> zoomed_lena.shape
+..     (1024, 1024)
 
 .. image:: image_processing/lena_transforms.png
    :align: center
@@ -39,8 +60,11 @@ Changing orientation, resolution, .. ::
     In [39]: # etc.
 
 
-Image filtering
-...................
+画像フィルタ
+............
+
+.. Image filtering
+.. ...................
 
 ::
 
@@ -57,30 +81,45 @@ Image filtering
    :align: center
 
 
+他にも画像に適応できるフィルタが ``scipy.ndimage.filters`` と ``scipy.signal`` にあります.
 
-And many other filters in ``scipy.ndimage.filters`` and ``scipy.signal``
-can be applied to images
+.. And many other filters in ``scipy.ndimage.filters`` and ``scipy.signal``
+.. can be applied to images
 
-.. topic:: Exercise
+.. topic:: 練習問題
 
-    Compare histograms for the different filtered images.
+    異なるフィルタを書けた画像の頻度分布を比較しなさい.
 
-Mathematical morphology
-........................
+.. .. topic:: Exercise
 
-Mathematical morphology is a mathematical theory that stems from set
-theory. It characterizes and transforms geometrical structures. Binary
-(black and white) images, in particular, can be transformed using this
-theory: the sets to be transformed are the sets of neighboring
-non-zero-valued pixels. The theory was also extended to gray-valued images.
+..     Compare histograms for the different filtered images.
+
+数理形態学
+..........
+
+.. Mathematical morphology
+.. ........................
+
+数理形態学 (Mathematical morphology) は集合論から派生した数学理論です.
+幾何構造の特徴付けと変換を行います.
+特に二進画像（白と黒のみのモノクロ）はこの理論によって変換できます：非ゼロのピクセルを近傍に含む集合が変換されます.
+理論はグレースケール画像に対しても拡張されます.
+
+.. Mathematical morphology is a mathematical theory that stems from set
+.. theory. It characterizes and transforms geometrical structures. Binary
+.. (black and white) images, in particular, can be transformed using this
+.. theory: the sets to be transformed are the sets of neighboring
+.. non-zero-valued pixels. The theory was also extended to gray-valued images.
 
 .. image:: image_processing/morpho_mat.png
    :align: center
 
-Elementary mathematical-morphology operations use a *structuring element*
-in order to modify other geometrical structures.
+幾何構造を変更するための数理形態学の基本演算は *構造要素 (structuring element)* を使います.
 
-Let us first generate a structuring element ::
+.. Elementary mathematical-morphology operations use a *structuring element*
+.. in order to modify other geometrical structures.
+
+まず構造要素を作ってみましょう ::
 
     >>> el = ndimage.generate_binary_structure(2, 1)
     >>> el
@@ -91,6 +130,18 @@ Let us first generate a structuring element ::
     array([[0, 1, 0],
 	   [1, 1, 1],
            [0, 1, 0]])
+
+.. Let us first generate a structuring element ::
+
+..     >>> el = ndimage.generate_binary_structure(2, 1)
+..     >>> el
+..     array([[False,  True, False],
+.. 	   [ True,  True,  True],
+.. 	   [False,  True, False]], dtype=bool)
+..     >>> el.astype(np.int)
+..     array([[0, 1, 0],
+.. 	   [1, 1, 1],
+..            [0, 1, 0]])
 
 * **Erosion** ::
 
@@ -166,13 +217,16 @@ Let us first generate a structuring element ::
 
 * **Closing:** ``ndimage.binary_closing``
 
-.. topic:: Exercise
+.. topic:: 練習問題
 
-    Check that opening amounts to eroding, then dilating.
+    opening が eroding 後に dilating することを確かめなさい.
 
-An opening operation removes small structures, while a closing operation
-fills small holes. Such operation can therefore be used to "clean" an
-image. ::
+.. .. topic:: Exercise
+
+..     Check that opening amounts to eroding, then dilating.
+
+opening 操作は小さい構造を取り除き, closing 操作は小さな穴を埋めます.
+これらの操作は画像の「ごみとり」に使えます. ::
 
     >>> a = np.zeros((50, 50))
     >>> a[10:-10, 10:-10] = 1
@@ -181,19 +235,33 @@ image. ::
     >>> opened_mask = ndimage.binary_opening(mask)
     >>> closed_mask = ndimage.binary_closing(opened_mask)
 
+.. An opening operation removes small structures, while a closing operation
+.. fills small holes. Such operation can therefore be used to "clean" an
+.. image. ::
+
+..     >>> a = np.zeros((50, 50))
+..     >>> a[10:-10, 10:-10] = 1
+..     >>> a += 0.25*np.random.standard_normal(a.shape)
+..     >>> mask = a>=0.5
+..     >>> opened_mask = ndimage.binary_opening(mask)
+..     >>> closed_mask = ndimage.binary_closing(opened_mask)
+
 .. image:: image_processing/morpho.png
    :align: center
 
-.. topic:: Exercise
+.. topic:: 練習問題
 
-    Check that the area of the reconstructed square is smaller
-    than the area of the initial square. (The opposite would occur if the
-    closing step was performed *before* the opening).
+    再構成された正方形が元の領域より小さいことを確かめなさい
+    （opening の *前* に closing を行うと逆のことが起こるはずです）.
 
+.. .. topic:: Exercise
 
-For **gray-valued** images, eroding (resp. dilating) amounts to replacing
-a pixel by the minimal (resp. maximal) value among pixels covered by the
-structuring element centered on the pixel of interest. ::
+..     Check that the area of the reconstructed square is smaller
+..     than the area of the initial square. (The opposite would occur if the
+..     closing step was performed *before* the opening).
+
+**gray-valued** 画像については, eroding は注目するピクセルを中心とする構造要素内のピクセルの最小値に置き換えます
+（dilation は最大値に置き換えます）::
 
     >>> a = np.zeros((7,7), dtype=np.int)
     >>> a[1:6, 1:6] = 3
@@ -215,17 +283,49 @@ structuring element centered on the pixel of interest. ::
            [0, 0, 0, 0, 0, 0, 0],
            [0, 0, 0, 0, 0, 0, 0]])
 
+.. For **gray-valued** images, eroding (resp. dilating) amounts to replacing
+.. a pixel by the minimal (resp. maximal) value among pixels covered by the
+.. structuring element centered on the pixel of interest. ::
 
-Measurements on images
-........................
+..     >>> a = np.zeros((7,7), dtype=np.int)
+..     >>> a[1:6, 1:6] = 3
+..     >>> a[4,4] = 2; a[2,3] = 1
+..     >>> a
+..     array([[0, 0, 0, 0, 0, 0, 0],
+..            [0, 3, 3, 3, 3, 3, 0],
+..            [0, 3, 3, 1, 3, 3, 0],
+..            [0, 3, 3, 3, 3, 3, 0],
+..            [0, 3, 3, 3, 2, 3, 0],
+..            [0, 3, 3, 3, 3, 3, 0],
+..            [0, 0, 0, 0, 0, 0, 0]])
+..     >>> ndimage.grey_erosion(a, size=(3,3))
+..     array([[0, 0, 0, 0, 0, 0, 0],
+..            [0, 0, 0, 0, 0, 0, 0],
+..            [0, 0, 1, 1, 1, 0, 0],
+..            [0, 0, 1, 1, 1, 0, 0],
+..            [0, 0, 3, 2, 2, 0, 0],
+..            [0, 0, 0, 0, 0, 0, 0],
+..            [0, 0, 0, 0, 0, 0, 0]])
 
-Let us first generate a nice synthetic binary image. ::
+画像の測定
+..........
+
+.. Measurements on images
+.. ........................
+
+まず, nice synthetic 二進画像を作りましょう. ::
 
     >>> x, y = np.indices((100, 100))
     >>> sig = np.sin(2*np.pi*x/50.)*np.sin(2*np.pi*y/50.)*(1+x*y/50.**2)**2
     >>> mask = sig > 1
 
-Now we look for various information about the objects in the image::
+.. Let us first generate a nice synthetic binary image. ::
+
+..     >>> x, y = np.indices((100, 100))
+..     >>> sig = np.sin(2*np.pi*x/50.)*np.sin(2*np.pi*y/50.)*(1+x*y/50.**2)**2
+..     >>> mask = sig > 1
+
+画像内のオブジェクトの色々な情報を見ることができます::
 
     >>> labels, nb = ndimage.label(mask)
     >>> nb
@@ -243,12 +343,31 @@ Now we look for various information about the objects in the image::
     >>> sl = ndimage.find_objects(labels==4)
     >>> imshow(sig[sl[0]])
 
+.. Now we look for various information about the objects in the image::
+
+..     >>> labels, nb = ndimage.label(mask)
+..     >>> nb
+..     8
+..     >>> areas = ndimage.sum(mask, labels, xrange(1, labels.max()+1))
+..     >>> areas
+..     [190.0, 45.0, 424.0, 278.0, 459.0, 190.0, 549.0, 424.0]
+..     >>> maxima = ndimage.maximum(sig, labels, xrange(1, labels.max()+1))
+..     >>> maxima
+..     [1.8023823799830032, 1.1352760475048373, 5.5195407887291426,
+..     2.4961181804217221, 6.7167361922608864, 1.8023823799830032,
+..     16.765472169131161, 5.5195407887291426]
+..     >>> ndimage.find_objects(labels==4)
+..     [(slice(30, 48, None), slice(30, 48, None))]
+..     >>> sl = ndimage.find_objects(labels==4)
+..     >>> imshow(sig[sl[0]])
+
 
 .. image:: image_processing/measures.png
    :align: center
 
+より高度な例は統括演習 :ref:`summary_exercise_image_processing` を見てください.
 
-See the summary exercise on :ref:`summary_exercise_image_processing` for a more
-advanced example.
+.. See the summary exercise on :ref:`summary_exercise_image_processing` for a more
+.. advanced example.
 
 
