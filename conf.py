@@ -172,8 +172,12 @@ htmlhelp_basename = 'PythonScientic'
 # The paper size ('letter' or 'a4').
 #latex_paper_size = 'letter'
 
+# jsbook を使う 10pt でないとおかしくなるので注意
+# 原因は http://oku.edu.mie-u.ac.jp/~okumura/jsclasses/#FAQ
+latex_docclass = {"manual": "jsbook"}
+
 # The font size ('10pt', '11pt' or '12pt').
-#latex_font_size = '10pt'
+latex_font_size = '10pt'
 
 # Latex references with page numbers (only Sphinx 1.0)
 latex_show_pagerefs = True
@@ -183,7 +187,8 @@ latex_show_pagerefs = True
 latex_documents = [
   ('index', 'PythonScientific.tex', ur'Python Scientific lecture notes',
    ur"""EuroScipy tutorial team \\\relax\normalfont Editors: Emmanuelle Gouillart, Gaël Varoquaux"""
-   + r"\\\relax ~\\\relax http://scipy-lectures.github.com", 
+   ur"""\\\relax\normalfont 翻訳者：打田 旭宏"""
+   + r"\\\relax ~\\\relax http://uchida.github.com/scipy-lecture-notes",
    'manual'),
 ]
 
@@ -202,14 +207,51 @@ latex_use_parts = True
 #latex_use_modindex = True
 
 # Additional stuff for the LaTeX preamble.
-latex_preamble = """
+latex_preamble = r"""
 \definecolor{VerbatimColor}{rgb}{0.95,1,0.833}
 \definecolor{VerbatimBorderColor}{rgb}{0.6,0.6,0.6}
 \setcounter{tocdepth}{1}
+% for jreport or jsbook
+\makeatletter
+\renewcommand{\DOCH}{
+  \raggedleft\CNV\FmN{\@chapapp}\space
+  \CNoV\thechapter\CNV\FmN{\@chappos}
+  \par\nobreak\vskip40\p@}
+\fancypagestyle{normal}{
+  \fancyhf{}
+  \fancyfoot[LE,RO]{{\py@HeaderFamily\thepage}}
+  \fancyfoot[LO]{{\py@HeaderFamily\nouppercase{\rightmark}}}
+  \fancyfoot[RE]{{\py@HeaderFamily\nouppercase{\leftmark}}}
+  \fancyhead[LE,RO]{{\py@HeaderFamily \@title, \py@release}}
+  \renewcommand{\headrulewidth}{0.4pt}
+  \renewcommand{\footrulewidth}{0.4pt}
+  \def\chaptermark##1{\markboth{\@chapapp\space\thechapter\space\@chappos\space ##1}{}}
+}
+% for jsbook
+\setlength\footskip{2\baselineskip}
+\addtolength{\textheight}{-2\baselineskip}
+\renewcommand{\theindex}{
+  \cleardoublepage
+  \phantomsection
+  \py@OldTheindex
+}
+\renewcommand{\thebibliography}[1]{
+  \cleardoublepage
+  \phantomsection
+  \py@OldThebibliography{1}
+}
+\makeatother
+% use sans-serif bold font for chapter and section if available
+\usepackage[deluxe,expert,bold]{otf}
+\renewcommand{\headfont}{\bfseries\sffamily\propshape}
 """
 
 latex_elements = {
     'classoptions': ',oneside,openany,dvipdfm',
+    'fontpkg': r'''
+\usepackage{mathptmx}
+\usepackage[scaled=.90]{helvet}
+\usepackage{courier}''',
     #'babel': '\usepackage[english]{babel}',
     #'tableofcontents': '\\pagestyle{normal}\\pagenumbering{arabic} %\\tableofcontents',
 } 
@@ -223,4 +265,8 @@ intersphinx_mapping = {
 # Increase pngmath font size
 pngmath_dvipng_args = ['-gamma 1.5', '-D 180']
 pngmath_use_preview = True
+pngmath_latex_preamble = r'''
+\usepackage{mathptmx}
+\usepackage[scaled=.90]{helvet}
+\usepackage{courier}'''
 

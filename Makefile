@@ -113,8 +113,10 @@ linkcheck:
 	      "or in build/linkcheck/output.txt."
 
 pdf: latex
+	cp euroscipy_back.bb build/latex
 	cd build/latex ; make all-pdf-ja
 	cp build/latex/PythonScientific.pdf .
+	#cd build/latex ; make all-pdf ; pdfnup python4science.pdf
 
 zip: html pdf
 	mkdir -p build/scipy_lecture_notes ;
@@ -126,7 +128,7 @@ zip: html pdf
 install: pdf html 
 	rm -rf build/scipy-lectures.github.com
 	cd build/ && \
-	git clone git@github.com:scipy-lectures/scipy-lectures.github.com.git && \
+	git clone git@github.com:uchida/scipy-lecture-notes && \
 	cp -r html/* scipy-lectures.github.com && \
 	cd scipy-lectures.github.com && \
 	git add * && \
