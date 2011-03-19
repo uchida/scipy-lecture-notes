@@ -288,7 +288,7 @@ data_clipping   whether to use numeric to clip data [*]_
 label           凡例のために使われる文字列
 linestyle       ``-`` ``:`` ``-.`` ``-`` のどれか
 linewidth       ラインの幅, 浮動小数点数 単位はポイント
-marker          ``+`` ``\`` ``,`` ``o`` ``.`` ``s`` ``v`` ``x`` ``>`` ``<`` などのどれか
+marker          ``+`` ``,`` ``o`` ``.`` ``s`` ``v`` ``x`` ``>`` ``<`` などのどれか
 markeredgewidth マーカー記号の周りのラインの幅
 markeredgecolor マーカーの端の色（マーカーが使われる場合）
 markerfacecolor マーカーの表面の色（マーカーが使われる場合）
