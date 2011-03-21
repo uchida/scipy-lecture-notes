@@ -42,9 +42,7 @@
 
     In [4]: f.close()
 
-より詳しくは http://docs.python.org/tutorial/inputoutput.html
-
-日本語訳： http://www.python.jp/doc/release/tutorial/inputoutput.html
+より詳しくは http://docs.python.org/tutorial/inputoutput.html [*]_
 
 .. For more details: http://docs.python.org/tutorial/inputoutput.html
 
@@ -96,3 +94,6 @@
 
 ..   * Note: Use for binary files, especially on Windows.
 
+.. rubric:: 脚注
+
+.. [*] http://www.python.jp/doc/release/tutorial/inputoutput.html

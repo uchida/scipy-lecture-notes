@@ -6,11 +6,8 @@
     ===================
 
 `Python library reference
-<http://docs.python.org/reference/simple_stmts.html#assignment-statements>`_
-（日本語訳
-`Python 言語レファレンス
-<http://www.python.jp/doc/release/reference/simple_stmts.html#assignment-statement>`_
-）によると：
+<http://docs.python.org/reference/simple_stmts.html#assignment-statements>`_ [*]_
+によると：
 
   代入文は, 名前を値に (再) 束縛したり, 変更可能なオブジェクトの属性や要素を変更し
   たりするために使われます
@@ -115,3 +112,7 @@ David M. Beazley による記事 `Types and Objects in Python
     A very good and detailed explanation of the above issues can be found
     in David M. Beazley's article `Types and Objects in Python
         <http://www.informit.com/articles/article.aspx?p=453682>`_.
+
+.. rubric:: 脚注
+
+.. [*] 日本語訳 `Python 言語レファレンス <http://www.python.jp/doc/release/reference/simple_stmts.html#assignment-statement>`_

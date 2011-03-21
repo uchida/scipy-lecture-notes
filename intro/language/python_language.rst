@@ -14,8 +14,7 @@ Python 入門（簡略）
     この章では Python の導入を行います.
     ここでは, Numpy や Scipy を始めるために必要な最小限のことだけを述べます.
     言語のことについてもっと学びたければ,
-    素晴しいチュートリアル http://docs.python.org/tutorial
-    （日本語訳 http://www.python.jp/doc/release/tutorial/）
+    素晴しいチュートリアル http://docs.python.org/tutorial [*]_
     を見ることを検討してみましょう.
     http://diveintopython.org/ のように, 言語を学ぶ専門の本も入手できます.
 
@@ -106,3 +105,6 @@ Python の特徴についてより多くの情報を得たければ, http://www.
     exceptions.rst
     oop.rst
 
+.. rubric:: 脚注
+
+.. [*] 日本語訳 http://www.python.jp/doc/release/tutorial/

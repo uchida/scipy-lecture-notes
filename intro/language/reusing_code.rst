@@ -549,7 +549,7 @@ main の名前空間にオブジェクトをインポートする
     .. directory to your sys.path each time you want to import from a module in
     .. this directory.
 
-モジュールに関するさらなる情報は http://docs.python.org/tutorial/modules.html を見てください.
+モジュールに関するさらなる情報は http://docs.python.org/tutorial/modules.html [*]_ を見てください.
 
 .. See http://docs.python.org/tutorial/modules.html for more information
 .. about modules.
@@ -694,7 +694,7 @@ IPython から：
         >>> a=1 # too cramped
  
     「きれいな」ソースコードを書くための
-    いくつかの規則が `Style Guide for Python Code <http://www.python.org/dev/peps/pep-0008>`_
+    いくつかの規則が `Style Guide for Python Code <http://www.python.org/dev/peps/pep-0008>`_ [*]_
     に与えられています（みんなで同じ規則を使う, という意味でも重要です）.
 
     * オブジェクトには **意味のある名前** をつけましょう
@@ -757,3 +757,7 @@ IPython から：
 
     .. * Use **meaningful** object **names**
 
+.. rubric:: 脚注
+
+.. [*] 日本語訳 http://www.python.jp/doc/release/tutorial/modules.html
+.. [*] 日本語訳 http://oldriver.org/python/pep-0008j.html

@@ -1350,8 +1350,8 @@ Numpy の配列はスライスだけでなく,
     * カンマや ``==`` 等の後に空白を入れる.
       「美しい」ソースコードを書くための（そしてより重要な点として,
       誰もが同じ記法を使うという重要性のための!）規則が
-      `Style Guide for Python Code <http://www.python.org/dev/peps/pep-0008>`_ と
-      `Docstring Conventions <http://www.python.org/dev/peps/pep-0257>`_
+      `Style Guide for Python Code <http://www.python.org/dev/peps/pep-0008>`_ [*]_ と
+      `Docstring Conventions <http://www.python.org/dev/peps/pep-0257>`_ [*]_
       （こちらはヘルプの為の文字列を扱うための規則）にあります.
 
     * いくつかの例外を除いて変数名とコメントは英語で書きましょう.
@@ -1612,3 +1612,7 @@ Numpy の配列はスライスだけでなく,
 ..     * For advanced use: master the indexing with arrays of integers, as well as
 ..       broadcasting. Know more functions of numpy allowing to handle array
 ..       operations.
+.. rubric:: 脚注
+
+.. [*] 日本語訳 `PEP 8 -- Style Guide for Python Code <http://oldriver.org/python/pep-0008j.html>`_
+.. [*] 日本語訳 `ドキュメンテーション文字列の書き方のガイドライン <http://www.python.jp/doc/contrib/peps/pep-0257.txt>`_

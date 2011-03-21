@@ -424,8 +424,7 @@ Python ではこのような区別はいくぶん不自然で,
 
 
     標準化の目的のために, `docstring conventions 
-    <http://www.python.org/dev/peps/pep-0257>`_ の Web ページ
-    （日本語訳 `ドキュメンテーション文字列の書き方のガイドライン <http://www.python.jp/doc/contrib/peps/pep-0257.txt>`_ ）
+    <http://www.python.org/dev/peps/pep-0257>`_ の Web ページ [*]_
     に python の docstring に関する意味論と取り決めが文書化されています. 
 
     また,  numpy や scipy モジュールも科学技術計算用の関数の文書化のために
@@ -542,3 +541,4 @@ Python ではこのような区別はいくぶん不自然で,
 .. rubric:: 脚注
 
 .. [*] C や Java は値渡ししかないので参照渡しはない. ポインタの値渡しのことを参照渡しといっているのかな?
+.. [*] 日本語訳 `ドキュメンテーション文字列の書き方のガイドライン <http://www.python.jp/doc/contrib/peps/pep-0257.txt>`_

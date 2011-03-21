@@ -7,9 +7,7 @@
 .. note:: この節の参考文献：
 
   * The Python Standard Library documentation: 
-    http://docs.python.org/library/index.html
-
-	日本語訳： http://python.jp/doc/release/library/index.html
+    http://docs.python.org/library/index.html [*]_
 
   * Python Essential Reference, David Beazley, Addison-Wesley Professional
 
@@ -358,3 +356,7 @@ Python インタプリタに関わるシステム固有の情報
 ..     Write a program to search your PYTHONPATH for the module ``site.py``.
 
 :ref:`path_site`
+
+.. rubric:: 脚注
+
+.. [*] 日本語訳 http://python.jp/doc/release/library/index.html

@@ -347,8 +347,7 @@ Python は効率よくオブジェクトの集まりを蓄えることができ�
 
 Python はリストを変更する, 照会するための多くの関数を提供します.
 ここでは少数の例を挙げますが, 詳しくは, 
-http://docs.python.org/tutorial/datastructures.html#more-on-lists
-（日本語訳 http://www.python.jp/doc/release/tutorial/datastructures.html#tut-morelists ）
+http://docs.python.org/tutorial/datastructures.html#more-on-lists [*]_
 を見てください.
 
 ..
@@ -598,9 +597,8 @@ r のソート（インプレース：上書きされる）::
         'hl r!'
 
 アクセントや特殊な記号は [*]_ Unicode 文字列で扱うことができます（
-http://docs.python.org/tutorial/introduction.html#unicode-strings
-日本語訳 http://www.python.jp/doc/release/tutorial/introduction.html#unicode を見ましょう
-）.
+http://docs.python.org/tutorial/introduction.html#unicode-strings [*]_
+を見ましょう）.
 
 ..
     Accents and special characters can also be handled in Unicode strings (see
@@ -644,11 +642,8 @@ http://docs.python.org/tutorial/introduction.html#unicode-strings
     Python はパターンを探したり, 
     フォーマットするといった進んだ文字列操作の方法を提供しています.
     時間的制限にためにその話題はここでは述べませんが,興味のある読者は
-    http://docs.python.org/library/stdtypes.html#string-methods
-    （日本語訳
-    http://www.python.jp/doc/release/library/stdtypes.html#string-methods ）と
-    http://docs.python.org/library/string.html#new-string-formatting
-    （日本語訳 http://www.python.jp/doc/release/library/string.html ）
+    http://docs.python.org/library/stdtypes.html#string-methods [*]_ と
+    http://docs.python.org/library/string.html#new-string-formatting [*]_
     を参照して下さい.
 
 ..
@@ -726,8 +721,7 @@ http://docs.python.org/tutorial/introduction.html#unicode-strings
 値を名前と関連づけて値を記録する（文字列に対して名前や時刻等を記録等）のに
 とても便利なコンテナです.
 より詳しくは
-http://docs.python.org/tutorial/datastructures.html#dictionaries
-（日本語訳 http://www.python.jp/doc/release/tutorial/datastructures.html#tut-dictionaries ）
+http://docs.python.org/tutorial/datastructures.html#dictionaries [*]_
 を見ましょう.
 
 ..
@@ -859,5 +853,10 @@ http://docs.python.org/tutorial/datastructures.html#dictionaries
 
 .. rubric:: 脚注
 
-.. [*] あるいは日本語
+.. [*] 日本語訳 http://www.python.jp/doc/release/tutorial/datastructures.html#tut-morelists
+.. [*] あるいは日本語など
+.. [*] 日本語訳 http://www.python.jp/doc/release/tutorial/introduction.html#unicode
+.. [*] 日本語訳 http://www.python.jp/doc/release/library/stdtypes.html#string-methods
+.. [*] 日本語訳 http://www.python.jp/doc/release/library/string.html
+.. [*] 日本語訳 http://www.python.jp/doc/release/tutorial/datastructures.html#tut-dictionaries
 
