@@ -1402,7 +1402,7 @@ Numpy の配列はスライスだけでなく,
     :align: center
     :scale: 70
 
-**Remark** ： ``numpy.ogrid`` 関数を2つの「代表的次元」を与えて使うことで,
+**注目** ： ``numpy.ogrid`` 関数を2つの「代表的次元」を与えて使うことで,
 前の例での x, y ベクトルを直接作りだすことができます.
 
 .. **Remark** : the ``numpy.ogrid`` function allows to directly create vectors x
@@ -1612,7 +1612,7 @@ Numpy の配列はスライスだけでなく,
 ..     * For advanced use: master the indexing with arrays of integers, as well as
 ..       broadcasting. Know more functions of numpy allowing to handle array
 ..       operations.
-.. rubric:: footnotes
+.. rubric:: Footnotes
 
 .. [*] 日本語訳 `PEP 8 -- Style Guide for Python Code <http://oldriver.org/python/pep-0008j.html>`_
 .. [*] 日本語訳 `ドキュメンテーション文字列の書き方のガイドライン <http://www.python.jp/doc/contrib/peps/pep-0257.txt>`_

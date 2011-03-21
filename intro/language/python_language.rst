@@ -105,6 +105,6 @@ Python の特徴についてより多くの情報を得たければ, http://www.
     exceptions.rst
     oop.rst
 
-.. rubric:: footnotes
+.. rubric:: Footnotes
 
 .. [*] 日本語訳 http://www.python.jp/doc/release/tutorial/

@@ -149,10 +149,10 @@ Python では以下で定義できます::
 
 ここに
 
-* ``coeffs[0]`` is :math:`B` (ノイズ)
-* ``coeffs[1]`` is :math:`A` (振幅)
-* ``coeffs[2]`` is :math:`\mu` (中心)
-* ``coeffs[3]`` is :math:`\sigma` (幅)
+* ``coeffs[0]`` は :math:`B` (ノイズ)
+* ``coeffs[1]`` は :math:`A` (振幅)
+* ``coeffs[2]`` は :math:`\mu` (中心)
+* ``coeffs[3]`` は :math:`\sigma` (幅)
 
 .. where
 
@@ -226,7 +226,7 @@ Python では以下で定義できます::
     >>> plt.legend(['waveform', 'model']) # doctest:+SKIP
     >>> plt.show() # doctest:+SKIP
 
-*Remark:* scipy v0.8 以上では ``scipy.optimize.curve_fit`` を使うべきです. これはモデルとデータを引数としてとるので残余を定義する必要はありません.
+*注目：* scipy v0.8 以上では ``scipy.optimize.curve_fit`` を使うべきです. これはモデルとデータを引数としてとるので残余を定義する必要はありません.
 
 .. *Remark:* from scipy v0.8 and above, you should rather use ``scipy.optimize.curve_fit`` which takes the model and the data as arguments, so you don't need to define the residuals any more.
 

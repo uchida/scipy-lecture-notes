@@ -684,7 +684,7 @@ http://docs.python.org/tutorial/introduction.html#unicode-strings [*]_
     Dictionnaries
     ~~~~~~~~~~~~~
 
-辞書はハッシュテーブルを基にして **キー (key) を値 (value) に写像します** .
+辞書はハッシュテーブルを基にして **キー (key) を値 (value) に対応づけします** .
 即ちこれは, **順序づけられていない** コンテナです::
 
     >>> tel = {'emmanuelle': 5752, 'sebastian': 5578}
@@ -851,7 +851,7 @@ http://docs.python.org/tutorial/datastructures.html#dictionaries [*]_
     Timestamping   : False
     State          : active
 
-.. rubric:: footnotes
+.. rubric:: Footnotes
 
 .. [*] 日本語訳 http://www.python.jp/doc/release/tutorial/datastructures.html#tut-morelists
 .. [*] あるいは日本語など

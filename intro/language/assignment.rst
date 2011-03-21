@@ -113,6 +113,6 @@ David M. Beazley による記事 `Types and Objects in Python
     in David M. Beazley's article `Types and Objects in Python
         <http://www.informit.com/articles/article.aspx?p=453682>`_.
 
-.. rubric:: footnotes
+.. rubric:: Footnotes
 
-.. [*] 日本語訳 `Python 言語レファレンス <http://www.python.jp/doc/release/reference/simple_stmts.html#assignment-statement>`_
+.. [*] 日本語訳 `Python 言語リファレンス <http://www.python.jp/doc/release/reference/simple_stmts.html#assignment-statement>`_

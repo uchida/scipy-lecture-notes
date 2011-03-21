@@ -94,6 +94,6 @@
 
 ..   * Note: Use for binary files, especially on Windows.
 
-.. rubric:: footnotes
+.. rubric:: Footnotes
 
 .. [*] http://www.python.jp/doc/release/tutorial/inputoutput.html
