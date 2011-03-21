@@ -187,8 +187,9 @@ latex_show_pagerefs = True
 latex_documents = [
   ('index', 'PythonScientific.tex', ur'Python Scientific lecture notes',
    ur"""EuroScipy tutorial team \\\relax\normalfont Editors: Emmanuelle Gouillart, Gaël Varoquaux"""
-   ur"""\\\relax\normalfont 翻訳者：打田 旭宏"""
-   + r"\\\relax ~\\\relax http://www.ike-dyn.ristumei.ac.jp/\~uchida/transl/scipy-lecture-notes",
+   + r"\\\relax{\Large\url{http://scipy-lectures.github.com}}"
+   + ur"""\\\relax\\\relax\\\relax\normalfont 翻訳者：打田 旭宏"""
+   + r"\\\relax{\Large\url{http://www.ike-dyn.ritsumei.ac.jp/~uchida/scipy-lecture-notes}}",
    'manual'),
 ]
 
