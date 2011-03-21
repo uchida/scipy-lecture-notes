@@ -188,7 +188,7 @@ latex_documents = [
   ('index', 'PythonScientific.tex', ur'Python Scientific lecture notes',
    ur"""EuroScipy tutorial team \\\relax\normalfont Editors: Emmanuelle Gouillart, Gaël Varoquaux"""
    ur"""\\\relax\normalfont 翻訳者：打田 旭宏"""
-   + r"\\\relax ~\\\relax http://uchida.github.com/scipy-lecture-notes",
+   + r"\\\relax ~\\\relax http://www.ike-dyn.ristumei.ac.jp/~uchida/transl/scipy-lecture-notes",
    'manual'),
 ]
 
