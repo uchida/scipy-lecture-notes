@@ -851,7 +851,7 @@ http://docs.python.org/tutorial/datastructures.html#dictionaries [*]_
     Timestamping   : False
     State          : active
 
-.. rubric:: 脚注
+.. rubric:: footnotes
 
 .. [*] 日本語訳 http://www.python.jp/doc/release/tutorial/datastructures.html#tut-morelists
 .. [*] あるいは日本語など

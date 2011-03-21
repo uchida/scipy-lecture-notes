@@ -757,7 +757,7 @@ IPython から：
 
     .. * Use **meaningful** object **names**
 
-.. rubric:: 脚注
+.. rubric:: footnotes
 
 .. [*] 日本語訳 http://www.python.jp/doc/release/tutorial/modules.html
 .. [*] 日本語訳 http://oldriver.org/python/pep-0008j.html

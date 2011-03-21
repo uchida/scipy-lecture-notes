@@ -1612,7 +1612,7 @@ Numpy の配列はスライスだけでなく,
 ..     * For advanced use: master the indexing with arrays of integers, as well as
 ..       broadcasting. Know more functions of numpy allowing to handle array
 ..       operations.
-.. rubric:: 脚注
+.. rubric:: footnotes
 
 .. [*] 日本語訳 `PEP 8 -- Style Guide for Python Code <http://oldriver.org/python/pep-0008j.html>`_
 .. [*] 日本語訳 `ドキュメンテーション文字列の書き方のガイドライン <http://www.python.jp/doc/contrib/peps/pep-0257.txt>`_

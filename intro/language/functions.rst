@@ -538,7 +538,7 @@ Python ではこのような区別はいくぶん不自然で,
     
     .. :ref:`fibonacci`
 
-.. rubric:: 脚注
+.. rubric:: footnotes
 
 .. [*] C や Java は値渡ししかないので参照渡しはない. ポインタの値渡しのことを参照渡しといっているのかな?
 .. [*] 日本語訳 `ドキュメンテーション文字列の書き方のガイドライン <http://www.python.jp/doc/contrib/peps/pep-0257.txt>`_

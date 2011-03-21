@@ -357,6 +357,6 @@ Python インタプリタに関わるシステム固有の情報
 
 :ref:`path_site`
 
-.. rubric:: 脚注
+.. rubric:: footnotes
 
 .. [*] 日本語訳 http://python.jp/doc/release/library/index.html
