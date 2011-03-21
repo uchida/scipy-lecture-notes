@@ -999,8 +999,7 @@ scipy-interpolation.py_ によって結果を Matplotlib の figure にまとめ
 
 ``scipy.interpolate.interp2d`` は ``inter1d`` と似ていまが二次元配列です.
 ``interp`` ファミリーについて注意しておくことは評価する時間は測定時間の範囲内に留める必要があるということです.
-より高度なスプライン補間の例については `Maximum wind speed prediction at the Sprogø station`_ 
-統括演習を見て下さい.
+より高度なスプライン補間の例については :ref:`summary_exercise_stat_interp` 統括演習を見て下さい.
 
 .. ``scipy.interpolate.interp2d`` is similar to ``interp1d``, but for 2-D
 .. arrays. Note that for the ``interp`` family, the computed time must stay

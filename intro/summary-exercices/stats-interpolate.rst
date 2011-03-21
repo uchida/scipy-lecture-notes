@@ -1,4 +1,4 @@
-.. _summary_exercise_image_processing:
+.. _summary_exercise_stat_interp:
 
 Sprogø 気象局の最大風速予測
 ----------------------------
