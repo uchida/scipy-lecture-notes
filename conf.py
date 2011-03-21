@@ -188,7 +188,7 @@ latex_documents = [
   ('index', 'PythonScientific.tex', ur'Python Scientific lecture notes',
    ur"""EuroScipy tutorial team \\\relax\normalfont Editors: Emmanuelle Gouillart, Gaël Varoquaux"""
    ur"""\\\relax\normalfont 翻訳者：打田 旭宏"""
-   + r"\\\relax ~\\\relax http://www.ike-dyn.ristumei.ac.jp/~uchida/transl/scipy-lecture-notes",
+   + r"\\\relax ~\\\relax http://www.ike-dyn.ristumei.ac.jp/\~uchida/transl/scipy-lecture-notes",
    'manual'),
 ]
 
@@ -249,9 +249,9 @@ latex_preamble = r"""
 latex_elements = {
     'classoptions': ',oneside,openany,dvipdfm',
     'fontpkg': r'''
-\usepackage{mathptmx}
+\usepackage{mathpazo}
 \usepackage[scaled=.90]{helvet}
-\usepackage{courier}''',
+''',
     #'babel': '\usepackage[english]{babel}',
     #'tableofcontents': '\\pagestyle{normal}\\pagenumbering{arabic} %\\tableofcontents',
 } 
