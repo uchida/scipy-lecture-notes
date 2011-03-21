@@ -246,8 +246,8 @@ Python では以下で定義できます::
 .. image:: waveform_2.png
    :align: center
 
-* ``leastsq`` を数値的に評価するよりも Jacobian を計算する関数を明示的に書いた方が場合があります.
-  残余の Jacobian を計算する関数を作り, ``leastsq`` の入力に使ってみましょう.
+* ``leastsq`` を数値的に評価するよりも関数行列式を計算する関数を明示的に書いた方が場合があります.
+  残余の関数行列式を計算する関数を作り, ``leastsq`` の入力に使ってみましょう.
 
 .. * In some cases, writing an explicit function to compute the Jacobian is faster
 ..   than letting ``leastsq`` estimate it numerically. Create a function to compute

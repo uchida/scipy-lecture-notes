@@ -18,7 +18,7 @@ Numpy と Scipy の全ての関数を知っていることよりも,
 .. find rapidly information throughout the documentation and the available
 .. help. Here are some ways to get information:
 
-IPython では ``help 関数`` で関数の docstring が開きます.
+IPython では ``help 関数`` で関数のドキュメンテーション文字列が開きます.
 関数の名前の最初の一部を打ち込んで Tab 補完を使うとマッチする関数が表示されます.
 
 .. * In Ipython, ``help function`` opens the docstring of the function. Only
@@ -34,7 +34,7 @@ IPython では ``help 関数`` で関数の docstring が開きます.
     In [204]: help np.vander
 	
 IPython ではヘルプとドキュメントのためにウィンドウを分割することはできません.
-しかし, ヘルプや docstring を見るために別の ``IPython`` シェルを立ち上げることができます.
+しかし, ヘルプやドキュメンテーション文字列を見るために別の ``IPython`` シェルを立ち上げることができます.
 
 .. In Ipython it is not possible to open a separated window for help and
 .. documentation; however one can always open a second ``Ipython`` shell
@@ -44,7 +44,7 @@ IPython ではヘルプとドキュメントのためにウィンドウを分割
   パッケージの reference (http://docs.scipy.org/doc/numpy/reference/ と
   http://docs.scipy.org/doc/scipy/reference/) 内の ``search`` ボタンがとても便利です.
 
-  この Web サイトでは docstring を備えた API と様々な話題についてのチュートリアルがあります.
+  この Web サイトではドキュメンテーション文字列を備えた API と様々な話題についてのチュートリアルがあります.
 
   .. image:: scipy_doc.png
      :align: center
@@ -66,7 +66,7 @@ IPython ではヘルプとドキュメントのためにウィンドウを分割
 
 * Numpy と Scipy のドキュメントはユーザによる Wiki http://docs.scipy.org/numpy/
   を基本として補強, 更新されています.
-  その結果, Wiki により明解で詳細な docstring がある場合があります,
+  その結果, Wiki には明解で詳細なドキュメンテーション文字列がある場合があります,
   なので, 公式のドキュメントの Web サイトに代わって, Wiki のドキュメントを直接見たいと思うかもしれません.
   Wiki のアカウントは誰でも作れるので, 誰でもよりよいドキュメントを書くことができます.
   ドキュメントを改善することはオープンソースプロジェクトに強力して,
@@ -137,7 +137,7 @@ IPython ではヘルプとドキュメントのためにウィンドウを分割
 
 最後に, 二つの「技術的」方法が便利です：
 
-* IPython では magical function ``%psearch`` でパターンにマッチするオブジェクトを探すことができます.
+* IPython ではマジック関数 ``%psearch`` でパターンにマッチするオブジェクトを探すことができます.
   これは関数の厳密な名前を知らないときに便利です.
 
   .. sourcecode:: ipython
@@ -148,7 +148,7 @@ IPython ではヘルプとドキュメントのためにウィンドウを分割
       np.diagflat
       np.diagonal
 
-* numpy.lookfor は特定のモジュールの docstring の中のキーワードを探します.
+* numpy.lookfor は特定のモジュールのドキュメンテーション文字列の中のキーワードを探します.
 
   .. sourcecode:: ipython
    
@@ -229,7 +229,7 @@ IPython ではヘルプとドキュメントのためにウィンドウを分割
       配列の操作, インデクスに関する質問について
 
 
-    * **SciPy Users List** (scipy-user@scipy.org)：Python での科学計算,
+    * **SciPy Users List** (scipy-user@scipy.org)：Python での科学技術計算,
       高レベルなデータ処理, 特に scipy パッケージについて
 
     * matplotlib-users@lists.sourceforge.net matplotlib での作図について

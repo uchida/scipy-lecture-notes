@@ -420,15 +420,15 @@ Python ではこのような区別はいくぶん不自然で,
 
         extended summary which can contain multiple paragraphs.
 
-.. note:: **docstring に関するガイドライン**
+.. note:: **ドキュメンテーション文字列に関するガイドライン**
 
 
     標準化の目的のために, `docstring conventions 
     <http://www.python.org/dev/peps/pep-0257>`_ の Web ページ
-    （日本語訳 `docstring の書き方のガイドライン <http://www.python.jp/doc/contrib/peps/pep-0257.txt>`_ ）
+    （日本語訳 `ドキュメンテーション文字列の書き方のガイドライン <http://www.python.jp/doc/contrib/peps/pep-0257.txt>`_ ）
     に python の docstring に関する意味論と取り決めが文書化されています. 
 
-    また,  numpy や scipy モジュールも科学計算用の関数の文書化のために
+    また,  numpy や scipy モジュールも科学技術計算用の関数の文書化のために
     簡潔化された標準を定めています, 
     それらは,  ``パラメータ`` 節や ``example`` 節等を含んでいて, 
     自分で書いた関数について参考にしたいと思うでしょう. 

@@ -22,7 +22,7 @@
 
 もし, ipython が計算機にインストールされていない,
 もしくはターミナルから "python" と打って使える Python デフォルトのシェルが利用できるとしても,
-インタラクティブな科学計算機能をはじめとする拡張機能をもった ipython シェルを利用することをお勧めします.
+インタラクティブな科学技術計算機能をはじめとする拡張機能をもった ipython シェルを利用することをお勧めします.
 
 ..
     If you don't have Ipython installed on your computer, other Python shells

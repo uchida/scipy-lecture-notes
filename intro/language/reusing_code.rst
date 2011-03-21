@@ -51,7 +51,7 @@ Python ファイルの拡張子は **.py** です.
 ..         print word
 
 では, スクリプトをインタラクティブに IPython インタプリタ内部から実行してみましょう.
-これは, 科学計算用のスクリプトの最も一般的使い方でしょう.
+これは, 科学技術計算用のスクリプトの最も一般的使い方でしょう.
 
 .. Let us now execute the script interactively, that is inside the Ipython
 .. interpreter. This is maybe the most common use of scripts in scientific

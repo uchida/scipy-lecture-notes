@@ -815,7 +815,7 @@ http://docs.python.org/tutorial/datastructures.html#dictionaries
       （つまり, カーソルが一番右にある場合には
       全ての過去のコマンドを渡り歩くことができます）.
 
-    * IPython の %logstart という "magic command"  を使えばセッションを保存できます.
+    * IPython の %logstart という「マジックコマンド」を使えばセッションを保存できます.
       そうすれば, あなたの打ち込む命令群は異なるセッションで
       スクリプトとして実行できるファイルとして保存されます.
 

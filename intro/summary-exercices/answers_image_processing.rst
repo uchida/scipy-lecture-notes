@@ -15,7 +15,7 @@
      :scale: 70
 
 1. MV_HFV_012.jpg を開いて表示しましょう.
-   ``imshow`` の docstring を眺めて右方向 ("right" orientation) に開きましょう::
+   ``imshow`` のドキュメンテーション文字列を眺めて右方向 ("right" orientation) に開きましょう::
 
     >>> dat = imread('MV_HFV_012.jpg')
 
