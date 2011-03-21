@@ -738,7 +738,7 @@ for stiff and nonstiff problems)
 .. image:: odeint-introduction.png
    :align: center
 
-.. _odeint-introduction.py : data/odeint-introduction.py
+.. _odeint-introduction.py : ../data/odeint-introduction.py
 
 ``odeint`` の別の例として減衰振動子（2次の振動子）を扱いましょう.
 バネにつながったおもりは2階常微分方程式
@@ -814,7 +814,7 @@ Matplotlib の figure を示します.
 .. image:: odeint-damped-spring-mass.png
    :align: center
 
-.. _odeint-damped-spring-mass.py: data/odeint-damped-spring-mass.py
+.. _odeint-damped-spring-mass.py: ../data/odeint-damped-spring-mass.py
 
 scipy には偏微分方程式 (PDE) のソルバーは含まれません.
 Python の PDE パッケージは, fipy_ や SfePy_ などがあります.
@@ -925,7 +925,7 @@ fftpack-illustration.py によって結果を Matplitlib の figure で作成し
 .. image:: fftpack-signals.png
    :align: center
 
-.. _fftpack-illustration.py: data/fftpack-illustration.py
+.. _fftpack-illustration.py: ../data/fftpack-illustration.py
 
 
 補間 ： ``scipy.interpolate``
@@ -995,7 +995,7 @@ scipy-interpolation.py_ によって結果を Matplotlib の figure にまとめ
 .. image:: interpolation.png
    :align: center
 
-.. _scipy-interpolation.py : data/scipy-interpolation.py
+.. _scipy-interpolation.py : ../data/scipy-interpolation.py
 
 ``scipy.interpolate.interp2d`` は ``inter1d`` と似ていまが2次元配列です.
 ``interp`` ファミリーについて注意しておくことは評価する時間は測定時間の範囲内に留める必要があるということです.

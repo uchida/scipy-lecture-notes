@@ -81,7 +81,7 @@ scipy.interpolate モジュールを使ってこれらの測定点から分位�
 ..     >>> max_speeds = np.load('data/max-speeds.npy')
 ..     >>> years_nb = max_speeds.shape[0]
 
-.. _max-speeds.npy : ../data/max-speeds.npy
+.. _max-speeds.npy : ../../data/max-speeds.npy
 
 前の節の累積確率 ``p_i`` の定義に従って, 対応する値は::
 
@@ -194,7 +194,7 @@ Sprogø の最大風速のために ``UnivariateSpline`` を使います::
 .. All those steps have been gathered in the script
 .. cumulative-wind-speed-prediction.py_.
 
-.. _cumulative-wind-speed-prediction.py: ../data/cumulative-wind-speed-prediction.py
+.. _cumulative-wind-speed-prediction.py: ../../data/cumulative-wind-speed-prediction.py
 
 Gumbell 分布での練習問題
 ~~~~~~~~~~~~~~~~~~~~~~~~
@@ -212,7 +212,7 @@ Gumbell 分布での練習問題
 .. been reduced for making the exercice setup easier). The data are stored
 .. in numpy format inside the file sprog-windspeeds.npy_.
 
-.. _sprog-windspeeds.npy : ../data/sprog-windspeeds.npy
+.. _sprog-windspeeds.npy : ../../data/sprog-windspeeds.npy
 
 * まずは年間での最大値を入手して matplotlib の棒グラフで表示しましょう.
 
@@ -246,5 +246,5 @@ Gumbell 分布での練習問題
 .. Once done, you may compare your code with a solution example available in the
 .. script gumbell-wind-speed-prediction.py_.
 
-.. _gumbell-wind-speed-prediction.py : ../data/gumbell-wind-speed-prediction.py
+.. _gumbell-wind-speed-prediction.py : ../../data/gumbell-wind-speed-prediction.py
 
