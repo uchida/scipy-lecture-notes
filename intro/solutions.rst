@@ -55,7 +55,7 @@ Fibonacci 数列
 .. Fibonacci sequence
 .. ------------------
 
-Fibonacci 数列の第一項から n 項までを表示する関数を書きなさい, Fibonacci 数列の定義は：
+Fibonacci 数列の第1項から n 項までを表示する関数を書きなさい, Fibonacci 数列の定義は：
 
 .. Write a function that displays the ``n`` first terms of the Fibonacci
 .. sequence, defined by:

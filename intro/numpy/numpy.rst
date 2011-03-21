@@ -23,7 +23,7 @@ NumPy：数値データの作成と操作
 
     **Numpy** モジュールは以下を可能にします.
     
-    * 上のようなデータの集まりの作成を一度ですませる
+    * 上のようなデータの集まりの作成を1度ですませる
     
     * データ配列のバッチ処理を実現（要素に対するループは不要）
     
@@ -73,9 +73,9 @@ Numpy データ配列作成
     array([[ 0.,  1.],
            [ 2.,  3.]])
 
-実際には要素を一つ一つ入力することは少ないでしょう.
+実際には要素を1つ1つ入力することは少ないでしょう.
 
-    * 一つとばしの値::
+    * 1つとばしの値::
 
         >>> import numpy as np
         >>> a = np.arange(10) # de 0 a n-1
@@ -169,7 +169,7 @@ Numpy データ配列作成
 .. -----------------------------------------------------
 
 これでデータ配列を学びました, 次は可視化です.
-**Matplotlib** は二次元の作図パッケージです.
+**Matplotlib** は2次元の作図パッケージです.
 関数は以下のようにしてインポートします.
 
 .. Now that we have our first data arrays, we are going to visualize them.
@@ -195,7 +195,7 @@ IPython を起動すると, ``from pylab import *`` を行わなくても,
 .. -pylab``: as a consequence, we won't write ``pylab.function()`` but directly
 .. ``function``.
 
-**一次元の曲線の描画**
+**1次元の曲線の描画**
 
 .. **1D curve plotting**
 
@@ -224,7 +224,7 @@ IPython を起動すると, ``from pylab import *`` を行わなくても,
    :scale: 80
    
 
-**二次元配列** （画像のような）
+**2次元配列** （画像のような）
 
 .. **2D arrays** (such as images)   
 
@@ -266,11 +266,11 @@ LaTeX のフォント, 図の取り込み, ヒストグラム等.
     * an example gallery with corresponding sourcecode
       http://matplotlib.sourceforge.net/gallery.html
 
-**三次元作図**
+**3次元作図**
 
 .. **3D plotting**
 
-三次元可視化のためには **Mayavi** パッケージを使います.
+3次元可視化のためには **Mayavi** パッケージを使います.
 **ipython -pylab -wthread** のオプションで **iPython を再起動** して速やかに例を実行しましょう：
 
 .. For 3D visualization, we use another package: **Mayavi**. A quick example:
@@ -358,8 +358,8 @@ Fortran や Matlab ではインデクスは 1 から始まります.
 
 以下のことに注意しましょう：
 
- * 二次元では次元の最初が行に対応し, 二番目が列に対応します.
- * 二次元以上の配列 ``a`` に対しては `a[0]` は未指定の次元の要素全てと解釈されます.
+ * 2次元では次元の最初が行に対応し, 2番目が列に対応します.
+ * 2次元以上の配列 ``a`` に対しては `a[0]` は未指定の次元の要素全てと解釈されます.
 
 .. Note that:
 
@@ -518,7 +518,7 @@ Numpy のインデクス指定, スライスを簡単に図でまとめると...
     >>> np.shape(b)
     (3, 4)
 
-そのうえ一番目の次元の長さは ``np.alen``
+そのうえ1番目の次元の長さは ``np.alen``
 （リストに対する ``len`` からのアナロジー）
 で求めることができます,
 そして全要素の数は ``ndarray.size`` で取得できます.
@@ -1402,7 +1402,7 @@ Numpy の配列はスライスだけでなく,
     :align: center
     :scale: 70
 
-**Remark** ： ``numpy.ogrid`` 関数を二つの「代表的次元」を与えて使うことで,
+**Remark** ： ``numpy.ogrid`` 関数を2つの「代表的次元」を与えて使うことで,
 前の例での x, y ベクトルを直接作りだすことができます.
 
 .. **Remark** : the ``numpy.ogrid`` function allows to directly create vectors x
@@ -1451,7 +1451,7 @@ Numpy の配列はスライスだけでなく,
 
 有名な画像 Lena (http://www.cs.cmu.edu/~chuck/lennapg/) を使って numpy 配列の
 操作をやってみましょう.
-``scipy`` はこの画像の二次元配列を ``scipy.lena`` 関数で提供しています.
+``scipy`` はこの画像の2次元配列を ``scipy.lena`` 関数で提供しています.
 
 .. Let's do some manipulations on numpy arrays by starting with the famous image of
 .. Lena (http://www.cs.cmu.edu/~chuck/lennapg/). ``scipy`` provides a 2D array of

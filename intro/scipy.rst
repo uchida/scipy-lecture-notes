@@ -427,8 +427,8 @@ Scipy も同じものを使っていることがわかります::
 .. Statistical tests
 .. ...................
 
-統計的検定は判断指標です. 例えば, Gauss 過程から生成されたと過程される二つの観測の集合があるとき, 
-二つの集合に有意差があるかを調べるのに T検定を使うことができます::
+統計的検定は判断指標です. 例えば, Gauss 過程から生成されたと過程される2つの観測の集合があるとき, 
+2つの集合に有意差があるかを調べるのに T検定を使うことができます::
 
     >>> a = np.random.normal(0, 1, size=100)
     >>> b = np.random.normal(1, 1, size=10)
@@ -447,9 +447,9 @@ Scipy も同じものを使っていることがわかります::
 
 検定の結果は以下で構成されます：
 
-    * T 統計値：二つの確率過程の差に比例し, 有意差の程度を示す数字
+    * T 統計値：2つの確率過程の差に比例し, 有意差の程度を示す数字
 
-    * *p 値*: 二つの過程が等価である確率. もし 1 に近ければ二つの過程はほぼ等価です.
+    * *p 値*: 2つの過程が等価である確率. もし 1 に近ければ2つの過程はほぼ等価です.
       0 に近ければ, 過程はより異なる意味をもつように思われます.
 
 .. The resulting output is composed of:
@@ -657,7 +657,7 @@ for stiff and nonstiff problems)
 
 .. .. _`ODEPACK Fortran library` : http://people.sc.fsu.edu/~jburkardt/f77_src/odepack/odepack.html
 
-``odeint`` は以下の形式の一階の常微分方程式系を解きます::
+``odeint`` は以下の形式の1階の常微分方程式系を解きます::
 
 ``dy/dt = rhs(y1, y2, .., t0,...)``
 
@@ -740,8 +740,8 @@ for stiff and nonstiff problems)
 
 .. _odeint-introduction.py : data/odeint-introduction.py
 
-``odeint`` の別の例として減衰振動子（二次の振動子）を扱いましょう.
-バネにつながったおもりは二階常微分方程式
+``odeint`` の別の例として減衰振動子（2次の振動子）を扱いましょう.
+バネにつながったおもりは2階常微分方程式
 ``y'' + 2 eps wo  y' + wo^2 y = 0`` に従います.
 ここに ``wo^2 = k/m`` で ``k`` はバネ定数で ``m`` は質量,
 ``eps=c/(2 m wo)`` で ``c`` は減衰定数です.
@@ -774,8 +774,8 @@ for stiff and nonstiff problems)
 ..     >>> eps < 1
 ..     True
 
-``odeint`` で二階微分方程式を解くにはベクトル形式 ``Y=(y, y')``
-で書かれる一階微分方程式の組に直す必要があります.
+``odeint`` で2階微分方程式を解くにはベクトル形式 ``Y=(y, y')``
+で書かれる1階微分方程式の組に直す必要があります.
 
 そのために ``nu = 2 eps wo = c / m`` と ``om = wo^2 = k/m`` を定義すると便利です::
 
@@ -956,7 +956,7 @@ fftpack-illustration.py によって結果を Matplitlib の figure で作成し
 ..     >>> noise = (np.random.random(10)*2 - 1) * 1e-1
 ..     >>> measures = np.sin(2 * np.pi * measured_time) + noise
 
-``interp1d`` クラスが一次の補間関数を使うために作られています::
+``interp1d`` クラスが1次の補間関数を使うために作られています::
 
     >>> from scipy.interpolate import interp1d
     >>> linear_interp = interp1d(measured_time, measures)
@@ -976,7 +976,7 @@ fftpack-illustration.py によって結果を Matplitlib の figure で作成し
 ..     >>> computed_time = np.linspace(0, 1, 50)
 ..     >>> linear_results = linear_interp(computed_time)
 
-``kind`` キーワード引数をオプションとして与えることで三次補間も選択できます::
+``kind`` キーワード引数をオプションとして与えることで3次補間も選択できます::
 
     >>> cubic_interp = interp1d(measured_time, measures, kind='cubic')
     >>> cubic_results = cubic_interp(computed_time)
@@ -997,7 +997,7 @@ scipy-interpolation.py_ によって結果を Matplotlib の figure にまとめ
 
 .. _scipy-interpolation.py : data/scipy-interpolation.py
 
-``scipy.interpolate.interp2d`` は ``inter1d`` と似ていまが二次元配列です.
+``scipy.interpolate.interp2d`` は ``inter1d`` と似ていまが2次元配列です.
 ``interp`` ファミリーについて注意しておくことは評価する時間は測定時間の範囲内に留める必要があるということです.
 より高度なスプライン補間の例については :ref:`summary_exercise_stat_interp` 統括演習を見て下さい.
 
@@ -1184,8 +1184,8 @@ BFGS アルゴリズムはこれをするよい方法です::
 .. -----------------------------------------
 
 統括演習では Numpy, Scipy そして Matplotlib を主に使います.
-Python での科学技術計算を実生活における例として使うことを第一の目的としています.
-一度土台を築けば, 興味あるユーザはさらなる演習を試みていくでしょう.
+Python での科学技術計算を実生活における例として使うことを最初の目的としています.
+1度土台を築けば, 興味あるユーザはさらなる演習を試みていくでしょう.
 
 .. The summary exercices use mainly Numpy, Scipy and Matplotlib. They first aim at
 .. providing real life examples on scientific computing with Python. Once the

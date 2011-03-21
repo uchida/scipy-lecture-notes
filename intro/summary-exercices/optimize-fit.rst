@@ -41,7 +41,7 @@ Lidar は光学距離計測系で, 距離測定のために散乱光の性質を
 レーザービームの足跡が地球上約 1m に及ぶと, 2方向伝搬の間でビームは複数の対象に当りうります
 （例えば木やビルの頂上と地面）
 レーザービームが各対象に当った寄与の和は複数のピークを持った複雑な信号を作りだします,
-各ピークに一つの対象の情報が含まれています.
+各ピークに1つの対象の情報が含まれています.
 
 .. In this tutorial, the goal is to analyze the waveform recorded by the lidar
 .. system [#data]_. Such a signal contains peaks whose center and amplitude permit to
@@ -52,14 +52,14 @@ Lidar は光学距離計測系で, 距離測定のために散乱光の性質を
 .. the laser beam then produces a complex signal with multiple peaks, each one
 .. containing information about one target.
 
-これらのデータから情報を取り出す最新技術の一つはデータをレーザービームに当った寄与を表現する
+これらのデータから情報を取り出す最新技術の1つはデータをレーザービームに当った寄与を表現する
 Gauss 関数の和として分解する方法があります.
 
 .. One state of the art method to extract information from these data is to
 .. decompose them in a sum of Gaussian functions where each function represents the
 .. contribution of a target hit by the laser beam.
 
-したがって, 波形を一つの Gauss 関数または Gauss 関数の和でフィットするために
+したがって, 波形を1つの Gauss 関数または Gauss 関数の和でフィットするために
 ``sicpy.optimize`` モジュールを使います.
 
 .. Therefore, we use the ``scipy.optimize`` module to fit a waveform to one or a sum of
@@ -98,7 +98,7 @@ Gauss 関数の和として分解する方法があります.
    :align: center
 
 As you can notice, this waveform is a 80-bin-length signal with a single peak.
-気づくと思いますが, この波形は一つのピークを持った 80 の区画に分けられた信号です.
+気づくと思いますが, この波形は1つのピークを持った 80 の区画に分けられた信号です.
 
 .. As you can notice, this waveform is a 80-bin-length signal with a single peak.
 
@@ -108,7 +108,7 @@ As you can notice, this waveform is a 80-bin-length signal with a single peak.
 .. Fitting a waveform with a simple Gaussian model
 .. ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-信号は単純なので一つの Gauss 関数とバックグラウンドノイズに対応するずれとして表現できます.
+信号は単純なので1つの Gauss 関数とバックグラウンドノイズに対応するずれとして表現できます.
 信号を関数でフィットするためには以下をしなければいけません：
 
 * モデルを定義
@@ -237,7 +237,7 @@ Python では以下で定義できます::
 .. ~~~~~~~~~~~~~
 
 * より複雑な波形に挑戦してみましょう （例として ``data/waveform_2.npy`` ）
-  これは三つの著しいピークを含みます. 1つの Gauss 関数 の代わりに3つの Gauss 関数の和を使う必要があります.
+  これは3つの著しいピークを含みます. 1つの Gauss 関数 の代わりに3つの Gauss 関数の和を使う必要があります.
 
 .. * Try with a more complex waveform (for instance ``data/waveform_2.npy``)
 ..   that contains three significant peaks. You must adapt the model which is

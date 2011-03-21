@@ -112,7 +112,7 @@ Pythonで科学技術計算の積み木を組む
     
       http://www.scipy.org/
 
-* **Matplotlib** ： 二次元可視化, 出版品質のプロット
+* **Matplotlib** ： 2次元可視化, 出版品質のプロット
 
   http://matplotlib.sourceforge.net/
 
@@ -134,7 +134,7 @@ Pythonで科学技術計算の積み木を組む
           :scale: 50
   
 
-* **Mayavi** ： 三次元可視化
+* **Mayavi** ： 3次元可視化
 
   http://code.enthought.com/projects/mayavi/
 
