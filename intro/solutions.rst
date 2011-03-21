@@ -1,23 +1,37 @@
 ===========
- Solutions
+ 解答
 ===========
+
+.. ===========
+..  Solutions
+.. ===========
 
 
 .. _pi_wallis:
 
-The Pi Wallis Solution
-----------------------
+Wallis の円周率の解答
+---------------------
 
-Compute the decimals of Pi using the Wallis formula:
+.. The Pi Wallis Solution
+.. ----------------------
+
+Wallis の公式を使って, Pi の値を計算しなさい：
+
+.. Compute the decimals of Pi using the Wallis formula:
 
 .. literalinclude:: solutions/pi_wallis.py
 
 .. _quick_sort:
 
-The Quicksort Solution
-----------------------
+クイックソートの解答
+--------------------
 
-Implement the quicksort algorithm, as defined by wikipedia:
+.. The Quicksort Solution
+.. ----------------------
+
+クイックソートアルゴリズムを実装しなさい, Wikipedia での定義:
+
+.. Implement the quicksort algorithm, as defined by wikipedia:
 
 ::
 
@@ -35,11 +49,16 @@ Implement the quicksort algorithm, as defined by wikipedia:
 
 .. _fibonacci:
 
-Fibonacci sequence
-------------------
+Fibonacci 数列
+--------------
 
-Write a function that displays the ``n`` first terms of the Fibonacci
-sequence, defined by:
+.. Fibonacci sequence
+.. ------------------
+
+Fibonacci 数列の第一項から n 項までを表示する関数を書きなさい, Fibonacci 数列の定義は：
+
+.. Write a function that displays the ``n`` first terms of the Fibonacci
+.. sequence, defined by:
 
 * ``u_0 = 1; u_1 = 1``
 * ``u_(n+2) = u_(n+1) + u_n``
@@ -69,38 +88,58 @@ sequence, defined by:
 
 .. _dir_sort:
 
-The Directory Listing Solution
-------------------------------
+ディレクトリリストの解答
+------------------------
 
-Implement a script that takes a directory name as argument, and
-returns the list of '.py' files, sorted by name length.
+.. The Directory Listing Solution
+.. ------------------------------
 
-**Hint:** try to understand the docstring of list.sort
+ディレクトリの名前を引数としてとり, 名前の長さによって並べられた '.py' ファイルのリストを返す関数を実装しなさい.
+
+.. Implement a script that takes a directory name as argument, and
+.. returns the list of '.py' files, sorted by name length.
+
+**ヒント：** list.sort のドキュメンテーション文字列を理解してみましょう
+
+.. **Hint:** try to understand the docstring of list.sort
 
 .. literalinclude:: solutions/dir_sort.py
 
 .. _data_file:
 
-The Data File I/O Solution
---------------------------
+データファイルの入出力の解答
 
-Write a function that will load the column of numbers in ``data.txt``
-and calculate the min, max and sum values.
+.. The Data File I/O Solution
+.. --------------------------
 
-Data file:
+``data.txt`` の各列の数字を読み込み最小値, 最大値, 和を計算する関数を書きなさい.
+
+.. Write a function that will load the column of numbers in ``data.txt``
+.. and calculate the min, max and sum values.
+
+データファイル：
+
+.. Data file:
 
 .. literalinclude:: solutions/data.txt
 
-Solution:
+解答：
+
+.. Solution:
 
 .. literalinclude:: solutions/data_file.py
 
 .. _path_site:
 
-The PYTHONPATH Search Solution
-------------------------------
+PYTHONPATH 検索の解答
+---------------------
 
-Write a program to search your PYTHONPATH for the module ``site.py``.
+.. The PYTHONPATH Search Solution
+.. ------------------------------
+
+site.py モジュールが PYTHONPATH のどこにあるか検索するプログラムを書きなさい.
+
+.. Write a program to search your PYTHONPATH for the module ``site.py``.
 
 .. literalinclude:: solutions/path_site.py
 
