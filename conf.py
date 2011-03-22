@@ -245,6 +245,8 @@ latex_preamble = r"""
 % use sans-serif bold font for chapter and section if available
 \usepackage[deluxe,expert,bold]{otf}
 \renewcommand{\headfont}{\bfseries\sffamily\propshape}
+% use pdf mediabox
+\usepackage{mediabb}
 """
 
 latex_elements = {

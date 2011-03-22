@@ -182,19 +182,13 @@ Sprogø の最大風速のために ``UnivariateSpline`` を使います::
 ..     >>> fifty_wind
 ..     array([ 32.97989825])
 
-結果を Matplotlib の figure にまとめます.
+結果を Matplotlib の figure にまとめます：
 
-.. The results are now gathered on a Matplotlib figure.
+.. plot:: pyplots/cumulative_wind_speed_prediction.py
 
-.. image:: cumulative-wind-speed-prediction.png
-   :align: center
+.. The results are now gathered on a Matplotlib figure:
 
-これらの手順を cumulative-wind-speed-prediction.py_ にまとめてあります.
-
-.. All those steps have been gathered in the script
-.. cumulative-wind-speed-prediction.py_.
-
-.. _cumulative-wind-speed-prediction.py: ../../data/cumulative-wind-speed-prediction.py
+.. .. plot:: pyplots/cumulative_wind_speed_prediction.py
 
 Gumbell 分布での練習問題
 ~~~~~~~~~~~~~~~~~~~~~~~~
@@ -205,26 +199,31 @@ Gumbell 分布での練習問題
 興味ある読者は21年の間測定された風速のデータを使って練習問題を作りたいと思っているでしょう.
 測定周期は90分です（元の周期は10分でしたが, 練習問題の準備を簡単にするためファイルサイズを小さくしました）.
 データは sprog-windspeeds.npy_ に numpy 形式で保存されています.
+練習問題が終わるまで, 作図のソースコードはみないで下さい.
 
-.. The interested readers are now invited to make an exercice by using the
-.. wind speeds measured over 21 years. The measurement period is around 90
-.. minutes (the original period was around 10 minutes but the file size has
-.. been reduced for making the exercice setup easier). The data are stored
-.. in numpy format inside the file sprog-windspeeds.npy_.
+.. The interested readers are now invited to make an exercice by using the wind
+.. speeds measured over 21 years. The measurement period is around 90 minutes (the
+.. original period was around 10 minutes but the file size has been reduced for
+.. making the exercice setup easier). The data are stored in numpy format inside
+.. the file sprog-windspeeds.npy_. Do not look at the source code for the plots until you have completed the exercise.
 
-.. _sprog-windspeeds.npy : ../../data/sprog-windspeeds.npy
+.. _sprog-windspeeds.npy : ../data/sprog-windspeeds.npy
 
 * まずは年間での最大値を入手して matplotlib の棒グラフで表示しましょう.
+
+  .. plot:: pyplots/sprog_annual_maxima.py
 
 .. * The first step will be to find the annual maxima by using numpy
 ..   and plot them as a matplotlib bar figure.
 
-.. image:: sprog-annual-maxima.png
-   :align: center
+.. .. plot:: pyplots/sprog_annual_maxima.py
+
 
 * 次は累積確率 ``p_i`` に対して定義される Gumbell 分布 ``-log( -log(p_i) )``
   を線形分位点関数のフィッティングに使ってみましょう（ ``UnvariateSpline`` の次数を定義するのを忘れないように）.
   年間の最大値と Gumbell 分布は以下のような図になるはずです.
+
+  .. plot:: pyplots/gumbell_wind_speed_prediction.py
 
 .. * The second step will be to use the Gumbell distribution on cumulative
 ..   probabilities ``p_i`` defined as ``-log( -log(p_i) )`` for fitting
@@ -232,19 +231,10 @@ Gumbell 分布での練習問題
 ..   of the ``UnivariateSpline``). Plotting the annual maxima versus the
 ..   Gumbell distribution should give you the following figure.
 
-.. image:: gumbell-wind-speed-prediction.png
-   :align: center
+.. .. plot:: pyplots/gumbell_wind_speed_prediction.py
 
 * 最後に50年の間に起きる最大風速として 34.23 m/s を得るはずです.
 
 .. * The last step will be to find 34.23 m/s for the maximum wind speed
 ..   occuring every 50 years.
-
-解答ができたら, 自分の解答と gumbell-wind-speed-prediction.py_
-の解答例とを比較してみましょう.
-
-.. Once done, you may compare your code with a solution example available in the
-.. script gumbell-wind-speed-prediction.py_.
-
-.. _gumbell-wind-speed-prediction.py : ../../data/gumbell-wind-speed-prediction.py
 
