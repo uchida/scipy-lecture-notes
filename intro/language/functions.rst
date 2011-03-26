@@ -431,9 +431,8 @@ Python ではこのような区別はいくぶん不自然で,
     簡潔化された標準を定めています, 
     それらは,  ``パラメータ`` 節や ``example`` 節等を含んでいて, 
     自分で書いた関数について参考にしたいと思うでしょう. 
-    http://projects.scipy.org/numpy/wiki/codingstyleguidelines#docstring-standard 
-    と http://projects.scipy.org/numpy/browser/trunk/doc/example.py#l37
-    を見てください. 
+    https://github.com/numpy/numpy/blob/master/doc/HOWTO_DOCUMENT.rst.txt
+    と https://github.com/numpy/numpy/blob/master/doc/example.py#L37 を見てください.
 
 ..
     .. note:: **docstring guidelines**
