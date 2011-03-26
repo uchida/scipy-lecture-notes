@@ -897,7 +897,7 @@ figure の見た目を決定する以下のいくつかのパラメータがあ�
 .. will be used most of the time. Only the number of the figure
 .. is frequently changed.
 
-GUI を使っている場合, 右上角の×ボタンをクリックすれば figure が閉じます.
+GUI を使っている場合, 右上角の x ボタンをクリックすれば figure が閉じます.
 しかし, ``close`` を呼びだすことで, figure をプログラムから閉じることができます.
 引数によって閉じるものが違い, 以下の場合があります
 (1) 現在の figure （引数無しの場合）
@@ -952,7 +952,7 @@ Subplots
     :width: 25%
 
 図を欲しい数だけ配置することができます.
-2×2で配置したい場合は ``subplot(221)``,  ``subplot(222)``,
+2x2で配置したい場合は ``subplot(221)``,  ``subplot(222)``,
 ``subplot(223)``, ``subplot(224)`` で作ります. 結果はこうです：
 
 .. You can arrange as many figures as you want. A two-by-two arrangement can
@@ -1009,7 +1009,7 @@ Axes は subplot によく似ています, しかし figure の任意の位置�
 練習問題
 ++++++++
 
-1) 5×5 インチと 10×10 インチの2つの図を描きなさい.
+1) 5x5 インチと 10x10 インチの2つの図を描きなさい.
 
 2) 4つの subplot を figure に追加しなさい. 最外部の軸にのみ目盛とラベルをつけなさい.
 
@@ -1728,7 +1728,7 @@ Axes と Subplot クラス
 .. Since we are not in the interactive pylab-mode, we
 .. need to import the class ``Figure`` explicitly (``#1``).
 
-figure のサイズを8×5インチに設定します (``#2``).
+figure のサイズを8x5インチに設定します (``#2``).
 新しい figure を初期化します (``#3``),
 そして fig に ``subplot`` を追加します (``#4``).
 MATLAB のように ``111`` で 1, 1 の位置に1番の作図を意味します.

@@ -245,7 +245,7 @@ IPython を起動すると, ``from pylab import *`` を行わなくても,
    :scale: 80
 
 matplotlib には他にも多くの機能があります：色の選択, マーカーのサイズ, 
-LaTeX のフォント, 図の取り込み, ヒストグラム等.
+LaTeX のフォント, 図の取り込み, 頻度分布等.
 
 .. There are many other features in matplotlib: color choice, marker size,
 .. latex font, inclusions within figures, histograms, etc.
@@ -1043,7 +1043,7 @@ IPython は os モジュールとその統合された機能によってシェ�
 
 .. 8. Which organism had the highest percentage of women in 2004? (hint: np.argmax)
 
-9. 2006 年の各組織の女性の割合のヒストグラムを作りなさい.
+9. 2006 年の各組織の女性の割合の頻度分布作りなさい.
    （ヒント：np.histgram, また matplotlib の bar か plot で可視化できます.）
 
 .. 9. Create a histogram of the percentage of women the different organisms in 2006
@@ -1233,7 +1233,7 @@ Numpy の配列はスライスだけでなく,
 ``numpy`` の配列に対する基本演算は同じサイズの配列の各要素に対して行なわれます.
 しかし, ``numpy`` がサイズの異なる配列を同じサイズの配列に変換できれば,
 異なるサイズの配列に対しても演算を行うことができます.
-この変換を **ブロードキャスト** と呼びます.
+この変換を **ブロードキャスト (broadcast)** と呼びます.
 
 .. Basic operations on ``numpy`` arrays (addition, etc.) are done element by
 .. element, thus work on arrays of the same size. Nevertheless, it's possible to do
@@ -1310,7 +1310,8 @@ Numpy の配列はスライスだけでなく,
 .. when we want to solve a problem whose output data is an array with more
 .. dimensions than input data.
 
-**例** ： ルート 66 での各街（シカゴ, スプリングフィールド, セントルイス, タルサ,
+**例** ： ルート 66 での各街 (Chicago, Springfield, Saint-Louis, Tulsa,
+Oklahoma City, Amarillo, Santa Fe, Albucquerque, Flagstaff and Los Angeles)
 オクラホマシティ, アマリロ, サンタフェ, アルバカーキ, フラグスタッフ, ロサンゼルス）
 の間の距離（マイル）を表わす配列を作ってみましょう.
 
@@ -1373,7 +1374,7 @@ Numpy の配列はスライスだけでなく,
 ..     * Except some rare cases, write variable names and comments in english.
 
 多くの格子やネットワークを扱う問題ではブロードキャストを使うことができます.
-例えば, 10x10 の格子の原点からの距離を計算したければこうします
+例えば, 10x10の格子の原点からの距離を計算したければこうします
 
 .. A lot of grid-based or network-based problems can also use broadcasting. For instance,
 .. if we want to compute the distance from the origin of points on a 10x10 grid, we

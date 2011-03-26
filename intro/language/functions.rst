@@ -199,8 +199,8 @@ python のスライスを実装した, より複雑な例：
     with a variable number of arguments, especially when default values are
     to be used in most calls to the function.
 
-値渡し (passed by value)
-------------------------
+値渡し
+------
 
 ..  Passed by value
     ---------------
