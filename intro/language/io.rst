@@ -5,14 +5,14 @@
 .. ================
 
 もれなく紹介するために, ここでは Python の入出力についての情報について扱います.
-ファイルの読み書きは後で Numpy のメソッドを使うので,
+ファイルの読み書きには後で Numpy のメソッドを使うので,
 最初に読むときは飛ばしてもかまいません.
 
 .. To be exhaustive, here are some informations about input and output in Python.
 .. Since we will use the Numpy methods to read and write files, you may skip this
 .. chapter at first reading.
 
-ファイルには **文字列** を読み書きします （他の型も文字列に変換されます）
+ファイルに **文字列** を読み書きします （他の型も文字列に変換されます）
 ファイルに書き込むには
 
 .. We write or read **strings** to/from files (other types must be converted to
@@ -81,7 +81,7 @@
 * 読み書き: ``r+``
 * バイナリモード： ``b``
 
-  * バイナリファイルのために使うことに注意, 特に Windows で.
+  * バイナリファイルのために使うことに注意, Windows では特に注意して下さい.
 
 .. * Read-only: ``r``
 .. * Write-only: ``w``

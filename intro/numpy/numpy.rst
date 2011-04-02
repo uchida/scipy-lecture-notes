@@ -182,11 +182,11 @@ Numpy データ配列作成
     >>> from pylab import * # imports everything in the namespace
 
 python(x,y) に付属する IPython か（Linux で） ``ipython -pylab`` として
-IPython を起動すると, ``from pylab import *`` を行わなくても, 
+IPython を起動すると ``from pylab import *`` を行うことなく
 全ての pylab の関数やオブジェクトがインポートされます.
 このチュートリアルでは ``from pylab import *`` か
 ``ipython -pylab`` を行なっているものとして扱います,
-その結果 ``pylab.function()`` と書かず直接 ``function`` と書きます.
+その結果として ``pylab.function()`` と書かずに直接 ``function`` と書きます.
     
 .. If you launched Ipython with python(x,y), or with ``ipython
 .. -pylab`` (under Linux), all the functions/objects of pylab are already
@@ -293,8 +293,7 @@ LaTeX のフォント, 図の取り込み, 頻度分布等.
    :align: center
    :scale: 60
 
-mayavi/mlab のウィンドウは, ドラッグして画像を回転する, マウスホイールで拡大等, 
-インタラクティブに開きます
+mayavi/mlab のウィンドウはインタラクティブに開きます：ドラッグして画像を回転する, マウスホイールで拡大等.
 
 .. The mayavi/mlab window that opens is interactive : by clicking on the left mouse button
 .. you can rotate the image, zoom with the mouse wheel, etc.
@@ -359,7 +358,7 @@ Fortran や Matlab ではインデクスは 1 から始まります.
 以下のことに注意しましょう：
 
  * 2次元では次元の最初が行に対応し, 2番目が列に対応します.
- * 2次元以上の配列 ``a`` に対しては `a[0]` は未指定の次元の要素全てと解釈されます.
+ * 2次元以上の配列 ``a`` に対しては `a[0]` は未指定の次元の全ての要素として解釈されます.
 
 .. Note that:
 
@@ -373,7 +372,7 @@ Fortran や Matlab ではインデクスは 1 から始まります.
 .. Slicing
 .. -------
 
-インデクス指定のように Python のシークエンスのスライスと似ています
+インデクス指定のように Python におけるシーケンスのスライスと似ています
 
 .. Like indexing, it's similar to Python sequences slicing::
 
@@ -394,7 +393,7 @@ Fortran や Matlab ではインデクスは 1 から始まります.
     >>> a[:4]
     array([0, 1, 2, 3])
 
-``start:end:stop`` はインデクスの集まりを表わす, ``slice`` オブジェクトです.
+``start:end:stop`` はインデクスの集まりを表わす ``slice`` オブジェクトです.
 ``slice`` は明示的に作ることができます
 
 .. ``start:end:step`` is a ``slice`` object which represents the set of indexes
@@ -410,8 +409,8 @@ Fortran や Matlab ではインデクスは 1 から始まります.
     >>> a[sl], b[sl]
     (array([1, 3, 5, 7]), array([ 3,  7, 11, 15]))
 
-slice の3つの要素は必須ではありません：デフォルトでは `start` は 0 `end` は最後で
-`step` は 1 です
+slice の3つの要素は必須ではありません：デフォルトでは `start` は0で
+`end` は最後で `step` は 1 です
 
 .. All three slice components are not required: by default, `start` is 0, `end` is the
 .. last and `step` is 1::
@@ -464,9 +463,9 @@ Numpy のインデクス指定, スライスを簡単に図でまとめると...
    :align: center
 
 スライス操作は元の配列の **ビュー (view)** を作ります, 
-**ビュー** は単に配列のデータへのアクセス法です.
+**ビュー** は単なる配列のデータへのアクセス法です.
 なので, 元の配列はメモリ上でコピーされません.
-**ビューが変更されたとき, 元の配列はこのように変更されます**
+**ビューが変更されると元の配列はこのように変更されます**
 
 .. A slicing operation creates a **view** on the original array, which is just a way of
 .. accessing array data. Thus the original array is not copied in memory. *When
@@ -486,7 +485,7 @@ Numpy のインデクス指定, スライスを簡単に図でまとめると...
     array([12,  1,  2,  3,  4,  5,  6,  7,  8,  9])
 
 この挙動をはじめて見たらおどろくでしょう...
-しかし, これによって多くのメモリが節約されます.
+しかし, これによって多くのメモリが節約されるのです.
 
 .. This behaviour can be surprising at first sight... but it allows to save a lot
 .. of memory.
@@ -518,7 +517,7 @@ Numpy のインデクス指定, スライスを簡単に図でまとめると...
     >>> np.shape(b)
     (3, 4)
 
-そのうえ1番目の次元の長さは ``np.alen``
+さらに1番目の次元の長さは ``np.alen``
 （リストに対する ``len`` からのアナロジー）
 で求めることができます,
 そして全要素の数は ``ndarray.size`` で取得できます.
@@ -534,7 +533,7 @@ Numpy のインデクス指定, スライスを簡単に図でまとめると...
     >>> b.size
     12
 
-いくつかの Numpy の関数は別のシェイプを持つ配列から異なるシェイプを持つ配列を作ることができます.
+いくつかの Numpy の関数は配列からシェイプの異なる配列を作れます.
 
 .. Several NumPy functions allow to create an array with a different shape, from
 .. another array::
@@ -583,7 +582,7 @@ Numpy のインデクス指定, スライスを簡単に図でまとめると...
            [2, 3],
            [0, 0]])
 
-小さな配列が繰り返されてできた大きな配列は
+小さな配列をタイル張りのように繰り返してできる大きな配列は
 
 .. A large array can be tiled with a smaller one::
 
@@ -611,7 +610,7 @@ Numpy のインデクス指定, スライスを簡単に図でまとめると...
 .. By using miscellaneous constructors, indexing, slicing, and simple operations
 .. (+/-/x/:), large arrays with various patterns can be created.
 
-**例** ： この配列を作成せよ
+**例** ： この配列を作成しましょう
 
 .. **Example** : create this array::
 
@@ -656,9 +655,9 @@ Numpy のインデクス指定, スライスを簡単に図でまとめると...
 .. Real data: read/write arrays from/to files
 .. ------------------------------------------
 
-しばしば, 実験やシミュレーションで得られた結果はファイルに書き出されます.
-これらの結果は Numpy の配列として処理するために Python に読み込まれなければいけません.
-また, 結果をファイルに保存する必要があります.
+たいていの場合, 実験やシミュレーションで得られた結果はファイルに書き出されます.
+Numpy の配列として処理するためこれらの結果を Python に読み込まれなければいけません.
+また, 結果をファイルに保存する必要もあるでしょう.
 
 .. Often, our experiments or simulations write some results in files. These results
 .. must then be loaded in Python as NumPy arrays to be able to manipulate them. We
@@ -677,39 +676,39 @@ Numpy のインデクス指定, スライスを簡単に図でまとめると...
 
     * iPython のコマンドを使いましょう： ``cd``, ``pwd``, tab-補完
 
-    .. sourcecode:: ipython
-     
-      In [1]: mkdir python_scripts
-     
-      In [2]: cd python_scripts/ 
-      /home/gouillar/python_scripts
-     
-      In [3]: pwd
-      Out[3]: '/home/gouillar/python_scripts'
-     
-      In [4]: ls
-     
-      In [5]: np.savetxt('integers.txt', np.arange(10))
-     
-      In [6]: ls
-      integers.txt
+      .. sourcecode:: ipython
+       
+        In [1]: mkdir python_scripts
+       
+        In [2]: cd python_scripts/ 
+        /home/gouillar/python_scripts
+       
+        In [3]: pwd
+        Out[3]: '/home/gouillar/python_scripts'
+       
+        In [4]: ls
+       
+        In [5]: np.savetxt('integers.txt', np.arange(10))
+       
+        In [6]: ls
+        integers.txt
 
     * os（OS のルーチン）と os.path（パスの管理）モジュール
 
-    ::
-
-      >>> import os, os.path  
-      >>> current_dir = os.getcwd()
-      >>> current_dir
-      '/home/gouillar/sandbox'
-      >>> data_dir = os.path.join(current_dir, 'data')
-      >>> data_dir
-      '/home/gouillar/sandbox/data'
-      >>> if not(os.path.exists(data_dir)):
-      ...     os.mkdir('data')
-      ...     print "created 'data' folder"
-      ...     
-      >>> os.chdir(data_dir) # or in Ipython : cd data
+      ::
+   
+        >>> import os, os.path  
+        >>> current_dir = os.getcwd()
+        >>> current_dir
+        '/home/gouillar/sandbox'
+        >>> data_dir = os.path.join(current_dir, 'data')
+        >>> data_dir
+        '/home/gouillar/sandbox/data'
+        >>> if not(os.path.exists(data_dir)):
+        ...     os.mkdir('data')
+        ...     print "created 'data' folder"
+        ...     
+        >>> os.chdir(data_dir) # or in Ipython : cd data
 
 .. To move in a folder hierarchy:
 
@@ -872,8 +871,8 @@ IPython は os モジュールとその統合された機能によってシェ�
     >>> l2 = np.loadtxt(filelist[2])
 
 注意：配列は Excel/Calc ファイルや HDF5 ファイル等からも作成できます
-（ただ, 追加のモジュール, xlrd, pytables などが必要です. 
-これらについてここでは述べません.）.
+（ただし, 追加のモジュール xlrd, pytables などが必要です. 
+これらについてはここで述べません.）.
 
 .. Note: arrays can also be created from Excel/Calc files, HDF5 files, etc.
 .. (but with additional modules not described here: xlrd, pytables, etc.).
@@ -884,7 +883,7 @@ IPython は os モジュールとその統合された機能によってシェ�
 .. Simple mathematical and statistical operations on arrays
 .. --------------------------------------------------------
 
-いくつかの配列に対する操作は Numpy でそのまま使えます（さらに, これらは一般にとても効率的です）.
+いくつかの配列に対する操作は Numpy でそのまま使えます（そしてこれらは一般にとても効率的です）.
 
 .. Some operations on arrays are natively available in NumPy (and are generally
 .. very efficient)::
@@ -994,27 +993,27 @@ IPython は os モジュールとその統合された機能によってシェ�
 
 .. **Exercise** : statistics on the number of women in french research (INSEE data)
 
-1. ``data`` ディレクトリの ``organisms.txt`` と ``women_percentage.txt`` を入手
+1. ``data`` ディレクトリの ``organisms.txt`` と ``women_percentage.txt`` を入手しましょう
 
 .. 1. Get the following files ``organisms.txt`` and ``women_percentage.txt``
 ..    in the ``data`` directory. 
 
-2. ``np.loadtxt`` を使って ``women_percentage.txt`` を開き, 配列 ``data`` を作成しなさい.
-   この配列はどんなシェイプでしょう?
+2. ``np.loadtxt`` を使って ``women_percentage.txt`` を開き, 配列 ``data`` を作成しましょう.
+   この配列はどんなシェイプでしょうか?
 
 .. 2. Create a ``data`` array by opening the ``women_percentage.txt`` file
 ..    with ``np.loadtxt``. What is the shape of this array? 
 
 3. 列は 2006 から 2001 までの年に対応します.
-   これらの年に対応する整数の配列 ``year`` を作成しなさい.
+   これらの年に対応する整数の配列 ``year`` を作成しましょう.
 
 .. 3. Columns correspond to year 2006 to 2001. Create a ``years`` array with
 ..    integers corresponding to these years.
 
 4. 行は研究機関に対応します. 各機関の名前は ``organisms.txt`` に保存されています.
-   このファイルを開いて配列 ``organisms`` を作成しなさい.
+   このファイルを開いて配列 ``organisms`` を作成しましょう.
    ただし,  ``np.loadtxt`` はデフォルトで浮動小数点数の配列を作ることに注意して下さい, 
-   そして, 文字列を使うことを指定しなければなりません：
+   そして文字列を使うことを指定しなければなりません：
    ``organisms = np.loadtxt('organisms.txt, dtype=str)``
 
 .. 4. The different lines correspond to the research organisms whose names are
@@ -1023,33 +1022,33 @@ IPython は os モジュールとその統合された機能によってシェ�
 ..    and it must be specified to use strings instead: ``organisms =
 ..    np.loadtxt('organisms.txt', dtype=str)``
 
-5. ``data`` の行数が organisms の行数と等しいことをチェックしなさい。
+5. ``data`` の行数が organisms の行数と等しいことをチェックしましょう.
 
 .. 5. Check that the number of lines of ``data`` equals the number of lines of the
 ..    organisms.
 
-6. 全ての組織, 年度の中での最大女性の割合を求めよ。
+6. 全ての組織, 年度の中での最大女性の割合を求めましょう.
 
 .. 6. What is the maximal percentage of women in all organisms, for all years taken
 ..    together? 
 
-7. 各々の組織における女性の割合の平均値の配列を作りなさい.
-   つまり, 軸(axis) 1 に対しての平均を求めなさい.
+7. 各々の組織における女性の割合の平均値の配列を作りましょう.
+   つまり, 軸(axis) 1 に対しての平均を求めましょう.
 
 .. 7. Create an array with the temporal mean of the percentage of women for each
 ..    organism? (i.e. the mean of ``data`` along axis 1).
 
-8. 2004年に女性の割合が最も高い組織を求めよ. （ヒント：np.argmax）
+8. 2004年に女性の割合が最も高い組織を求めましょう. （ヒント：np.argmax）
 
 .. 8. Which organism had the highest percentage of women in 2004? (hint: np.argmax)
 
-9. 2006 年の各組織の女性の割合の頻度分布作りなさい.
+9. 2006 年の各組織の女性の割合の頻度分布を作りましょう.
    （ヒント：np.histgram, また matplotlib の bar か plot で可視化できます.）
 
 .. 9. Create a histogram of the percentage of women the different organisms in 2006
 ..    (hint: np.histogram, then matplotlib bar or plot for visulalization)
 
-10. 各年度の女性が最も多い組織を要素とする配列を作成しなさい.
+10. 各年度の女性が最も多い組織を要素とする配列を作成しましょう.
 
 .. 10. Create an array that contains the organism where the highest women's
 ..     percentage is found for the different years.
@@ -1133,7 +1132,7 @@ Numpy の配列はスライスだけでなく,
     >>> a[[2, 5, 1, 8]] # or a[np.array([2, 5, 1, 8])]
     array([ 5,  5,  1, 11])
 
-整数配列を利用したインデクス指定は同じインデクスが何回も繰り返されていても使えます.
+インデクス指定は整数配列を使ってもでき, 同じインデクスが何回か繰り返されていても使えます.
 
 .. Indexing can be done with an array of integers, where the same index is repeated
 .. several time::
@@ -1207,12 +1206,12 @@ Numpy の配列はスライスだけでなく,
 .. (``data`` and ``organisms`` arrays)
 
 1. ``data`` の要素が 30% より高ければ 1 低ければ 0 となるような ``data``
-   と同じサイズの配列 ``sup30`` を作りなさい.
+   と同じサイズの配列 ``sup30`` を作りましょう.
 
 .. 1. Create a ``sup30`` array of the same size than ``data`` with a value of 1 if
 ..    the value of ``data`` is greater than 30%, 0 otherwise.
 
-2. 各年度毎の女性の割合が最大となる組織を含む配列を作成しなさい.
+2. 各年度毎の女性の割合が最大となる組織を含む配列を作成しましょう.
 
 .. 2. Create an array containing the organisme having the greatest percentage of
 .. women of each year.
@@ -1302,7 +1301,7 @@ Numpy の配列はスライスだけでなく,
     array([[ 2,  6],
            [ 6, 10]])
 
-ブロードキャストはいくぶん不思議にみえるでしょう,
+ブロードキャストは少々不思議に思えるでしょう,
 しかし入力データより出力データが多い問題を解くような場合
 自然に使うことができます.
 
@@ -1312,8 +1311,7 @@ Numpy の配列はスライスだけでなく,
 
 **例** ： ルート 66 での各街 (Chicago, Springfield, Saint-Louis, Tulsa,
 Oklahoma City, Amarillo, Santa Fe, Albucquerque, Flagstaff and Los Angeles)
-オクラホマシティ, アマリロ, サンタフェ, アルバカーキ, フラグスタッフ, ロサンゼルス）
-の間の距離（マイル）を表わす配列を作ってみましょう.
+間の距離（マイル）を表わす配列を作ってみましょう.
 
 .. **Example**: let's construct an array of distances (in miles) between cities of
 .. Route 66: Chicago, Springfield, Saint-Louis, Tulsa,
@@ -1403,7 +1401,7 @@ Oklahoma City, Amarillo, Santa Fe, Albucquerque, Flagstaff and Los Angeles)
     :align: center
     :scale: 70
 
-**注目** ： ``numpy.ogrid`` 関数を2つの「代表的次元」を与えて使うことで,
+**注目** ： ``numpy.ogrid`` 関数を2つの「代表的次元」を与えて使うことで
 前の例での x, y ベクトルを直接作りだすことができます.
 
 .. **Remark** : the ``numpy.ogrid`` function allows to directly create vectors x
@@ -1424,7 +1422,7 @@ Oklahoma City, Amarillo, Santa Fe, Albucquerque, Flagstaff and Los Angeles)
 
     
 これからわかるように ``np.ogrid`` はネットワークの計算を扱うのにとても便利です.
-一方, ``np.mgrid`` は完全なインデクスを持つ行列を直接提供します.
+一方 ``np.mgrid`` は完全なインデクスを持つ行列を直接提供します.
 これはブロードキャストの恩恵を受けられない（もしくは受けたない）場合に使うことができます.
 
 .. So, ``np.ogrid`` is very useful as soon as we have to handle computations on a

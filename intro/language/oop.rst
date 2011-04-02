@@ -19,7 +19,7 @@ OOP のゴールは：
 
 ここに簡単な例があります：例では Student **class** を作ります. 
 これは独自の関数（ **メソッド (method)** ）と変数（ **属性 (attribute)** ）を集めたオブジェクトで,
-こうやって使うことができます.
+こうして使うことができます.
 
 .. Here is a small example: we create a Student **class**, which is an object
 .. gathering several custom functions (**methods**) and variables (**attributes**),
@@ -77,9 +77,10 @@ MasterStudent クラスは Student から属性とメソッドを継承してい
 
 .. The MasterStudent class inherited from the Student attributes and methods.
 
-クラスとオブジェクト指向プログラミングのおかげで我々が出くわす異なるオブジェクト
-に対応する異なるクラス（Experiment クラス, Image クラス, Flow クラス等）を独自のメソッドや属性としてまとめることができます.
-中心となる基底クラスを考え, 継承することでコードを **再利用** できます.
+クラスとオブジェクト指向プログラミングの恩恵を受けることで,
+我々が遭遇する様々なオブジェクトに対応して
+独自のメソッドや属性を持った, 様々なクラスにコードをまとめることができます,
+さらに継承を使うことで基底クラスを中心とした変種を考える, コードを **再利用** できます.
 例：Flow 基底クラスから, StokesFlow, TurbulentFlow, PotentialFlow を作るなど.
 
 .. Thanks to classes and object-oriented programming, we can organize code

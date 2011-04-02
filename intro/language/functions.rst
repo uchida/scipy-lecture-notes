@@ -186,13 +186,13 @@ python のスライスを実装した, より複雑な例：
     In [107]: slicer(rhyme, step=2, start=1, stop=4)
     Out[107]: ['fish,', 'fish,']
 
-しかし, 関数定義と同じ順序で書くこと方がいい習慣です. 
+しかし, 関数定義と同じ順序で書くこと方がいい習慣とされます.
 
 ..  but it is good practice to use the same ordering as the function's
     definition.
 
 *キーワード引数* は多くの引数を持つ関数を定義するのにとても便利な機能です, 
-とりわけ, 多くの値がデフォルトの値を持つような関数では特に便利です. 
+とりわけ, 多くの値がデフォルトの値を持つような関数で特に便利です. 
 
 ..
     *Keyword arguments* are a very convenient feature for defining functions
@@ -209,8 +209,8 @@ python のスライスを実装した, より複雑な例：
 多くの言語 (C, Java, ...) では「値渡し (passing by value)」
 と「参照渡し (passing by reference)」を区別します [*]_ . 
 Python ではこのような区別はいくぶん不自然で, 
-変数が変更されるかどうかについては少々わかりにくいところがあります. 
-しかし, 幸運なことにそれには明解な規則があります. 
+変数が変更されるのかについては少々わかりにくいところがあります. 
+しかし, 幸運なことに明解な規則があります. 
 
 ..
     Can you modify the value of a variable inside a function? Most languages
@@ -229,8 +229,8 @@ Python ではこのような区別はいくぶん不自然で,
     reference to the object to which the variable refers (the **value**).
     Not the variable itself.
 
-もし **値** が変化不可能なら, 関数は呼び出し元の変数を変更しません. 
-もし **値** が変更可能なら, 関数は呼び出し元の変数をインプレースに変更する可能性があります::
+もし **値** が変化不可能 (immutable) なら, 関数は呼び出し元の変数を変更しません. 
+もし **値** が変更可能 (mutable) なら, 関数は呼び出し元の変数をインプレースに変更する可能性があります::
 
     >>> def try_to_modify(x, y, z):
     ...     x = 23
@@ -304,14 +304,14 @@ Python ではこのような区別はいくぶん不自然で,
 
 .. sourcecode:: ipython
 
-    in [114]: x = 5
+    In [114]: x = 5
 
-    in [115]: def addx(y):
+    In [115]: def addx(y):
        .....:     return x + y
        .....: 
 
-    in [116]: addx(10)
-    out[116]: 15
+    In [116]: addx(10)
+    Out[116]: 15
 
 しかし, これらのグローバル変数は関数の中で変更することはできません, 
 ただし, **global** と宣言すれば可能になります. 
@@ -325,17 +325,17 @@ Python ではこのような区別はいくぶん不自然で,
 
 .. sourcecode:: ipython
 
-    in [117]: def setx(y):
+    In [117]: def setx(y):
        .....:     x = y
        .....:     print('x is %d' % x)
        .....:     
        .....:     
 
-    in [118]: setx(10)
+    In [118]: setx(10)
     x is 10
 
-    in [120]: x
-    out[120]: 5
+    In [120]: x
+    Out[120]: 5
 
 これは動きます：
 
@@ -343,17 +343,17 @@ Python ではこのような区別はいくぶん不自然で,
 
 .. sourcecode:: ipython
 
-    in [121]: def setx(y):
+    In [121]: def setx(y):
        .....:     global x
        .....:     x = y
        .....:     print('x is %d' % x)
        .....:     
        .....:     
 
-    in [122]: setx(10)
+    In [122]: setx(10)
     x is 10
 
-    in [123]: x
+    In [123]: x
     out[123]: 10
 
 
@@ -374,12 +374,12 @@ Python ではこのような区別はいくぶん不自然で,
 
 .. sourcecode:: ipython
 
-    in [35]: def variable_args(*args, **kwargs):
+    In [35]: def variable_args(*args, **kwargs):
        ....:     print 'args is', args
        ....:     print 'kwargs is', kwargs
        ....: 
 
-    in [36]: variable_args('one', 'two', x=1, y=2, z=3)
+    In [36]: variable_args('one', 'two', x=1, y=2, z=3)
     args is ('one', 'two')
     kwargs is {'y': 2, 'x': 1, 'z': 3}
 
@@ -399,26 +399,26 @@ Python ではこのような区別はいくぶん不自然で,
 
 .. sourcecode:: ipython
 
-    in [67]: def funcname(params):
-       ....:     """concise one-line sentence describing the function.
+    In [67]: def funcname(params):
+       ....:     """Concise one-line sentence describing the function.
        ....: 
-       ....:     extended summary which can contain multiple paragraphs.
+       ....:     Extended summary which can contain multiple paragraphs.
        ....:     """
        ....:     # function body
        ....:     pass
        ....: 
 
-    in [68]: funcname?
-    type:		function
-    base class:	<type 'function'>
-    string form:	<function funcname at 0xeaa0f0>
-    namespace:	interactive
-    file:		/users/cburns/src/scipy2009/.../<ipython console>
-    definition:	funcname(params)
-    docstring:
-        concise one-line sentence describing the function.
+    In [68]: funcname?
+    Type:		function
+    Base class:	<type 'function'>
+    String form:	<function funcname at 0xeaa0f0>
+    Namespace:	Interactive
+    File:		/Users/cburns/src/scipy2009/.../<ipython console>
+    Definition:	funcname(params)
+    Docstring:
+        Eoncise one-line sentence describing the function.
 
-        extended summary which can contain multiple paragraphs.
+        Extended summary which can contain multiple paragraphs.
 
 .. note:: **ドキュメンテーション文字列に関するガイドライン**
 
@@ -427,12 +427,12 @@ Python ではこのような区別はいくぶん不自然で,
     <http://www.python.org/dev/peps/pep-0257>`_ の Web ページ [*]_
     に python の docstring に関する意味論と取り決めが文書化されています. 
 
-    また,  numpy や scipy モジュールも科学技術計算用の関数の文書化のために
+    また numpy や scipy モジュールも科学技術計算用の関数の文書化のために
     簡潔化された標準を定めています, 
     それらは,  ``パラメータ`` 節や ``example`` 節等を含んでいて, 
-    自分で書いた関数について参考にしたいと思うでしょう. 
-    https://github.com/numpy/numpy/blob/master/doc/HOWTO_DOCUMENT.rst.txt
-    と https://github.com/numpy/numpy/blob/master/doc/example.py#L37 を見てください.
+    自分で書いた関数について参考にしたいと思うことでしょう. 
+    http://github.com/numpy/numpy/blob/master/doc/HOWTO_DOCUMENT.rst.txt
+    と http://github.com/numpy/numpy/blob/master/doc/example.py#L37 を見てください.
 
 ..
     .. note:: **docstring guidelines**
@@ -472,7 +472,7 @@ Python ではこのような区別はいくぶん不自然で,
     -------
 
 メソッドはオブジェクトと結びついた関数です. 
-これまで, **リスト**, **辞書**, **文字列** 等の例の中でみてきました. 
+これまで **リスト**, **辞書**, **文字列** 等の例の中でみてきました. 
 
 ..  methods are functions attached to objects.  you've seen these in our
     examples on **lists**, **dictionaries**, **strings**, etc...
@@ -485,7 +485,7 @@ Python ではこのような区別はいくぶん不自然で,
 
 .. topic:: 練習問題：クイックソート
 
-    クイックソートアルゴリズムを実装しなさい, Wikipedia での定義::
+    クイックソートアルゴリズムを実装しましょう, Wikipedia での定義::
 
 	function quicksort(array)
 	    var list less, greater
@@ -518,7 +518,7 @@ Python ではこのような区別はいくぶん不自然で,
 
 .. topic:: 練習問題：Fibonacci 数列
 
-    Fibonacci 数列の第1項から ``n`` 項までを表示する関数を書きなさい, 
+    Fibonacci 数列の第1項から ``n`` 項までを表示する関数を書きましょう, 
     Fibonacci 数列の定義は：
 
     * ``u_0 = 1; u_1 = 1``

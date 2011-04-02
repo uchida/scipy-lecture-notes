@@ -4,12 +4,12 @@
 .. Reusing code: scripts and modules
 .. =================================
 
-これまでの内容では, 命令は全てインタプリタに打ち込んできました.
-全体が長い命令となる場合には, その方針を変えて, （テキストエディタを使って）
+これまでの内容で命令は全てインタプリタに打ち込んできました.
+全体が長い命令となる場合にはその方針を変え（テキストエディタを使って）
 **スクリプト** や **モジュール** と呼ぶテキストファイルに書くことにします.
 テキストエディタは好みのもの（Python 用の構文ハイライト機能があるものがいいでしょう）か
 Python の科学ライブラリ一式に付属しているエディタ
-（例えば, Python(x,y) に付属する Scite）を使いましょう.
+（例えば Python(x,y) に付属する Scite）を使いましょう.
 
 .. For now, we have typed all instructions in the interpreter. For longer
 .. sets of instructions we need to change tack and write the code in text
@@ -31,9 +31,9 @@ Python の科学ライブラリ一式に付属しているエディタ
 .. instructions that are executed each time the script is called.
 
 命令は例えばインタプリタからコピーペーストしてもかまいません
-（ただし, インデントの規則は忘れないように!）.
+（ただしインデントの規則は忘れないように!）.
 Python ファイルの拡張子は **.py** です.
-**test.py** という名前のファイルに以下の行を書き写すか, コピーペーストしましょう.
+**test.py** という名前のファイルに以下の行を書き写すかコピーペーストしましょう.
 
 ::
 
@@ -51,7 +51,7 @@ Python ファイルの拡張子は **.py** です.
 ..         print word
 
 では, スクリプトをインタラクティブに IPython インタプリタ内部から実行してみましょう.
-これは, 科学技術計算用のスクリプトの最も一般的使い方でしょう.
+これは科学技術計算用のスクリプトの最も一般的使い方でしょう.
 
 .. Let us now execute the script interactively, that is inside the Ipython
 .. interpreter. This is maybe the most common use of scripts in scientific
@@ -82,14 +82,14 @@ Python ファイルの拡張子は **.py** です.
 .. namespace.
 
 他のインタプリタでもスクリプトを実行することができます
-（例えば, デフォルトの Python インタプリタでは ``execfile`` 等）.
+（例えばデフォルトの Python インタプリタでは ``execfile`` 等）.
 
 .. Other interpreters also offer the possibility to execute scripts (e.g.,
 .. ``execfile`` in the plain Python interpreter, etc.).
 
 また, ターミナル上（Linux/Mac のターミナル Windows のコマンドプロンプト）
 で実行することで **独立したプログラム** としても実行できます.
-例えば, test.py ファイルが置かれたディレクトリにいる場合,
+例えば test.py ファイルが置かれたディレクトリにいる場合
 端末でこれを実行します.
 
 .. It is also possible In order to execute this script as a **standalone
@@ -235,7 +235,7 @@ Python ファイルの拡張子は **.py** です.
 ..     array([  0.,   2.,   4.,   6.,   8.,  10.])
 ..     >>> import scipy # scientific computing
 
-Python(x,y) の中のソフトウェア IPython(x,y) 起動時に以下のインポートを実行します::
+Python(x,y) の中のソフトウェア IPython(x,y) は起動時に以下のインポートを実行します::
 
     >>> import numpy	
     >>> import numpy as np
@@ -260,8 +260,9 @@ Python(x,y) の中のソフトウェア IPython(x,y) 起動時に以下のイン
 .. Creating modules
 .. -----------------
 
-いくつかのオブジェクト（変数,関数,クラス）が定義され, 何度も再利用したくなるような
-より大きな, まとまったプログラム（単純なスクリプトに比べて）を書きたい場合,
+いくつかのオブジェクト（変数,関数,クラス）が定義され,
+何度も再利用したくなるような（単純なスクリプトに比べて）
+より大きなまとまったプログラムを書きたい場合には
 自分自身の **モジュール** を作成します.
 
 `demo.py` に書かれた `demo` モジュールを作ってみましょう：
@@ -275,9 +276,9 @@ Python(x,y) の中のソフトウェア IPython(x,y) 起動時に以下のイン
 
    .. literalinclude:: demo.py
 
-このファイルには, 私達が定義した2つの関数 `print_a` と `print_b` があります.
+このファイルには私達が定義した2つの関数 `print_a` と `print_b` があります.
 インタプリタから `print_a` 関数を呼び出したい仮定します.
-ファイルをスクリプトとして実行することもできますが, `print_a` 関数にアクセスしたいだけなので,
+ファイルをスクリプトとして実行することもできますが `print_a` 関数にアクセスしたいだけなので
 **モジュールとしてインポート** しましょう.
 構文は以下です.
 
@@ -298,8 +299,8 @@ Python(x,y) の中のソフトウェア IPython(x,y) 起動時に以下のイン
     In [3]: demo.print_b()
     b
 
-モジュールをインポートすることで, そのオブジェクトに ``module.object`` 構文でアクセスすることができます.
-オブジェクトの名前の前にモジュールの名前を忘れないで下さい, そうしないと Python は命令を理解してくれません.
+モジュールをインポートすることでそのオブジェクトに ``module.object`` 構文でアクセスすることができます.
+オブジェクトの名前の前にモジュールの名前を忘れないで下さい, 忘れると Python は命令を理解してくれません.
 
 .. Importing the module gives access to its objects, using the
 .. ``module.object`` syntax. Don't forget to put the module's name before the
@@ -374,23 +375,28 @@ main の名前空間にオブジェクトをインポートする
 
 .. warning:: 
 
-	**モジュールのキャッシュ**
+   **モジュールのキャッシュ**
 
-	モジュールはキャッシュされます：`demo.py` を変更して
-	変更前のセッションで再インポートした場合, 変更前のモジュールがインポートされます.
+   モジュールはキャッシュされます： `demo.py` を変更して
+   変更前のセッションで再インポートした場合, 変更前のモジュールがインポートされます.
 
-	解決法：
+   解決法：
 
-    .. **Module caching**
+   .. sourcecode :: ipython
 
-    ..  Modules are cached: if you modify `demo.py` and re-import it in the
-    ..  old session, you will get the old one.
+      In [10]: reload(demo)
 
-    .. Solution:
 
-    .. sourcecode :: ipython
+..    **Module caching**
+   
+..     Modules are cached: if you modify `demo.py` and re-import it in the
+..     old session, you will get the old one.
+   
+..     Solution:
 
-        In [10]: reload(demo)
+..     .. sourcecode :: ipython
+
+..         In [10]: reload(demo)
 
 
 '__main__' とモジュールのロード
@@ -427,7 +433,7 @@ main の名前空間にオブジェクトをインポートする
     a
 
 
-スクリプトそれともモジュール? ソースコートのまとめ方
+スクリプトそれともモジュール? ソースコードのまとめ方
 ----------------------------------------------------
 
 .. Scripts or modules? How to organize your code
@@ -436,11 +442,12 @@ main の名前空間にオブジェクトをインポートする
 .. Note:: 確かな経験則
 
     * コードの再利用性を高めるために, 
-      多く呼び出される命令の集まりは関数の内部に書くべきです.
+      たくさん呼ばれる命令の組は関数内に書くべきです.
 
     * いくつかのスクリプトから呼び出される関数（もしくはソースコードの一部分）はモジュールの中に書くべきです,
-      そうすると異なるスクリプトから呼び出されるのはそのモジュールだけになります
-      （異なるスクリプトに関数をコピーペーストするのはやめましょう!）
+      そうすることで異なるスクリプトから呼び出されるのは
+      そのモジュールだけになります
+      （違うスクリプトに関数をコピーペーストするのはやめましょう!）
 
 .. .. Note:: Rule of thumb
 
@@ -453,15 +460,67 @@ main の名前空間にオブジェクトをインポートする
 ..       your functions in the different scripts!).
 
 .. Note:: **離れたディレクトリからモジュールをインポートするには?**
-
-	主に OS によって変わりますが, 多くの方法があります.
-	``import mymodule`` 文が実行されると, 
- 	`mymodule` があるディレクトリのリストから探されます.
-	このは環境変数 **PYTHONPATH** で指定されたディレクトリリストと
-	インストール場所に依存したデフォルトのパス
-	（例えば, `/usr/lib/python` ） を含みます.
-
-	その Python が探すディレクトリリストは `sys.path` 変数で与えられます
+        
+   主に OS によって変わりますが方法はたくさんあります.
+   ``import mymodule`` 文が実行されると, 
+   `mymodule` が与えられたディレクトリのリストから探索されます.
+   このリストは環境変数 **PYTHONPATH** で指定されたディレクトリリストと
+   インストール場所に依存したデフォルトのパス
+   （例えば, `/usr/lib/python` ） を含みます.
+    
+   その Python が探すディレクトリリストは `sys.path` 変数で与えられます
+    
+   .. sourcecode:: ipython	
+    
+       In [1]: import sys
+       
+       In [2]: sys.path
+       Out[2]: 
+       ['',
+        '/usr/bin',
+        '/usr/local/include/enthought.traits-1.1.0',
+        '/usr/lib/python2.6',
+        '/usr/lib/python2.6/plat-linux2',
+        '/usr/lib/python2.6/lib-tk',
+        '/usr/lib/python2.6/lib-old',
+        '/usr/lib/python2.6/lib-dynload',
+        '/usr/lib/python2.6/dist-packages',
+        '/usr/lib/pymodules/python2.6',
+        '/usr/lib/pymodules/python2.6/gtk-2.0',
+        '/usr/lib/python2.6/dist-packages/wx-2.8-gtk2-unicode',
+        '/usr/local/lib/python2.6/dist-packages',
+        '/usr/lib/python2.6/dist-packages',
+        '/usr/lib/pymodules/python2.6/IPython/Extensions',
+        u'/home/gouillar/.ipython']
+        
+   モジュールはこの検索パスの中に置かれなければいけません,
+   そのためできることとしては：
+    
+   * 既に定義された検索パスの中（例えば '/usr/local/lib/python2.6/dist-packages'） に
+     モジュールを書く. （Linux では）シンボリックリンクを使って他の場所に置くことができます.
+    
+   * **PYTHONPATH** 環境変数を変更してユーザが定義したモジュールがあるディレクトリを含むようにする.
+     Linux/Unix では以下の行をシェルの起動ファイル（例えば /etc/profile .profile）に加えましょう.
+    
+     ::
+    
+       export PYTHONPATH=$PYTHONPATH:/home/emma/user_defined_modules
+    
+     Windows では, http://support.microsoft.com/kb/310519 で環境変数の扱い方が説明されています.
+    
+   * または, Python スクリプトの中で `sys.path` 変数を変更する
+    
+     ::
+    
+       import sys
+       new_path = '/home/emma/user_defined_modules'
+       if new_path not in sys.path:
+           sys.path.append(new_path)
+    
+     この方法は （ユーザによって変わるパスを設定するため）
+     ソースコードの可搬性が悪く, 
+     ディレクトリからモジュールをインポートする度 sys.path を変更しなければならないため
+     変更が少ない頑強な方法ではありません.
 
 .. .. Note:: **How to import a module from a remote directory?**
 
@@ -477,77 +536,56 @@ main の名前空間にオブジェクトをインポートする
 ..     The list of directories searched by Python is given by the `sys.path`
 ..     variable 
 
-    .. sourcecode:: ipython	
+..     .. sourcecode:: ipython	
 
-        In [1]: import sys
+..         In [1]: import sys
         
-        In [2]: sys.path
-        Out[2]: 
-        ['',
-         '/usr/bin',
-         '/usr/local/include/enthought.traits-1.1.0',
-         '/usr/lib/python2.6',
-         '/usr/lib/python2.6/plat-linux2',
-         '/usr/lib/python2.6/lib-tk',
-         '/usr/lib/python2.6/lib-old',
-         '/usr/lib/python2.6/lib-dynload',
-         '/usr/lib/python2.6/dist-packages',
-         '/usr/lib/pymodules/python2.6',
-         '/usr/lib/pymodules/python2.6/gtk-2.0',
-         '/usr/lib/python2.6/dist-packages/wx-2.8-gtk2-unicode',
-         '/usr/local/lib/python2.6/dist-packages',
-         '/usr/lib/python2.6/dist-packages',
-         '/usr/lib/pymodules/python2.6/IPython/Extensions',
-         u'/home/gouillar/.ipython']
+..         In [2]: sys.path
+..         Out[2]: 
+..         ['',
+..          '/usr/bin',
+..          '/usr/local/include/enthought.traits-1.1.0',
+..          '/usr/lib/python2.6',
+..          '/usr/lib/python2.6/plat-linux2',
+..          '/usr/lib/python2.6/lib-tk',
+..          '/usr/lib/python2.6/lib-old',
+..          '/usr/lib/python2.6/lib-dynload',
+..          '/usr/lib/python2.6/dist-packages',
+..          '/usr/lib/pymodules/python2.6',
+..          '/usr/lib/pymodules/python2.6/gtk-2.0',
+..          '/usr/lib/python2.6/dist-packages/wx-2.8-gtk2-unicode',
+..          '/usr/local/lib/python2.6/dist-packages',
+..          '/usr/lib/python2.6/dist-packages',
+..          '/usr/lib/pymodules/python2.6/IPython/Extensions',
+..          u'/home/gouillar/.ipython']
      
-	モジュールはこの検索パスの中に置かれていないといけません, つまり以下の方法を取れます：
+..     Modules must be located in the search path, therefore you can:
 
-	* 既に定義された検索パスの中（例えば '/usr/local/lib/python2.6/dist-packages） に
-	  モジュールを書く. （Linux では）シンボリックリンクを使えば他の場所に置くことができます.
+..     * write your own modules within directories already defined in the
+..       search path (e.g. '/usr/local/lib/python2.6/dist-packages'). You
+..       may use symbolic links (on Linux) to keep the code somewhere else.
 
-	* **PYTHONPATH** 環境変数を変更して, ユーザが定義したモジュールを含むディレクトリを含むようにする.
-	  Linux/Unix では以下の行をシェルの起動ファイル（例えば /etc/profile .profile）に加えましょう.
+..     * modify the environment variable **PYTHONPATH** to include the
+..       directories containing the user-defined modules. On Linux/Unix, add
+..       the following line to a file read by the shell at startup (e.g.
+..       /etc/profile, .profile)
 
-    .. Modules must be located in the search path, therefore you can:
+..     On Windows, http://support.microsoft.com/kb/310519 explains how to
+..     handle environment variables.
 
-    .. * write your own modules within directories already defined in the
-    ..   search path (e.g. '/usr/local/lib/python2.6/dist-packages'). You
-    ..   may use symbolic links (on Linux) to keep the code somewhere else.
+..     * or modify the `sys.path` variable itself within a Python script.
 
-    .. * modify the environment variable **PYTHONPATH** to include the
-    ..   directories containing the user-defined modules. On Linux/Unix, add
-    ..   the following line to a file read by the shell at startup (e.g.
-    ..   /etc/profile, .profile)
+..     ::
 
-    ::
+.. 	import sys
+.. 	new_path = '/home/emma/user_defined_modules'
+.. 	if new_path not in sys.path:
+.. 	    sys.path.append(new_path)
 
-	export PYTHONPATH=$PYTHONPATH:/home/emma/user_defined_modules
-
-	Windows では, http://support.microsoft.com/kb/310519 で環境変数の扱い方が説明されています.
-
-    .. On Windows, http://support.microsoft.com/kb/310519 explains how to
-    .. handle environment variables.
-
-	* または, Python スクリプトの中で `sys.path` 変数を変更する
-
-    .. * or modify the `sys.path` variable itself within a Python script.
-
-    ::
-
-	import sys
-	new_path = '/home/emma/user_defined_modules'
-	if new_path not in sys.path:
-	    sys.path.append(new_path)
-
-	この方法は （ユーザによって変わるパスを設定するため）
-    ソースコードの可搬性が悪くなること, 
-	ディレクトリからモジュールをインポートする度 sys.path を変更しなければならないこと, 
-	という2点から変更が少なくすむ, 頑強な方法とはいえません.
-
-    .. This method is not very robust, however, because it makes the code
-    .. less portable (user-dependent path) and because you have to add the
-    .. directory to your sys.path each time you want to import from a module in
-    .. this directory.
+.. This method is not very robust, however, because it makes the code
+.. less portable (user-dependent path) and because you have to add the
+.. directory to your sys.path each time you want to import from a module in
+.. this directory.
 
 モジュールに関するさらなる情報は http://docs.python.org/tutorial/modules.html [*]_ を見てください.
 
@@ -562,8 +600,8 @@ main の名前空間にオブジェクトをインポートする
 
 多くのモジュールを含むディレクトリは **パッケージ** と呼ばれます.
 パッケージはサブモジュール（これもサブモジュールを持ちます）を含むモジュールです.
-`__init__.py` と呼ばれる特別なファイルがそのディレクトリがパッケージであること,
-どのモジュールがインポートできるかを Python に教えます.
+`__init__.py` と呼ばれる特別なファイルがそのディレクトリがパッケージであり, 
+モジュールがインポートできることを Python に教えます.
 
 .. A directory that contains many modules is called a **package**. A package
 .. is a module with submodules (which can have submodules themselves, etc.).
@@ -652,14 +690,14 @@ IPython から：
     * **インデント：選択の余地なし!**
 
     Python ではインデントは強制されます.
-    どのコマンドブロックもコロンに続いて,
+    コロンに続く全てのコマンドブロックは
     前のコロンの行より1段インデントが深くなります.
-    なので ``def f():`` や ``while:`` の後にインデントしなければいけません.
-    この論理ブロックが終ったときには, インデントが浅くなります
+    なので ``def f():`` や ``while:`` の後はインデントしなければいけません.
+    この論理ブロックが終ると, インデントが浅くなります
     （そして新しいブロックに入るとまた深くなります）.
 
-    インデントを厳格に扱うことは他の言語で論理ブロックを示す文字
-    ``{`` や ``;`` を取り除く効果があります.
+    インデントを厳格に扱うことで他の言語で論理ブロックを示す文字
+    ``{`` や ``;`` を取り除くことができます.
     不適切なインデントはこのようなエラーを起こします.
 
     .. sourcecode:: ipython
@@ -667,16 +705,17 @@ IPython から：
         ------------------------------------------------------------
         IndentationError: unexpected indent (test.py, line 2)
 
-    はじめはインデントに少し混乱するかもしれませんが, はっきりとインデントと
-    余計な文字列がないことによって他の言語と比べて読みやすい, 
-    とてもいいソースコードになります.
+    はじめはこのインデント作業で少し混乱するかもしれませんが,
+    はっきりとインデントすることで余計な文字列がなくなり,
+    他の言語と比べて読みやすいすてきなソースコードになります.
 
     * **インデントの深さ**
 
-    テキストエディタでは, インデントのスペースの数を任意の正の数(1, 2, 3, 4, ...) にできるかもしれません.
-    しかし, **インデントはスペース4つ分** がよい習慣とされています.
+    テキストエディタでは, インデントのスペースの数を任意の正の数
+    (1, 2, 3, 4, ...) にできるかもしれません.
+    しかし, **インデントにはスペース4つ分** がよい習慣とされています.
     エディタの設定で ``Tab`` キーをインデントのための4文字分のスペースに割り当てることができるでしょう.
-    Python(x,y) の ``Scite`` エディタは既にそう設定されています.
+    Python(x,y) の ``Scite`` エディタでは既にそのように設定されています.
 
     * **スタイルガイド**
 

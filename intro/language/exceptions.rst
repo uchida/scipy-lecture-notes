@@ -4,15 +4,15 @@ Python で例外処理
 .. Exceptions handling in Python
 .. =============================
 
-ここまでチュートリアルでのコマンドを打ち込んでいれば, 例外が送出されているはずです.
-例えば, コマンドを打ち間違えれば例外が送出されます.
+これまでの全てのコマンドを打ち込んでいれば, 何度か例外の送出を経験したことでしょう.
+例えばコマンドを打ち間違えると例外が送出されます.
 
 .. It is highly unlikely that you haven't yet raised Exceptions if you have
 .. typed all the previous commands of the tutorial. For example, you may
 .. have raised an exception if you entered a command with a typo.  
 
-Python コードを実行したとき, いろいろな種類のエラーによって例外が送出されます.
-あなたはソースコードの中で例外を捉えたり, カスタマイズしたエラー型を定義できます.
+Python コードを実行するといろいろな種類のエラーにより例外が送出されます.
+ソースコードの中では例外を捉えたり, カスタマイズしたエラー型を定義できます.
 
 .. Exceptions are raised by different kinds of errors arising when executing
 .. Python code. In you own code, you may also catch errors, or define custom

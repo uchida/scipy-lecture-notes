@@ -18,12 +18,12 @@ if/elif/else
        ...: 
     Obvious!
 
-**ブロックの範囲はインデントで決められます**
+**ブロックの範囲はインデントで決まります**
 
 .. **Blocks are delimited by indentation**
 
 
-以下の行を Python インタプリタで打ち込んで下さい, ただし, 
+以下の行を Python インタプリタで打ち込んで下さい, ただし 
 **インデントの深さに注意してください**
 IPython はコラム記号 ``:`` の後に自動的にインデントを深くします;
 インデントを減らすにはバックスペースキーでスペース4つ分移動します.
@@ -51,7 +51,7 @@ IPython はコラム記号 ``:`` の後に自動的にインデントを深く�
 
 インデントはスクリプトを書く場合も必須です.
 練習問題として, 上の行の内容を同じインデントで
-``condition.py`` というスクリプトに打ち込んで, 
+``condition.py`` というスクリプトに打ち込んで
 IPython から ``run condition.py``
 としてスクリプトを実行してみましょう.
 
@@ -77,7 +77,7 @@ for/range
     2
     3
 
-しかしたいていの場合には, 値に対して反復した方が読みやすいでしょう：
+しかし多くの場合, 値に対して反復した方が読みやすいでしょう：
 
 .. But most often, it is more readable to iterate over values:
 
@@ -165,11 +165,11 @@ while/break/continue
 
   真と評価されるもの：
     * 0 でない値
-    * 長さが 0 でないシークエンス
+    * 長さが 0 でないシーケンス
 
   偽と評価されるもの：
     * 0 となる値
-    * 空のシークエンス
+    * 空のシーケンス
 
 ..
     * `if object`
@@ -198,7 +198,7 @@ while/break/continue
 
 * `a is b`
 
-  同1かどうか調べる：2つのオブジェクトが同じか
+  同一性を調べる：2つのオブジェクトが同じか
 
 ..
     * `a is b`
@@ -219,7 +219,7 @@ while/break/continue
 
 * `a in b`
 
-  `a` がデータの集まり `b` の中に含まれているか::
+  データの集まり `b` の中に `a` が含まれているか::
 
     >>> b = [1, 2, 3]
     >>> 2 in b
@@ -228,7 +228,7 @@ while/break/continue
     False
 
   
-  `b` が辞書の場合,  `a` 辞書のキーに含まれるか調べます.
+  `b` が辞書の場合, 辞書のキーに `a` が含まれているか調べます.
 
 ..
     * `a in b`
@@ -251,13 +251,13 @@ while/break/continue
 ..  Advanced iteration
     -------------------------
 
-あらゆるシークエンスに対する反復
+あらゆるシーケンスに対する反復
 --------------------------------
 
 ..  Iterate over any *sequence*
     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-* あらゆるシークエンスに対して反復ができます（文字列, リスト, 辞書, ファイル, ...）
+* あらゆるシーケンスに対して反復できます（文字列, リスト, 辞書, ファイル, ...）
 
 .. * You can iterate over any sequence (string, list, dictionary, file, ...)
 
@@ -285,10 +285,10 @@ while/break/continue
     are
     you?
 
-整数やインデクスでなく, あらゆるものに対してループできる言語は, 
-（特に科学技術計算向きの言語では）, 少数です.
-Python を使うことで, 注意深くインデクスについて考えない為に起きる問題に
-悩まされることなく, 
+整数やインデクスでなく, あらゆるものに対してループできる言語は
+（特に科学技術計算向きの言語では）少数です.
+Python を使うことで, インデクスについて注意深く考えない為に起きる問題に
+悩まされることはなくなり, 
 まさに興味あるオブジェクトに対してループできるようになります.
 
 ..
@@ -297,7 +297,7 @@ Python を使うことで, 注意深くインデクスについて考えない�
     loop exactly over the objects of interest without bothering with indices
     you often don't care about.
 
-.. warning:: 反復しているシークエンスを変更するのは危険です.
+.. warning:: 反復しているシーケンスを変更するのは危険です.
 
 .. .. warning:: Not safe to modify the sequence you are iterating over.
 
@@ -307,12 +307,12 @@ Python を使うことで, 注意深くインデクスについて考えない�
 ..  Keeping track of enumeration number
     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-シークエンスの反復中に反復回数を追跡すること場合はよくあります.
+シーケンスの反復中に反復回数を追跡することはよくあります.
 
 ..  Common task is to iterate over a sequence while keeping track of the
     item number.
 
-* 以下のような, カウンター付きの while や for ループを使うこともできます：
+* 以下のような, カウンタ付きの while や for ループを使うこともできます：
 
 ..  * Could use while loop with a counter as above. Or a for loop:
 
@@ -326,7 +326,7 @@ Python を使うことで, 注意深くインデクスについて考えない�
     1 powerful
     2 readable
 
-* しかし, Python はそうするために **enumerate** を提供しています::
+* しかし, Python はそうするための **enumerate** を提供しています::
 
     >>> words = ('cool', 'powerful', 'readable')
     >>> for index, item in enumerate(words):
@@ -385,7 +385,7 @@ Python を使うことで, 注意深くインデクスについて考えない�
 
 .. topic:: 練習問題
 
-    Wallis の公式を使って, Pi の値を計算しなさい：
+    Wallis の公式を使って, Pi の値を計算しましょう：
 
     .. image:: pi_formula.png
 	:align: center

@@ -14,8 +14,8 @@ Matplotlib
 ``matplotlib`` はおそらく2次元グラフィック用の Python パッケージの決定版です.
 高速なデータの可視化手法や出版品質の図を多くのフォーマットで提供します.
 これからインタラクティブモードで matplotlib の機能を調べていきましょう.
-ほとんどの場合はインタラクティブモードで扱うことができます.
-オブジェクト指向インターフェースとともに提供されるクラスライブラリについても触れます.
+ほとんどの状況はインタラクティブモードですませることができます.
+またオブジェクト指向インターフェースとともに提供されるクラスライブラリについても触れます.
 
 .. ``matplotlib`` is probably the single most used Python package
 .. for 2D-graphics. It provides both a very quick way to visualize
@@ -43,9 +43,9 @@ Matlab や Mathematica のような機能をもったインタラクティブな
 pylab
 -----
 
-``pylab`` は ``matplotlib`` のオブジェクト指向ライブラリの手続き的インターフェースを提供します.
+``pylab`` は ``matplotlib`` のオブジェクト指向ライブラリに対する手続き的インターフェースを提供します.
 このモデルは Matlab(TM) をお手本にしています.
-そのため, ``pylab`` の大部分の作図コマンドは Matlab(TM) に類似していて,
+そのため ``pylab`` の大部分の作図コマンドは Matlab(TM) に類似していて
 同じような引数をとります.
 重要なコマンドはインタラクティブな例で説明します.
 
@@ -84,8 +84,6 @@ pylab
     
     Welcome to pylab, a matplotlib-based Python environment.
     For more information, type 'help(pylab)'.
-
-.. code-block:: python
         
     In [1]:
 
@@ -160,7 +158,7 @@ pylab
     In [9]: setp(line, color='g')
     Out[9]: [None]
 
-新しいプロパティを適用するためには, 画面の再描画が必要です：
+新しいプロパティを適用するには画面の再描画が必要です：
 
 .. To apply the new properties we need to redraw the screen:
 
@@ -168,7 +166,7 @@ pylab
 
     In [10]: draw()
 
-ひとつの作図に対して, いくつかのラインを追加できます：
+ひとつの作図に対しいくつかのラインを追加できます：
 
 .. We can also add several lines to one plot:
 
@@ -232,12 +230,12 @@ pylab
 練習問題
 ++++++++
 
-1) 簡単なステップ関数を作図しなさい.
-   範囲は 0 から 3 まででステップの幅は 0.01 とする.
+1) 簡単なステップ関数を作図しましょう.
+   範囲は 0 から 3 まででステップの幅は 0.01 とします.
 
-2) ラインを赤にしなさい. サイズ 5 のダイヤモンドマーカーも追加しなさい.
+2) ラインを赤にましょう. サイズ 5 のダイヤモンドマーカーも追加しましょう.
 
-3) 凡例とグリッドを追加しなさい.
+3) 凡例とグリッドを追加しましょう.
 
 .. Exercises
 .. +++++++++
@@ -524,7 +522,7 @@ weight               フォントのウェイト 例：normal, bold, heavy, ligh
      \pi
 
 
-もしテキストがどこに配置されるかをより制御したいと思ったら,
+もしテキストがどこに配置されるかをより制御したい場合
 annotate を使います：
 
 .. code-block:: python
@@ -653,7 +651,7 @@ IndexLocator    インデクスを作図したときの為の指定子（例： 
 LinearLocator   最小から最大までの均等に配置する目盛
 LogLocator      最小から最大までの対数目盛
 MultipleLocator 目盛と範囲をそれぞれ独立にとります, どちらも整数か浮動小数点数で指定します
-AutoLocator     MultipleLocator を選択して, 動的に変更します
+AutoLocator     MultipleLocator を選択し, 動的に変更します
 =============== ===========================================================================
 
 .. There are several locators for different kind of requirements:
@@ -789,13 +787,13 @@ DateFormatter           時間のフォーマットの為に strftime 文字列�
 練習問題
 ++++++++
 
-1) 1年の日付のグラフを作図しなさい.
+1) 1年の日付のグラフを作図しましょう.
    x 軸は1日毎にとり, ビルトインの ``datetime`` モジュールを使いましょう.
 
-2) 月の始めの日だけを表示するように書式指定しなさい.
+2) 月の始めの日だけを表示するように書式指定しましょう.
 
-3) 年の表示, 非表示を切り替えなさい.
-   月の数での表示と月の名前の最初の3文字での表示を切り替えなさい.
+3) 年の表示, 非表示を切り替えましょう.
+   月の数での表示と月の名前の最初の3文字での表示を切り替えましょう.
 
 
 .. Exercises
@@ -822,19 +820,19 @@ Figure, Subplot そして Axes
 .. The Hierarchy
 .. +++++++++++++
 
-ここまでの内容で実は暗黙の内に figure と axes を作成していました.
-この作成法は素早く作図でき手軽に扱えます.
-``figure``, ``subplot`` さらに ``axes`` を明示的に使うことで,
-より制御した表示ができます.
+ここまでの内容の中で実は暗黙の内に figure と axes を作成していました.
+この作成法は素早く作図できるため手軽に扱えます.
+``figure``, ``subplot`` さらに ``axes`` を明示的に使うことで
+より細かく制御して表示できます.
 ``matplotlib`` では ``figure`` はユーザーインターフェースのウィンドウ全体のことを指します.
 この ``figure`` の内部は subplot になりえます.
 ``subplot`` が作図内の規則的に並んだ格子上に位置している場合,
 ``axes`` は ``figure`` 内のどこにでも配置できます.
-意図に応じて暗黙的, 明示的の両方の方法を使いわけると便利でしょう.
+意図に応じて暗黙的, 明示的に呼び出す方法の両方を使いわけると便利でしょう.
 ここまででは明示的に figure や subfigure を呼び出していませんでしたが, 
-``plot`` を呼び出すときに ``matplotlib`` は現在の axes を取得するために
+``matplotlib`` は ``plot`` を呼び出すときに現在の axes を取得するため
 ``gca()`` を呼び出し, ``gca`` は現在の figure を取得するために ``gcf()`` を呼び出します.
-もし, 現在の figure が none だった場合には ``figure()`` が呼び出され, figure が作成されます,
+もし, 現在の figure がない場合には ``figure()`` が呼び出され, figure が作成されます,
 より正確にいえば, ``subplot(111)`` が作られます.
 詳しくみてみましょう.
 
@@ -858,7 +856,7 @@ Figures
 ++++++++
 
 ``figure`` はタイトルが "Figure #" となっている GUI ウィンドウです.
-Figure の番号は0から始まる Python 流とは違って, 1から始まります. 
+Figure の番号は0から始まる Python のスタイルとは違い, 1から始まります. 
 これは明らかに MATLAB のスタイルに起因しています.
 figure の見た目を決定する以下のいくつかのパラメータがあります：
 
@@ -926,7 +924,7 @@ Subplots
 .. specify the number of rows and columns and the number of the plot.
 
 2行1列の図は ``subplot(211)`` と ``subplot(212)`` で作成します.
-結果はこうです：
+結果はこうなります：
 
 .. A plot with two rows and one column is created with
 .. ``subplot(211)`` and ``subplot(212)``. The result looks like this:
@@ -939,7 +937,7 @@ Subplots
     :width: 25%
 
 横に並んだ2つの作図が欲しい場合には, 1行2列を ``subplot(121)`` と
-``subplot(112)`` で作ります. 結果はこうです：
+``subplot(112)`` で作ります. 結果はこうなります：
 
 .. If you want two plots side by side, you create one row and two columns
 .. with ``subplot(121)`` and ``subplot(112)``. The result looks like this:
@@ -953,7 +951,7 @@ Subplots
 
 図を欲しい数だけ配置することができます.
 2x2で配置したい場合は ``subplot(221)``,  ``subplot(222)``,
-``subplot(223)``, ``subplot(224)`` で作ります. 結果はこうです：
+``subplot(223)``, ``subplot(224)`` で作ります. 結果はこうなります：
 
 .. You can arrange as many figures as you want. A two-by-two arrangement can
 .. be created with ``subplot(221)``,  ``subplot(222)``, ``subplot(223)``, and
@@ -982,7 +980,7 @@ Subplots
 Axes
 ++++
 
-Axes は subplot によく似ています, しかし figure の任意の位置に作図できます.
+Axes は subplot によく似ていますが Axes は figure の任意の位置に作図できます.
 つまり, 大きな作図の中に小さな作図を置きたい場合 ``axes`` を使います.
 
 .. Axes are very similar to subplots but allow placement of plots
@@ -1009,11 +1007,11 @@ Axes は subplot によく似ています, しかし figure の任意の位置�
 練習問題
 ++++++++
 
-1) 5x5 インチと 10x10 インチの2つの図を描きなさい.
+1) 5x5 インチと 10x10 インチの2つの図を描きましょう.
 
-2) 4つの subplot を figure に追加しなさい. 最外部の軸にのみ目盛とラベルをつけなさい.
+2) 4つの subplot を figure に追加しましょう. 最外部の軸にのみ目盛とラベルをつけましょう.
 
-3) 大きな作図の中に小さな作図を配置してみなさい.
+3) 大きな作図の中に小さな作図を配置してみましょう.
 
 .. .. 
     Exercises
@@ -1042,7 +1040,7 @@ Axes は subplot によく似ています, しかし figure の任意の位置�
 
 ここまででは線の作図だけを扱ってきましたが,
 ``matplotlib`` は多くの作図法を提供しています.
-これらの作図法の中からいくつかを簡単に紹介します.
+これらの作図法の中からいくつか簡単に紹介します.
 紹介する関数は多くのオプション引数を持っていますが,
 それらについては扱いません.
 
@@ -1065,7 +1063,7 @@ Axes は subplot によく似ています, しかし figure の任意の位置�
 
     bar([1, 2, 3], [4, 3, 7])
 
-これで, 1, 2, 3 に対して 4, 3, 7 の高さの3つの棒ができるでしょう：
+これで1, 2, 3に対応して4, 3, 7の高さの3つの棒ができるでしょう：
 
 .. Now we have three bars starting at 1, 2, and 3 with height of
 .. 4, 3, 7 respectively:
@@ -1144,7 +1142,7 @@ y 方向の開始点と幅と全ての x 方向の開始点と幅の対を指定
     (0, 5)
     draw()
     
-そして, 以下の図を得ます：
+そして以下の図を得ます：
 
 .. and get this: 
 
@@ -1187,8 +1185,8 @@ y 方向の開始点と幅と全ての x 方向の開始点と幅の対を指定
 .. image:: figures/boxplot.png
             :width: 25%
 
-ひげの幅は ``whis`` 引数によって決まります, デフォルト値は1.5です.
-ひげの幅は ``whis*(75%-25%)`` 内の最も遠いデータまでをとります.
+ひげの幅は ``whis`` 引数によって決まり, デフォルト値は1.5です.
+ひげの幅は ``whis*(75%-25%)`` 内の最も遠いデータまでの値をとります.
 
 .. The range of the whiskers can be determined with the
 .. argument ``whis``, which defaults to 1.5. The range of
@@ -1333,7 +1331,7 @@ x, y 座標の配列を定義します：
 .. image:: figures/loglog.png
             :width: 25%
 
-もし片対数グラフが欲しければ, ``semilogx`` か ``semilogy`` を使うことができます.
+もし片対数グラフが欲しければ ``semilogx`` か ``semilogy`` を使うことができます.
 
 .. If we want only one axis with a logarithmic scale we can
 .. use ``semilogx`` or ``semilogy``.
@@ -1368,7 +1366,7 @@ x, y 座標の配列を定義します：
 .. +++++++++++
 
 極座標表示での作図 (polar plots) も可能です.
-0から360までの ``r`` と0から360度までの ``thete`` を定義しましょう.
+0から360までの ``r`` と0から360度までの ``theta`` を定義しましょう.
 角度はラジアンに変更する必要があります.
 
 .. Polar plots are also possible. Let's define our ``r`` from
@@ -1493,7 +1491,7 @@ x, y 座標の配列を定義します：
 .. ++++++++++++++++++++++
 
 疎行列を扱う場合, しばしば疎パターン (sparsity pattern),
-疎行列がどうなっているかが問題になります.
+つまり疎行列がどういう構造になっているかが問題になります.
 例として単位行列を扱ってみましょう：
 
 .. Working with sparse matrices, it is often of interest as
@@ -1515,7 +1513,7 @@ x, y 座標の配列を定義します：
            [0, 0, 0, 0, 0, 0, 0, 0, 1, 0],
            [0, 0, 0, 0, 0, 0, 0, 0, 0, 1]])
 
-さぁ, より視覚的にみてみましょう：
+より視覚的にみてみましょう：
 
 .. Now we look at it more visually:
 
@@ -1589,7 +1587,7 @@ x, y 座標の配列を定義します：
     y
     array([0, 7, 2, 3, 2, 5, 6, 7, 3, 9])
      
-さて, 日付が x 軸の作図ができます：
+これで日付が x 軸の作図ができます：
 
 .. Now we can plot the dates at the x axis:
 
@@ -1644,9 +1642,9 @@ Figure クラス
     num=None, figsize=None, dpi=None, facecolor=None
     edgecolor=None, frameon=True
 
-``Figure`` は多くのメソッドを提供しています, 多くのメソッドは ``pylab`` と等価です.
+``Figure`` は多くのメソッドを提供していますが, 多くのメソッドは ``pylab`` と等価です.
 ``pylab`` で ``axes`` や ``subplot`` によって
-axes や subplot を新たに作成すると, ``add_axes`` と
+axes や subplot を新たに作成すると ``add_axes`` と
 ``add_subplot`` メソッドが呼び出されます.
 同様に ``gca`` メソッドは ``pylab`` で ``legend``, ``text`` その他を行なうことに対応します.
 
@@ -1656,10 +1654,10 @@ axes や subplot を新たに作成すると, ``add_axes`` と
 .. Also the method ``gca`` maps directly to ``pylab`` as do ``legend``,
 .. ``text`` and many others.
 
-``pylab`` で figure のプロパティを設定する際に呼び出される,
+``pylab`` で figure のプロパティを設定する際に呼び出される
 ``set_facecolor`` や ``set_edgecolor`` のようないくつかの
 ``set_something`` メソッドがあります.
-また, ``Figure`` は ``get_axes`` や ``get_facecolor`` のような figure のプロパティを取得する ``get_something`` メソッドも実装しています.
+また ``Figure`` は ``get_axes`` や ``get_facecolor`` のような figure のプロパティを取得する ``get_something`` メソッドも実装しています.
 
 .. There are also several ``set_something`` method such as ``set_facecolor`` or
 .. ``set_edgecolor`` that will be called through ``pylab`` to set properties of
@@ -1674,9 +1672,9 @@ Axes と Subplot クラス
 .. The Classes Axes and Subplot
 .. ++++++++++++++++++++++++++++
 
-``Axes`` クラスでは ``Axis`` や ``Tick``, ``Line2D``
+``Axes`` クラスには ``Axis`` や ``Tick``, ``Line2D``
 または ``Text`` のような figure の要素の大部分があります.
-また, このクラスは座標系も設定します.
+またこのクラスは座標系も設定します.
 ``Subplot`` クラスは ``Axis`` クラスを継承して格子上に作図を配置するための機能が追加されています.
 
 .. In the class  ``Axes`` we find most of the figure elements such as
@@ -1684,8 +1682,9 @@ Axes と Subplot クラス
 .. system. The class ``Subplot`` inherits from ``Axes`` and adds some
 .. more functionality to arrange the plots in a grid.
 
-``Figure`` との同様に, このクラスはプロパティ設定, 取得するメソッドを持っています, そしてメソッドは ``pylab`` の ``annotate`` のような関数で既にでくわしています.
-さらに, ``Axwes`` はこれまでの節で示した作図の全てのタイプのメソッドを持っています.
+``Figure`` との同様に, このクラスはプロパティ設定, 取得するメソッドを持っています.
+そしてメソッドは ``pylab` の関数として既に扱ってきました, 例えば ``annotate``.
+さらに ``Axwes`` はこれまでの節で示した作図の全てのタイプのメソッドを持っています.
 
 .. Analogous to ``Figure``, it has methods to get and set properties
 .. and methods already encountered as functions in ``pylab`` such as
@@ -1699,7 +1698,7 @@ Axes と Subplot クラス
 .. +++++++++++++
 
 ``text``, ``Legend`` または ``Ticker`` のような他のクラスはとても類似した機構を持っています.
-これらは多くの場合, ``pylab`` インターフェースと比較して理解することができます.
+これらは多くの場合 ``pylab`` インターフェースと比較して理解することができます.
 
 
 .. Other classes such as ``text``, ``Legend`` or ``Ticker`` are setup very
@@ -1722,7 +1721,7 @@ Axes と Subplot クラス
 .. .. code-block:: python
     :include: matplotlib_examples/oo.py
 
-インタラクティブな pylab モードにいないので,
+インタラクティブな pylab モードにいないので
 ``Figure`` クラスをインポートする必要があります (``#1``).
 
 .. Since we are not in the interactive pylab-mode, we
@@ -1735,7 +1734,7 @@ MATLAB のように ``111`` で 1, 1 の位置に1番の作図を意味します
 0から9までの数字で新しく作図し,
 同時に line に対するレファレンスを取得します (``#5``).
 いくつかの要素を作図に追加できます.
-なので, タイトルと x, y 軸のラベルを設定します (``#6``).
+そのためタイトルと x, y 軸のラベルを設定します (``#6``).
 
 .. We set the size of our figure to be 8 by 5 inches (``#2``).
 .. Now we initialize a new figure (``#3``) and add a subplot
@@ -1745,13 +1744,13 @@ MATLAB のように ``111`` で 1, 1 の位置に1番の作図を意味します
 .. to our line (``#5``). We can add several things to our plot.
 .. So we set a title and labels for the x and y axis (``#6``).
 
-また, グリッドも表示し (``#7``) マーカーに小さな円を使いたい (``#8``) と思います.
+また, グリッドも表示し (``#7``) マーカーに小さな円を使いたい (``#8``) です.
     
 .. We also want to see the grid (``#7``) and would like to have
 .. little filled circles as markers (``#8``).
 
-fig をレンダリングするためにバックエンドはいくつかあります.
-レンダリングのために Anti-Grain Geometry toolkit (http://www.antigrain.com) を使います.
+fig をレンダリングするためのバックエンドはいくつかあります.
+レンダリングのために Anti-Grain Geometry toolkit (http://www.antigrain.com) を使ってみます.
 まず, バックエンドをインポートします (``#9``),
 そして fig を描画する新しいキャンバスを作ります (``#10``).
 fig を80 dpi の解像度の png ファイルに保存します (``#11``).
@@ -1762,15 +1761,15 @@ fig を80 dpi の解像度の png ファイルに保存します (``#11``).
 .. we create a new canvas that renders our figure (``#10``).
 .. We save our figure in a png-file with a resolution of 80 dpi (``#11``).
 
-いくつかの GUI ツールキットを直接使うことができます.
-なので, Tkinter をインポートし (``#12``),
+いくつかの GUI ツールキットは直接使うことができます.
+ということで Tkinter をインポートし (``#12``),
 同様に対応するバックエンドをインポートします (``#13``).
-さて, 基本的な GUI プログラミングが動くようにする必要があります.
+まず基本的な GUI プログラミングが動くようにする必要があります.
 GUI のための root オブジェクトを作成し (``#14``),
 キャンバスを得るため fig とともに与えます (``#15``).
 show メソッドを実行し (``#16``), ウィジェットにパックします (``#17``),
-アプリケーションを起動するために, Tkinter の mainloop を実行します (``#18``).
-これで, 画面の GUI ウィンドウで figure が見られるはずです.
+アプリケーションを起動するため Tkinter の mainloop を実行します (``#18``).
+これで画面の GUI ウィンドウで figure が見られるはずです.
 画面を閉じると, スクリプトの次の部分が実行されます.
 
 .. We can use several GUI toolkits directly. So we import Tkinter (``#12``)
@@ -1784,9 +1783,9 @@ show メソッドを実行し (``#16``), ウィジェットにパックします
 .. be executed.
 
 ``pylab`` を使っているときのように画面に表示したいので,
-helper をインポートし (``#19``) , ``pylab`` 自身もインポートします (``#20``).
+helper をインポートし (``#19``), ``pylab`` 自身もインポートします (``#20``).
 ``pylab`` で通常の figure を作成し (``#21``),
-そして, 対応するfigure manajer を取得します (``#22``).
+そして, 対応する figure manager を取得します (``#22``).
 さぁ, 上で作った figure を現在の figure に設定し (``#23``),
 ``pylab`` に結果を表示させましょう (``#24``).
 figure の下の部分がツールバーで覆われているかもしれません.
@@ -1808,7 +1807,7 @@ figure の下の部分がツールバーで覆われているかもしれませ�
 .. +++++++++
 
 1) matplotlib のオブジェクト指向 API を使って,
-   凡例つきの直線と2次曲線を作図し, png ファイルを作りなさい.
+   凡例つきの直線と2次曲線を作図し, png ファイルを作りましょう.
 
 .. 1) Use the object-oriented API of matplotlib to create a png-file
 ..    with a plot of two lines, one linear and square with a legend in it.

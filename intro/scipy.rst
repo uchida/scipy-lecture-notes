@@ -13,12 +13,12 @@ Scipy：高レベルな科学技術計算
 .. topic:: Scipy
 
     ``scipy`` パッケージは科学技術計算の共通して現われる問題を解決するための多くのツールを含んでいます.
-    補間, 積分, 最適化, 画像処理, 統計, 特殊関数など, 適用する問題の違いに対応したサブモジュールを持っています.
+    補間, 積分, 最適化, 画像処理, 統計, 特殊関数など適用する問題の違いに対応した様々なサブモジュールを持っています.
 
     ``scipy`` は GSL (GNU Scientific Library for C and C++) や
     Matlab の toolboxes のような他の科学技術計算で標準的に使われるライブラリと同等の機能を持っています.
     ``scipy`` は Python における科学技術計算ライブラリの中核となるパッケージです；
-    ``numpy`` の配列を効率的に扱い, numpy と scipy は密接な連携を持っています.
+    ``numpy`` の配列を効率的に扱ったりと numpy と scipy は密接な連携を持っています.
 
     ルーチンを実装する前に行いたいデータ処理が Scipy で実装されているか調べることは有効です.
     専門的でないプログラマによくあるように, 科学者はしばしば **車輪の再開発** をしたがります.
@@ -76,7 +76,7 @@ integrate       積分ルーチン
 interpolate     補間
 io              データの入出力
 linalg          線形代数ルーチン
-maxentropy      最大エントロピーモデルによるフィッティングルーチン
+maxentropy      最大エントロピーモデルによるフィッティング
 ndimage         n 次元画像パッケージ
 odr             直交距離回帰
 optimize        最適化
@@ -115,7 +115,7 @@ Scipy は Numpy に基づいています
 .. -------------------------
 
 Scipy を動かし, 使うには Numpy が必要です.
-Numpy が Python に導入する型の中で最も重要なものは, N 次元配列ですが,
+Numpy が Python に導入する型の中で最も重要なものは N 次元配列ですが,
 Scipy も同じものを使っていることがわかります::
 
     >>> scipy.ndarray is np.ndarray
@@ -389,7 +389,7 @@ Scipy も同じものを使っていることがわかります::
     >>> stats.scoreatpercentile(a, 50)
     0.0071645570292782519
 
-同様にして, 百分位点 90 も計算できます：
+同様に百分位点 90 も計算できます：
 
     >>> stats.scoreatpercentile(a, 90)
     1.2729556087871292
@@ -422,7 +422,7 @@ Scipy も同じものを使っていることがわかります::
 .. Statistical tests
 .. ...................
 
-統計的検定は判断指標です. 例えば, Gauss 過程から生成されたと過程される2つの観測の集合があるとき, 
+統計的検定は判断指標です. 例えば Gauss 過程から生成されたと過程される2つの観測の集合があるとき, 
 2つの集合に有意差があるかを調べるのに T検定を使うことができます::
 
     >>> a = np.random.normal(0, 1, size=100)
@@ -444,8 +444,8 @@ Scipy も同じものを使っていることがわかります::
 
     * T 統計値：2つの確率過程の差に比例し, 有意差の程度を示す数字
 
-    * *p 値*: 2つの過程が等価である確率. もし 1 に近ければ2つの過程はほぼ等価です.
-      0 に近ければ, 過程はより異なる意味をもつように思われます.
+    * *p 値*: 2つの過程が等価である確率. もし1に近ければ2つの過程はほぼ等価です.
+      0 に近ければ過程はより異なる意味をもつように思われます.
 
 .. The resulting output is composed of:
 
@@ -662,7 +662,7 @@ for stiff and nonstiff problems)
 
 入門として, 常微分方程式 ``dy/dt = -2y`` を ``t = 0..4`` の区間にわたって
 ``y(t=0) = 1`` の初期条件のもとで解きます.
-まず, 位置の微分を計算する関数を定義する必要があります::
+まずは位置の微分を計算する関数を定義する必要があります::
 
     >>> def calc_derivative(ypos, time, counter_arr):
     ...     counter_arr += 1
@@ -703,7 +703,7 @@ for stiff and nonstiff problems)
 ..     >>> yvec, info = odeint(calc_derivative, 1, time_vec,
 ..     ...                     args=(counter,), full_output=True)
 
-上のように, 微分を与える関数は 40 回以上呼ばれたことがわかります::
+上のように微分を与える関数は 40 回以上呼ばれたことがわかります::
 
     >>> counter
     array([129], dtype=uint16)
@@ -713,7 +713,7 @@ for stiff and nonstiff problems)
 ..     >>> counter
 ..     array([129], dtype=uint16)
 
-そして, 最初の10回の収束に対しての累積反復回数はこうして得られます::
+そして最初の10回の収束に対しての累積反復回数はこうして得られます::
 
     >>> info['nfe'][:10]
     array([31, 35, 43, 49, 53, 57, 59, 63, 65, 69], dtype=int32)
@@ -738,7 +738,7 @@ for stiff and nonstiff problems)
 ``y'' + 2 eps wo  y' + wo^2 y = 0`` に従います.
 ここに ``wo^2 = k/m`` で ``k`` はバネ定数で ``m`` は質量,
 ``eps=c/(2 m wo)`` で ``c`` は減衰定数です.
-計算する例として, パラメータは::
+計算する例としてパラメータを::
 
     >>> mass = 0.5 # kg
     >>> kspring = 4 # N/m
@@ -755,6 +755,7 @@ for stiff and nonstiff problems)
 ..     >>> kspring = 4 # N/m
 ..     >>> cviscous = 0.4 # N s/m
 
+とします.
 系の運動は減衰します, なぜなら::
 
     >>> eps = cviscous / (2 * mass * np.sqrt(kspring/mass))
@@ -805,7 +806,7 @@ for stiff and nonstiff problems)
 .. plot:: pyplots/odeint_damped_spring_mass.py
    :scale: 70
 
-scipy には偏微分方程式 (PDE) のソルバーは含まれません.
+scipy には偏微分方程式 (PDE) のソルバーは含まれていません.
 Python の PDE パッケージは, fipy_ や SfePy_ などがあります.
 
 .. There is no Partial Differential Equations (PDE) solver
@@ -839,9 +840,9 @@ Python の PDE パッケージは, fipy_ や SfePy_ などがあります.
 ..     >>> sig = np.sin(2 * np.pi / period * time_vec) + \
 ..     ...       np.cos(10 * np.pi * time_vec)
 
-しかし, 観察者は信号の周波数を知らず, 
+しかし, 観察者は信号の周波数を知らず
 信号 ``sig`` のサンプリング時間ステップだけを知っています.
-ただし, 信号は実関数だと仮定されるので Fourier 変換は対称となります.
+ただし信号は実関数と仮定されるため Fourier 変換は対称となります.
 ``fftfreq`` 関数はサンプリング周波数を生み出し,
 ``fft`` は高速 Fourier 変換を計算します::
 
@@ -860,7 +861,7 @@ Python の PDE パッケージは, fipy_ や SfePy_ などがあります.
 ..     >>> sample_freq = fftpack.fftfreq(sig.size, d=time_step)
 ..     >>> sig_fft = fftpack.fft(sig)
 
-とはいえ, 結果のパワースペクトルは対称なので周波数を見つけるのには,
+とはいえ, 結果のパワースペクトルは対称なので周波数を見つけるには
 正の部分だけを使います.
 
     >>> pidxs = np.where(sample_freq > 0)
@@ -982,8 +983,8 @@ scipy-interpolation.py_ によって結果を Matplotlib の figure にまとめ
 .. _scipy-interpolation.py : ../data/scipy-interpolation.py
 
 ``scipy.interpolate.interp2d`` は ``inter1d`` と似ていまが2次元配列です.
-``interp`` ファミリーについて注意しておくことは評価する時間は測定時間の範囲内に留める必要があるということです.
-より高度なスプライン補間の例については :ref:`summary_exercise_stat_interp` 統括演習を見て下さい.
+``interp`` ファミリーについては評価する時間は測定時間の範囲内に留める必要があるということに注意して下さい.
+より高度なスプライン補間の例については :ref:`summary_exercise_stat_interp` 統括演習を参照して下さい.
 
 .. ``scipy.interpolate.interp2d`` is similar to ``interp1d``, but for 2-D
 .. arrays. Note that for the ``interp`` family, the computed time must stay
@@ -998,7 +999,7 @@ scipy-interpolation.py_ によって結果を Matplotlib の figure にまとめ
 .. Optimization and fit: ``scipy.optimize``
 .. ----------------------------------------
 
-最適化とは極小値や方程式の解を数値的に見つけること問題のことです.
+最適化は極小値や方程式の解を数値的に見つけること問題のことです.
 
 .. Optimization is the problem of finding a numerical solution to a
 .. minimization or equality.
@@ -1048,7 +1049,7 @@ scipy-interpolation.py_ によって結果を Matplotlib の figure にまとめ
 .. ..............................
 
 極小値を見つける一般的で効率的な方法として与えた初期点から勾配が小さくなるように導く方法があります.
-BFGS アルゴリズムはこれをするよい方法です::
+BFGS アルゴリズムはこれをするのによい方法です::
 
     >>> optimize.fmin_bfgs(f, 0)
     Optimization terminated successfully.
@@ -1090,7 +1091,7 @@ BFGS アルゴリズムはこれをするよい方法です::
 .. Global optimization
 .. .....................
 
-大域的な極小値を探すための最も簡単なアルゴリズムはブルートフォースアルゴリズムで,
+大域的な極小値を探すための最も簡単なアルゴリズムはブルートフォースアルゴリズムで
 与えられた格子上の各点で関数を評価することです::
 
     >>> from scipy import optimize
@@ -1169,7 +1170,7 @@ BFGS アルゴリズムはこれをするよい方法です::
 
 統括演習では Numpy, Scipy そして Matplotlib を主に使います.
 Python での科学技術計算を実生活における例として使うことを最初の目的としています.
-1度土台を築けば, 興味あるユーザはさらなる演習を試みていくでしょう.
+1度土台を築けば, 興味あるユーザはさらなる演習を試みていくことでしょう.
 
 .. The summary exercices use mainly Numpy, Scipy and Matplotlib. They first aim at
 .. providing real life examples on scientific computing with Python. Once the

@@ -38,9 +38,9 @@ Lidar は光学距離計測系で, 距離測定のために散乱光の性質を
 
 チュートリアルでの目的は Lidar 系に記録された波形 [#data]_ を解析することです.
 この信号は中心にピークを持ち, 振幅から距離やいくつかの特徴を計算できます.
-レーザービームの足跡が地球上約 1m に及ぶと, 2方向伝搬の間でビームは複数の対象に当りうります
+レーザービームの足跡が地球上約 1m に及ぶと, 2方向伝搬の間でビームは複数の対象に当ることがあります.
 （例えば木やビルの頂上と地面）
-レーザービームが各対象に当った寄与の和は複数のピークを持った複雑な信号を作りだします,
+レーザービームが各対象に当ることでその寄与の和は複数のピークを持った複雑な信号を作りだします,
 各ピークに1つの対象の情報が含まれています.
 
 .. In this tutorial, the goal is to analyze the waveform recorded by the lidar
@@ -97,7 +97,6 @@ Gauss 関数の和として分解する方法があります.
 .. image:: waveform_1.png
    :align: center
 
-As you can notice, this waveform is a 80-bin-length signal with a single peak.
 気づくと思いますが, この波形は1つのピークを持った 80 の区画に分けられた信号です.
 
 .. As you can notice, this waveform is a 80-bin-length signal with a single peak.

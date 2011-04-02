@@ -15,7 +15,7 @@ Wallis の円周率の解答
 .. The Pi Wallis Solution
 .. ----------------------
 
-Wallis の公式を使って, Pi の値を計算しなさい：
+Wallis の公式を使って, Pi の値を計算しましょう：
 
 .. Compute the decimals of Pi using the Wallis formula:
 
@@ -29,7 +29,7 @@ Wallis の公式を使って, Pi の値を計算しなさい：
 .. The Quicksort Solution
 .. ----------------------
 
-クイックソートアルゴリズムを実装しなさい, Wikipedia での定義:
+クイックソートアルゴリズムを実装しましょう, Wikipedia での定義:
 
 .. Implement the quicksort algorithm, as defined by wikipedia:
 
@@ -55,7 +55,7 @@ Fibonacci 数列
 .. Fibonacci sequence
 .. ------------------
 
-Fibonacci 数列の第1項から n 項までを表示する関数を書きなさい, Fibonacci 数列の定義は：
+Fibonacci 数列の第1項から n 項までを表示する関数を書きましょう, Fibonacci 数列の定義は：
 
 .. Write a function that displays the ``n`` first terms of the Fibonacci
 .. sequence, defined by:
@@ -94,7 +94,7 @@ Fibonacci 数列の第1項から n 項までを表示する関数を書きなさ
 .. The Directory Listing Solution
 .. ------------------------------
 
-ディレクトリの名前を引数としてとり, 名前の長さによって並べられた '.py' ファイルのリストを返す関数を実装しなさい.
+ディレクトリの名前を引数としてとり, 名前の長さによって並べられた '.py' ファイルのリストを返す関数を実装しましょう.
 
 .. Implement a script that takes a directory name as argument, and
 .. returns the list of '.py' files, sorted by name length.
@@ -112,7 +112,7 @@ Fibonacci 数列の第1項から n 項までを表示する関数を書きなさ
 .. The Data File I/O Solution
 .. --------------------------
 
-``data.txt`` の各列の数字を読み込み最小値, 最大値, 和を計算する関数を書きなさい.
+``data.txt`` の各列の数字を読み込み最小値, 最大値, 和を計算する関数を書きましょう.
 
 .. Write a function that will load the column of numbers in ``data.txt``
 .. and calculate the min, max and sum values.
@@ -137,7 +137,7 @@ PYTHONPATH 検索の解答
 .. The PYTHONPATH Search Solution
 .. ------------------------------
 
-site.py モジュールが PYTHONPATH のどこにあるか検索するプログラムを書きなさい.
+site.py モジュールが PYTHONPATH のどこにあるか検索するプログラムを書きましょう.
 
 .. Write a program to search your PYTHONPATH for the module ``site.py``.
 

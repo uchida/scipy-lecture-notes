@@ -9,8 +9,7 @@
 <http://docs.python.org/reference/simple_stmts.html#assignment-statements>`_ [*]_
 によると：
 
-  代入文は, 名前を値に (再) 束縛したり, 変更可能なオブジェクトの属性や要素を変更し
-  たりするために使われます
+  代入文は名前を値に（再）束縛したり, 変更可能なオブジェクトの属性や要素を変更したりするために使われます
 
 ..
     `Python library reference
@@ -24,7 +23,7 @@
 
 #. 右辺の式が評価され, 対応する値が得られる
 
-#. 左辺の名前に値が代入, あるいは束縛される
+#. 左辺の名前に値が代入あるいは束縛される
 
 ..
     In short, it works as follows (simple assignment):
@@ -95,7 +94,7 @@
 
 * ここでの重要な概念は **変更可能か変化不可能か** です
 
-    * 変更可能なオブジェクトはインプレイスに変更されます
+    * 変更可能なオブジェクトはインプレースに変更されます
     * 変化不可能なオブジェクトは一旦作られたら変更できません
 
 ..
@@ -106,7 +105,7 @@
 
 David M. Beazley による記事 `Types and Objects in Python
 <http://www.informit.com/articles/article.aspx?p=453682>`_
-に上の話題についてのとても素晴しい, 詳しい解説があります.
+に上の話題についてのとても優れた詳しい解説があります.
 
 ..
     A very good and detailed explanation of the above issues can be found

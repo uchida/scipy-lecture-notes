@@ -349,7 +349,7 @@ Python インタプリタに関わるシステム固有の情報
 
 .. topic:: 練習問題
 
-	``site.py`` モジュールが PYTHONPATH のどこにあるか検索するプログラムを書きなさい.
+	``site.py`` モジュールが PYTHONPATH のどこにあるか検索するプログラムを書きましょう.
 
 .. .. topic:: Exercise
 

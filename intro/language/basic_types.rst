@@ -72,7 +72,7 @@
 
 
 Python シェルは基本的な算術演算 ``+``, ``-``, ``*``, ``/``, ``%``
-（剰余）がそのままで使えるので, 電卓代わりに使うこともできます::
+（剰余）がそのまま使えるため電卓代わりに使うこともできます::
 
     >>> 7 * 3.
     21.0
@@ -175,7 +175,7 @@ Python シェルは基本的な算術演算 ``+``, ``-``, ``*``, ``/``, ``%``
 ..  Containers
     ------------
 
-Python は効率よくオブジェクトの集まりを蓄えることができるいろいろなコンテナ型を提供しています.
+Python は多くの効率よいコンテナ型を提供していて, これらはオブジェクトの集まりを記録できます.
 
 ..
     Python provides many efficient types of containers, in which collections of
@@ -187,7 +187,7 @@ Python は効率よくオブジェクトの集まりを蓄えることができ�
 ..  Lists
     ~~~~~
 
-リストは順序つきのオブジェクトの集りで, オブジェクトは異なる型を取り得ます.
+リストは順序つきのオブジェクトの集まりです, 要素となるオブジェクトは異なる型を取ることができます.
 例::
 
     >>> l = [1, 2, 3, 4, 5]
@@ -214,9 +214,9 @@ Python は効率よくオブジェクトの集まりを蓄えることができ�
     >>> l[-2]
     4
 
-.. warning::
-
-    **インデクスは 0 から始まります** （C のように）, 1 から（Fortran や Matlab のように）ではありません!
+  .. warning::
+   
+      **インデクスは 0 から始まります** （C のように）1 から（Fortran や Matlab のように）ではありません!
 
 ..
     * Indexing: accessing individual objects contained in the list::
@@ -235,7 +235,7 @@ Python は効率よくオブジェクトの集まりを蓄えることができ�
     
         **Indexing starts at 0** (as in C), not at 1 (as in Fortran or Matlab)!
 
-* スライス：リスト内の並んだ要素からなる部分リストを得る
+* スライス：規則正しく並んだ要素からなる部分リストを得る
 
   ::
 
@@ -244,11 +244,11 @@ Python は効率よくオブジェクトの集まりを蓄えることができ�
     >>> l[2:4]
     [3, 4]
 
-.. Warning::
-
-    ``l[start:stop]`` はインデクス ``start<= i <stop`` を満す ``i``
-    である（ ``i`` は ``start`` から ``stop-1`` までの値をとる）ことに注意しましょう.
-    したがって,  ``l[start:stop]`` は ``(stop-start)`` 個の要素を持ちます.
+  .. Warning::
+   
+      ``l[start:stop]`` はインデクス ``start<= i <stop`` を満す ``i``
+      である（ ``i`` は ``start`` から ``stop-1`` までの値をとる）ことに注意しましょう.
+      したがって,  ``l[start:stop]`` は ``(stop-start)`` 個の要素を持ちます.
 
 **スライス構文** ： `l[start:stop:stride]`
 
@@ -288,7 +288,7 @@ Python は効率よくオブジェクトの集まりを蓄えることができ�
         >>> l[::2]
         [1, 3, 5]
 
-リストは *変更可能 (mutable)* なオブジェクトなので改変可能です::
+リストは *変更可能 (mutable)* なオブジェクトなので変更できます::
 
     >>> l[0] = 28
     >>> l
@@ -313,7 +313,7 @@ Python は効率よくオブジェクトの集まりを蓄えることができ�
     **Numpy** モジュールが提供している,
     固定サイズのデータがメモリ上に順序よく並んだデータの集まり
     **array** 型を使うとより効率的です.
-    Numpy の array を使うとi番目の要素へのアクセスは要素が規則正しく並んでいるために,
+    Numpy の array を使うとi番目の要素へのアクセスは要素が規則正しく並んでいるため
     複雑さ O(1) となります.
 
 ..
@@ -346,7 +346,7 @@ Python は効率よくオブジェクトの集まりを蓄えることができ�
 
 
 Python はリストを変更する, 照会するための多くの関数を提供します.
-ここでは少数の例を挙げますが, 詳しくは, 
+ここでは少数の例を挙げますが, 詳しくは
 http://docs.python.org/tutorial/datastructures.html#more-on-lists [*]_
 を見てください.
 
@@ -435,11 +435,11 @@ r のソート（インプレース：上書きされる）::
 
 .. Note:: **メソッドとオブジェクト指向プログラミング**
 
-    ``r.method()`` という表記法 (``r.sort(), r.append(3), l.pop()``)
-    はオブジェクト指向プログラミングのここでの最初例となっています.
-    ``list`` であるために, オブジェクト `r` は, **.** の表記で使える
+    ここで ``r.method()`` という表記法 (``r.sort(), r.append(3), l.pop()``) は
+    オブジェクト指向プログラミングのはじめての例です.
+    オブジェクト `r` は ``list`` なので **.** の表記で使える
     *method* 関数を所持しています.
-    **.** に関する表記法以上の OOP の知識はこのチュートリアルでは必要ではありません.
+    このチュートリアルでは **.** の表記以上の OOP の知識は不要です.
 
 ..
     .. Note:: **Methods and Object-Oriented Programming**
@@ -605,7 +605,7 @@ http://docs.python.org/tutorial/introduction.html#unicode-strings [*]_
     http://docs.python.org/tutorial/introduction.html#unicode-strings).
 
 文字列は **変化不可能なオブジェクト (immutable)** なので文字を変更することはできません. 
-とはいえ, 元の文字列から新しい文字列を作ろうとするかもしれません. 
+とはいえ, 元の文字列から新しい文字列を作ることはできます.
 
 ..
     A string is an **immutable object** and it is not possible to modify its
@@ -629,8 +629,8 @@ http://docs.python.org/tutorial/introduction.html#unicode-strings [*]_
     Out[56]: 'hezzo, worzd!'
 
 文字列は上で見た ``a.relace`` のような多くの便利なメソッドを持っています.
-``a.`` はオブジェクト指向の表記法で, tab 補完か ``help(str)`` で
-新しいメソッドを探せることは覚えておきましょう.
+``a.`` がオブジェクト指向の表記法であることと
+新しいメソッドを探すのに tab 補完か ``help(str)`` が使えることは覚えておきましょう.
 
 ..
     Strings have many useful methods, such as ``a.replace`` as seen above.
@@ -685,7 +685,7 @@ http://docs.python.org/tutorial/introduction.html#unicode-strings [*]_
     ~~~~~~~~~~~~~
 
 辞書はハッシュテーブルを基にして **キー (key) を値 (value) に対応づけします** .
-即ちこれは, **順序づけられていない** コンテナです::
+即ちこれは **順序づけられていない** コンテナです::
 
     >>> tel = {'emmanuelle': 5752, 'sebastian': 5578}
     >>> tel['francis'] = 5915 
@@ -752,7 +752,7 @@ http://docs.python.org/tutorial/datastructures.html#dictionaries [*]_
 
 * **タプル**
 
-  タプルは要は変化不可能なリストです.
+  タプルは要は変化不可能 (immutable) なリストです.
   タプルの要素はカンマで区切られ, 丸括弧に囲われて書かれます::
    
       >>> t = 12345, 54321, 'hello!'
@@ -794,24 +794,36 @@ http://docs.python.org/tutorial/datastructures.html#dictionaries [*]_
 
 .. topic:: IPython をうまく使う秘訣
 
-    * IPython では ``ls``, ``pwd``, ``cd`` 等のいくつかの Linux シェルコマンドが動きます.
+   * IPython では ``ls``, ``pwd``, ``cd`` 等のいくつかの Linux シェルコマンドが動きます.
 
-    * オブジェクトや関数, その他に関するヘルプを得たければ ``help object``
-      やただ単に help() と打ち込んでみましょう.
+   * オブジェクトや関数, その他に関するヘルプを得たければ ``help object``
+     やただ単に help() と打ち込んでみましょう.
 
-    * できるだけ, **tab補完** しましょう：オブジェクトの名前（変数, 関数, モジュール）を打ち込んですぐに
-      **Tab** キーを押すと IPython がマッチする利用可能な名前に補完してくれます.
-      もしたくさんの名前が候補にあれば, 候補となる名前のリストを表示します.
+   * できるだけ **tab補完** しましょう：オブジェクトの名前（変数, 関数, モジュール）を打ち込んですぐ
+     **Tab** キーを押すと IPython がマッチする利用可能な名前に補完してくれます.
+     もしたくさんの名前が候補にあれば, 候補となる名前のリストを表示します.
 
-    * **履歴**: 以前に入力した命令に `上` の矢印キーを押すことで
-      移れます（逆に `下` の矢印で次に進みます）.
-      移動できる命令はカーソルの左側に入力された表現と一致する命令です
-      （つまり, カーソルが1番右にある場合には
-      全ての過去のコマンドを渡り歩くことができます）.
+   * **履歴** ： 以前に入力した命令に `上` の矢印キーを押すことで
+     移れます（逆に `下` の矢印で次に進みます）.
+     移動できる命令はカーソルの左側に入力された表現と一致する命令です
+     （つまり, カーソルが1番右にある場合には
+     全ての過去のコマンドを渡り歩くことができます）.
 
-    * IPython の %logstart という「マジックコマンド」を使えばセッションを保存できます.
-      そうすれば, あなたの打ち込む命令群は異なるセッションで
-      スクリプトとして実行できるファイルとして保存されます.
+   * IPython の %logstart という「マジックコマンド」を使えばセッションを保存できます.
+     そうすれば, あなたの打ち込む命令群は異なるセッションで
+     スクリプトとして実行できるファイルとして保存されます.
+
+     .. sourcecode:: ipython
+      
+         In [1]: %logstart commandes.log
+         Activating auto-logging. Current session state plus future input
+         saved.
+         Filename       : commandes.log
+         Mode           : backup
+         Output logging : False
+         Raw input log  : False
+         Timestamping   : False
+         State          : active
 
 ..
     .. topic:: A bag of Ipython tricks
@@ -839,17 +851,17 @@ http://docs.python.org/tutorial/datastructures.html#dictionaries [*]_
           execute as a script in a different session.
 
 
-.. sourcecode:: ipython
+.. .. sourcecode:: ipython
 
-    In [1]: %logstart commandes.log
-    Activating auto-logging. Current session state plus future input
-    saved.
-    Filename       : commandes.log
-    Mode           : backup
-    Output logging : False
-    Raw input log  : False
-    Timestamping   : False
-    State          : active
+..     In [1]: %logstart commandes.log
+..     Activating auto-logging. Current session state plus future input
+..     saved.
+..     Filename       : commandes.log
+..     Mode           : backup
+..     Output logging : False
+..     Raw input log  : False
+..     Timestamping   : False
+..     State          : active
 
 .. rubric:: Footnotes
 
