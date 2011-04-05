@@ -293,7 +293,7 @@ LaTeX のフォント, 図の取り込み, 頻度分布等.
    :align: center
    :scale: 60
 
-mayavi/mlab のウィンドウはインタラクティブに開きます：ドラッグして画像を回転する, マウスホイールで拡大等.
+mayavi/mlab のウィンドウは対話的に開きます：ドラッグして画像を回転する, マウスホイールで拡大等.
 
 .. The mayavi/mlab window that opens is interactive : by clicking on the left mouse button
 .. you can rotate the image, zoom with the mouse wheel, etc.
@@ -1057,8 +1057,8 @@ IPython は os モジュールとその統合された機能によってシェ�
 
 .. **Answers** :ref:`stat_recherche`
 
-ファンシーインデクス
---------------------
+ファンシーインデクス指定
+------------------------
 
 .. Fancy indexing
 .. --------------
@@ -1066,7 +1066,7 @@ IPython は os モジュールとその統合された機能によってシェ�
 Numpy の配列はスライスだけでなく,
 ブール値や整数の配列（ **マスク (masks)** ）を使って
 インデクス指定することができます.
-この方法を *ファンシーインデクス* と呼びます.
+この方法を *ファンシーインデクス指定 (fancy indexing)* と呼びます.
 
 .. Numpy arrays can be indexed with slices, but also with boolean or integer arrays
 .. (**masks**). This method is called *fancy indexing*.
@@ -1109,7 +1109,7 @@ Numpy の配列はスライスだけでなく,
     >>> a
     array([10,  3,  8,  0, 19, 10, 11,  9, 10,  6,  0, 20, 12,  7, 14])
 
-マスクによるインデクスは配列の一部に新しい値を代入するのに便利です.
+マスクによるインデクス指定は配列の一部に新しい値を代入するのに便利です.
 
 .. Indexing with a mask can be very useful to assign a new value to a sub-array::
 
@@ -1155,7 +1155,7 @@ Numpy の配列はスライスだけでなく,
     >>> a
     array([  3,   1,   6,   4,   8,   5,   9, -10,  11, -10])
 
-整数配列によるインデクスで新しい配列を作った場合, 
+整数配列によるインデクス指定で新しい配列を作った場合, 
 新しい配列は整数配列と同じシェイプになります.
 
 .. When a new array is created by indexing with an array of integers, the new array
@@ -1282,7 +1282,7 @@ Numpy の配列はスライスだけでなく,
            [ 1,  2,  3,  4,  5],
            [15, 16, 17, 18, 19]])
 
-ファンシーインデクスとブロードキャストを同時に使うこともできます.
+ファンシーインデクス指定とブロードキャストを同時に使うこともできます.
 上と同じ例を取り上げてみましょう.
 
 .. We can even use fancy indexing and broadcasting at the same time. Take again the
@@ -1587,7 +1587,7 @@ Oklahoma City, Amarillo, Santa Fe, Albucquerque, Flagstaff and Los Angeles)
       （ :ref:`help` をみましょう ）!!
 
     * もっと使いこなすには：
-      整数配列を使ったインデクシングやブロードキャストに精通する.
+      整数配列を使ったインデクス指定やブロードキャストに精通する.
       numpy の配列操作に関する関数をより多く知る
 
 .. .. topic:: Conclusion : what do you need to know about numpy arrays to start?

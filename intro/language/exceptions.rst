@@ -140,54 +140,97 @@ try/finally
 
 * 例外を捉えて再送出する：
 
+  .. sourcecode:: ipython
+   
+      In [15]: def filter_name(name):
+         ....:	try:                      
+         ....:	    name = name.encode('ascii')
+         ....:	except UnicodeError, e:
+         ....:	    if name == 'Gaël':
+         ....:		print('OK, Gaël')
+         ....:	    else:                
+         ....:		raise e
+         ....:	return name
+         ....: 
+   
+      In [16]: filter_name('Gaël')
+      OK, Gaël
+      Out[16]: 'Ga\xc3\xabl'
+   
+      In [17]: filter_name('Stéfan')
+      ---------------------------------------------------------------------------
+      UnicodeDecodeError: 'ascii' codec can't decode byte 0xc3 in position 2: ordinal not in range(128)
+
 .. * Capturing and reraising an exception:
 
-.. sourcecode:: ipython
+.. .. sourcecode:: ipython
 
-    In [15]: def filter_name(name):
-       ....:	try:                      
-       ....:	    name = name.encode('ascii')
-       ....:	except UnicodeError, e:
-       ....:	    if name == 'Gaël':
-       ....:		print('OK, Gaël')
-       ....:	    else:                
-       ....:		raise e
-       ....:	return name
-       ....: 
+..     In [15]: def filter_name(name):
+..        ....:	try:                      
+..        ....:	    name = name.encode('ascii')
+..        ....:	except UnicodeError, e:
+..        ....:	    if name == 'Gaël':
+..        ....:		print('OK, Gaël')
+..        ....:	    else:                
+..        ....:		raise e
+..        ....:	return name
+..        ....: 
 
-    In [16]: filter_name('Gaël')
-    OK, Gaël
-    Out[16]: 'Ga\xc3\xabl'
+..     In [16]: filter_name('Gaël')
+..     OK, Gaël
+..     Out[16]: 'Ga\xc3\xabl'
 
-    In [17]: filter_name('Stéfan')
-    ---------------------------------------------------------------------------
-    UnicodeDecodeError: 'ascii' codec can't decode byte 0xc3 in position 2: ordinal not in range(128)
+..     In [17]: filter_name('Stéfan')
+..     ---------------------------------------------------------------------------
+..     UnicodeDecodeError: 'ascii' codec can't decode byte 0xc3 in position 2: ordinal not in range(128)
 
 * コードのある部分をパスするための例外：
 
+  .. sourcecode:: ipython
+   
+      In [17]: def achilles_arrow(x):
+         ....:    if abs(x - 1) < 1e-3:
+         ....:        raise StopIteration
+         ....:    x = 1 - (1-x)/2.
+         ....:    return x
+         ....: 
+   
+      In [18]: x = 0
+   
+      In [19]: while True:
+         ....:     try:
+         ....:         x = achilles_arrow(x)
+         ....:     except StopIteration:
+         ....:         break
+         ....:         
+         ....:         
+   
+      In [20]: x
+      Out[20]: 0.9990234375
+
 .. * Exceptions to pass messages between parts of the code:
 
-.. sourcecode:: ipython
+.. .. sourcecode:: ipython
 
-    In [17]: def achilles_arrow(x):
-       ....:    if abs(x - 1) < 1e-3:
-       ....:        raise StopIteration
-       ....:    x = 1 - (1-x)/2.
-       ....:    return x
-       ....: 
+..     In [17]: def achilles_arrow(x):
+..        ....:    if abs(x - 1) < 1e-3:
+..        ....:        raise StopIteration
+..        ....:    x = 1 - (1-x)/2.
+..        ....:    return x
+..        ....: 
 
-    In [18]: x = 0
+..     In [18]: x = 0
 
-    In [19]: while True:
-       ....:     try:
-       ....:         x = achilles_arrow(x)
-       ....:     except StopIteration:
-       ....:         break
-       ....:         
-       ....:         
+..     In [19]: while True:
+..        ....:     try:
+..        ....:         x = achilles_arrow(x)
+..        ....:     except StopIteration:
+..        ....:         break
+..        ....:         
+..        ....:         
 
-    In [20]: x
-    Out[20]: 0.9990234375
+..     In [20]: x
+..     Out[20]: 0.9990234375
 
 **出会った状況を知らせてくれる例外を使いましょう（上の場合でカスタマイズしたエラーではなく StopIteration を使ったように）**
 

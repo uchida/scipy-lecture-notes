@@ -186,24 +186,24 @@ while/break/continue
 
   論理的に等価かどうか調べる：
 
-..
-    * `a == b`
-    
-    Tests equality, with logics:
-
   .. sourcecode:: ipython
 
     In [19]: 1 == 1.
     Out[19]: True
 
+..
+    * `a == b`
+    
+    Tests equality, with logics:
+
+..   .. sourcecode:: ipython
+
+..     In [19]: 1 == 1.
+..     Out[19]: True
+
 * `a is b`
 
   同一性を調べる：2つのオブジェクトが同じか
-
-..
-    * `a is b`
-    
-      Tests identity: both objects are the same
 
   .. sourcecode:: ipython
 
@@ -216,6 +216,23 @@ while/break/continue
 
     In [23]: a is b
     Out[23]: True
+
+..
+    * `a is b`
+    
+      Tests identity: both objects are the same
+
+..   .. sourcecode:: ipython
+
+..     In [20]: 1 is 1.
+..     Out[20]: False
+
+..     In [21]: a = 1
+
+..     In [22]: b = 1
+
+..     In [23]: a is b
+..     Out[23]: True
 
 * `a in b`
 
@@ -314,8 +331,6 @@ Python を使うことで, インデクスについて注意深く考えない�
 
 * 以下のような, カウンタ付きの while や for ループを使うこともできます：
 
-..  * Could use while loop with a counter as above. Or a for loop:
-
   .. sourcecode:: ipython
 
     In [13]: for i in range(0, len(words)):
@@ -325,6 +340,18 @@ Python を使うことで, インデクスについて注意深く考えない�
     0 cool
     1 powerful
     2 readable
+
+..  * Could use while loop with a counter as above. Or a for loop:
+
+..   .. sourcecode:: ipython
+
+..     In [13]: for i in range(0, len(words)):
+..        ....:     print(i, words[i])
+..        ....:     
+..        ....:     
+..     0 cool
+..     1 powerful
+..     2 readable
 
 * しかし, Python はそうするための **enumerate** を提供しています::
 

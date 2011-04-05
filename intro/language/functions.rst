@@ -79,13 +79,13 @@ return 文
         * and ``return object`` for optionally returning values.
 
 
-パラメーター
-------------
+引数
+----
 
 ..  Parameters
     ----------
 
-必須のパラメーター（固定引数）
+必須の引数（固定引数）
 
 .. Mandatory parameters (positional arguments)
 
@@ -106,7 +106,7 @@ return 文
 
     TypeError: double_it() takes exactly 1 argument (0 given)
 
-オプションのパラメーター（キーワード引数または名前付き引数）
+オプションの引数（キーワード引数または名前付き引数）
 
 .. Optional parameters (keyword or named arguments)
 
@@ -219,7 +219,7 @@ Python ではこのような区別はいくぶん不自然で,
     subtle whether your variables are going to be modified or not.
     Fortunately, there exist clear rules.
 
-関数のパラメーターはオブジェクトの参照が値として渡されます. 
+関数の引数はオブジェクトの参照が値として渡されます. 
 関数に変数を渡すとき, Python は変数を参照しているオブジェクト（ **値** ）を渡します. 
 変数自身は渡しません. 
 
@@ -314,7 +314,7 @@ Python ではこのような区別はいくぶん不自然で,
     Out[116]: 15
 
 しかし, これらのグローバル変数は関数の中で変更することはできません, 
-ただし, **global** と宣言すれば可能になります. 
+ただし **global** と宣言すれば可能になります. 
 
 ..  but these "global" variables cannot be modified within the function,
     unless declared **global** in the function.
@@ -357,13 +357,13 @@ Python ではこのような区別はいくぶん不自然で,
     out[123]: 10
 
 
-可変なパラメータ
-----------------
+可変な引数
+----------
 
 ..  variable number of parameters
     -----------------------------
 
-パラメータの特別な形式：
+引数の特別な形式：
   * \*args：任意の固定引数が入ったタプル
   * \**kwargs：任意のキーワード引数が入った辞書
 
@@ -429,7 +429,7 @@ Python ではこのような区別はいくぶん不自然で,
 
     また numpy や scipy モジュールも科学技術計算用の関数の文書化のために
     簡潔化された標準を定めています, 
-    それらは,  ``パラメータ`` 節や ``example`` 節等を含んでいて, 
+    それらは,  ``引数`` 節や ``example`` 節等を含んでいて, 
     自分で書いた関数について参考にしたいと思うことでしょう. 
     http://github.com/numpy/numpy/blob/master/doc/HOWTO_DOCUMENT.rst.txt
     と http://github.com/numpy/numpy/blob/master/doc/example.py#L37 を見てください.

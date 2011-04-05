@@ -4,7 +4,7 @@
 ..  First steps
     -------------
 
-**iPython** シェル（機能拡張された Python インタラクティブシェル）を起動してみましょう：
+**iPython** シェル（機能拡張された Python 対話型シェル）を起動してみましょう：
 
 * Linux/Mac のターミナルから
   または Windows のコマンドプロンプトから "ipython" と打ち込んで,
@@ -22,7 +22,7 @@
 
 もし ipython が計算機にインストールされていない,
 もしくはターミナルから "python" と打って使える Python デフォルトのシェルが利用できるとしても,
-インタラクティブな科学技術計算機能をはじめとする拡張機能をもった ipython シェルを利用することをお勧めします.
+対話的な科学技術計算機能をはじめとする拡張機能をもった ipython シェルを利用することをお勧めします.
 
 ..
     If you don't have Ipython installed on your computer, other Python shells
@@ -39,7 +39,7 @@
 と打ちこんでみましょう.
 
 "Hello, world!" というメッセージが表示されるはずです.
-実行しましたねいままさに Python の学習がはじまりました, おめでとう!
+実行しましたね, いままさに Python の学習がはじまりました, おめでとう!
 
 ..
     Once you have started the interpreter, type ::

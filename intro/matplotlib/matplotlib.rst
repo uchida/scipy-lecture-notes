@@ -13,8 +13,8 @@ Matplotlib
 
 ``matplotlib`` はおそらく2次元グラフィック用の Python パッケージの決定版です.
 高速なデータの可視化手法や出版品質の図を多くのフォーマットで提供します.
-これからインタラクティブモードで matplotlib の機能を調べていきましょう.
-ほとんどの状況はインタラクティブモードですませることができます.
+これから対話モードで matplotlib の機能を調べていきましょう.
+ほとんどの状況は対話モードですませることができます.
 またオブジェクト指向インターフェースとともに提供されるクラスライブラリについても触れます.
 
 .. ``matplotlib`` is probably the single most used Python package
@@ -27,10 +27,10 @@ Matplotlib
 IPython
 -------
 
-IPython は多くの機能をもった高機能な Python インタラクティブシェルです.
+IPython は多くの機能をもった高機能な Python 対話型シェルです.
 IPython は名前つきの入出力, シェルコマンド, 改良されたデバッグ機能など他にも多くの機能があります.
 IPython をコマンドラインで ``-pylab`` 引数を与えて起動すると,
-Matlab や Mathematica のような機能をもったインタラクティブな
+Matlab や Mathematica のような機能をもった対話的な
 ``matplotlib`` セッションが使えるようになります.
 
 .. IPython is an enhanced interactive Python shell that has lots of
@@ -47,7 +47,7 @@ pylab
 このモデルは Matlab(TM) をお手本にしています.
 そのため ``pylab`` の大部分の作図コマンドは Matlab(TM) に類似していて
 同じような引数をとります.
-重要なコマンドはインタラクティブな例で説明します.
+重要なコマンドは対話的な例で説明します.
 
 
 .. ``pylab`` provides a procedural interface to the ``matplotlib``
@@ -62,7 +62,7 @@ pylab
 .. Simple Plots
 .. ------------
 
-インタラクティブセッションを始めてみましょう::
+対話的セッションを始めてみましょう::
 
     $ ipython -pylab
 
@@ -106,7 +106,7 @@ pylab
     :width: 50%
 
 
-機能をインタラクティブに追加して作図できます：
+機能を対話的に追加して作図できます：
 
 .. Now we can interactively add features to or plot:
 
@@ -1721,7 +1721,7 @@ Axes と Subplot クラス
 .. .. code-block:: python
     :include: matplotlib_examples/oo.py
 
-インタラクティブな pylab モードにいないので
+対話的な pylab モードにいないので
 ``Figure`` クラスをインポートする必要があります (``#1``).
 
 .. Since we are not in the interactive pylab-mode, we
