@@ -29,6 +29,7 @@ extensions = ['sphinx.ext.autodoc', 'sphinx.ext.doctest',
         'ipython_console_highlighting',
         #'matplotlib.sphinxext.only_directives',
          'sphinx.ext.pngmath',
+         'jpsupport',
         ]#'sphinx.ext.intersphinx']
 
 doctest_test_doctest_blocks = 'true'

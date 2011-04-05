@@ -30,11 +30,12 @@ help:
 
 clean:
 	-rm -rf build/*
+	-rm -f sphinxext/jpsupport.py
 
 test:
 	nosetests -v --with-doctest --doctest-tests --doctest-extension=rst intro/*[a-z].rst advanced/*[a-z].rst intro/summary-exercices/*.rst
 
-html:
+html: sphinxext/jpsupport.py
 	mkdir -p build/html build/doctrees
 	$(SPHINXBUILD) -b html $(ALLSPHINXOPTS) build/html
 	mkdir -p build/html/data
@@ -59,7 +60,7 @@ htmlhelp:
 	@echo "Build finished; now you can run HTML Help Workshop with the" \
 	      ".hhp project file in build/htmlhelp."
 
-latex:
+latex: sphinxext/jpsupport.py
 	mkdir -p build/latex build/doctrees
 	$(SPHINXBUILD) -b latex $(ALLSPHINXOPTS) build/latex
 	@echo
@@ -92,4 +93,7 @@ zip: html pdf
 	cp -r data build/scipy_lecture_notes ;
 	cp PythonScientific.pdf build/scipy_lecture_notes;
 	zip -r build/scipy_lecture_notes.zip build/scipy_lecture_notes  
+
+sphinxext/jpsupport.py:
+	curl -o $@ http://python-doc-ja.googlecode.com/hg/tools/sphinxext/jpsupport.py
 
