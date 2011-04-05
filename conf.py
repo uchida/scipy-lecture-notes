@@ -270,7 +270,7 @@ intersphinx_mapping = {
 pngmath_dvipng_args = ['-gamma 1.5', '-D 180']
 pngmath_use_preview = True
 pngmath_latex_preamble = r'''
-\usepackage{mathptmx}
+\usepackage{mathpazo}
 \usepackage[scaled=.90]{helvet}
 \usepackage{courier}'''
 
