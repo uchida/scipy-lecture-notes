@@ -480,7 +480,7 @@ Python ではこのような区別はいくぶん不自然で,
 練習問題
 --------
 
-..  exercices
+..  exercises
     ---------
 
 .. topic:: 練習問題：クイックソート
@@ -500,7 +500,7 @@ Python ではこのような区別はいくぶん不自然で,
 :ref:`quick_sort`
 
 ..
-    .. topic:: exercice: quicksort
+    .. topic:: exercise: quicksort
     
         implement the quicksort algorithm, as defined by wikipedia::
     
@@ -527,7 +527,7 @@ Python ではこのような区別はいくぶん不自然で,
 :ref:`fibonacci`
 
 ..
-    .. topic:: Exercice: Fibonacci sequence
+    .. topic:: Exercise: Fibonacci sequence
     
         Write a function that displays the ``n`` first terms of the Fibonacci
         sequence, defined by:

@@ -33,7 +33,7 @@ clean:
 	-rm -f sphinxext/jpsupport.py
 
 test:
-	nosetests -v --with-doctest --doctest-tests --doctest-extension=rst intro/*[a-z].rst advanced/*[a-z].rst intro/summary-exercices/*.rst
+	nosetests -v --with-doctest --doctest-tests --doctest-extension=rst intro/*[a-z].rst advanced/*[a-z].rst intro/summary-exercises/*.rst
 
 html: sphinxext/jpsupport.py
 	mkdir -p build/html build/doctrees
@@ -62,11 +62,14 @@ htmlhelp:
 
 latex: sphinxext/jpsupport.py
 	mkdir -p build/latex build/doctrees
-	$(SPHINXBUILD) -b latex $(ALLSPHINXOPTS) build/latex
+	$(SPHINXBUILD) -b $@ $(ALLSPHINXOPTS) build/latex
 	@echo
 	@echo "Build finished; the LaTeX files are in build/latex."
 	@echo "Run \`make all-pdf' or \`make all-ps' in that directory to" \
 	      "run these through (pdf)latex."
+
+latexpdf: latex
+	$(MAKE) -C build/latex all-pdf
 
 changes:
 	mkdir -p build/changes build/doctrees

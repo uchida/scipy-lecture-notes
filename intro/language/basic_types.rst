@@ -34,7 +34,7 @@
 
 複素数（Python の組み込み型です!）::
 
-    >>> a=1.5+0.5j
+    >>> a = 1.5+0.5j
     >>> a.real
     1.5
     >>> a.imag
@@ -43,7 +43,7 @@
 ..
     complex (a native type in Python!) ::
     
-        >>> a=1.5+0.5j
+        >>> a = 1.5+0.5j
         >>> a.real
         1.5
         >>> a.imag
@@ -78,7 +78,7 @@ Python シェルは基本的な算術演算 ``+``, ``-``, ``*``, ``/``, ``%``
     21.0
     >>> 2**10
     1024
-    >>> 8%3
+    >>> 8 % 3
     2
 
 ..
@@ -90,45 +90,45 @@ Python シェルは基本的な算術演算 ``+``, ``-``, ``*``, ``/``, ``%``
         21.0
         >>> 2**10
         1024
-        >>> 8%3
+        >>> 8 % 3
         2
 
 .. warning:: 整数での除算
     ::
 
-	>>> 3/2
-	1
+       >>> 3 / 2
+       1
 
     **うまくやるには**: 浮動小数点数を使いましょう::
 
-	>>> 3/2.
-	1.5
-
-	>>> a = 3
-	>>> b = 2
-	>>> a/b
-	1
-	>>> a/float(b)
-	1.5
+       >>> 3 / 2.
+       1.5
+   
+       >>> a = 3
+       >>> b = 2
+       >>> a / b
+       1
+       >>> a / float(b)
+       1.5
 
 ..
     .. warning:: Integer division
         ::
     
-    	>>> 3/2
-    	1
-    
+       >>> 3 / 2
+       1
+
         **Trick**: use floats:: 
-    
-    	>>> 3/2.
-    	1.5
-    
-    	>>> a = 3
-    	>>> b = 2
-    	>>> a/b
-    	1
-    	>>> a/float(b)
-    	1.5
+
+       >>> 3 / 2.
+       1.5
+
+       >>> a = 3
+       >>> b = 2
+       >>> a / b
+       1
+       >>> a / float(b)
+       1.5
 
 * スカラー型：int, float, complex, bool::
 
@@ -299,22 +299,12 @@ Python は多くの効率よいコンテナ型を提供していて, これら�
 
 .. Note::
 
-    リストの要素は異なる型を持ちえます::
-
-	>>> l = [3, 2, 'hello']
-	>>> l
-	[3, 2, 'hello']
-	>>> l[1], l[2]
-	(2, 'hello')
-
-    リストの要素があらゆる型, サイズをとりうるために,
-    リストの i 番目の要素へのアクセスは複雑さ O(i) となります.
-    要素が全て同じ型を持つ数値データの集まりに対しては
-    **Numpy** モジュールが提供している,
-    固定サイズのデータがメモリ上に順序よく並んだデータの集まり
-    **array** 型を使うとより効率的です.
-    Numpy の array を使うとi番目の要素へのアクセスは要素が規則正しく並んでいるため
-    複雑さ O(1) となります.
+    同じ型を持つ数値データの集まりを扱うには, ``numpy`` モジュールが
+    提供する ``array`` 型を使うことがしばしば **より効率的** です.
+    NumPy の配列は固定サイズのメモリ上のかたまりです.
+    Numpy の配列を使うと, 要素が規則正しく並んでいることと,
+    Python のループでは無く配列操作用の C 関数によって操作されるため,
+    要素に対する演算を速く行なうことができます.
 
 ..
     Lists are *mutable* objects and can be modified::
@@ -327,22 +317,14 @@ Python は多くの効率よいコンテナ型を提供していて, これら�
         [28, 2, 3, 8, 5]
     
     .. Note::
-    
-        The elements of a list may have different types::
-    
-    	>>> l = [3, 2, 'hello']
-    	>>> l
-    	[3, 2, 'hello']
-    	>>> l[1], l[2]
-    	(2, 'hello')
-    
-        As the elements of a list can be of any type and size, accessing the
-        i `th` element of a list has a complexity O(i). For collections of
-        numerical data that all have the same type, it is **more efficient** to use
-        the **array** type provided by the **Numpy** module, which is a sequence
-        of regularly-spaced chunks of memory containing fixed-sized data istems.
-        With Numpy arrays, accessing the i`th` element has a complexity of O(1)
-        because the elements are regularly spaced in memory.
+
+        For collections of numerical data that all have the same type, it
+        is often **more efficient** to use the ``array`` type provided by
+        the ``numpy`` module. A NumPy array is a chunk of memory
+        containing fixed-sized items.  With NumPy arrays, operations on
+        elements can be faster because elements are regularly spaced in
+        memory and more operations are perfomed through specialized C
+        functions instead of Python loops.
 
 
 Python はリストを変更する, 照会するための多くの関数を提供します.
@@ -507,44 +489,44 @@ r のソート（インプレース：上書きされる）::
 ..  Strings
     ~~~~~~~
 
-異なる文字列構文（シングルクオート, ダブルクオート, 3重のクオート）::
+異なる文字列構文（シングルクォート, ダブルクォート, 3重のクォート）::
 
     s = 'Hello, how are you?'
     s = "Hi, what's up"
-    s = '''Hello, 
-           how are you'''
+    s = '''Hello,                 # 三重クォートは複数行に
+           how are you'''         # 渡る文字列も受け付けます
     s = """Hi,
-	   what's up?'''
+          what's up?"""
 
 ..
     Different string syntaxes (simple, double or triple quotes)::
     
         s = 'Hello, how are you?'
         s = "Hi, what's up"
-        s = '''Hello, 
-               how are you'''
+        s = '''Hello,                 # tripling the quotes allows the
+               how are you'''         # the string to span more than one line
         s = """Hi,
-    	   what's up?'''
+           what's up?'''
 
 .. sourcecode:: ipython
 
     In [1]: 'Hi, what's up?'
     ------------------------------------------------------------
        File "<ipython console>", line 1
-	 'Hi, what's up?'
-               ^
+         'Hi, what's up?'
+                  ^
     SyntaxError: invalid syntax
 
-改行文字は ``\n`` で tab 文字は ``\t`` です. 
+改行文字は ``\n`` で tab 文字は ``\t`` です.
 
-文字列はリストのように要素が集まったものです. 
-そのためインデクスやスライスを同じ構文や規則で使うことができます. 
+文字列はリストのように要素が集まったものです.
+そのためインデクスやスライスを同じ構文や規則で使うことができます.
 
 ..
     The newline character is ``\n``, and the tab characted is
     ``\t``.
     
-    Strings are collections as lists. Hence they can be indexed and sliced,
+    Strings are collections like lists. Hence they can be indexed and sliced,
     using the same syntax and rules.
     
 インデクス指定::
@@ -571,7 +553,7 @@ r のソート（インプレース：上書きされる）::
 （負のインデクスは右端から数えることに対応することを忘れないように. ）
 
 ..
-    (Remember that Negative indices correspond to counting from the right
+    (Remember that negative indices correspond to counting from the right
     end.)
 
 スライス::
@@ -604,12 +586,12 @@ http://docs.python.org/tutorial/introduction.html#unicode-strings [*]_
     Accents and special characters can also be handled in Unicode strings (see
     http://docs.python.org/tutorial/introduction.html#unicode-strings).
 
-文字列は **変化不可能なオブジェクト (immutable)** なので文字を変更することはできません. 
+文字列は **変化不可能なオブジェクト (immutable)** なので内容を変更することはできません.
 とはいえ, 元の文字列から新しい文字列を作ることはできます.
 
 ..
     A string is an **immutable object** and it is not possible to modify its
-    characters. One may however create new strings from an original one.
+    contents. One may however create new strings from an original one.
 
 .. sourcecode:: ipython
 
@@ -684,7 +666,7 @@ http://docs.python.org/tutorial/introduction.html#unicode-strings [*]_
     Dictionnaries
     ~~~~~~~~~~~~~
 
-辞書はハッシュテーブルを基にして **キー (key) を値 (value) に対応づけします** .
+辞書は **キー (key) を値 (value) に対応づけする** 効率よいテーブルです.
 即ちこれは **順序づけられていない** コンテナです::
 
     >>> tel = {'emmanuelle': 5752, 'sebastian': 5578}
@@ -701,8 +683,8 @@ http://docs.python.org/tutorial/introduction.html#unicode-strings [*]_
     True
 
 ..
-    A dictionnary is basically a hash table that **maps keys to values**. It
-    is therefore an **unordered** container::
+    A dictionnary is basically an efficient table that **maps keys to
+    values**. It is therefore an **unordered** container::
     
     
         >>> tel = {'emmanuelle': 5752, 'sebastian': 5578}
@@ -718,15 +700,15 @@ http://docs.python.org/tutorial/introduction.html#unicode-strings [*]_
         >>> 'francis' in tel
         True
 
-値を名前と関連づけて値を記録する（文字列に対して名前や時刻等を記録等）のに
-とても便利なコンテナです.
+値を名前と関連づけて値を記録し取得する（文字列に対して名前や時刻等）のに
+便利に使うことができます.
 より詳しくは
 http://docs.python.org/tutorial/datastructures.html#dictionaries [*]_
 を見ましょう.
 
 ..
-    This is a very convenient data container in order to store values
-    associated to a name (a string for a date, a name, etc.). See
+    It can be used to conveniently store and retrieve values
+    associated with a name (a string for a date, a name, etc.). See
     http://docs.python.org/tutorial/datastructures.html#dictionaries
     for more information.
 
@@ -765,7 +747,7 @@ http://docs.python.org/tutorial/datastructures.html#dictionaries [*]_
 .. * **Tuples**
 
 ..   Tuples are basically immutable lists. The elements of a tuple are written
-..   between brackets, or just separated by commas::
+..   between parentheses, or just separated by commas::
   
   
 ..       >>> t = 12345, 54321, 'hello!'
@@ -784,7 +766,7 @@ http://docs.python.org/tutorial/datastructures.html#dictionaries [*]_
     set(['c'])
 
 ..
-    * **Sets:** non ordered, unique items::
+    * **Sets:** unordered, unique items::
     
         >>> s = set(('a', 'b', 'c', 'a'))
         >>> s
@@ -815,10 +797,10 @@ http://docs.python.org/tutorial/datastructures.html#dictionaries [*]_
 
      .. sourcecode:: ipython
       
-         In [1]: %logstart commandes.log
+         In [1]: %logstart commands.log
          Activating auto-logging. Current session state plus future input
          saved.
-         Filename       : commandes.log
+         Filename       : commands.log
          Mode           : backup
          Output logging : False
          Raw input log  : False

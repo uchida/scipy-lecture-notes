@@ -988,7 +988,7 @@ scipy-interpolation.py_ によって結果を Matplotlib の figure にまとめ
 
 .. ``scipy.interpolate.interp2d`` is similar to ``interp1d``, but for 2-D
 .. arrays. Note that for the ``interp`` family, the computed time must stay
-.. within the measured time range. See the summary exercice  on `Maximum
+.. within the measured time range. See the summary exercise  on `Maximum
 .. wind speed prediction at the Sprogø station`_ for a more advance spline
 .. interpolation example.
 
@@ -1165,26 +1165,26 @@ BFGS アルゴリズムはこれをするのによい方法です::
 科学技術計算の統括演習
 ----------------------
     
-.. Summary exercices on scientific computing
+.. Summary exercises on scientific computing
 .. -----------------------------------------
 
 統括演習では Numpy, Scipy そして Matplotlib を主に使います.
 Python での科学技術計算を実生活における例として使うことを最初の目的としています.
 1度土台を築けば, 興味あるユーザはさらなる演習を試みていくことでしょう.
 
-.. The summary exercices use mainly Numpy, Scipy and Matplotlib. They first aim at
+.. The summary exercises use mainly Numpy, Scipy and Matplotlib. They first aim at
 .. providing real life examples on scientific computing with Python. Once the
-.. groundwork is introduced, the interested user is invited to try some exercices.
+.. groundwork is introduced, the interested user is invited to try some exercises.
 
 .. only:: latex
 
     .. toctree::
        :maxdepth: 1
 
-       summary-exercices/stats-interpolate.rst
-       summary-exercices/optimize-fit.rst
-       summary-exercices/image-processing.rst
-       summary-exercices/answers_image_processing.rst
+       summary-exercises/stats-interpolate.rst
+       summary-exercises/optimize-fit.rst
+       summary-exercises/image-processing.rst
+       summary-exercises/answers_image_processing.rst
 
 .. only:: html
 
@@ -1193,29 +1193,29 @@ Python での科学技術計算を実生活における例として使うこと�
    .. toctree::
        :maxdepth: 1
 
-       summary-exercices/stats-interpolate.rst
-       summary-exercices/optimize-fit.rst
-       summary-exercices/image-processing.rst
+       summary-exercises/stats-interpolate.rst
+       summary-exercises/optimize-fit.rst
+       summary-exercises/image-processing.rst
 
    解答例：
     
    .. toctree::
       :maxdepth: 1
 
-      summary-exercices/answers_image_processing.rst
+      summary-exercises/answers_image_processing.rst
 
 ..    Exercises:
 
 ..    .. toctree::
 ..        :maxdepth: 1
 
-..        summary-exercices/stats-interpolate.rst
-..        summary-exercices/optimize-fit.rst
-..        summary-exercices/image-processing.rst
+..        summary-exercises/stats-interpolate.rst
+..        summary-exercises/optimize-fit.rst
+..        summary-exercises/image-processing.rst
 
 ..    Proposed solutions:
 
 ..    .. toctree::
 ..       :maxdepth: 1
 
-..       summary-exercices/answers_image_processing.rst
+..       summary-exercises/answers_image_processing.rst

@@ -16,7 +16,7 @@
     
     * by typing "Ipython" from a Linux/Mac terminal, or from the Windows cmd shell,
     * **or** by starting the program from a menu, e.g. in the Python(x,y) or
-      EPD menu if you have installed one these scientific-Python suites.
+      EPD menu if you have installed one of these scientific-Python suites.
 
 .. :ref:`pythonxy`
 
@@ -88,14 +88,13 @@
         >>> 2*b
         'hellohello'
 
-``a``, ``b`` の2つのオブジェクトは上で定義されています.
-ただオブジェクトの型が代入される前に宣言されていないことに注意しましょう.
+``a``, ``b`` の2つの変数は上で定義されています.
+ただ変数の型が代入される前に宣言されていないことに注意しましょう.
 これと対照的に C ではこう書かなければいけません.
 
 .. sourcecode:: c
 
-    int a;
-    a = 3;
+    int a = 3;
 
 ..
     Two objects ``a`` and ``b`` have been defined above. Note that one does
@@ -104,21 +103,21 @@
     
     .. sourcecode:: c
     
-        int a;
-        a = 3;
+        int a = 3;
 
-加えて, オブジェクトの型は変わることがあります.
+加えて, 変数の型は変わることがあります, つまりある時は特定の型の値と
+等しくても, 次には異なる型の値と等しいことがあります.
 `b` は最初整数でしたが,  `hello` を代入されて文字列になりました.
 整数の操作 (``b=2*a``) は Python の標準ライブラリでそのまま実行され,
 文字列の加算や乗算はそれぞれ結合と繰り返しになります.
 
 ..
-    In addition, the type of an object may change. `b` was first an integer,
-    but it became a string when it was assigned the value `hello`. Operations
-    on integers (``b=2*a``) are coded natively in the Python standard
-    library, and so are some operations on strings such as additions and
-    multiplications, which amount respectively to concatenation and
-    repetition.
-
-
+    In addition, the type of a variable may change, in the sense that at
+    one point in time it can be equal to a value of a certain type, and a
+    second point in time, it can be equal to a value of a different
+    type. `b` was first equal to an integer, but it became equal to a
+    string when it was assigned the value `'hello'`. Operations on
+    integers (``b=2*a``) are coded natively in Python, and so are some
+    operations on strings such as additions and multiplications, which
+    amount respectively to concatenation and repetition.
 

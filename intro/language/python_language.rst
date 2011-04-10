@@ -51,7 +51,7 @@ Python は以下のいくつかの機能を持っています：
 * 他の言語, 特に C, C++ との連携がとても簡単です.
 
 * 他の特徴, 例えばオブジェクト指向言語,
-  ダイナミックタイピング（オブジェクトの型がプログラムの途中で変りうる）などは以下に書かれています.
+  ダイナミックタイピング（同じ変数がプログラムの途中で異なる変数を含むことができる）などは以下に書かれています.
 
 Python の特徴についてより多くの情報を得たければ, http://www.python.org/about/ をみてみましょう.
 
@@ -84,7 +84,8 @@ Python の特徴についてより多くの情報を得たければ, http://www.
     
     * Some other features of the language are illustrated just below. For
       example, Python is an object-oriented language, with dynamic typing
-      (an object's type can change during the course of a program).
+      (the same variable can contain objects of different types during the
+      course of program)
     
     
     See http://www.python.org/about/ for more information about

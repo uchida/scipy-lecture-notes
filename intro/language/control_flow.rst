@@ -14,7 +14,7 @@ if/elif/else
 .. sourcecode:: ipython
   
     In [1]: if 2**2 == 4:
-       ...:     print('Obvious!')
+       ...:     print 'Obvious!'
        ...: 
     Obvious!
 
@@ -163,25 +163,25 @@ while/break/continue
 
 * `if オブジェクト`
 
-  真と評価されるもの：
-    * 0 でない値
-    * 長さが 0 でないシーケンス
-
   偽と評価されるもの：
-    * 0 となる値
-    * 空のシーケンス
+    * 0 に等しい数 (0, 0.0, 0+0j)
+    * 空のコンテナ (list, tuple, set, dictionary, ...)
+    * ``False``, ``None``
+
+  真と評価されるもの：
+    * あらゆるもの [#nonzero_note]_
 
 ..
     * `if object`
+   
+      Evaluates to False:
+        * any number equal to zero (0, 0.0, 0+0j)
+        * an empty container (list, tuple, set, dictionary, ...)
+        * ``False``, ``None``
     
       Evaluates to True:
-        * any non-zero value
-        * any sequence with a length > 0
-    
-      Evaluates to False:
-        * any zero value
-        * any empty sequence
-    
+        * everything else [#nonzero_note]_
+
 * `a == b`
 
   論理的に等価かどうか調べる：
@@ -203,7 +203,7 @@ while/break/continue
 
 * `a is b`
 
-  同一性を調べる：2つのオブジェクトが同じか
+  同一性を調べる：2つのオブジェクトが同じオブジェクトかどうか
 
   .. sourcecode:: ipython
 
@@ -220,7 +220,7 @@ while/break/continue
 ..
     * `a is b`
     
-      Tests identity: both objects are the same
+      Tests identity: both objects are the same object
 
 ..   .. sourcecode:: ipython
 
@@ -274,9 +274,10 @@ while/break/continue
 ..  Iterate over any *sequence*
     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-* あらゆるシーケンスに対して反復できます（文字列, リスト, 辞書, ファイル, ...）
+* あらゆるシーケンスに対して反復できます（文字列, リスト, 辞書のキー, ファイル中の行, ...）
 
-.. * You can iterate over any sequence (string, list, dictionary, file, ...)
+.. * You can iterate over any sequence (string, list, keys in a
+     dictionary, lines in a file, ...)
 
   .. sourcecode:: ipython
 
@@ -414,8 +415,8 @@ Python を使うことで, インデクスについて注意深く考えない�
 
     Wallis の公式を使って, Pi の値を計算しましょう：
 
-    .. image:: pi_formula.png
-	:align: center
+    .. math::
+        \pi = 2 \prod_{i=1}^{\infty} \frac{4i^2}{4i^2 - 1}
 
 .. :ref:`pi_wallis`
 
@@ -424,10 +425,17 @@ Python を使うことで, インデクスについて注意深く考えない�
     
         Compute the decimals of Pi using the Wallis formula:
     
-        .. image:: pi_formula.png
-    	:align: center
+    .. math::
+        \pi = 2 \prod_{i=1}^{\infty} \frac{4i^2}{4i^2 - 1}
+
     
     .. :ref:`pi_wallis`
 
+.. rubric:: Footnotes
 
+.. [#nonzero_note] ユーザ定義型はこれらの規則を特別なメソッド
+      ``__nonzero__`` をオーバーライドすることでカスタマイズできます.
+
+.. .. [#nonzero_note] User-defined classes can customize those rules by overriding
+..       the special ``__nonzero__`` method.
 
