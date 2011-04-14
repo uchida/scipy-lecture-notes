@@ -521,9 +521,9 @@ Python ではこのような区別はいくぶん不自然で,
     Fibonacci 数列の第1項から ``n`` 項までを表示する関数を書きましょう, 
     Fibonacci 数列の定義は：
 
-    * ``u_0 = 1; u_1 = 1``
-    * ``u_(n+2) = u_(n+1) + u_n``
-
+    * :math:`u_0 = 1; u_1 = 1`
+    * :math:`u_{n+2} = u_{n+1} + u_n`
+    
 :ref:`fibonacci`
 
 ..
@@ -532,8 +532,8 @@ Python ではこのような区別はいくぶん不自然で,
         Write a function that displays the ``n`` first terms of the Fibonacci
         sequence, defined by:
     
-        * ``u_0 = 1; u_1 = 1``
-        * ``u_(n+2) = u_(n+1) + u_n``
+        * :math:`u_0 = 1; u_1 = 1`
+        * :math:`u_{n+2} = u_{n+1} + u_n`
     
     .. :ref:`fibonacci`
 

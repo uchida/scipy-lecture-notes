@@ -279,6 +279,7 @@ latex_elements = {
 \usepackage{mathpazo}
 \usepackage[scaled=.90]{helvet}
 \usepackage[scaled]{beramono}
+\usepackage{bm}
 \usepackage{jtygm}
 ''',
     #'babel': '\usepackage[english]{babel}',
@@ -296,5 +297,6 @@ pngmath_dvipng_args = ['-gamma 1.5', '-D 130']
 pngmath_use_preview = True
 pngmath_latex_preamble = r'''
 \usepackage{mathpazo}
+\usepackage{bm}
 '''
 

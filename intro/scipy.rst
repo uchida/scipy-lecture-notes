@@ -652,16 +652,16 @@ for stiff and nonstiff problems)
 
 .. .. _`ODEPACK Fortran library` : http://people.sc.fsu.edu/~jburkardt/f77_src/odepack/odepack.html
 
-``odeint`` は以下の形式の1階の常微分方程式系を解きます::
+``odeint`` は以下の形式の1階の常微分方程式系を解きます
 
-``dy/dt = rhs(y1, y2, .., t0,...)``
+.. math:: dy/dt = \text{rhs}(y_1, y_2, \dots, t_0, \dots)
 
-.. ``odeint`` solves first-order ODE systems of the form::
+.. ``odeint`` solves first-order ODE systems of the form
 
-.. ``dy/dt = rhs(y1, y2, .., t0,...)``
+.. .. math:: dy/dt = \text{rhs}(y_1, y_2, \dots, t_0, \dots)
 
-入門として, 常微分方程式 ``dy/dt = -2y`` を ``t = 0..4`` の区間にわたって
-``y(t=0) = 1`` の初期条件のもとで解きます.
+入門として, 常微分方程式 :math:`dy/dt = -2y` を :math:`t = 0,\dots,4` の区間にわたって
+:math:`y(t=0) = 1` の初期条件のもとで解きます.
 まずは位置の微分を計算する関数を定義する必要があります::
 
     >>> def calc_derivative(ypos, time, counter_arr):
@@ -669,9 +669,9 @@ for stiff and nonstiff problems)
     ...     return -2*ypos
     ...
 
-.. As an introduction, let us solve the ODE ``dy/dt = -2y`` between ``t =
-.. 0..4``, with the  initial condition ``y(t=0) = 1``. First the function
-.. computing the derivative of the position needs to be defined::
+.. As an introduction, let us solve the ODE :math:`dy/dt = -2y` between
+.. :math:`t =0,\dots,4`, with the initial condition :math:`y(t=0) = 1`.
+.. First the function computing the derivative of the position needs to be defined::
 
 ..     >>> def calc_derivative(ypos, time, counter_arr):
 ..     ...     counter_arr += 1
@@ -735,9 +735,9 @@ for stiff and nonstiff problems)
 
 ``odeint`` の別の例として減衰振動子（2次の振動子）を扱いましょう.
 バネにつながったおもりは2階常微分方程式
-``y'' + 2 eps wo  y' + wo^2 y = 0`` に従います.
-ここに ``wo^2 = k/m`` で ``k`` はバネ定数で ``m`` は質量,
-``eps=c/(2 m wo)`` で ``c`` は減衰定数です.
+:math:`y'' + 2\epsilon w_0y' + w_0^2y = 0` に従います.
+ここに :math:`\omega_0^2 = k/m` で :math:`k` はバネ定数で :math:`m` は質量,
+:math:`\epsilon=c/(2m\omega_0)` で :math:`c` は減衰定数です.
 計算する例としてパラメータを::
 
     >>> mass = 0.5 # kg
@@ -746,8 +746,8 @@ for stiff and nonstiff problems)
 
 .. Another example with ``odeint`` will be a damped spring-mass oscillator
 .. (2nd order oscillator). The position of a mass attached to a spring obeys
-.. the 2nd order ODE ``y'' + 2 eps wo  y' + wo^2 y = 0`` with ``wo^2 = k/m``
-.. being ``k`` the spring constant, ``m`` the mass and ``eps=c/(2 m wo)``
+.. the 2nd order ODE :math:`y'' + 2\epsilon\omega_0y' + \omega_0^2y = 0`` with :math:`\omega_0^2 = k/m``
+.. being :math:`k` the spring constant, :math:`m` the mass and :math:`\epsilon=c/(2m\omega_0)``
 .. with ``c`` the damping coefficient.
 .. For a computing example, the parameters will be::
 
@@ -768,10 +768,10 @@ for stiff and nonstiff problems)
 ..     >>> eps < 1
 ..     True
 
-``odeint`` で2階微分方程式を解くにはベクトル形式 ``Y=(y, y')``
+``odeint`` で2階微分方程式を解くにはベクトル形式 :math:`\bm{y}=(y, y')`
 で書かれる1階微分方程式の組に直す必要があります.
 
-そのために ``nu = 2 eps wo = c / m`` と ``om = wo^2 = k/m`` を定義すると便利です::
+そのために :math:`\nu = 2\epsilon\omega_0 = c / m` と :math:`\text{om} = \omega_0^2 = k/m` を定義すると便利です::
 
     >>> nu_coef = cviscous/mass
     >>> om_coef = kspring/mass

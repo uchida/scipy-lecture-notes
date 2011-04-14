@@ -413,7 +413,7 @@ Python を使うことで, インデクスについて注意深く考えない�
 
 .. topic:: 練習問題
 
-    Wallis の公式を使って, Pi の値を計算しましょう：
+    Wallis の公式を使って, :math:`\pi` の値を計算しましょう：
 
     .. math::
         \pi = 2 \prod_{i=1}^{\infty} \frac{4i^2}{4i^2 - 1}
@@ -423,9 +423,10 @@ Python を使うことで, インデクスについて注意深く考えない�
 ..
     .. topic:: Exercise
     
-        Compute the decimals of Pi using the Wallis formula:
+        Compute the decimals of :math:`\pi` using the Wallis formula:
     
     .. math::
+        \Large
         \pi = 2 \prod_{i=1}^{\infty} \frac{4i^2}{4i^2 - 1}
 
     

@@ -45,15 +45,15 @@ Sprogø 気象局の最大風速予測
 
 定義から分位点関数は累積分布関数の逆関数です.
 後者は年間の最大値の分布関数を表わします.
-練習問題では, ``i`` 年の累積確率 ``p_i`` を ``p_i = i/(N+1)``, 測定年数 ``N = 21`` とします.
+練習問題では, :math:`i` 年の累積確率 :math:`p_i` を :math:`p_i = i/(N+1)`, 測定年数 :math:`N = 21` とします.
 これで各年で測定された最大風速の累積確率を計算できます.
 scipy.interpolate モジュールを使ってこれらの測定点から分位点関数をフィットするのが有効です.
 最終的に50年の最大値は 2% 分位点の累積分布関数から評価できます.
 
 .. By definition, the quantile function is the inverse of the cumulative
 .. distribution function. The latter describes the probability distribution
-.. of an annual maxima. In the exercise, the cumulative probabilty ``p_i``
-.. for a given year ``i`` is defined as ``p_i = i/(N+1)`` with ``N = 21``,
+.. of an annual maxima. In the exercise, the cumulative probabilty :math:`p_i`
+.. for a given year :math:`i` is defined as :math:`p_i = i/(N+1)` with :math:`N = 21`,
 .. the number of measured years. Thus it will be possible to calculate
 .. the cumulative probability of every measured wind speed maxima.
 .. From those experimental points, the scipy.interpolate module will be
@@ -84,7 +84,7 @@ scipy.interpolate モジュールを使ってこれらの測定点から分位�
 
 .. _max-speeds.npy : ../../data/max-speeds.npy
 
-前の節の累積確率 ``p_i`` の定義に従って, 対応する値は::
+前の節の累積確率 :math:`p_i` の定義に従って, 対応する値は::
 
     >>> cprob = (np.arange(years_nb, dtype=np.float32) + 1)/(years_nb + 1)
 
@@ -220,14 +220,14 @@ Gumbell 分布での練習問題
 .. .. plot:: pyplots/sprog_annual_maxima.py
 
 
-* 次は累積確率 ``p_i`` に対して定義される Gumbell 分布 ``-log( -log(p_i) )``
+* 次は累積確率 :math:`p_i` に対して定義される Gumbell 分布 :math:`-\log\left(-\log(p_i)\right)`
   を線形分位点関数のフィッティングに使ってみましょう（ ``UnvariateSpline`` の次数を定義するのを忘れないように）.
   年間の最大値と Gumbell 分布は以下のような図になるはずです.
 
   .. plot:: pyplots/gumbell_wind_speed_prediction.py
 
 .. * The second step will be to use the Gumbell distribution on cumulative
-..   probabilities ``p_i`` defined as ``-log( -log(p_i) )`` for fitting
+..   probabilities :math:`p_i` defined as :math:`-\log\left(-\log(p_i) \\right)` for fitting
 ..   a linear quantile function (remember that you can define the degree
 ..   of the ``UnivariateSpline``). Plotting the annual maxima versus the
 ..   Gumbell distribution should give you the following figure.

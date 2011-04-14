@@ -483,13 +483,13 @@ Main point
 
   .. math::
 
-     \mathrm{shape} &= (d_1, d_2, ..., d_n)
+     \mathrm{shape} &= (d_1, d_2, \dots, d_n)
      \\
-     \mathrm{strides} &= (s_1, s_2, ..., s_n)
+     \mathrm{strides} &= (s_1, s_2, \dots, s_n)
      \\
-     s_j^C &= d_{j+1} d_{j+2} ... d_{n} \times \mathrm{itemsize}
+     s_j^C &= d_{j+1} d_{j+2} \dots d_{n} \times \mathrm{itemsize}
      \\ 
-     s_j^F &= d_{1} d_{2} ... d_{j-1} \times \mathrm{itemsize}
+     s_j^F &= d_{1} d_{2} \dots d_{j-1} \times \mathrm{itemsize}
 
 
 .. note::

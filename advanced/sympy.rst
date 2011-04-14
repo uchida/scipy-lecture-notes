@@ -156,7 +156,7 @@ Exercises
 ---------
 
 1. Calculate the expanded form of :math:`(x+y)^6`.
-2. Simplify the trigonometric expression sin(x) / cos(x)
+2. Simplify the trigonometric expression :math:`\sin(x) / \cos(x)`
 
   
 Calculus
@@ -232,8 +232,8 @@ a point. Use ``series(expr, var)``::
 Exercises
 ---------
 
-1. Calculate :math:`\lim{x->0, sin(x)/x}`
-2. Calulate the derivative of log(x) for x.
+1. Calculate :math:`\lim{x\to0}\sin(x)/x`
+2. Calulate the derivative of :math:`\log(x)` for :math:`x`.
 
 .. index:: integration
 

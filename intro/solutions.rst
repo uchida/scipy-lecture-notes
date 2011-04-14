@@ -15,9 +15,9 @@ Wallis の円周率の解答
 .. The Pi Wallis Solution
 .. ----------------------
 
-Wallis の公式を使って, Pi の値を計算しましょう：
+Wallis の公式を使って, :math:`\pi` の値を計算しましょう：
 
-.. Compute the decimals of Pi using the Wallis formula:
+.. Compute the decimals of :math:`\pi` using the Wallis formula:
 
 .. literalinclude:: solutions/pi_wallis.py
 
