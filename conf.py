@@ -22,15 +22,18 @@ sys.path.append(os.path.abspath('sphinxext'))
 
 # Add any Sphinx extension module names here, as strings. They can be extensions
 # coming with Sphinx (named 'sphinx.ext.*') or your custom ones.
-extensions = ['sphinx.ext.autodoc', 'sphinx.ext.doctest', 
-        #'matplotlib.sphinxext.plot_directive', 
-        'plot_directive',
-        'only_directives',
-        'ipython_console_highlighting',
-        #'matplotlib.sphinxext.only_directives',
-         'sphinx.ext.pngmath',
-         'jpsupport',
-        ]#'sphinx.ext.intersphinx']
+extensions = ['sphinx.ext.autodoc',
+              'sphinx.ext.doctest',
+              'sphinx.ext.pngmath',
+              #'sphinx.ext.intersphinx'
+              #'ipython_console_highlighting',
+              'plot_directive',
+              'only_directives',
+              'matplotlib.sphinxext.ipython_console_highlighting',
+              #'matplotlib.sphinxext.plot_directive',
+              #'matplotlib.sphinxext.only_directives',
+              'jpsupport',
+             ]
 
 doctest_test_doctest_blocks = 'true'
 
@@ -41,7 +44,7 @@ templates_path = ['.templates']
 source_suffix = '.rst'
 
 # The encoding of source files.
-#source_encoding = 'utf-8'
+source_encoding = 'utf-8'
 
 # The master toctree document.
 master_doc = 'index'
@@ -100,31 +103,32 @@ pygments_style = 'sphinx'
 # The style sheet to use for HTML and HTML Help pages. A file of that name
 # must exist either in Sphinx' static/ path, or in one of the custom paths
 # given in html_static_path.
-html_theme = 'default'
 html_style = 'style.css'
 
-html_theme_options = {
-                #'nosidebar':'true',
-                'footerbgcolor': '#0d0015',
-                'footertextcolor': '#fbfaf5',
-                'sidebarbgcolor': '#e7e7eb',
-                #'sidebarbtncolor': '#3c6e83',
-                'sidebartextcolor': '#0d0015',
-                'sidebarlinkcolor': '#ba2636',
-                'relbarbgcolor': '#474a4d',
-                'relbartextcolor': '#fbfaf5',
-                'relbarlinkcolor': '#fbfaf5',
-                'bgcolor': '#ffffff',
-                'textcolor': '#0d0015',
-                'headbgcolor': '#fbfaf5',
-                'headtextcolor': '#0d0015',
-                'headlinkcolor': '#ba2636',
-                'linkcolor': '#ba2636',
-                'visitedlinkcolor': '#ba2636',
-                'codebgcolor': '#fbfaf5',
-                'codetextcolor': '#7b7c7d',
-                }
-
+html_theme_options = {#'nosidebar': 'true',
+                      #'rightsidebar': 'true',
+                      #'stickysidebar': 'true',
+                      #'collapsiblesidebar': 'true',
+                      'externalrefs': 'true',
+                      'relbarbgcolor': '#474a4d',
+                      'relbartextcolor': '#fbfaf5',
+                      'relbarlinkcolor': '#fbfaf5',
+                      'headbgcolor': '#fbfaf5',
+                      'headtextcolor': '#0d0015',
+                      'headlinkcolor': '#ba2636',
+                      'bgcolor': '#ffffff',
+                      'textcolor': '#0d0015',
+                      'linkcolor': '#ba2636',
+                      'visitedlinkcolor': '#d3381c',
+                      'codebgcolor': '#fbfaf5',
+                      'codetextcolor': '#7b7c7d',
+                      'sidebarbgcolor': '#e7e7eb',
+                      'sidebarbtncolor': '#474a4d',
+                      'sidebartextcolor': '#0d0015',
+                      'sidebarlinkcolor': '#ba2636',
+                      'footerbgcolor': '#0d0015',
+                      'footertextcolor': '#fbfaf5',
+                     }
 
 # The name for this set of Sphinx documents.  If None, it defaults to
 # "<project> v<release> documentation".
@@ -275,7 +279,7 @@ latex_elements = {
 \usepackage{mathpazo}
 \usepackage[scaled=.90]{helvet}
 \usepackage[scaled]{beramono}
-%\usepackage{jtygm}
+\usepackage{jtygm}
 ''',
     #'babel': '\usepackage[english]{babel}',
     #'tableofcontents': '\\pagestyle{normal}\\pagenumbering{arabic} %\\tableofcontents',
@@ -288,11 +292,9 @@ intersphinx_mapping = {
 }
 
 # Increase pngmath font size
-pngmath_dvipng_args = ['-gamma 1.5', '-D 180']
+pngmath_dvipng_args = ['-gamma 1.5', '-D 130']
 pngmath_use_preview = True
 pngmath_latex_preamble = r'''
 \usepackage{mathpazo}
-\usepackage[scaled=.90]{helvet}
-\usepackage[scaled]{beramono}
 '''
 
