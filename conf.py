@@ -100,11 +100,30 @@ pygments_style = 'sphinx'
 # The style sheet to use for HTML and HTML Help pages. A file of that name
 # must exist either in Sphinx' static/ path, or in one of the custom paths
 # given in html_static_path.
-html_style = 'default.css'
+html_theme = 'default'
+html_style = 'style.css'
 
 html_theme_options = {
-                'nosidebar':'true',
-                                }
+                #'nosidebar':'true',
+                'footerbgcolor': '#0d0015',
+                'footertextcolor': '#fbfaf5',
+                'sidebarbgcolor': '#e7e7eb',
+                #'sidebarbtncolor': '#3c6e83',
+                'sidebartextcolor': '#0d0015',
+                'sidebarlinkcolor': '#ba2636',
+                'relbarbgcolor': '#474a4d',
+                'relbartextcolor': '#fbfaf5',
+                'relbarlinkcolor': '#fbfaf5',
+                'bgcolor': '#ffffff',
+                'textcolor': '#0d0015',
+                'headbgcolor': '#fbfaf5',
+                'headtextcolor': '#0d0015',
+                'headlinkcolor': '#ba2636',
+                'linkcolor': '#ba2636',
+                'visitedlinkcolor': '#ba2636',
+                'codebgcolor': '#fbfaf5',
+                'codetextcolor': '#7b7c7d',
+                }
 
 
 # The name for this set of Sphinx documents.  If None, it defaults to
@@ -255,6 +274,8 @@ latex_elements = {
     'fontpkg': r'''
 \usepackage{mathpazo}
 \usepackage[scaled=.90]{helvet}
+\usepackage[scaled]{beramono}
+%\usepackage{jtygm}
 ''',
     #'babel': '\usepackage[english]{babel}',
     #'tableofcontents': '\\pagestyle{normal}\\pagenumbering{arabic} %\\tableofcontents',
@@ -272,5 +293,6 @@ pngmath_use_preview = True
 pngmath_latex_preamble = r'''
 \usepackage{mathpazo}
 \usepackage[scaled=.90]{helvet}
-\usepackage{courier}'''
+\usepackage[scaled]{beramono}
+'''
 

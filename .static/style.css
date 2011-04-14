@@ -1,0 +1,29 @@
+@import url("default.css");
+
+div.body h1,
+div.body h2,
+div.body h3,
+div.body h4,
+div.body h5,
+div.body h6 {
+    border-bottom: 1px solid #ba2636;
+}
+
+div.body h1 {
+    border-left: 20px solid #ba2636;
+}
+div.body h2 {
+    border-left: 16px solid #ba2636;
+}
+div.body h3 {
+    border-left: 12px solid #ba2636;
+}
+div.body h4 {
+    border-left: 8px solid #ba2636;
+}
+div.body h5 {
+    border-left: 4px solid #ba2636;
+}
+div.body h6 {
+    border-left: 1px solid #ba2636;
+}

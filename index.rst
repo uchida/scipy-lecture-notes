@@ -1,4 +1,4 @@
-Python Scientific Lecture Notes 
+Python Scientific Lecture Notes
 ===================================================================
 
 .. raw:: html
@@ -20,7 +20,7 @@ Python Scientific Lecture Notes
         font-family: Arial, sans-serif;
         background-color: #f2f2f2;
         font-weight: normal;
-        color: #20435c;
+        color: #0d0015;
         margin-left: 0;
         margin-bottom: 1em;
         font-weight: bold;
