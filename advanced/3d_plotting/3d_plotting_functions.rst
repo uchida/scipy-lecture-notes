@@ -1,8 +1,14 @@
-3D plotting functions
-=======================
+3次元作図関数
+=============
 
-Points
--------
+.. 3D plotting functions
+.. =======================
+
+点
+--
+  
+.. Points
+.. -------
   
 .. sourcecode:: ipython
 
@@ -18,8 +24,11 @@ Points
 .. image:: points3d.png
     :align: center
 
-Lines
-------
+線
+--
+
+.. Lines
+.. ------
 
 .. sourcecode:: ipython
 
@@ -33,8 +42,11 @@ Lines
 .. image:: plot3d.png
     :align: center
 
-Elevation surface
--------------------
+立体表面
+--------
+
+.. Elevation surface
+.. -------------------
 
 .. sourcecode:: ipython
 
@@ -52,8 +64,11 @@ Elevation surface
 .. image:: surf.png
     :align: center
 
-Arbitrary regular mesh
------------------------
+任意の規則メッシュ
+------------------
+
+.. Arbitrary regular mesh
+.. -----------------------
 
 .. sourcecode:: ipython
 
@@ -77,17 +92,28 @@ Arbitrary regular mesh
 
 .. note:: 
 
-    A surface is defined by points **connected** to form triangles or
-    polygones. In `mlab.func` and `mlab.mesh`, the connectivity is
-    implicity given by the layout of the arrays. See also
-    `mlab.triangular_mesh`.
+    表面は三角形や多角形を形成するために **連結された** 点で定義されます.
+    `mlab.func` と `mlab.mesh` では連結は配列のレイアウトによって暗黙の内に与えられます.
+    `mlab.triangler_mesh` も参照して下さい.
 
-**Our data is often more than points and values: it needs some
-connectivity information**
+.. .. note:: 
+.. 
+..     A surface is defined by points **connected** to form triangles or
+..     polygones. In `mlab.func` and `mlab.mesh`, the connectivity is
+..     implicity given by the layout of the arrays. See also
+..     `mlab.triangular_mesh`.
+
+**データの多くは点や値以上のものです: 連結性の情報を必要とします**
+
+.. **Our data is often more than points and values: it needs some
+.. connectivity information**
 
 
-Volumetric data
-----------------
+体積データ
+----------
+
+.. Volumetric data
+.. ----------------
 
 .. sourcecode:: ipython
 
@@ -103,7 +129,9 @@ Volumetric data
 .. image:: contour3d.png
     :align: center
 
-**This function works with a regular orthogonal grid:**
+**この関数は正方格子で動作します:**
+
+.. **This function works with a regular orthogonal grid:**
 
     .. image:: viz_volume_structure.png
 	:align: center

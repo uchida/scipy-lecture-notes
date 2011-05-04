@@ -1,9 +1,12 @@
-3D plotting with Mayavi
+Mayavi での3次元プロット
 ========================
+
+.. 3D plotting with Mayavi
+.. ========================
 
 .. only:: latex
 
-    :author: Gaël Varoquaux
+    :author: Ga谷l Varoquaux
 
 .. only:: html
 
