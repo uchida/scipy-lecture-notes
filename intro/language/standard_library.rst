@@ -178,7 +178,7 @@
 .. Walking a directory
 .. ~~~~~~~~~~~~~~~~~~~~
 
-:func:`os.path.walk` はディレクトリツリー以下のファイル名を生成します.
+:func:`os.walk` はディレクトリツリー以下のファイル名を生成します.
 
 .. sourcecode:: ipython
 
