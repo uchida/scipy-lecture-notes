@@ -130,13 +130,13 @@ Python シェルは基本的な算術演算 ``+``, ``-``, ``*``, ``/``, ``%``
        >>> a / float(b)
        1.5
 
-* スカラー型：int, float, complex, bool::
+* スカラー型：:class:`int`, :class:`float`, :class:`complex`, :class:`bool`::
 
     >>> type(1)
     <type 'int'>
     >>> type(1.)
     <type 'float'>
-    >>> type(1. + 0j )
+    >>> type(1. + 0j)
     <type 'complex'>
 
     >>> a = 3
@@ -144,13 +144,13 @@ Python シェルは基本的な算術演算 ``+``, ``-``, ``*``, ``/``, ``%``
     <type 'int'>
 
 ..
-    * Scalar types: int, float, complex, bool::
+    * Scalar types: :class:`int`, :class:`float`, :class:`complex`, :class:`bool`::
     
         >>> type(1)
         <type 'int'>
         >>> type(1.)
         <type 'float'>
-        >>> type(1. + 0j )
+        >>> type(1. + 0j)
         <type 'complex'>
     
         >>> a = 3
@@ -299,7 +299,7 @@ Python は多くの効率よいコンテナ型を提供していて, これら�
 
 .. Note::
 
-    同じ型を持つ数値データの集まりを扱うには, ``numpy`` モジュールが
+    同じ型を持つ数値データの集まりを扱うには, :mod:`numpy` モジュールが
     提供する ``array`` 型を使うことがしばしば **より効率的** です.
     NumPy の配列は固定サイズのメモリ上のかたまりです.
     Numpy の配列を使うと, 要素が規則正しく並んでいることと,
@@ -417,9 +417,9 @@ r のソート（インプレース：上書きされる）::
 
 .. Note:: **メソッドとオブジェクト指向プログラミング**
 
-    ここで ``r.method()`` という表記法 (``r.sort(), r.append(3), l.pop()``) は
+    ここで :meth:`r.method()` という表記法 (``r.sort(), r.append(3), l.pop()``) は
     オブジェクト指向プログラミングのはじめての例です.
-    オブジェクト `r` は ``list`` なので **.** の表記で使える
+    オブジェクト `r` は :class:`list` なので **.** の表記で使える
     *method* 関数を所持しています.
     このチュートリアルでは **.** の表記以上の OOP の知識は不要です.
 
@@ -435,7 +435,7 @@ r のソート（インプレース：上書きされる）::
 
 .. note:: **メソッドを見つける：**
 
-    IPython を起動した上で：tab-補完（tab を押す）
+    IPython を起動した上で：tab-補完（ :kbd:`tab` を押す）
 
     .. sourcecode:: ipython
 
@@ -459,7 +459,7 @@ r のソート（インプレース：上書きされる）::
 ..
     .. note:: **Discovering methods:**
     
-        In IPython: tab-completion (press tab)
+        In IPython: tab-completion (press :kbd:`tab`)
     
         .. sourcecode:: ipython
     
@@ -776,17 +776,17 @@ http://docs.python.org/tutorial/datastructures.html#dictionaries [*]_
 
 .. topic:: IPython をうまく使う秘訣
 
-   * IPython では ``ls``, ``pwd``, ``cd`` 等のいくつかの Linux シェルコマンドが動きます.
+   * IPython では :command:`ls`, :command:`pwd`, :command:`cd` 等のいくつかの Linux シェルコマンドが動きます.
 
    * オブジェクトや関数, その他に関するヘルプを得たければ ``help object``
-     やただ単に help() と打ち込んでみましょう.
+     やただ単に ``help()`` と打ち込んでみましょう.
 
    * できるだけ **tab補完** しましょう：オブジェクトの名前（変数, 関数, モジュール）を打ち込んですぐ
-     **Tab** キーを押すと IPython がマッチする利用可能な名前に補完してくれます.
+     :kbd:`Tab` キーを押すと IPython がマッチする利用可能な名前に補完してくれます.
      もしたくさんの名前が候補にあれば, 候補となる名前のリストを表示します.
 
-   * **履歴** ： 以前に入力した命令に `上` の矢印キーを押すことで
-     移れます（逆に `下` の矢印で次に進みます）.
+   * **履歴** ： 以前に入力した命令に :kbd:`up` の矢印キーを押すことで
+     移れます（逆に :kbd:`down` の矢印で次に進みます）.
      移動できる命令はカーソルの左側に入力された表現と一致する命令です
      （つまり, カーソルが1番右にある場合には
      全ての過去のコマンドを渡り歩くことができます）.

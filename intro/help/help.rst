@@ -148,7 +148,7 @@ IPython ではヘルプとドキュメントのためにウィンドウを分割
       np.diagflat
       np.diagonal
 
-* numpy.lookfor はあるモジュール内のドキュメンテーション文字列からキーワードを探します.
+* :func:`numpy.lookfor` はあるモジュール内のドキュメンテーション文字列からキーワードを探します.
 
   .. sourcecode:: ipython
    
@@ -191,7 +191,7 @@ IPython ではヘルプとドキュメントのためにウィンドウを分割
 ..     np.diagflat
 ..     np.diagonal
 
-.. * numpy.lookfor looks for keywords inside the docstrings of specified modules.
+.. * :func:`numpy.lookfor` looks for keywords inside the docstrings of specified modules.
 
 .. .. sourcecode:: ipython
 

@@ -12,12 +12,12 @@ Scipy：高レベルな科学技術計算
 
 .. topic:: Scipy
 
-    ``scipy`` パッケージは科学技術計算の共通して現われる問題を解決するための多くのツールを含んでいます.
+    :mod:`scipy` パッケージは科学技術計算の共通して現われる問題を解決するための多くのツールを含んでいます.
     補間, 積分, 最適化, 画像処理, 統計, 特殊関数など適用する問題の違いに対応した様々なサブモジュールを持っています.
 
-    ``scipy`` は GSL (GNU Scientific Library for C and C++) や
+    :mod:`scipy` は GSL (GNU Scientific Library for C and C++) や
     Matlab の toolboxes のような他の科学技術計算で標準的に使われるライブラリと同等の機能を持っています.
-    ``scipy`` は Python における科学技術計算ライブラリの中核となるパッケージです；
+    :mod:`scipy` は Python における科学技術計算ライブラリの中核となるパッケージです；
     ``numpy`` の配列を効率的に扱ったりと numpy と scipy は密接な連携を持っています.
 
     ルーチンを実装する前に行いたいデータ処理が Scipy で実装されているか調べることは有効です.
@@ -27,14 +27,14 @@ Scipy：高レベルな科学技術計算
     一方で ``Scipy`` のルーチンは最適化とテスト済みされています,
     なので可能な場合にはこちらを使うべきです.
 
-..     The ``scipy`` package contains various toolboxes dedicated to common
+..     The :mod:`scipy` package contains various toolboxes dedicated to common
 ..     issues in scientific computing. Its different submodules correspond
 ..     to different applications, such as interpolation, integration,
 ..     optimization, image processing, statistics, special functions, etc.
 
-..     ``scipy`` can be compared to other standard scientific-computing
+..     :mod:`scipy` can be compared to other standard scientific-computing
 ..     libraries, such as the GSL (GNU Scientific  Library for C and C++),
-..     or Matlab's toolboxes. ``scipy`` is the core package for scientific
+..     or Matlab's toolboxes. :mod:`scipy` is the core package for scientific
 ..     routines in Python; it is meant to operate efficiently on ``numpy``
 ..     arrays, so that numpy and scipy work hand in hand.
 
@@ -50,12 +50,12 @@ Scipy：高レベルな科学技術計算
 
     このチュートリアルは決して数値計算の入門ではありません.
     scipy のサブモジュールと関数を列挙していくことはとても退屈なものになるでしょうから,
-    代わりに ``scipy`` を科学技術計算のためにどう使えばいいか理解するための少数の例を集中して扱います, 
+    代わりに :mod:`scipy` を科学技術計算のためにどう使えばいいか理解するための少数の例を集中して扱います, 
 
 ..     This tutorial is far from an introduction to numerical computing.
 ..     As enumerating the different submodules and functions in scipy would
 ..     be very boring, we concentrate instead on a few examples to give a
-..     general idea of how to use ``scipy`` for scientific computing.
+..     general idea of how to use :mod:`scipy` for scientific computing.
 
 ますはじめに::
 
@@ -67,45 +67,45 @@ Scipy：高レベルな科学技術計算
 ..     >>> import numpy as np
 ..     >>> import scipy
 
-`scipy` は主に特定の作業向けのサブモジュールから構成されています.
+:mod:`scipy` は主に特定の作業向けのサブモジュールから構成されています.
 
-============= ========================================================
-cluster         ベクトル量子化 / K 平均法
-fftpack         フーリエ変換
-integrate       積分ルーチン
-interpolate     補間
-io              データの入出力
-linalg          線形代数ルーチン
-maxentropy      最大エントロピーモデルによるフィッティング
-ndimage         n 次元画像パッケージ
-odr             直交距離回帰
-optimize        最適化
-signal          信号処理
-sparse          疎行列
-spatial         空間データ構造とアルゴリズム
-special         特殊関数
-stats           統計
-============= ========================================================
+=================== ========================================================
+:mod:`cluster`         ベクトル量子化 / K 平均法
+:mod:`fftpack`         フーリエ変換
+:mod:`integrate`       積分ルーチン
+:mod:`interpolate`     補間
+:mod:`io`              データの入出力
+:mod:`linalg`          線形代数ルーチン
+:mod:`maxentropy`      最大エントロピーモデルによるフィッティング
+:mod:`ndimage`         n 次元画像パッケージ
+:mod:`odr`             直交距離回帰
+:mod:`optimize`        最適化
+:mod:`signal`          信号処理
+:mod:`sparse`          疎行列
+:mod:`spatial`         空間データ構造とアルゴリズム
+:mod:`special`         特殊関数
+:mod:`stats`           統計
+=================== ========================================================
 
-.. `scipy` is mainly composed of task-specific sub-modules:
+.. :mod:`scipy` is mainly composed of task-specific sub-modules:
 
-.. ============= ===============================================
-.. cluster         Vector quantization / Kmeans
-.. fftpack         Fourier transform
-.. integrate       Integration routines
-.. interpolate     Interpolation
-.. io              Data input and output
-.. linalg          Linear algebra routines
-.. maxentropy      Routines for fitting maximum entropy models
-.. ndimage         n-dimensional image package
-.. odr             Orthogonal distance regression
-.. optimize        Optimization
-.. signal          Signal processing
-.. sparse          Sparse matrices
-.. spatial         Spatial data structures and algorithms
-.. special         Any special mathematical functions
-.. stats           Statistics
-.. ============= ===============================================
+.. ==================== ===============================================
+.. :mod:`cluster`         Vector quantization / Kmeans
+.. :mod:`fftpack`         Fourier transform
+.. :mod:`integrate`       Integration routines
+.. :mod:`interpolate`     Interpolation
+.. :mod:`io`              Data input and output
+.. :mod:`linalg`          Linear algebra routines
+.. :mod:`maxentropy`      Routines for fitting maximum entropy models
+.. :mod:`ndimage`         n-dimensional image package
+.. :mod:`odr`             Orthogonal distance regression
+.. :mod:`optimize`        Optimization
+.. :mod:`signal`          Signal processing
+.. :mod:`sparse`          Sparse matrices
+.. :mod:`spatial`         Spatial data structures and algorithms
+.. :mod:`special`         Any special mathematical functions
+.. :mod:`stats`           Statistics
+.. ==================== ===============================================
 
 
 Scipy は Numpy に基づいています
@@ -145,10 +145,10 @@ Scipy も同じものを使っていることがわかります::
 .. the  ``scipy.__file__[:-1]`` file. On version '0.6.0', the whole Numpy
 .. namespace is imported by the line ``from numpy import *``.
 
-ファイル入出力 ： ``scipy.io``
-------------------------------
+ファイル入出力 ： :mod:`scipy.io`
+---------------------------------
 
-.. File input/output: ``scipy.io``
+.. File input/output: :mod:`scipy.io`
 .. ----------------------------------
 
 * matlab のファイルの読み込みと保存::
@@ -179,24 +179,27 @@ Scipy も同じものを使っていることがわかります::
 
 .. See also:
 
+
+    * 高速で効率的な numpy に特化したバイナリフォーマット::
+
 ..     * Load text files::
 
-..         np.loadtxt/np.savetxt
+..         :func:`np.loadtxt`/:func:`np.savetxt`
 
 ..     * Clever loading of text/csv files::
 
-..         np.genfromtxt/np.recfromcsv
+..         :func:`np.genfromtxt`/:func:`np.recfromcsv`
 
 ..     * Fast an efficient, but numpy-specific, binary format::
 
-..         np.save/np.load
+..         :func:`np.save`/:func:`np.load`
 
 
-信号処理 ： ``scipy.signal``
-----------------------------
+信号処理 ： :mod:`scipy.signal`
+-------------------------------
 
-.. Signal processing: ``scipy.signal``
-.. ------------------------------------
+.. Signal processing: :mod:`scipy.signal`
+.. --------------------------------------
 
 ::
 
@@ -255,9 +258,9 @@ Scipy も同じものを使っていることがわかります::
 ..      Notice how on the side of the window the resampling is less accurate
 ..      and has a rippling effect.
 
-* signal は多くの窓関数を持っています ： `hamming`, `bartlett`, `blackman`...
+* signal は多くの窓関数を持っています ： :func:`hamming`, :func:`bartlett`, :func:`blackman`...
 
-.. * Signal has many window function: `hamming`, `bartlett`, `blackman`...
+.. * Signal has many window function: :func:`hamming`, :func:`bartlett`, :func:`blackman`...
 
 * signal はフィルタを持っています (Gaussian, 中央値フィルタ, Wiener),
   しかし, これらについては画像の段落で議論することにします.
@@ -265,51 +268,51 @@ Scipy も同じものを使っていることがわかります::
 .. * Signal has filtering (Gaussian, median filter, Wiener), but we will
 ..   discuss this in the image paragraph.
 
-特殊関数 ： ``scipy.special``
------------------------------
+特殊関数 ： :mod:`scipy.special`
+--------------------------------
     
-.. Special functions: ``scipy.special``
+.. Special functions: :mod:`scipy.special`
 .. ---------------------------------------
 
 特殊関数は超越関数です.
 モジュールのドキュメンテーション文字列にしっかりと書かれているので列挙しません.
 よく使うものは：
 
- * Bessel 関数, 例えば `special.jn` （整数次 Bessel 関数）など
+ * Bessel 関数, 例えば :func:`special.jn` （整数次 Bessel 関数）など
 
- * 楕円関数 （Jacobi の楕円関数 `special.ellipj`, ...)
+ * 楕円関数 （Jacobi の楕円関数 :func:`special.ellipj`, ...)
 
- * ガンマ関数 ： `special.gamma`,
-   また `special.gammaln` は高精度のガンマ関数の log を与えます.
+ * ガンマ関数 ： :func:`special.gamma`,
+   また :func:`special.gammaln` は高精度のガンマ関数の log を与えます.
 
- * 誤差関数, Gauss 関数の面積 ： `special.erf`
+ * 誤差関数, Gauss 関数の面積 ： :func:`special.erf`
 
 .. Special functions are transcendal functions. The docstring of the module
 .. is well-written and we will not list them. Frequently used ones are:
 
-..  * Bessel function, such as `special.jn` (nth integer order Bessel
+..  * Bessel function, such as :func:`special.jn` (nth integer order Bessel
 ..    function)
 
-..  * Elliptic function (`special.ellipj` for the Jacobian elliptic
+..  * Elliptic function (:func:`special.ellipj` for the Jacobian elliptic
 ..    function, ...)
 
-..  * Gamma function: `special.gamma`, alos note `special.gammaln` which
+..  * Gamma function: :func:`special.gamma`, alos note :func:`special.gammaln` which
 ..    will give the log of Gamma to a higher numerical precision.
 
-..  * Erf, the area under a Gaussian curve: `special.erf`
+..  * Erf, the area under a Gaussian curve: :func:`special.erf`
 
-統計と乱数 ： ``scipy.stats``
------------------------------
+統計と乱数 ： :mod:`scipy.stats`
+--------------------------------
 
-.. Statistics and random numbers: ``scipy.stats``
-.. -----------------------------------------------
+.. Statistics and random numbers: :mod:`scipy.stats`
+.. -------------------------------------------------
 
-`scipy.stats` は統計ツールと確率過程の確率論的な記述を含みます.
-多くの確率過程のための乱数生成器は `numpy.random` にあります.
+:mod:`scipy.stats` は統計ツールと確率過程の確率論的な記述を含みます.
+多くの確率過程のための乱数生成器は :mod:`numpy.random` にあります.
 
-.. The module `scipy.stats` contains statistical tools and probabilistic
+.. The module :mod:`scipy.stats` contains statistical tools and probabilistic
 .. description of random processes. Random number generators for various
-.. random process can be found in `numpy.random`.
+.. random process can be found in :mod:`numpy.random`.
 
 頻度分布と確率分布関数
 ----------------------
@@ -458,14 +461,14 @@ Scipy も同じものを使っていることがわかります::
 ..       The closer it is to zero, the more likely it is that the processes
 ..       have different mean.
 
-線形代数演算 ： ``scipy.linalg``
---------------------------------
+線形代数演算 ： :mod:`scipy.linalg`
+-----------------------------------
 
-.. Linear algebra operations: ``scipy.linalg``
+.. Linear algebra operations: :mod:`scipy.linalg`
 .. -----------------------------------------------
 
 linalg モジュールは標準的な線形代数演算を提供します.
-``det`` 関数は正方行列の行列式を計算します::
+:func:`det` 関数は正方行列の行列式を計算します::
 
     >>> from scipy import linalg
     >>> arr = np.array([[1, 2],
@@ -482,7 +485,7 @@ linalg モジュールは標準的な線形代数演算を提供します.
     ValueError: expected square matrix
 
 .. First, the linalg module provides standard linear algebra operations.
-.. The ``det`` function computes the determinant of a square matrix::
+.. The :func:`det` function computes the determinant of a square matrix::
 
 ..     >>> from scipy import linalg
 ..     >>> arr = np.array([[1, 2],
@@ -498,7 +501,7 @@ linalg モジュールは標準的な線形代数演算を提供します.
 ..     ...
 ..     ValueError: expected square matrix
 
-``inv`` 関数は正方行列の逆行列を計算します::
+:func:`inv` 関数は正方行列の逆行列を計算します::
 
     >>> arr = np.array([[1, 2],
     ...                 [3, 4]])
@@ -509,7 +512,7 @@ linalg モジュールは標準的な線形代数演算を提供します.
     >>> np.allclose(np.dot(arr, iarr), np.eye(2))
     True
 
-.. The ``inv`` function computes the inverse of a square matrix::
+.. The :func:`inv` function computes the inverse of a square matrix::
 
 ..     >>> arr = np.array([[1, 2],
 ..     ...                 [3, 4]])
@@ -520,20 +523,20 @@ linalg モジュールは標準的な線形代数演算を提供します.
 ..     >>> np.allclose(np.dot(arr, iarr), np.eye(2))
 ..     True
 
-matrix 型を使う場合 ``I`` 属性を要求すると逆行列が計算されます::
+matrix 型を使う場合 :attr:`I` 属性を要求すると逆行列が計算されます::
 
     >>> ma = np.matrix(arr, copy=False)
     >>> np.allclose(ma.I, iarr)
     True
 
 .. Note that in case you use the matrix type, the inverse is computed when
-.. requesting the ``I`` attribute::
+.. requesting the :attr:`I` attribute::
 
 ..     >>> ma = np.matrix(arr, copy=False)
 ..     >>> np.allclose(ma.I, iarr)
 ..     True
 
-特異行列（行列式が 0 な行列）を計算する場合 ``LinAlgError`` が送出されるでしょう::
+特異行列（行列式が 0 な行列）を計算する場合 :exc:`LinAlgError` が送出されるでしょう::
 
     >>> arr = np.array([[3, 2],
     ...                 [6, 4]])
@@ -543,7 +546,7 @@ matrix 型を使う場合 ``I`` 属性を要求すると逆行列が計算され
     LinAlgError: singular matrix
 
 .. Finally computing the inverse of a singular matrix (its determinant is zero)
-.. will raise ``LinAlgError``::
+.. will raise :exc:`LinAlgError`::
 
 ..     >>> arr = np.array([[3, 2],
 ..     ...                 [6, 4]])
@@ -575,7 +578,7 @@ matrix 型を使う場合 ``I`` 属性を要求すると逆行列が計算され
     True
 
 SVD は統計や信号処理などで一般的に使われています.
-他の多くの分解（QR, LU, Cholesky, Schur）も線形系のソルバーと同様に ``scipy.linalg`` で入手できます.
+他の多くの分解（QR, LU, Cholesky, Schur）も線形系のソルバーと同様に :mod:`scipy.linalg` で入手できます.
 
 .. More advanced operations are available like singular-value decomposition
 .. (SVD)::
@@ -605,13 +608,13 @@ SVD は統計や信号処理などで一般的に使われています.
 .. standard decompositions (QR, LU, Cholesky, Schur), as well as solvers
 .. for linear systems, are available in ``scipy.linalg``.
 
-数値積分 ： ``scipy.integrate``
--------------------------------
+数値積分 ： :mod:`scipy.integrate`
+----------------------------------
 
-.. Numerical integration: ``scipy.integrate``
-.. ------------------------------------------------
+.. Numerical integration: :mod:`scipy.integrate`
+.. ---------------------------------------------
 
-最も一般的な積分ルーチンは ``scipy.integrate.quad`` です::
+最も一般的な積分ルーチンは :func:`scipy.integrate.quad` です::
 
     >>> from scipy.integrate import quad
     >>> res, err = quad(np.sin, 0, np.pi/2)
@@ -620,7 +623,7 @@ SVD は統計や信号処理などで一般的に使われています.
     >>> np.allclose(err, 1 - res)
     True
 
-.. The most generic integration routine is ``scipy.integrate.quad``::
+.. The most generic integration routine is :func:`scipy.integrate.quad`::
 
 ..     >>> from scipy.integrate import quad
 ..     >>> res, err = quad(np.sin, 0, np.pi/2)
@@ -629,13 +632,13 @@ SVD は統計や信号処理などで一般的に使われています.
 ..     >>> np.allclose(err, 1 - res)
 ..     True
 
-他の積分スキーム ``fixed_quad``, ``quadrature``, ``romberg`` が使えます.
+他の積分スキーム :func:`fixed_quad`, :func:`quadrature`, :func:`romberg` が使えます.
 
-.. Others integration schemes are available with ``fixed_quad``,
-.. ``quadrature``, ``romberg``.
+.. Others integration schemes are available with :func:`fixed_quad`,
+.. :func:`quadrature`, :func:`romberg`.
 
-``scipy.integrate`` は常微分方程式を解くためのルーチンも持っています.
-特に ``scipy.integrate.odeint`` は LSODA (Livermore solver for
+:mod:`scipy.integrate` は常微分方程式を解くためのルーチンも持っています.
+特に :func:`scipy.integrate.odeint` は LSODA (Livermore solver for
 ordinary differential equations with automatic method switching
 for stiff and nonstiff problems)
 を使った一般的な用途に使える積分器です.
@@ -643,8 +646,8 @@ for stiff and nonstiff problems)
 
 .. _`ODEPACK Fortran library` : http://people.sc.fsu.edu/~jburkardt/f77_src/odepack/odepack.html
 
-.. ``scipy.integrate`` also features routines for Ordinary differential
-.. equations (ODE) integration. In particular, ``scipy.integrate.odeint``
+.. :mod:`scipy.integrate` also features routines for Ordinary differential
+.. equations (ODE) integration. In particular, :func:`scipy.integrate.odeint`
 .. is a general-purpose integrator using LSODA (Livermore solver for
 .. ordinary differential equations with automatic method switching
 .. for stiff and nonstiff problems), see the `ODEPACK Fortran library`_
@@ -652,11 +655,11 @@ for stiff and nonstiff problems)
 
 .. .. _`ODEPACK Fortran library` : http://people.sc.fsu.edu/~jburkardt/f77_src/odepack/odepack.html
 
-``odeint`` は以下の形式の1階の常微分方程式系を解きます
+:func:`odeint` は以下の形式の1階の常微分方程式系を解きます
 
 .. math:: dy/dt = \text{rhs}(y_1, y_2, \dots, t_0, \dots)
 
-.. ``odeint`` solves first-order ODE systems of the form
+.. :func:`odeint` solves first-order ODE systems of the form
 
 .. .. math:: dy/dt = \text{rhs}(y_1, y_2, \dots, t_0, \dots)
 
@@ -733,7 +736,7 @@ for stiff and nonstiff problems)
 .. plot:: pyplots/odeint_introduction.py
   :scale: 70
 
-``odeint`` の別の例として減衰振動子（2次の振動子）を扱いましょう.
+:func:`odeint` の別の例として減衰振動子（2次の振動子）を扱いましょう.
 バネにつながったおもりは2階常微分方程式
 :math:`y'' + 2\epsilon w_0y' + w_0^2y = 0` に従います.
 ここに :math:`\omega_0^2 = k/m` で :math:`k` はバネ定数で :math:`m` は質量,
@@ -744,7 +747,7 @@ for stiff and nonstiff problems)
     >>> kspring = 4 # N/m
     >>> cviscous = 0.4 # N s/m
 
-.. Another example with ``odeint`` will be a damped spring-mass oscillator
+.. Another example with :func:`odeint` will be a damped spring-mass oscillator
 .. (2nd order oscillator). The position of a mass attached to a spring obeys
 .. the 2nd order ODE :math:`y'' + 2\epsilon\omega_0y' + \omega_0^2y = 0`` with :math:`\omega_0^2 = k/m``
 .. being :math:`k` the spring constant, :math:`m` the mass and :math:`\epsilon=c/(2m\omega_0)``
@@ -768,7 +771,7 @@ for stiff and nonstiff problems)
 ..     >>> eps < 1
 ..     True
 
-``odeint`` で2階微分方程式を解くにはベクトル形式 :math:`\bm{y}=(y, y')`
+:func:`odeint` で2階微分方程式を解くにはベクトル形式 :math:`\bm{y}=(y, y')`
 で書かれる1階微分方程式の組に直す必要があります.
 
 そのために :math:`\nu = 2\epsilon\omega_0 = c / m` と :math:`\text{om} = \omega_0^2 = k/m` を定義すると便利です::
@@ -776,7 +779,7 @@ for stiff and nonstiff problems)
     >>> nu_coef = cviscous/mass
     >>> om_coef = kspring/mass
 
-.. For the ``odeint`` solver the 2nd order equation needs to be transformed in a
+.. For the :func:`odeint` solver the 2nd order equation needs to be transformed in a
 .. system of two first-order equations for the vector ``Y=(y, y')``.  It will
 .. be convenient to define ``nu = 2 eps wo = c / m`` and ``om = wo^2 = k/m``::
 
@@ -816,13 +819,13 @@ Python の PDE パッケージは, fipy_ や SfePy_ などがあります.
 .. _fipy: http://www.ctcms.nist.gov/fipy/
 .. _SfePy: http://code.google.com/p/sfepy/
 
-高速 Fourier 変換 ： ``scipy.fftpack``
---------------------------------------
+高速 Fourier 変換 ： :mod:`scipy.fftpack`
+-----------------------------------------
 
-.. Fast Fourier transforms: ``scipy.fftpack``
-.. ----------------------------------------------
+.. Fast Fourier transforms: :mod:`scipy.fftpack`
+.. ---------------------------------------------
     
-``fftpack`` モジュールは高速 Fouier 変換の計算を可能にします.
+:mod:`fftpack` モジュールは高速 Fouier 変換の計算を可能にします.
 実例として入力信号をこうしてみます::
 
     >>> time_step = 0.1
@@ -831,7 +834,7 @@ Python の PDE パッケージは, fipy_ や SfePy_ などがあります.
     >>> sig = np.sin(2 * np.pi / period * time_vec) + \
     ...       np.cos(10 * np.pi * time_vec)
 
-.. The ``fftpack`` module allows to compute fast Fourier transforms.
+.. The :mod:`fftpack` module allows to compute fast Fourier transforms.
 .. As an illustration, an input signal may look like::
 
 ..     >>> time_step = 0.1
@@ -843,8 +846,8 @@ Python の PDE パッケージは, fipy_ や SfePy_ などがあります.
 しかし, 観察者は信号の周波数を知らず
 信号 ``sig`` のサンプリング時間ステップだけを知っています.
 ただし信号は実関数と仮定されるため Fourier 変換は対称となります.
-``fftfreq`` 関数はサンプリング周波数を生み出し,
-``fft`` は高速 Fourier 変換を計算します::
+:func:`fftfreq` 関数はサンプリング周波数を生み出し,
+:func:`fft` は高速 Fourier 変換を計算します::
 
     >>> from scipy import fftpack
     >>> sample_freq = fftpack.fftfreq(sig.size, d=time_step)
@@ -854,8 +857,8 @@ Python の PDE パッケージは, fipy_ や SfePy_ などがあります.
 .. the sampling time step of the signal ``sig``. But the signal
 .. is supposed to come from a real function so the Fourier transform
 .. will be symmetric.
-.. The ``fftfreq`` function will generate the sampling frequencies and
-.. ``fft`` will compute the fast fourier transform::
+.. The :func:`fftfreq` function will generate the sampling frequencies and
+.. :func:`fft` will compute the fast fourier transform::
 
 ..     >>> from scipy import fftpack
 ..     >>> sample_freq = fftpack.fftfreq(sig.size, d=time_step)
@@ -899,11 +902,11 @@ Python の PDE パッケージは, fipy_ や SfePy_ などがあります.
 
 ..     >>> sig_fft[np.abs(sample_freq) > freq] = 0
 
-結果として得られる信号は ``ifft`` 関数で計算されます::
+結果として得られる信号は :func:`ifft` 関数で計算されます::
 
     >>> main_sig = fftpack.ifft(sig_fft)
 
-.. The resulting signal can be computed by the ``ifft`` function::
+.. The resulting signal can be computed by the :func:`ifft` function::
 
 ..     >>> main_sig = fftpack.ifft(sig_fft)
 
@@ -914,16 +917,16 @@ Python の PDE パッケージは, fipy_ や SfePy_ などがあります.
 .. plot:: pyplots/fftpack_signals.py
 
 
-補間 ： ``scipy.interpolate``
-------------------------------------
+補間 ： :mod:`scipy.interpolate`
+--------------------------------
 
-.. Interpolation: ``scipy.interpolate``
-.. ------------------------------------
+.. Interpolation: :mod:`scipy.interpolate`
+.. ---------------------------------------
 
-``scipy.interpolate`` は実験データを関数でフィッティングし, 測定していない点を評価するのに便利です.
+:mod:`scipy.interpolate` は実験データを関数でフィッティングし, 測定していない点を評価するのに便利です.
 モジュールは netlib_ の `FITPACK Fortran subroutines`_ を基にしています.
 
-.. The ``scipy.interpolate`` is useful for fitting a function from experimental
+.. The :mod:`scipy.interpolate` is useful for fitting a function from experimental
 .. data and thus evaluating points where no measure exists. The module is based
 .. on the `FITPACK Fortran subroutines`_ from the netlib_ project.
 
@@ -942,12 +945,12 @@ Python の PDE パッケージは, fipy_ や SfePy_ などがあります.
 ..     >>> noise = (np.random.random(10)*2 - 1) * 1e-1
 ..     >>> measures = np.sin(2 * np.pi * measured_time) + noise
 
-``interp1d`` クラスが1次の補間関数を使うために作られています::
+:class:`interp1d` クラスが1次の補間関数を使うために作られています::
 
     >>> from scipy.interpolate import interp1d
     >>> linear_interp = interp1d(measured_time, measures)
 
-.. The ``interp1d`` class can built a linear interpolation function::
+.. The :class:`interp1d` class can built a linear interpolation function::
 
 ..     >>> from scipy.interpolate import interp1d
 ..     >>> linear_interp = interp1d(measured_time, measures)
@@ -982,32 +985,32 @@ scipy-interpolation.py_ によって結果を Matplotlib の figure にまとめ
 
 .. _scipy-interpolation.py : ../data/scipy-interpolation.py
 
-``scipy.interpolate.interp2d`` は ``inter1d`` と似ていまが2次元配列です.
+:class:`scipy.interpolate.interp2d` は :class:`inter1d` と似ていまが2次元配列です.
 ``interp`` ファミリーについては評価する時間は測定時間の範囲内に留める必要があるということに注意して下さい.
 より高度なスプライン補間の例については :ref:`summary_exercise_stat_interp` 統括演習を参照して下さい.
 
-.. ``scipy.interpolate.interp2d`` is similar to ``interp1d``, but for 2-D
+.. :class:`scipy.interpolate.interp2d` is similar to :class:`interp1d`, but for 2-D
 .. arrays. Note that for the ``interp`` family, the computed time must stay
 .. within the measured time range. See the summary exercise  on `Maximum
 .. wind speed prediction at the Sprogø station`_ for a more advance spline
 .. interpolation example.
 
 
-最適化とフィット ： ``scipy.optimize``
-----------------------------------------
+最適化とフィット ： :mod:`scipy.optimize`
+-----------------------------------------
 
-.. Optimization and fit: ``scipy.optimize``
-.. ----------------------------------------
+.. Optimization and fit: :mod:`scipy.optimize`
+.. -------------------------------------------
 
 最適化は極小値や方程式の解を数値的に見つけること問題のことです.
 
 .. Optimization is the problem of finding a numerical solution to a
 .. minimization or equality.
 
-``scipy.optimize`` は（スカラーまたは多次元の）関数極小化や曲線のフィッティング,
+:mod:`scipy.optimize` は（スカラーまたは多次元の）関数極小化や曲線のフィッティング,
 そして根の探索のためのアルゴリズムを提供します.
 
-.. The ``scipy.optimize`` module provides useful algorithms for function
+.. The :mod:`scipy.optimize` module provides useful algorithms for function
 .. minimization (scalar or multi-dimensional), curve fitting and root
 .. finding.
 
@@ -1112,18 +1115,18 @@ BFGS アルゴリズムはこれをするのによい方法です::
 .. This approach take 20 ms on our computer.
 
 このアルゴリズムは格子のサイズが大きくなるに従いとても遅くなります,
-なのでスカラー関数の代わりに ``optimize.brent`` を使うべきです::
+なのでスカラー関数の代わりに :func:`optimize.brent` を使うべきです::
 
     >>> optimize.brent(f)
     -1.3064400120612139
 
 .. This simple alorithm becomes very slow as the size of the grid grows, so you
-.. should use ``optimize.brent`` instead for scalar functions: ::
+.. should use :func:`optimize.brent` instead for scalar functions: ::
 
 ..     >>> optimize.brent(f)
 ..     -1.3064400120612139
 
-局所的な極小値を探すために, ``optimize.fminbound`` を使って値の拘束条件を追加します::
+局所的な極小値を探すために, :func:`optimize.fminbound` を使って値の拘束条件を追加します::
 
     >>> # search the minimum only between 0 and 10
     >>> optimize.fminbound(f, 0, 10)
@@ -1136,12 +1139,12 @@ BFGS アルゴリズムはこれをするのによい方法です::
 ..     >>> optimize.fminbound(f, 0, 10)
 ..     array([ 3.83746712])
 
-多次元の問題に対する同じ機能を持ったアルゴリズムは ``scipy.optimize`` で入手できます.
+多次元の問題に対する同じ機能を持ったアルゴリズムは :mod:`scipy.optimize` で入手できます.
 
 より高度な例は :ref:`summary_exercise_optimize` の統括演習を見てください.
 
 .. You can find algorithms with the same functionalities for multi-dimensional
-.. problems in ``scipy.optimize``.
+.. problems in :mod:`scipy.optimize`.
 
 .. See the summary exercise on :ref:`summary_exercise_optimize` for a
 .. more advanced example.
@@ -1150,11 +1153,11 @@ BFGS アルゴリズムはこれをするのによい方法です::
 
 
 
-画像処理 ： ``scipy.ndimage``
------------------------------------
+画像処理 ： :mod:`scipy.ndimage`
+--------------------------------
 
-.. Image processing: ``scipy.ndimage``
-.. -----------------------------------
+.. Image processing: :mod:`scipy.ndimage`
+.. --------------------------------------
 
 .. include:: image_processing/image_processing.rst
 

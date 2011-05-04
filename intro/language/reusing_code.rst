@@ -53,26 +53,37 @@ Python ファイルの拡張子は **.py** です.
 では, スクリプトを対話的に IPython インタプリタ内部から実行してみましょう.
 これは科学技術計算用のスクリプトの最も一般的使い方でしょう.
 
+  * IPython でスクリプトを実行する構文は ``%run script.py`` です．
+    例
+
+    .. sourcecode:: ipython
+
+       In [1]: %run test.py
+       Hello
+       how
+       are
+       you?
+
+       In [2]: message
+       Out[2]: 'Hello how are you?'
+
 .. Let us now execute the script interactively, that is inside the Ipython
 .. interpreter. This is maybe the most common use of scripts in scientific
 .. computing. 
 
-	* IPython でスクリプトを実行する構文は ``%run script.py`` です．
-      例
+..    * in Ipython, the syntax to execute a script is ``%run
+..      script.py``. For example, 
 
-    .. * in Ipython, the syntax to execute a script is ``%run
-    ..   script.py``. For example, 
-
-.. sourcecode:: ipython
-
-    In [1]: %run test.py
-    Hello
-    how
-    are
-    you?
-
-    In [2]: message
-    Out[2]: 'Hello how are you?'
+..       .. sourcecode:: ipython
+       
+..           In [1]: %run test.py
+..           Hello
+..           how
+..           are
+..           you?
+       
+..           In [2]: message
+..           Out[2]: 'Hello how are you?'
 
 スクリプトが実行されるとスクリプト内の変数が定義され, インタプリタ内の名前空間で
 アクセスできるようになります．
@@ -82,10 +93,10 @@ Python ファイルの拡張子は **.py** です.
 .. namespace.
 
 他のインタプリタでもスクリプトを実行することができます
-（例えばデフォルトの Python インタプリタでは ``execfile`` 等）.
+（例えばデフォルトの Python インタプリタでは :func:`execfile` 等）.
 
 .. Other interpreters also offer the possibility to execute scripts (e.g.,
-.. ``execfile`` in the plain Python interpreter, etc.).
+.. :func:`execfile` in the plain Python interpreter, etc.).
 
 また, ターミナル上（Linux/Mac のターミナル Windows のコマンドプロンプト）
 で実行することで **独立したプログラム** としても実行できます.
@@ -129,10 +140,10 @@ Python ファイルの拡張子は **.py** です.
 
 .. note:: 
 
-	オプションの構文解析は行いません. `optparse` モジュールを使って下さい.
+	オプションの構文解析は行いません. :mod:`optparse` モジュールを使って下さい.
 
 ..     Don't implement option parsing yourself. Use modules such as
-..     `optparse`.
+..     :mod:`optparse`.
 
 
 モジュールからオブジェクトをインポートする
@@ -188,10 +199,10 @@ Python ファイルの拡張子は **.py** です.
     * コードが読みにくく, 理解しづらくなります： シンボルがどこから来たかわかりますか?
 
     * 名前と文脈から機能を予測することが不可能になります
-      （ヒント： `os.name` は OS の名前）,
+      （ヒント： :data:`os.name` は OS の名前）,
       さらに tab 補完の恩恵を受けるのに便利です.
 
-    * 命名できる変数名が制限されます： `os.name` を `name` に上書きするなどすれば
+    * 命名できる変数名が制限されます： :data:`os.name` が :obj:`name` を上書きします、そしてその逆も.
 	
     * モジュール間の名前の衝突を生みます
 
@@ -209,11 +220,11 @@ Python ファイルの拡張子は **.py** です.
 ..       from?
 
 ..     * Makes it impossible to guess the functionality by the context and
-..       the name (hint: `os.name` is the name of the OS), and to profit
+..       the name (hint: :data:`os.name` is the name of the OS), and to profit
 ..       usefully from tab completion.
 
-..     * Restricts the variable names you can use: `os.name` might override 
-..       `name`, or vise-versa.
+..     * Restricts the variable names you can use: :data:`os.name` might override 
+..       :obj:`name`, or vise-versa.
 
 ..     * Creates possible name clashes between modules.
 
@@ -265,27 +276,27 @@ Python(x,y) の中のソフトウェア IPython(x,y) は起動時に以下のイ
 より大きなまとまったプログラムを書きたい場合には
 自分自身の **モジュール** を作成します.
 
-`demo.py` に書かれた `demo` モジュールを作ってみましょう：
+:file:`demo.py` に書かれた `demo` モジュールを作ってみましょう：
 
 .. If we want to write larger and better organized programs (compared to
 .. simple scripts), where some objects are defined, (variables, functions,
 .. classes) and that we want to reuse several times, we have to create our
 .. own **modules**. 
 
-.. Let us create a module `demo` contained in the file `demo.py`:
+.. Let us create a module `demo` contained in the file :file:`demo.py`:
 
    .. literalinclude:: demo.py
 
-このファイルには私達が定義した2つの関数 `print_a` と `print_b` があります.
-インタプリタから `print_a` 関数を呼び出したい仮定します.
-ファイルをスクリプトとして実行することもできますが `print_a` 関数にアクセスしたいだけなので
+このファイルには私達が定義した2つの関数 :func:`print_a` と :func:`print_b` があります.
+インタプリタから :func:`print_a` 関数を呼び出したい仮定します.
+ファイルをスクリプトとして実行することもできますが :func:`print_a` 関数にアクセスしたいだけなので
 **モジュールとしてインポート** しましょう.
 構文は以下です.
 
-.. In this file, we defined two functions `print_a` and `print_b`. Suppose
-.. we want to call the `print_a` function from the interpreter. We could
+.. In this file, we defined two functions :func:`print_a` and :func:`print_b`. Suppose
+.. we want to call the :func:`print_a` function from the interpreter. We could
 .. execute the file as a script, but since we just want to have access to
-.. the function `print_a`, we are rather going to **import it as a module**.
+.. the function :func:`print_a`, we are rather going to **import it as a module**.
 .. The syntax is as follows.
 
 .. sourcecode:: ipython
@@ -299,7 +310,7 @@ Python(x,y) の中のソフトウェア IPython(x,y) は起動時に以下のイ
     In [3]: demo.print_b()
     b
 
-モジュールをインポートすることでそのオブジェクトに ``module.object`` 構文でアクセスすることができます.
+モジュールをインポートすることでそのオブジェクトに :data:`module.object` 構文でアクセスすることができます.
 オブジェクトの名前の前にモジュールの名前を忘れないで下さい, 忘れると Python は命令を理解してくれません.
 
 .. Importing the module gives access to its objects, using the
@@ -377,7 +388,7 @@ main の名前空間にオブジェクトをインポートする
 
    **モジュールのキャッシュ**
 
-   モジュールはキャッシュされます： `demo.py` を変更して
+   モジュールはキャッシュされます： :file:`demo.py` を変更して
    変更前のセッションで再インポートした場合, 変更前のモジュールがインポートされます.
 
    解決法：
@@ -389,7 +400,7 @@ main の名前空間にオブジェクトをインポートする
 
 ..    **Module caching**
    
-..     Modules are cached: if you modify `demo.py` and re-import it in the
+..     Modules are cached: if you modify :file:`demo.py` and re-import it in the
 ..     old session, you will get the old one.
    
 ..     Solution:
@@ -405,9 +416,9 @@ main の名前空間にオブジェクトをインポートする
 .. '__main__' and module loading
 .. ------------------------------
 
-ファイル `demo2.py` ：
+ファイル :file:`demo2.py` ：
 
-.. File `demo2.py`:
+.. File :file:`demo2.py`:
 
 .. literalinclude:: demo2.py
 
@@ -463,12 +474,12 @@ main の名前空間にオブジェクトをインポートする
         
    主に OS によって変わりますが方法はたくさんあります.
    ``import mymodule`` 文が実行されると, 
-   `mymodule` が与えられたディレクトリのリストから探索されます.
-   このリストは環境変数 **PYTHONPATH** で指定されたディレクトリリストと
+   :mod:`mymodule` が与えられたディレクトリのリストから探索されます.
+   このリストは環境変数 :envvar:`PYTHONPATH` で指定されたディレクトリリストと
    インストール場所に依存したデフォルトのパス
-   （例えば, `/usr/lib/python` ） を含みます.
+   （例えば, :file:`/usr/lib/python` ） を含みます.
     
-   その Python が探すディレクトリリストは `sys.path` 変数で与えられます
+   その Python が探すディレクトリリストは :data:`sys.path` 変数で与えられます
     
    .. sourcecode:: ipython	
     
@@ -496,11 +507,11 @@ main の名前空間にオブジェクトをインポートする
    モジュールはこの検索パスの中に置かれなければいけません,
    そのためできることとしては：
     
-   * 既に定義された検索パスの中（例えば '/usr/local/lib/python2.6/dist-packages'） に
+   * 既に定義された検索パスの中（例えば :file:`'/usr/local/lib/python2.6/dist-packages'` ） に
      モジュールを書く. （Linux では）シンボリックリンクを使って他の場所に置くことができます.
     
-   * **PYTHONPATH** 環境変数を変更してユーザが定義したモジュールがあるディレクトリを含むようにする.
-     Linux/Unix では以下の行をシェルの起動ファイル（例えば /etc/profile .profile）に加えましょう.
+   * :envvar:`PYTHONPATH` 環境変数を変更してユーザが定義したモジュールがあるディレクトリを含むようにする.
+     Linux/Unix では以下の行をシェルの起動ファイル（例えば :file:`/etc/profile`, :file:`.profile` ）に加えましょう.
     
      ::
     
@@ -508,7 +519,7 @@ main の名前空間にオブジェクトをインポートする
     
      Windows では, http://support.microsoft.com/kb/310519 で環境変数の扱い方が説明されています.
     
-   * または, Python スクリプトの中で `sys.path` 変数を変更する
+   * または, Python スクリプトの中で :data:`sys.path` 変数を変更する
     
      ::
     
@@ -519,7 +530,7 @@ main の名前空間にオブジェクトをインポートする
     
      この方法は （ユーザによって変わるパスを設定するため）
      ソースコードの可搬性が悪く, 
-     ディレクトリからモジュールをインポートする度 sys.path を変更しなければならないため
+     ディレクトリからモジュールをインポートする度 :data:`sys.path` を変更しなければならないため
      変更が少ない頑強な方法ではありません.
 
 .. .. Note:: **How to import a module from a remote directory?**
@@ -527,13 +538,13 @@ main の名前空間にオブジェクトをインポートする
 ..     ..
 
 ..     Many solutions exist, depending mainly on your operating system. When
-..     the ``import mymodule`` statement is executed, the module `mymodule`
+..     the ``import mymodule`` statement is executed, the module :mod:`mymodule`
 ..     is searched in a given list of directories. This list includes a list
-..     of installation-dependent default path (e.g., `/usr/lib/python`) as
+..     of installation-dependent default path (e.g., :file:`/usr/lib/python`) as
 ..     well as the list of directories specified by the environment variable
-..     **PYTHONPATH**. 
+..     :envvar:`PYTHONPATH`. 
 
-..     The list of directories searched by Python is given by the `sys.path`
+..     The list of directories searched by Python is given by the :data:`sys.path`
 ..     variable 
 
 ..     .. sourcecode:: ipython	
@@ -562,18 +573,18 @@ main の名前空間にオブジェクトをインポートする
 ..     Modules must be located in the search path, therefore you can:
 
 ..     * write your own modules within directories already defined in the
-..       search path (e.g. '/usr/local/lib/python2.6/dist-packages'). You
+..       search path (e.g. :file:`'/usr/local/lib/python2.6/dist-packages'`). You
 ..       may use symbolic links (on Linux) to keep the code somewhere else.
 
-..     * modify the environment variable **PYTHONPATH** to include the
+..     * modify the environment variable :envvar:`PYTHONPATH` to include the
 ..       directories containing the user-defined modules. On Linux/Unix, add
 ..       the following line to a file read by the shell at startup (e.g.
-..       /etc/profile, .profile)
+..       :file:`/etc/profile`, :file:`.profile`)
 
 ..     On Windows, http://support.microsoft.com/kb/310519 explains how to
 ..     handle environment variables.
 
-..     * or modify the `sys.path` variable itself within a Python script.
+..     * or modify the :data:`sys.path` variable itself within a Python script.
 
 ..     ::
 
@@ -600,12 +611,12 @@ main の名前空間にオブジェクトをインポートする
 
 多くのモジュールを含むディレクトリは **パッケージ** と呼ばれます.
 パッケージはサブモジュール（これもサブモジュールを持ちます）を含むモジュールです.
-`__init__.py` と呼ばれる特別なファイルがそのディレクトリがパッケージであり, 
+:file:`__init__.py` と呼ばれる特別なファイルがそのディレクトリがパッケージであり, 
 モジュールがインポートできることを Python に教えます.
 
 .. A directory that contains many modules is called a **package**. A package
 .. is a module with submodules (which can have submodules themselves, etc.).
-.. A special file called `__init__.py` (which may be empty) tells Python
+.. A special file called :file:`__init__.py` (which may be empty) tells Python
 .. that the directory is a Python package, from which modules can be
 .. imported.
 
@@ -714,8 +725,8 @@ IPython から：
       テキストエディタでは, インデントのスペースの数を任意の正の数
       (1, 2, 3, 4, ...) にできるかもしれません.
       しかし, **インデントにはスペース4つ分** がよい習慣とされています.
-      エディタの設定で ``Tab`` キーをインデントのための4文字分のスペースに割り当てることができるでしょう.
-      Python(x,y) の ``Scite`` エディタでは既にそのように設定されています.
+      エディタの設定で :kbd:`Tab` キーをインデントのための4文字分のスペースに割り当てることができるでしょう.
+      Python(x,y) の :program:`Scite` エディタでは既にそのように設定されています.
 
     * **スタイルガイド**
 

@@ -51,7 +51,7 @@ IPython はコラム記号 ``:`` の後に自動的にインデントを深く�
 
 インデントはスクリプトを書く場合も必須です.
 練習問題として, 上の行の内容を同じインデントで
-``condition.py`` というスクリプトに打ち込んで
+:file:`condition.py` というスクリプトに打ち込んで
 IPython から ``run condition.py``
 としてスクリプトを実行してみましょう.
 
@@ -113,9 +113,9 @@ while/break/continue
 
 .. **More advanced features**
 
-``break`` for/while ループの中から抜ける：
+:keyword:`!break` for/while ループの中から抜ける：
 
-.. ``break`` out of enclosing for/while loop:
+.. :keyword:`!break` out of enclosing for/while loop:
 
 .. sourcecode:: ipython
 
@@ -129,7 +129,7 @@ while/break/continue
        ....:     
 
 
-``continue`` ループの反復を進める::
+:keyword:`!continue` ループの反復を進める::
 
     >>> a = [1, 0, 2, 4]
     >>> for element in a:
@@ -142,7 +142,7 @@ while/break/continue
     0.25
 
 ..
-    ``continue`` the next iteration of a loop.::
+    :keyword:`!continue` the next iteration of a loop.::
     
         >>> a = [1, 0, 2, 4]
         >>> for element in a:
@@ -161,12 +161,12 @@ while/break/continue
 ..  Conditional Expressions
     -----------------------
 
-* `if オブジェクト`
+* :keyword:`!if` `オブジェクト`
 
   偽と評価されるもの：
     * 0 に等しい数 (0, 0.0, 0+0j)
     * 空のコンテナ (list, tuple, set, dictionary, ...)
-    * ``False``, ``None``
+    * :const:`False`, :const:`None`
 
   真と評価されるもの：
     * あらゆるもの [#nonzero_note]_
@@ -177,12 +177,12 @@ while/break/continue
       Evaluates to False:
         * any number equal to zero (0, 0.0, 0+0j)
         * an empty container (list, tuple, set, dictionary, ...)
-        * ``False``, ``None``
+        * :const:`False`, :const:`None`
     
       Evaluates to True:
         * everything else [#nonzero_note]_
 
-* `a == b`
+* `a` ``==`` `b`
 
   論理的に等価かどうか調べる：
 
@@ -192,7 +192,7 @@ while/break/continue
     Out[19]: True
 
 ..
-    * `a == b`
+    * `a` ``==`` `b`
     
     Tests equality, with logics:
 
@@ -201,7 +201,7 @@ while/break/continue
 ..     In [19]: 1 == 1.
 ..     Out[19]: True
 
-* `a is b`
+* `a` :keyword:`is` `b`
 
   同一性を調べる：2つのオブジェクトが同じオブジェクトかどうか
 
@@ -218,7 +218,7 @@ while/break/continue
     Out[23]: True
 
 ..
-    * `a is b`
+    * `a` :keyword:`is` `b`
     
       Tests identity: both objects are the same object
 
@@ -234,7 +234,7 @@ while/break/continue
 ..     In [23]: a is b
 ..     Out[23]: True
 
-* `a in b`
+* `a` :keyword:`in` `b`
 
   データの集まり `b` の中に `a` が含まれているか::
 
@@ -248,7 +248,7 @@ while/break/continue
   `b` が辞書の場合, 辞書のキーに `a` が含まれているか調べます.
 
 ..
-    * `a in b`
+    * `a` :keyword:`in` `b`
     
       For any collection `b`: `b` contains `a` ::
     
@@ -354,7 +354,7 @@ Python を使うことで, インデクスについて注意深く考えない�
 ..     1 powerful
 ..     2 readable
 
-* しかし, Python はそうするための **enumerate** を提供しています::
+* しかし, Python はそうするための :func:`enumerate` を提供しています::
 
     >>> words = ('cool', 'powerful', 'readable')
     >>> for index, item in enumerate(words):
@@ -365,7 +365,7 @@ Python を使うことで, インデクスについて注意深く考えない�
     2 readable
 
 ..
-    * But Python provides **enumerate** for this::
+    * But Python provides :func:`enumerate` for this::
     
         >>> words = ('cool', 'powerful', 'readable')
         >>> for index, item in enumerate(words):
@@ -382,9 +382,9 @@ Python を使うことで, インデクスについて注意深く考えない�
 ..  Looping over a dictionary
     ~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-**iteritems** を使います:
+:meth:`iteritems` を使います:
 
-.. Use **iteritems**:
+.. Use :meth:`iteritems`:
 
 .. sourcecode:: ipython
 
@@ -435,8 +435,8 @@ Python を使うことで, インデクスについて注意深く考えない�
 .. rubric:: Footnotes
 
 .. [#nonzero_note] ユーザ定義型はこれらの規則を特別なメソッド
-      ``__nonzero__`` をオーバーライドすることでカスタマイズできます.
+      :meth:`__nonzero__` をオーバーライドすることでカスタマイズできます.
 
 .. .. [#nonzero_note] User-defined classes can customize those rules by overriding
-..       the special ``__nonzero__`` method.
+..       the special :meth:`__nonzero__` method.
 

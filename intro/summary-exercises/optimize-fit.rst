@@ -112,7 +112,7 @@ Gauss 関数の和として分解する方法があります.
 
 * モデルを定義
 * 初期解を提案
-* ``scipy.optimize.leastsq`` を呼びだす
+* :func:`scipy.optimize.leastsq` を呼びだす
 
 .. The signal is very simple and can be modelled as a single Gaussian function and
 .. an offset corresponding to the background noise. To fit the signal with the
@@ -120,7 +120,7 @@ Gauss 関数の和として分解する方法があります.
 
 .. * define the model
 .. * propose an initial solution
-.. * call ``scipy.optimize.leastsq``
+.. * call :func:`scipy.optimize.leastsq`
 
 
 モデル
@@ -182,26 +182,26 @@ Python では以下で定義できます::
 .. Fit
 .. ^^^
 
-``scipy.optimize.leastsq`` は引数として与えた関数の2乗の和を最小化します.
+:func:`scipy.optimize.leastsq` は引数として与えた関数の2乗の和を最小化します.
 基本的に最小化する関数は残余（データとモデルの差）です::
 
     >>> def residuals(coeffs, y, t):
     ...     return y - model(t, coeffs)
 
-.. ``scipy.optimize.leastsq`` minimizes the sum of squares of the function given as
+.. :func:`scipy.optimize.leastsq` minimizes the sum of squares of the function given as
 .. an argument. Basically, the function to minimize is the residuals (the
 .. difference between the data and the model)::
 
 ..     >>> def residuals(coeffs, y, t):
 ..     ...     return y - model(t, coeffs)
 
-さて以下の引数で ``sipy.optimize.leastsq`` を呼び出して解を得ましょう：
+さて以下の引数で :func:`sipy.optimize.leastsq` を呼び出して解を得ましょう：
 
 * 最小化する関数
 * 初期解
 * 関数に渡す追加の引数
 
-.. So let's get our solution by calling ``scipy.optimize.leastsq`` with the
+.. So let's get our solution by calling :func:`scipy.optimize.leastsq` with the
 .. following arguments:
 
 .. * the function to minimize
@@ -225,9 +225,9 @@ Python では以下で定義できます::
     >>> plt.legend(['waveform', 'model']) # doctest:+SKIP
     >>> plt.show() # doctest:+SKIP
 
-*注目：* scipy v0.8 以上では ``scipy.optimize.curve_fit`` を使うべきです. これはモデルとデータを引数としてとるので残余を定義する必要はありません.
+*注目：* scipy v0.8 以上では :func:`scipy.optimize.curve_fit` を使うべきです. これはモデルとデータを引数としてとるので残余を定義する必要はありません.
 
-.. *Remark:* from scipy v0.8 and above, you should rather use ``scipy.optimize.curve_fit`` which takes the model and the data as arguments, so you don't need to define the residuals any more.
+.. *Remark:* from scipy v0.8 and above, you should rather use :func:`scipy.optimize.curve_fit` which takes the model and the data as arguments, so you don't need to define the residuals any more.
 
 より進んで
 ~~~~~~~~~~
@@ -235,22 +235,22 @@ Python では以下で定義できます::
 .. Going further
 .. ~~~~~~~~~~~~~
 
-* より複雑な波形に挑戦してみましょう （例として ``data/waveform_2.npy`` ）
+* より複雑な波形に挑戦してみましょう （例として :file:`data/waveform_2.npy` ）
   これは3つの著しいピークを含みます. 1つの Gauss 関数 の代わりに3つの Gauss 関数の和を使う必要があります.
 
-.. * Try with a more complex waveform (for instance ``data/waveform_2.npy``)
+.. * Try with a more complex waveform (for instance :file:`data/waveform_2.npy`)
 ..   that contains three significant peaks. You must adapt the model which is
 ..   now a sum of Gaussian functions instead of only one Gaussian peak.
 
 .. image:: waveform_2.png
    :align: center
 
-* ``leastsq`` を数値的に評価するよりも関数行列式を計算する関数を明示的に書いた方が場合があります.
-  残余の関数行列式を計算する関数を作り, ``leastsq`` の入力に使ってみましょう.
+* :func:`leastsq` を数値的に評価するよりも関数行列式を計算する関数を明示的に書いた方が場合があります.
+  残余の関数行列式を計算する関数を作り, :func:`leastsq` の入力に使ってみましょう.
 
 .. * In some cases, writing an explicit function to compute the Jacobian is faster
-..   than letting ``leastsq`` estimate it numerically. Create a function to compute
-..   the Jacobian of the residuals and use it as an input for ``leastsq``.
+..   than letting :func:`leastsq` estimate it numerically. Create a function to compute
+..   the Jacobian of the residuals and use it as an input for :func:`leastsq`.
 
 * 信号の小さなピークを検出したい, または初期解が妥当でない場合には与えたアルゴリズムは不満足な結果を与えます.
   パラメータの拘束条件を追加することでこの制限に打ち克つことができます.
@@ -260,7 +260,7 @@ Python では以下で定義できます::
 
     >>> x0 = np.array([3, 50, 20, 1], dtype=float)
 
-  を使って ``scipy.optimize.leastsq`` と拘束条件を追加して ``scipy.optimize.fmin_slsqp`` で得た結果を比較してみましょう.
+  を使って :func:`scipy.optimize.leastsq` と拘束条件を追加して :func:`scipy.optimize.fmin_slsqp` で得た結果を比較してみましょう.
 
 .. * When we want to detect very small peaks in the signal, or when the initial
 ..   guess is too far from a good solution, the result given by the algorithm is
@@ -272,8 +272,8 @@ Python では以下で定義できます::
 
 ..     >>> x0 = np.array([3, 50, 20, 1], dtype=float)
 
-..   compare the result of ``scipy.optimize.leastsq`` and what you can get with
-..   ``scipy.optimize.fmin_slsqp`` when adding boundary constraints.
+..   compare the result of :func:`scipy.optimize.leastsq` and what you can get with
+..   :func:`scipy.optimize.fmin_slsqp` when adding boundary constraints.
 
 
 .. [#data] このチュートリアルで使った実演データは `FullAnalyze software <http://fullanalyze.sourceforge.net>`_ から入手できます, これらは `GIS DRAIX <http://www.ore.fr/rubrique.php3?id_rubrique=24>`_ が快く提供してくれました.

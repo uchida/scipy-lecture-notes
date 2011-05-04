@@ -9,11 +9,11 @@
 
 .. _pi_wallis:
 
-Wallis の円周率の解答
----------------------
+Wallis の公式による :math:`\pi` 解答
+------------------------------------
 
-.. The Pi Wallis Solution
-.. ----------------------
+.. The :math:`\pi` Wallis Solution
+.. -------------------------------
 
 Wallis の公式を使って, :math:`\pi` の値を計算しましょう：
 
@@ -60,8 +60,8 @@ Fibonacci 数列の第1項から n 項までを表示する関数を書きまし
 .. Write a function that displays the ``n`` first terms of the Fibonacci
 .. sequence, defined by:
 
-* ``u_0 = 1; u_1 = 1``
-* ``u_(n+2) = u_(n+1) + u_n``
+* :math:`u_0 = 1; u_1 = 1`
+* :math:`u_{n+2} = u_{n+1} + u_n`
 
 ::
 
@@ -108,6 +108,7 @@ Fibonacci 数列の第1項から n 項までを表示する関数を書きまし
 .. _data_file:
 
 データファイルの入出力の解答
+----------------------------
 
 .. The Data File I/O Solution
 .. --------------------------
@@ -131,15 +132,15 @@ Fibonacci 数列の第1項から n 項までを表示する関数を書きまし
 
 .. _path_site:
 
-PYTHONPATH 検索の解答
----------------------
+:envvar:`PYTHONPATH` 検索の解答
+-------------------------------
 
-.. The PYTHONPATH Search Solution
-.. ------------------------------
+.. The :envvar:`PYTHONPATH` Search Solution
+.. ----------------------------------------
 
-site.py モジュールが PYTHONPATH のどこにあるか検索するプログラムを書きましょう.
+:file:`site.py` モジュールが :envvar:`PYTHONPATH` のどこにあるか検索するプログラムを書きましょう.
 
-.. Write a program to search your PYTHONPATH for the module ``site.py``.
+.. Write a program to search your :envvar:`PYTHONPATH` for the module ``site.py``.
 
 .. literalinclude:: solutions/path_site.py
 

@@ -7,26 +7,26 @@
 **iPython** シェル（機能拡張された Python 対話型シェル）を起動してみましょう：
 
 * Linux/Mac のターミナルから
-  または Windows のコマンドプロンプトから "ipython" と打ち込んで,
+  または Windows のコマンドプロンプトから :program:`ipython` と打ち込んで,
 * **または**  Python(x,y) や EPD などの科学ライブラリ一式からインストールしている場合
   プログラムメニューから起動してみましょう.
 
 ..
     Start the **Ipython** shell (an enhanced interactive Python shell):
     
-    * by typing "Ipython" from a Linux/Mac terminal, or from the Windows cmd shell,
+    * by typing :program:`ipython` from a Linux/Mac terminal, or from the Windows cmd shell,
     * **or** by starting the program from a menu, e.g. in the Python(x,y) or
       EPD menu if you have installed one of these scientific-Python suites.
 
 .. :ref:`pythonxy`
 
 もし ipython が計算機にインストールされていない,
-もしくはターミナルから "python" と打って使える Python デフォルトのシェルが利用できるとしても,
+もしくはターミナルから :program:`python` と打って使える Python デフォルトのシェルが利用できるとしても,
 対話的な科学技術計算機能をはじめとする拡張機能をもった ipython シェルを利用することをお勧めします.
 
 ..
     If you don't have Ipython installed on your computer, other Python shells
-    are available, such as the plain Python shell started by typing "python"
+    are available, such as the plain Python shell started by typing :program:`python`
     in a terminal, or the Idle interpreter. However, we advise to use the
     Ipython shell because of its enhanced features, especially for
     interactive scientific computing.
@@ -54,38 +54,38 @@
 下にのせた例を順を追って打ち込んでみましょう::
 
     >>> a = 3
-    >>> b = 2*a
+    >>> b = 2 * a
     >>> type(b)
     <type 'int'>
     >>> print b
     6
-    >>> a*b
+    >>> a * b
     18
     >>> b = 'hello'
     >>> type(b)
     <type 'str'>
     >>> b + b
     'hellohello'
-    >>> 2*b
+    >>> 2 * b
     'hellohello'
 
 ..
     To get yourself started, type the following stack of instructions ::
      
         >>> a = 3
-        >>> b = 2*a
+        >>> b = 2 * a
         >>> type(b)
         <type 'int'>
         >>> print b
         6
-        >>> a*b
+        >>> a * b
         18
         >>> b = 'hello'
         >>> type(b)
         <type 'str'>
         >>> b + b
         'hellohello'
-        >>> 2*b
+        >>> 2 * b
         'hellohello'
 
 ``a``, ``b`` の2つの変数は上で定義されています.
@@ -108,7 +108,7 @@
 加えて, 変数の型は変わることがあります, つまりある時は特定の型の値と
 等しくても, 次には異なる型の値と等しいことがあります.
 `b` は最初整数でしたが,  `hello` を代入されて文字列になりました.
-整数の操作 (``b=2*a``) は Python の標準ライブラリでそのまま実行され,
+整数の操作 (``b = 2 * a``) は Python の標準ライブラリでそのまま実行され,
 文字列の加算や乗算はそれぞれ結合と繰り返しになります.
 
 ..
@@ -117,7 +117,7 @@
     second point in time, it can be equal to a value of a different
     type. `b` was first equal to an integer, but it became equal to a
     string when it was assigned the value `'hello'`. Operations on
-    integers (``b=2*a``) are coded natively in Python, and so are some
+    integers (``b = 2 * a``) are coded natively in Python, and so are some
     operations on strings such as additions and multiplications, which
     amount respectively to concatenation and repetition.
 

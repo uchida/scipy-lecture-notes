@@ -14,13 +14,13 @@
      :align: center
      :scale: 70
 
-1. MV_HFV_012.jpg を開いて表示しましょう.
-   ``imshow`` のドキュメンテーション文字列を眺めて右方向 ("right" orientation) に開きましょう::
+1. :file:`MV_HFV_012.jpg` を開いて表示しましょう.
+   :func:`imshow` のドキュメンテーション文字列を眺めて右方向 ("right" orientation) に開きましょう::
 
     >>> dat = imread('MV_HFV_012.jpg')
 
-.. 1. Open the image file MV_HFV_012.jpg and display it. Browse through the
-..    keyword arguments in the docstring of ``imshow`` to display the image
+.. 1. Open the image file :file:`MV_HFV_012.jpg` and display it. Browse through the
+..    keyword arguments in the docstring of :func`imshow` to display the image
 ..    with the "right" orientation (origin in the bottom left corner, and not
 ..    the upper left corner as for standard arrays). ::
 
@@ -91,7 +91,7 @@
 ..     >>> sand_op = ndimage.binary_opening(sand, iterations=2)
 
 7. 全ての泡と砂粒にラベルをつけ, そして10ピクセルより小さい砂粒のマスクを取り除きなさい.
-   そうしたら, ``ndimage.sum`` か ``np.bincount`` を使って粒の大きさを計算しなさい. ::
+   そうしたら, :func:`ndimage.sum` か :func:`np.bincount` を使って粒の大きさを計算しなさい. ::
 
     >>> sand_labels, sand_nb = ndimage.label(sand_op)
     >>> sand_areas = np.array(ndimage.sum(sand_op, sand_labels,\

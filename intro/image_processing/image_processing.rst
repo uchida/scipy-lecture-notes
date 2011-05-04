@@ -1,10 +1,10 @@
-scipy の画像処理向けのサブモジュールは `scipy.ndimage` です. ::
+scipy の画像処理向けのサブモジュールは :mod:`scipy.ndimage` です. ::
 
     >>> from scipy import ndimage
 
 画像処理ルーチンは実行する処理に応じて分類されています.
 
-.. The submodule dedicated to image processing in scipy is `scipy.ndimage`. ::
+.. The submodule dedicated to image processing in scipy is :mod:`scipy.ndimage`. ::
 
 ..     >>> from scipy import ndimage
 
@@ -81,7 +81,7 @@ scipy の画像処理向けのサブモジュールは `scipy.ndimage` です. :
    :align: center
 
 
-他にも画像に適応できるフィルタが ``scipy.ndimage.filters`` と ``scipy.signal`` にあります.
+他にも画像に適応できるフィルタが :mod:`scipy.ndimage.filters` と :mod:`scipy.signal` にあります.
 
 .. And many other filters in ``scipy.ndimage.filters`` and ``scipy.signal``
 .. can be applied to images
@@ -215,7 +215,7 @@ scipy の画像処理向けのサブモジュールは `scipy.ndimage` です. :
            [0, 0, 1, 0, 0],
            [0, 0, 0, 0, 0]])
 
-* **Closing:** ``ndimage.binary_closing``
+* **Closing:** :func:`ndimage.binary_closing`
 
 .. topic:: 練習問題
 

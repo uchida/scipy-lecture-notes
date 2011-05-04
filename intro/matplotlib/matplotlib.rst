@@ -11,13 +11,13 @@ Matplotlib
 .. Introduction
 .. ------------
 
-``matplotlib`` はおそらく2次元グラフィック用の Python パッケージの決定版です.
+:mod:`matplotlib` はおそらく2次元グラフィック用の Python パッケージの決定版です.
 高速なデータの可視化手法や出版品質の図を多くのフォーマットで提供します.
 これから対話モードで matplotlib の機能を調べていきましょう.
 ほとんどの状況は対話モードですませることができます.
 またオブジェクト指向インターフェースとともに提供されるクラスライブラリについても触れます.
 
-.. ``matplotlib`` is probably the single most used Python package
+.. :mod:`matplotlib` is probably the single most used Python package
 .. for 2D-graphics. It provides both a very quick way to visualize
 .. data from Python and publication-quality figures in many formats.
 .. We are going to explore matplotlib in interactive mode covering
@@ -29,31 +29,31 @@ IPython
 
 IPython は多くの機能をもった高機能な Python 対話型シェルです.
 IPython は名前つきの入出力, シェルコマンド, 改良されたデバッグ機能など他にも多くの機能があります.
-IPython をコマンドラインで ``-pylab`` 引数を与えて起動すると,
+IPython をコマンドラインで :option:`-pylab` 引数を与えて起動すると,
 Matlab や Mathematica のような機能をもった対話的な
-``matplotlib`` セッションが使えるようになります.
+:mod:`matplotlib` セッションが使えるようになります.
 
 .. IPython is an enhanced interactive Python shell that has lots of
 .. interesting features including named inputs and outputs,
 .. access to shell commands, improved debugging and many more.
-.. When we start it with the command line argument ``-pylab``, it allows
-.. interactive ``matplotlib`` sessions that has Matlab/Mathematica-like
+.. When we start it with the command line argument :option:`-pylab`, it allows
+.. interactive :mod:`matplotlib` sessions that has Matlab/Mathematica-like
 .. functionality.
 
 pylab
 -----
 
-``pylab`` は ``matplotlib`` のオブジェクト指向ライブラリに対する手続き的インターフェースを提供します.
+:mod:`pylab` は :mod:`matplotlib` のオブジェクト指向ライブラリに対する手続き的インターフェースを提供します.
 このモデルは Matlab(TM) をお手本にしています.
-そのため ``pylab`` の大部分の作図コマンドは Matlab(TM) に類似していて
+そのため :mod:`pylab` の大部分の作図コマンドは Matlab(TM) に類似していて
 同じような引数をとります.
 重要なコマンドは対話的な例で説明します.
 
 
-.. ``pylab`` provides a procedural interface to the ``matplotlib``
+.. :mod:`pylab` provides a procedural interface to the :mod:`matplotlib`
 .. object-oriented plotting library. It is modeled closely
 .. after Matlab(TM). Therefore, the majority of plotting
-.. commands in ``pylab`` has Matlab(TM) analogs with similar arguments.
+.. commands in :mod:`pylab` has Matlab(TM) analogs with similar arguments.
 .. Important commands are explained with interactive examples.
 
 単純な作図
@@ -141,17 +141,17 @@ pylab
     
     In [7]: line = my_plot.lines[0]
 
-``set_something`` メソッドでプロパティをつけることもできます：
+:meth:`set_something` メソッドでプロパティをつけることもできます：
 
-.. Now we can set properties using ``set_something`` methods:
+.. Now we can set properties using :meth:`set_something`` methods:
 
 .. code-block:: python
 
     In [8]: line.set_marker('o')
 
-もしくは ``setp`` 関数でも：
+もしくは :func:`setp` 関数でも：
 
-.. or the ``setp`` function:
+.. or the :func:`setp` function:
 
 .. code-block:: python
 
@@ -260,9 +260,9 @@ pylab
 1) 作成するときにキーワード引数として与える：
    ``plot(x, linear, 'g:+', x, square, 'r--o')``
 
-2) ``setp`` 関数で与える： ``setp(line, color='g')``
+2) :func:`setp` 関数で与える： ``setp(line, color='g')``
 
-3) ``set_something`` メソッドを使う： ``line.set_marker('o')``
+3) :meth:`set_something` メソッドを使う： ``line.set_marker('o')``
 
 .. So far we have used properties for the lines.
 .. There are three possibilities to set them:
@@ -270,9 +270,9 @@ pylab
 .. 1) as keyword arguments at creation time:
 .. ``plot(x, linear, 'g:+', x, square, 'r--o')``.
 
-.. 2) with the function ``setp``: ``setp(line, color='g')``.
+.. 2) with the function :func:`setp`: ``setp(line, color='g')``.
 
-.. 3) using the ``set_something`` methods: ``line.set_marker('o')``
+.. 3) using the :meth:`set_something` methods: ``line.set_marker('o')``
 
 ラインは以下のテーブルに挙げたプロパティをもっています：
 
@@ -280,7 +280,7 @@ pylab
 プロパティ      値
 =============== ===========================================================================
 alpha           0 から 1 までのアルファ透過率
-antialiased     True または False - アンチエイリアスを使うか
+antialiased     :const:`True` または :const:`False` - アンチエイリアスを使うか
 color           matplotlib のカラー引数
 data_clipping   whether to use numeric to clip data [*]_
 label           凡例のために使われる文字列
@@ -293,11 +293,11 @@ markerfacecolor マーカーの表面の色（マーカーが使われる場合�
 markersize      マーカーのサイズ 単位はポイント
 =============== ===========================================================================
 
-.. =============== ========================================
+.. =============== ==========================================================
 .. Property        Value
-.. =============== ========================================
+.. =============== ==========================================================
 .. alpha           alpha transparency on 0-1 scale
-.. antialiased     True or False - use antialised rendering
+.. antialiased     :const:`True` or :const:`False` - use antialised rendering
 .. color           matplotlib color arg
 .. data_clipping   whether to use numeric to clip data
 .. label           string optionally used for legend
@@ -308,7 +308,7 @@ markersize      マーカーのサイズ 単位はポイント
 .. markeredgecolor edge color if a marker is used
 .. markerfacecolor face color if a marker is used
 .. markersize      size of the marker in points
-.. =============== ========================================
+.. =============== ==========================================================
 
 ラインのスタイルを指定する記号はたくさんあります.
 
@@ -482,24 +482,24 @@ weight               フォントのウェイト 例：normal, bold, heavy, ligh
 .. Text
 .. ----
 
-ここまでで既に図にテキストを追加するコマンド ``xlabel``, ``ylabel``
-そして ``title`` を使いました.
+ここまでで既に図にテキストを追加するコマンド :func:`xlabel`, :func:`ylabel`
+そして :func:`title` を使いました.
 
 特定の位置にテキストを配置する関数は2つあります.
-``text`` はデータの座標にテキストを追加します：
+:func:`text` はデータの座標にテキストを追加します：
 
-.. We've already used some commands to add text to our figure: ``xlabel``
-.. ``ylabel``, and ``title``.
+.. We've already used some commands to add text to our figure: :func:`xlabel`
+.. :func:`ylabel`, and :func:`title`.
 
 .. There are two functions to put text at a defined position.
-.. ``text`` adds the text with data coordinates:
+.. :func:`text` adds the text with data coordinates:
 
 .. code-block:: python
 
     In [2]: plot(arange(10))
     In [3]: t1 = text(5, 5, 'Text in the middle')
 
-``figtext`` は 0 から 1 までの figure 座標を使います.
+:func:`figtext` は 0 から 1 までの figure 座標を使います.
 
 .. ``figtext`` uses figure coordinates form 0 to 1:
 
@@ -511,10 +511,10 @@ weight               フォントのウェイト 例：normal, bold, heavy, ligh
 .. image:: figures/text.png
     :width: 50%
     
-``matplotlib`` は TeX の数式をサポートしています.
+:mod:`matplotlib` は TeX の数式をサポートしています.
 そのため ``r'$\pi$`` はこのように表示されます：
 
-.. ``matplotlib`` supports TeX mathematical expression. So ``r'$\pi$'``
+.. :mod:`matplotlib` supports TeX mathematical expression. So ``r'$\pi$'``
 .. will show up as:
 
 .. math::
@@ -523,11 +523,11 @@ weight               フォントのウェイト 例：normal, bold, heavy, ligh
 
 
 もしテキストがどこに配置されるかをより制御したい場合
-annotate を使います：
+:meth:`annotate` を使います：
 
 .. code-block:: python
 
-    In [4]: ax = gcd()
+    In [4]: ax = gca()
     In [5]: ax.annotate('Here is something special', xy = (1, 1))
 
 .. If you want to get more control over where the text goes, you
@@ -536,6 +536,7 @@ annotate を使います：
 .. .. code-block:: python
 
 ..     In [4]: ax.annotate('Here is something special', xy = (1, 1))
+..     In [5]: ax.annotate('Here is something special', xy = (1, 1))
 
 データの中の (1, 1) の位置にテキストを追加します.
 テキストの位置をカスタマイズするための多くのオプションがあります.
@@ -618,22 +619,22 @@ data                 データの座標軸を使う
 .. ++++++++++++++
 
 適切に整形された目盛 (ticks) は図を出版品質にするのに重要な役割を果します.
-``matplotlib`` では目盛の総合的な設定ができます.
+:mod:`matplotlib` では目盛の総合的な設定ができます.
 目盛がどこに現われるか指定する目盛位置指定子 (tick locators),
 目盛の見た目を変更する目盛書式指定子 (tick formatters) があります.
 大きい目盛と小さな目盛はお互い独立に位置と書式を指定できます.
 デフォルトでは小さい目盛は表示されません,
-つまり小さい目盛の位置指定子は ``NullLocator`` （後述）となっているため,
+つまり小さい目盛の位置指定子は :class:`NullLocator` （後述）となっているため,
 空リストのみが受けつけられます.
 
 
 .. Well formated ticks are an important part of publishing-ready
-.. figures. ``matplotlib`` provides a totally configurable system
+.. figures. :mod:`matplotlib` provides a totally configurable system
 .. for ticks. There are tick locators to specify where ticks
 .. should appear and tick formatters to make ticks look like the way you want.
 .. Major and minor ticks can be located and formated independently from
 .. each other. Per default minor ticks are not shown, i.e. there is only
-.. an empty list for them because it is as ``NullLocator`` (see below).
+.. an empty list for them because it is as :class:`NullLocator` (see below).
 
 目盛位置指定子
 ++++++++++++++
@@ -667,11 +668,11 @@ AutoLocator     MultipleLocator を選択し, 動的に変更します
 .. AutoLocator     choose a MultipleLocator and dynamically reassign
 .. =============== ===============================================================
 
-これら全ての位置指定子は ``matplotlib.ticker.Locator`` 基底クラスから派生しています.
+これら全ての位置指定子は :class:`matplotlib.ticker.Locator` 基底クラスから派生しています.
 このクラスから派生して独自の位置指定子を作成することもできます.
 
 時間を目盛として扱う場合は少々技巧的になりえます.
-そのため ``matplitlib`` は特別な位置指定子 ``matplotlib.dates`` を提供しています.
+そのため :mod:`matplotlib` は特別な位置指定子 :mod:`matplotlib.dates` を提供しています.
 
 ======================= ===========================================
 クラス                  説明
@@ -685,11 +686,11 @@ YearLocator             年を位置指定（複数の目盛の基準を持ち�
 RRuleLocator            matplotlib.dates.rrule を使って位置指定
 ======================= ===========================================
 
-.. All of these locators derive from the base class ``matplotlib.ticker.Locator``.
+.. All of these locators derive from the base class :class:`matplotlib.ticker.Locator`.
 .. You can make your own locator deriving from it.
 
-.. Handling dates as ticks can be especially tricky. Therefore, ``matplotlib``
-.. provides special locators in ``matplotlib.dates``:
+.. Handling dates as ticks can be especially tricky. Therefore, :mod:`matplotlib`
+.. provides special locators in :mod:`matplotlib.dates`:
 
 .. ======================= ===========================================
 .. Class                   Description
@@ -742,18 +743,18 @@ DateFormatter           時間のフォーマットの為に strftime 文字列�
 .. DateFormatter           use an strftime string to format the date
 .. ======================= =============================================
 
-これらの書式指定子は全て ``matplotlib.ticker.Formatter`` 基底クラスから派生しています.
+これらの書式指定子は全て :class:`matplotlib.ticker.Formatter` 基底クラスから派生しています.
 このクラスから派生して独自の位置指定子を作成することもできます.
 
-.. All of these formatters derive from the base class ``matplotlib.ticker.Formatter``.
+.. All of these formatters derive from the base class :class:`matplotlib.ticker.Formatter`.
 .. You can make your own formatter deriving from it.
 
 大きな目盛を2に小さな目盛を2に設定します.
-さらに ``FormatStrFormatter`` で10進数でフォーマットします.
+さらに :class:`FormatStrFormatter` で10進数でフォーマットします.
 
 .. Now we set our major locator to 2 and the minor locator
 .. to 1. We also format the numbers as decimals using the
-.. ``FormatStrFormatter``:
+.. :class:`FormatStrFormatter`:
 
 .. code-block:: python
 
@@ -788,7 +789,7 @@ DateFormatter           時間のフォーマットの為に strftime 文字列�
 ++++++++
 
 1) 1年の日付のグラフを作図しましょう.
-   x 軸は1日毎にとり, ビルトインの ``datetime`` モジュールを使いましょう.
+   x 軸は1日毎にとり, ビルトインの :mod:`datetime` モジュールを使いましょう.
 
 2) 月の始めの日だけを表示するように書式指定しましょう.
 
@@ -800,7 +801,7 @@ DateFormatter           時間のフォーマットの為に strftime 文字列�
 .. +++++++++
 
 .. 1) Plot a graph with dates for one year with daily
-..    values at the x axis using the built-in module ``datetime``.
+..    values at the x axis using the built-in module :mod:`datetime`.
 
 .. 2) Format the dates in such a way that only the first day
 ..    of the month is shown.
@@ -824,15 +825,15 @@ Figure, Subplot そして Axes
 この作成法は素早く作図できるため手軽に扱えます.
 ``figure``, ``subplot`` さらに ``axes`` を明示的に使うことで
 より細かく制御して表示できます.
-``matplotlib`` では ``figure`` はユーザーインターフェースのウィンドウ全体のことを指します.
+:mod:`matplotlib` では ``figure`` はユーザーインターフェースのウィンドウ全体のことを指します.
 この ``figure`` の内部は subplot になりえます.
 ``subplot`` が作図内の規則的に並んだ格子上に位置している場合,
 ``axes`` は ``figure`` 内のどこにでも配置できます.
 意図に応じて暗黙的, 明示的に呼び出す方法の両方を使いわけると便利でしょう.
 ここまででは明示的に figure や subfigure を呼び出していませんでしたが, 
-``matplotlib`` は ``plot`` を呼び出すときに現在の axes を取得するため
-``gca()`` を呼び出し, ``gca`` は現在の figure を取得するために ``gcf()`` を呼び出します.
-もし, 現在の figure がない場合には ``figure()`` が呼び出され, figure が作成されます,
+:mod:`matplotlib` は :func:`plot` を呼び出すときに現在の axes を取得するため
+:func:`gca()` を呼び出し, :func:`gca` は現在の figure を取得するために :func:`gcf()` を呼び出します.
+もし, 現在の figure がない場合には :func:`figure()` が呼び出され, figure が作成されます,
 より正確にいえば, ``subplot(111)`` が作られます.
 詳しくみてみましょう.
 
@@ -840,15 +841,15 @@ Figure, Subplot そして Axes
 .. So far we have used implicit figure and axes creation.
 .. This is handy for fast plots. We can have more control over
 .. the display using ``figure``, ``subplot``, and ``axes`` explicitly.
-.. A ``figure`` in ``matplotlib`` means the whole window in the
+.. A ``figure`` in :mod:`matplotlib` means the whole window in the
 .. user interface. Within this ``figure`` there can be subplots.
 .. While ``subplot`` positions the plots in a regular grid, ``axes``
 .. allows free placement within the ``figure``. Both can
 .. be useful depending on your intention.
 .. We've already work with figures and subplots without explicitly
-.. calling them.  When we call ``plot`` ``matplotlib`` calls ``gca()`` to
-.. get the current axes and ``gca`` in turn calls ``gcf()`` to
-.. get the current figure. If there is none it calls ``figure()``
+.. calling them.  When we call :func`plot` :mod:`matplotlib` calls :func:`gca` to
+.. get the current axes and :func:`gca` in turn calls :func:`gcf` to
+.. get the current figure. If there is none it calls :func:`figure`
 .. to make one, strictly speaking, to make a ``subplot(111)``.
 .. Let's look at the details.
 
@@ -868,7 +869,7 @@ figure の見た目を決定する以下のいくつかのパラメータがあ�
 ``dpi``           ``figure.dpi``          解像度 単位は dpi（1インチ辺りのドット数）
 ``facecolor``     ``figure.facecolor``    背景色
 ``edgecolor``     ``figure.edgecolor``    背景の端の色
-``frameon``       ``True``                figure の枠を描くかどうか
+``frameon``       :const:`True`                figure の枠を描くかどうか
 ==============    ======================= ============================================
 
 .. A ``figure`` is  the windows in the GUI that has "Figure #" as
@@ -885,7 +886,7 @@ figure の見た目を決定する以下のいくつかのパラメータがあ�
 .. ``dpi``           ``figure.dpi``           resolution in dots per inch
 .. ``facecolor``     ``figure.facecolor``     color of the drawing background
 .. ``edgecolor``     ``figure.edgecolor``     color of edge around the drawing background
-.. ``frameon``       ``True``                 draw figure frame or not
+.. ``frameon``       :const:`True`                 draw figure frame or not
 .. ==============    ======================= ============================================
 
 多くの場合に使われることになるデフォルト値は設定ファイルで指定することができます.
@@ -908,11 +909,11 @@ GUI を使っている場合, 右上角の x ボタンをクリックすれば f
 .. (1) the current figure (no argument), (2) a specific figure (figure number or figure
 .. instance as argument), or (3) all figures (``all`` as argument).
 
-他のオブジェクトと同じように ``setp`` か ``set_something`` メソッドで
+他のオブジェクトと同じように :func:`setp` か :meth:`set_something` メソッドで
 figure のプロパティを設定できます.
 
-.. As with other objects, you can set figure properties also ``setp``
-.. or with the ``set_something`` methods.
+.. As with other objects, you can set figure properties also :func:`setp`
+.. or with the :meth:`set_something`` methods.
 
 Subplots
 ++++++++
@@ -965,15 +966,15 @@ Subplots
     :width: 25%
 
 全ての subplot に対しては目盛やラベルを付けたくないことがしばしばあります.
-そのためには ``xticklabels`` か ``yticklabels`` を空リスト (``[]``) にします.
-各 subplot には ``is_first_row``, ``is_first_col``, ``is_last_wor``, ``is_last_col``
+そのためには :attr:`xticklabels` か :attr:`yticklabels` を空リスト (``[]``) にします.
+各 subplot には :meth:`is_first_row`, :meth:`is_first_col`, :meth:`is_last_wor`, :meth:`is_last_col`
 メソッドが定義されています.
 これらは外側の作図にのみ目盛やラベルを設定するのを助けてくれます.
 
 .. Frequently, you don't want all subplots to have ticks or labels.
-.. You can set the ``xticklabels`` or the ``yticklabels`` to an empty
-.. list (``[]``). Every subplot defines the methods ``'is_first_row``,
-.. ``is_first_col``, ``is_last_row``, ``is_last_col``. These can help to
+.. You can set the :attr:`xticklabels` or the :attr:`yticklabels` to an empty
+.. list (``[]``). Every subplot defines the methods :meth:`is_first_row`,
+.. :meth:`is_first_col`, :meth:`is_last_row`, :meth:`is_last_col`. These can help to
 .. set ticks and labels only for the outer pots.
 
 
@@ -1039,12 +1040,12 @@ Axes は subplot によく似ていますが Axes は figure の任意の位置�
 .. +++++++++
 
 ここまででは線の作図だけを扱ってきましたが,
-``matplotlib`` は多くの作図法を提供しています.
+:mod:`matplotlib` は多くの作図法を提供しています.
 これらの作図法の中からいくつか簡単に紹介します.
 紹介する関数は多くのオプション引数を持っていますが,
 それらについては扱いません.
 
-.. So far we have used only line plots. ``matplotlib`` offers many more types
+.. So far we have used only line plots. :mod:`matplotlib` offers many more types
 .. of plots. We will have a brief look at some of them. All functions have many
 .. optional arguments that are not shown here.
 
@@ -1055,9 +1056,9 @@ Axes は subplot によく似ていますが Axes は figure の任意の位置�
 .. Bar Charts
 .. ++++++++++
 
-``bar`` 関数は新たに棒グラフ (bar chart) を作成します：
+:func:`bar` 関数は新たに棒グラフ (bar chart) を作成します：
 
-.. The function ``bar`` creates a new bar chart:
+.. The function :func:`bar` creates a new bar chart:
 
 .. code-block:: python
 
@@ -1090,10 +1091,10 @@ Axes は subplot によく似ていますが Axes は figure の任意の位置�
 .. Horizontal Bar Charts
 .. +++++++++++++++++++++
 
-``barh`` は垂直に並んだ棒グラフ (horizontal bar chart) を作成します.
+:func:`barh` は垂直に並んだ棒グラフ (horizontal bar chart) を作成します.
 同じデータを使って：
 
-.. The function ``barh`` creates an vertical bar chart.
+.. The function :func:`barh` creates an vertical bar chart.
 .. Using the same data:
 
 .. code-block:: python
@@ -1117,11 +1118,11 @@ Axes は subplot によく似ていますが Axes は figure の任意の位置�
 .. Broken Horizontal Bar Charts
 .. ++++++++++++++++++++++++++++
 
-``broken_barh`` で垂直に不連続に並んだ棒グラフ
+:func:`broken_barh` で垂直に不連続に並んだ棒グラフ
 (broken horizontal bar charts) を作ることができます.
 y 方向の開始点と幅と全ての x 方向の開始点と幅の対を指定します：
 
-.. We can also have discontinuous vertical bars with ``broken_barh``.
+.. We can also have discontinuous vertical bars with :func:`broken_barh`.
 .. We specify start and width of the range in y-direction and all
 .. start-width pairs in x-direction:
 
@@ -1331,10 +1332,10 @@ x, y 座標の配列を定義します：
 .. image:: figures/loglog.png
             :width: 25%
 
-もし片対数グラフが欲しければ ``semilogx`` か ``semilogy`` を使うことができます.
+もし片対数グラフが欲しければ :func:`semilogx` か :func:`semilogy` を使うことができます.
 
 .. If we want only one axis with a logarithmic scale we can
-.. use ``semilogx`` or ``semilogy``.
+.. use :func:`semilogx` or :func:`semilogy`.
 
 円グラフ
 ++++++++
@@ -1399,10 +1400,10 @@ x, y 座標の配列を定義します：
 .. Arrow Plots
 .. ++++++++++++
 
-2次元平面上での矢印の作図 (arrow plot) は ``quiver`` で実現できます.
+2次元平面上での矢印の作図 (arrow plot) は :func:`quiver` で実現できます.
 矢印の矢尻にあたる x, y 座標を定義します：
 
-.. Plotting arrows in 2D plane can be achieved with ``quiver``.
+.. Plotting arrows in 2D plane can be achieved with :func:`quiver`.
 .. We define the x and y coordinates of the arrow shafts:
 
 .. code-block:: python
@@ -1606,11 +1607,11 @@ x, y 座標の配列を定義します：
 .. The Class Library
 .. -----------------
 
-ここまででは ``pylab`` インターフェースのみを使ってきました.
-名前が暗示するように, ``pylab`` はクラスライブラリの単なるラッパーです.
-``pylab`` のコマンドはオブジェクト指向な方法を使うクラスライブラリ経由で呼びだすことができます.
+ここまででは :mod:`pylab` インターフェースのみを使ってきました.
+名前が暗示するように, :mod:`pylab` はクラスライブラリの単なるラッパーです.
+:mod:`pylab` のコマンドはオブジェクト指向な方法を使うクラスライブラリ経由で呼びだすことができます.
 
-.. So far we have used the ``pylab`` interface only. As the name
+.. So far we have used the :mod:`pylab` interface only. As the name
 .. suggests it is just wrapper around the class library. All ``pylabb``
 .. commands can be invoked via the class library using an object-oriented
 .. approach.
@@ -1621,7 +1622,7 @@ Figure クラス
 .. The Figure Class
 .. ++++++++++++++++
 
-``Figure`` クラスは ``matplotlib.figure`` モジュール内にあります.
+:class:`Figure` クラスは :mod:`matplotlib.figure` モジュール内にあります.
 このコンストラクタはこれらの引数を取ります：
 
 .. The class ``Figure`` lives in the module ``matplotlib.figure``.
@@ -1632,9 +1633,9 @@ Figure クラス
     figsize=None, dpi=None, facecolor=None, edgecolor=None,
     linewidth=1.0, frameon=True, subplotpars=None
 
-``pylab`` の ``figure`` の引数と比較すると重要な部分が重複しています：
+:mod:`pylab` の ``figure`` の引数と比較すると重要な部分が重複しています：
 
-.. Comparing this with the arguments of ``figure`` in ``pylab`` shows
+.. Comparing this with the arguments of ``figure`` in :mod:`pylab` shows
 .. significant overlap:
 
 .. code-block:: python
@@ -1642,27 +1643,27 @@ Figure クラス
     num=None, figsize=None, dpi=None, facecolor=None
     edgecolor=None, frameon=True
 
-``Figure`` は多くのメソッドを提供していますが, 多くのメソッドは ``pylab`` と等価です.
-``pylab`` で ``axes`` や ``subplot`` によって
-axes や subplot を新たに作成すると ``add_axes`` と
-``add_subplot`` メソッドが呼び出されます.
-同様に ``gca`` メソッドは ``pylab`` で ``legend``, ``text`` その他を行なうことに対応します.
+:class:`Figure` は多くのメソッドを提供していますが, 多くのメソッドは :mod:`pylab` と等価です.
+:mod:`pylab` で ``axes`` や ``subplot`` によって
+axes や subplot を新たに作成すると :meth:`add_axes` と
+:meth:`add_subplot` メソッドが呼び出されます.
+同様に :meth:`gca` メソッドは :mod:`pylab` で :func:`legend`, :func:`text` その他を行なうことに対応します.
 
-.. ``Figure`` provides lots of methods, many of them have equivalents in
-.. ``pylab``. The methods ``add_axes`` and ``add_subplot`` are called if new
-.. axes or subplot are created with ``axes`` or ``subplot`` in ``pylab``.
-.. Also the method ``gca`` maps directly to ``pylab`` as do ``legend``,
-.. ``text`` and many others.
+.. :class:`Figure` provides lots of methods, many of them have equivalents in
+.. :mod:`pylab`. The methods :meth:`add_axes` and :meth:`add_subplot` are called if new
+.. axes or subplot are created with ``axes`` or ``subplot`` in :mod:`pylab`.
+.. Also the method :meth:`gca` maps directly to :mod:`pylab` as do :func:`legend`,
+.. :func:`text` and many others.
 
-``pylab`` で figure のプロパティを設定する際に呼び出される
-``set_facecolor`` や ``set_edgecolor`` のようないくつかの
-``set_something`` メソッドがあります.
-また ``Figure`` は ``get_axes`` や ``get_facecolor`` のような figure のプロパティを取得する ``get_something`` メソッドも実装しています.
+:mod:`pylab` で figure のプロパティを設定する際に呼び出される
+:meth:`set_facecolor` や :meth:`set_edgecolor` のようないくつかの
+:meth:`set_something` メソッドがあります.
+また ``Figure`` は :meth:`get_axes` や :meth:`get_facecolor` のような figure のプロパティを取得する :meth:`get_something` メソッドも実装しています.
 
-.. There are also several ``set_something`` method such as ``set_facecolor`` or
-.. ``set_edgecolor`` that will be called through ``pylab`` to set properties of
-.. the figure. ``Figure`` also implements ``get_something`` methods
-.. such as ``get_axes`` or ``get_facecolor`` to get properties of the figure.
+.. There are also several :meth:`set_something`` method such as :meth:`set_facecolor`` or
+.. :meth:`set_edgecolor`` that will be called through :mod:`pylab` to set properties of
+.. the figure. ``Figure`` also implements :meth:`get_something`` methods
+.. such as :meth:`get_axes`` or :meth:`get_facecolor`` to get properties of the figure.
 
 
 
@@ -1672,23 +1673,23 @@ Axes と Subplot クラス
 .. The Classes Axes and Subplot
 .. ++++++++++++++++++++++++++++
 
-``Axes`` クラスには ``Axis`` や ``Tick``, ``Line2D``
-または ``Text`` のような figure の要素の大部分があります.
+:class:`Axes` クラスには :class:`Axis` や :class:`Tick`, :class:`Line2D`
+または :class:`Text` のような figure の要素の大部分があります.
 またこのクラスは座標系も設定します.
-``Subplot`` クラスは ``Axis`` クラスを継承して格子上に作図を配置するための機能が追加されています.
+:class:`Subplot` クラスは :class:`Axis` クラスを継承して格子上に作図を配置するための機能が追加されています.
 
-.. In the class  ``Axes`` we find most of the figure elements such as
-.. ``Axis``, ``Tick``, ``Line2D``, or ``Text``. It also sets the coordinate
-.. system. The class ``Subplot`` inherits from ``Axes`` and adds some
+.. In the class  :class:`Axes` we find most of the figure elements such as
+.. :class:`Axis`, :class:`Tick`, :class:`Line2D`, or :class:`Text`. It also sets the coordinate
+.. system. The class :class:`Subplot` inherits from :class:`Axes` and adds some
 .. more functionality to arrange the plots in a grid.
 
-``Figure`` との同様に, このクラスはプロパティ設定, 取得するメソッドを持っています.
-そしてメソッドは ``pylab` の関数として既に扱ってきました, 例えば ``annotate``.
-さらに ``Axwes`` はこれまでの節で示した作図の全てのタイプのメソッドを持っています.
+:class:`Figure` との同様に, このクラスはプロパティ設定, 取得するメソッドを持っています.
+そしてメソッドは :mod:`pylab` の関数として既に扱ってきました, 例えば :meth:`annotate`.
+さらに :class:`Axes` はこれまでの節で示した作図の全てのタイプのメソッドを持っています.
 
-.. Analogous to ``Figure``, it has methods to get and set properties
-.. and methods already encountered as functions in ``pylab`` such as
-.. ``annotate``. In addition, ``Axes`` has methods for all types of plots
+.. Analogous to :class`Figure`, it has methods to get and set properties
+.. and methods already encountered as functions in :mod:`pylab` such as
+.. :meth:`annotate`. In addition, :class:`Axes` has methods for all types of plots
 .. shown in the previous section.
 
 その他のクラス
@@ -1697,12 +1698,12 @@ Axes と Subplot クラス
 .. Other Classes
 .. +++++++++++++
 
-``text``, ``Legend`` または ``Ticker`` のような他のクラスはとても類似した機構を持っています.
-これらは多くの場合 ``pylab`` インターフェースと比較して理解することができます.
+:class:`Text`, :class:`Legend` または :class:`Ticker` のような他のクラスはとても類似した機構を持っています.
+これらは多くの場合 :mod:`pylab` インターフェースと比較して理解することができます.
 
 
-.. Other classes such as ``text``, ``Legend`` or ``Ticker`` are setup very
-.. similarly. They can be understood mostly by comparing to the ``pylab``
+.. Other classes such as :class:`Text`, :class:`Legend` or :class:`Ticker` are setup very
+.. similarly. They can be understood mostly by comparing to the :mod:`pylab`
 .. interface.
 
 
@@ -1782,23 +1783,23 @@ show メソッドを実行し (``#16``), ウィジェットにパックします
 .. on your screen. After closing the screen, the next part, the script, will
 .. be executed.
 
-``pylab`` を使っているときのように画面に表示したいので,
-helper をインポートし (``#19``), ``pylab`` 自身もインポートします (``#20``).
-``pylab`` で通常の figure を作成し (``#21``),
+:mod:`pylab` を使っているときのように画面に表示したいので,
+helper をインポートし (``#19``), :mod:`pylab` 自身もインポートします (``#20``).
+:mod:`pylab` で通常の figure を作成し (``#21``),
 そして, 対応する figure manager を取得します (``#22``).
 さぁ, 上で作った figure を現在の figure に設定し (``#23``),
-``pylab`` に結果を表示させましょう (``#24``).
+:mod:`pylab` に結果を表示させましょう (``#24``).
 figure の下の部分がツールバーで覆われているかもしれません.
-その場合は ``pylab`` に対して ``figsize`` を調整して下さい.
+その場合は :mod:`pylab` に対して ``figsize`` を調整して下さい.
 
 .. We would like to create a screen display just as we would use
-.. ``pylab``. Therefore we import a helper (``#18``) and ``pylab``
+.. :mod:`pylab`. Therefore we import a helper (``#18``) and :mod:`pylab`
 .. itself (``#19``). We create a normal figure with ``pylab` (``20``)
 .. and get the corresponding figure manager (``#21``). Now let's set
 .. our figure we created above to be the current figure (``#22``)
-.. and let ``pylab`` show the result (``#23``).
+.. and let :mod:`pylab` show the result (``#23``).
 .. The lower part of the figure might be cover by the toolbar.
-.. If so, please adjust the ``figsize`` for ``pylab`` accordingly.
+.. If so, please adjust the ``figsize`` for :mod:`pylab` accordingly.
 
 練習問題
 ++++++++

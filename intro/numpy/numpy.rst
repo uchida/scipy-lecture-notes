@@ -27,7 +27,7 @@ NumPy：数値データの作成と操作
     
     * データ配列のバッチ処理を実現（要素に対するループは不要）
     
-    データ配列 := ``numpy.ndarray``
+    データ配列 := :class:`numpy.ndarray`
 
 .. .. topic:: The array: the basic tool for scientific computing
 
@@ -48,7 +48,7 @@ NumPy：数値データの作成と操作
 
 ..     * realize batch operations on data arrays (no loops on their items)
 
-..     Data arrays := ``numpy.ndarray``
+..     Data arrays := :class:`numpy.ndarray`
 
 Numpy データ配列作成
 --------------------
@@ -181,19 +181,19 @@ Numpy データ配列作成
     >>> # or
     >>> from pylab import * # imports everything in the namespace
 
-python(x,y) に付属する IPython か（Linux で） ``ipython -pylab`` として
+python(x,y) に付属する IPython か（Linux で） :program:`ipython -pylab` として
 IPython を起動すると ``from pylab import *`` を行うことなく
 全ての pylab の関数やオブジェクトがインポートされます.
 このチュートリアルでは ``from pylab import *`` か
-``ipython -pylab`` を行なっているものとして扱います,
-その結果として ``pylab.function()`` と書かずに直接 ``function`` と書きます.
+:program:`ipython -pylab` を行なっているものとして扱います,
+その結果として :function:`pylab.function` と書かずに直接 :func:`function` と書きます.
     
-.. If you launched Ipython with python(x,y), or with ``ipython
-.. -pylab`` (under Linux), all the functions/objects of pylab are already
+.. If you launched Ipython with python(x,y), or with :program:`ipython
+.. -pylab` (under Linux), all the functions/objects of pylab are already
 .. imported, without needing ``from pylab import *``. In the remainder of this
-.. tutorial, we assume you have already run ``from pylab import *`` or ``ipython
-.. -pylab``: as a consequence, we won't write ``pylab.function()`` but directly
-.. ``function``.
+.. tutorial, we assume you have already run ``from pylab import *`` or :program:`ipython
+.. -pylab`: as a consequence, we won't write :func:`pylab.function` but directly
+.. :func:`function`.
 
 **1次元の曲線の描画**
 
@@ -271,11 +271,11 @@ LaTeX のフォント, 図の取り込み, 頻度分布等.
 .. **3D plotting**
 
 3次元可視化のためには **Mayavi** パッケージを使います.
-**ipython -pylab -wthread** のオプションで **iPython を再起動** して速やかに例を実行しましょう：
+:program:`ipython -pylab -wthread` のオプションで **iPython を再起動** して速やかに例を実行しましょう：
 
 .. For 3D visualization, we use another package: **Mayavi**. A quick example:
 .. start with **relaunching iPython** with these options:
-.. **ipython -pylab -wthread**
+.. :program:`ipython -pylab -wthread`
 
 .. sourcecode:: ipython
 
@@ -314,10 +314,10 @@ http://code.enthought.com/projects/mayavi/docs/development/html/mayavi/index.htm
 .. indexing 
 .. --------
 
-配列の要素は他の python のシーケンス (``list``, ``tuple``) と同じようにアクセスできます.
+配列の要素は他の python のシーケンス (:class:`list`, :class:`tuple`) と同じようにアクセスできます.
 
 .. The items of an array can be accessed the same way as other Python sequences
-.. (``list``, ``tuple``) ::
+.. (:class:`list`, :class:`tuple`) ::
 
     >>> a = np.arange(10)
     >>> a
@@ -363,7 +363,7 @@ Fortran や Matlab ではインデクスは 1 から始まります.
 .. Note that:
 
 .. * In 2D, the first dimension corresponds to lines, the second to columns.
-.. * for an array ``a`` with more than one dimension,`a[0]` is interpreted by
+.. * for an array ``a`` with more than one dimension, `a[0]` is interpreted by
 ..   taking all elements in the unspecified dimensions.
 
 スライス
@@ -393,8 +393,8 @@ Fortran や Matlab ではインデクスは 1 から始まります.
     >>> a[:4]
     array([0, 1, 2, 3])
 
-``start:end:stop`` はインデクスの集まりを表わす ``slice`` オブジェクトです.
-``slice`` は明示的に作ることができます
+``start:end:stop`` はインデクスの集まりを表わす :class:`slice` オブジェクトです.
+:class:`slice` は明示的に作ることができます
 
 .. ``start:end:step`` is a ``slice`` object which represents the set of indexes
 .. ``range(start, end, step)``. A ``slice`` can be explicitly created::
@@ -468,7 +468,7 @@ Numpy のインデクス指定, スライスを簡単に図でまとめると...
 **ビューが変更されると元の配列はこのように変更されます**
 
 .. A slicing operation creates a **view** on the original array, which is just a way of
-.. accessing array data. Thus the original array is not copied in memory. *When
+.. accessing array data. Thus the original array is not copied in memory. **When
 .. modifying the view, the original array is modified as well**::
 
 ::
@@ -497,10 +497,10 @@ Numpy のインデクス指定, スライスを簡単に図でまとめると...
 .. Manipulating the shape of arrays
 .. ---------------------------------
 
-配列のシェイプは ``ndarray.shape`` メソッドで取得できます.
+配列のシェイプは :attr:`ndarray.shape` メソッドで取得できます.
 このメソッドは配列の次元をタプルで返します.
 
-.. th shape of an array can be retrieved with the ``ndarray.shape`` method which
+.. th shape of an array can be retrieved with the :attr:`ndarray.shape` method which
 .. returns a tuple with the dimensions of the array::
 
 ::
@@ -517,14 +517,14 @@ Numpy のインデクス指定, スライスを簡単に図でまとめると...
     >>> np.shape(b)
     (3, 4)
 
-さらに1番目の次元の長さは ``np.alen``
-（リストに対する ``len`` からのアナロジー）
+さらに1番目の次元の長さは :func:`np.alen`
+（リストに対する :func:`len` からのアナロジー）
 で求めることができます,
-そして全要素の数は ``ndarray.size`` で取得できます.
+そして全要素の数は :attr:`ndarray.size` で取得できます.
 
-.. Moreover, the length of the first dimension can be queried with ``np.alen`` (by
-.. analogy with ``len`` for a list) and the total number of elements with
-.. ``ndarray.size``::
+.. Moreover, the length of the first dimension can be queried with :func:`np.alen` (by
+.. analogy with :func:`len` for a list) and the total number of elements with
+.. :attr:`ndarray.size`::
 
 ::
 
@@ -550,9 +550,9 @@ Numpy のインデクス指定, スライスを簡単に図でまとめると...
            [24, 25, 26, 27, 28, 29],
            [30, 31, 32, 33, 34, 35]])
 
-``ndarray.reshape`` はコピーではなく, ビューを返します
+:meth:`ndarray.reshape` はコピーではなく, ビューを返します
 
-.. ``ndarray.reshape`` returns a view, not a copy::
+.. :meth:`ndarray.reshape` returns a view, not a copy::
 
 ::
 
@@ -562,9 +562,9 @@ Numpy のインデクス指定, スライスを簡単に図でまとめると...
            17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33,
            34, 35])
 
-異なる要素数の配列も ``ndarray.resize`` で作ることができます
+異なる要素数の配列も :meth:`ndarray.resize` で作ることができます
 
-.. An array with a different number of elements can also be created with ``ndarray.resize``::
+.. An array with a different number of elements can also be created with :meth:`ndarray.resize`::
 
 ::
 
@@ -674,7 +674,7 @@ Numpy の配列として処理するためこれらの結果を Python に読み
 
 フォルダの階層を移動する： 
 
-    * iPython のコマンドを使いましょう： ``cd``, ``pwd``, tab-補完
+    * iPython のコマンドを使いましょう： :command:`cd`, :command:`pwd`, tab-補完
 
       .. sourcecode:: ipython
        
@@ -693,7 +693,7 @@ Numpy の配列として処理するためこれらの結果を Python に読み
         In [6]: ls
         integers.txt
 
-    * os（OS のルーチン）と os.path（パスの管理）モジュール
+    * :mod:`os` （OS のルーチン）と :mod:`os.path` （パスの管理）モジュール
 
       ::
    
@@ -805,14 +805,14 @@ IPython は os モジュールとその統合された機能によってシェ�
 
 .. topic:: matlab のデータファイルを読む
 
-    ``scipy.io.loadmat`` : matlab 形式の .mat ファイルが辞書として保存されます.
+    :func:`scipy.io.loadmat` : matlab 形式の .mat ファイルが辞書として保存されます.
 
 .. .. topic:: To read matlab data files
 
 ..     ``scipy.io.loadmat`` : the matlab structure of a .mat file is stored as a
 ..     dictionary.
 
-**画像を開く, 保存する：imread と imsave**
+**画像を開く, 保存する：** :func:`imread` と :func:`imsave`
 
 .. **Opening and saving images: imsave and imread**
 
@@ -857,9 +857,9 @@ IPython は os モジュールとその統合された機能によってシェ�
     9 [90 91 92 93 94 95 96 97 98 99]
 
 ``line`` で始まる全てのファイルを取得するために, パターンに対応するパス全てに適合する
-``glob`` モジュールを使います.
+:mod:`glob` モジュールを使います.
 
-.. To get a list of all files beginning with ``line``, we use the ``glob`` module
+.. To get a list of all files beginning with ``line``, we use the :mod:`glob` module
 .. which matches all paths corresponding to a pattern. Example::
 
     >>> import glob
@@ -921,7 +921,7 @@ IPython は os モジュールとその統合された機能によってシェ�
     
     配列に対する算術演算子は個々の要素に対して演算されます.
     特に積は（ **Matlab と違い** ）行列の積ではありません!
-    行列の積は ``np.dot`` によって計算できます::
+    行列の積は :func:`np.dot` によって計算できます::
 
         >>> a = np.ones((2,2))
         >>> a*a
@@ -935,7 +935,7 @@ IPython は os モジュールとその統合された機能によってシェ�
 
 ..     Arithmetic operations on arrays correspond to operations on each individual
 ..     element. In particular, the multiplication is not a matrix multiplication
-..     (**unlike Matlab**)! The matrix multiplication is provided by ``np.dot``::
+..     (**unlike Matlab**)! The matrix multiplication is provided by :func:`np.dot`::
 
 ..         >>> a = np.ones((2,2))
 ..         >>> a*a
@@ -993,16 +993,16 @@ IPython は os モジュールとその統合された機能によってシェ�
 
 .. **Exercise** : statistics on the number of women in french research (INSEE data)
 
-1. ``data`` ディレクトリの ``organisms.txt`` と ``women_percentage.txt`` を入手しましょう
+1. :file:`data` ディレクトリの :file:`organisms.txt` と :file:`women_percentage.txt` を入手しましょう
 
-.. 1. Get the following files ``organisms.txt`` and ``women_percentage.txt``
-..    in the ``data`` directory. 
+.. 1. Get the following files :file:`organisms.txt` and :file:`women_percentage.txt`
+..    in the :file:`data` directory. 
 
-2. ``np.loadtxt`` を使って ``women_percentage.txt`` を開き, 配列 ``data`` を作成しましょう.
+2. :func:`np.loadtxt` を使って :file:`women_percentage.txt` を開き, 配列 ``data`` を作成しましょう.
    この配列はどんなシェイプでしょうか?
 
-.. 2. Create a ``data`` array by opening the ``women_percentage.txt`` file
-..    with ``np.loadtxt``. What is the shape of this array? 
+.. 2. Create a ``data`` array by opening the :file:`women_percentage.txt` file
+..    with :func:`np.loadtxt`. What is the shape of this array? 
 
 3. 列は 2006 から 2001 までの年に対応します.
    これらの年に対応する整数の配列 ``year`` を作成しましょう.
@@ -1010,15 +1010,15 @@ IPython は os モジュールとその統合された機能によってシェ�
 .. 3. Columns correspond to year 2006 to 2001. Create a ``years`` array with
 ..    integers corresponding to these years.
 
-4. 行は研究機関に対応します. 各機関の名前は ``organisms.txt`` に保存されています.
+4. 行は研究機関に対応します. 各機関の名前は :file:`organisms.txt` に保存されています.
    このファイルを開いて配列 ``organisms`` を作成しましょう.
-   ただし,  ``np.loadtxt`` はデフォルトで浮動小数点数の配列を作ることに注意して下さい, 
+   ただし,  :func:`np.loadtxt` はデフォルトで浮動小数点数の配列を作ることに注意して下さい, 
    そして文字列を使うことを指定しなければなりません：
    ``organisms = np.loadtxt('organisms.txt, dtype=str)``
 
 .. 4. The different lines correspond to the research organisms whose names are
-..    stored in the ``organisms.txt`` file. Create a ``organisms`` array by
-..    opening this file. Beware that ``np.loadtxt`` creates float arrays by default,
+..    stored in the :file:`organisms.txt` file. Create a ``organisms`` array by
+..    opening this file. Beware that :func:`np.loadtxt` creates float arrays by default,
 ..    and it must be specified to use strings instead: ``organisms =
 ..    np.loadtxt('organisms.txt', dtype=str)``
 
@@ -1038,12 +1038,12 @@ IPython は os モジュールとその統合された機能によってシェ�
 .. 7. Create an array with the temporal mean of the percentage of women for each
 ..    organism? (i.e. the mean of ``data`` along axis 1).
 
-8. 2004年に女性の割合が最も高い組織を求めましょう. （ヒント：np.argmax）
+8. 2004年に女性の割合が最も高い組織を求めましょう. （ヒント： :func:`np.argmax` ）
 
 .. 8. Which organism had the highest percentage of women in 2004? (hint: np.argmax)
 
 9. 2006 年の各組織の女性の割合の頻度分布を作りましょう.
-   （ヒント：np.histgram, また matplotlib の bar か plot で可視化できます.）
+   （ヒント： :func:`np.histgram`, また :mod:`matplotlib` の :func:`bar` か :func:`plot` で可視化できます.）
 
 .. 9. Create a histogram of the percentage of women the different organisms in 2006
 ..    (hint: np.histogram, then matplotlib bar or plot for visulalization)
@@ -1229,14 +1229,14 @@ Numpy の配列はスライスだけでなく,
 .. ------------
 
 
-``numpy`` の配列に対する基本演算は同じサイズの配列の各要素に対して行なわれます.
-しかし, ``numpy`` がサイズの異なる配列を同じサイズの配列に変換できれば,
+:mod:`numpy` の配列に対する基本演算は同じサイズの配列の各要素に対して行なわれます.
+しかし, :mod:`numpy` がサイズの異なる配列を同じサイズの配列に変換できれば,
 異なるサイズの配列に対しても演算を行うことができます.
 この変換を **ブロードキャスト (broadcast)** と呼びます.
 
-.. Basic operations on ``numpy`` arrays (addition, etc.) are done element by
+.. Basic operations on :mod:`numpy` arrays (addition, etc.) are done element by
 .. element, thus work on arrays of the same size. Nevertheless, it's possible to do
-.. operations on arrays of different sizes if ``numpy`` can transform these arrays
+.. operations on arrays of different sizes if :mod:`numpy` can transform these arrays
 .. so that they all have the same size: this conversion is called **broadcasting**.
 
 以下の画像はブロードキャストの例を示しています：
@@ -1310,7 +1310,7 @@ Numpy の配列はスライスだけでなく,
 .. dimensions than input data.
 
 **例** ： ルート 66 での各街 (Chicago, Springfield, Saint-Louis, Tulsa,
-Oklahoma City, Amarillo, Santa Fe, Albucquerque, Flagstaff and Los Angeles)
+Oklahoma City, Amarillo, Santa Fe, Albucquerque, Flagstaff そして Los Angeles)
 間の距離（マイル）を表わす配列を作ってみましょう.
 
 .. **Example**: let's construct an array of distances (in miles) between cities of
@@ -1389,22 +1389,22 @@ Oklahoma City, Amarillo, Santa Fe, Albucquerque, Flagstaff and Los Angeles)
            [ 3.        ,  3.16227766,  3.60555128,  4.24264069,  5.        ],
            [ 4.        ,  4.12310563,  4.47213595,  5.        ,  5.65685425]])
 
-``pylab.imshow`` 関数を使って配列の距離の値を色で表示できます
+:func:`pylab.imshow` 関数を使って配列の距離の値を色で表示できます
 （構文は ``pylab.imshow(distance)`` です.
 他のオプションについてはヘルプを見てください.）
 
 .. The values of the distance array can be represented in colour, thanks to the
-.. ``pylab.imshow`` function (syntax: ``pylab.imshow(distance)``. See help for
+.. :func:`pylab.imshow` function (syntax: ``pylab.imshow(distance)``. See help for
 .. other options).
 
 .. image:: distance.png
     :align: center
     :scale: 70
 
-**注目** ： ``numpy.ogrid`` 関数を2つの「代表的次元」を与えて使うことで
+**注目** ： :func:`numpy.ogrid` 関数を2つの「代表的次元」を与えて使うことで
 前の例での x, y ベクトルを直接作りだすことができます.
 
-.. **Remark** : the ``numpy.ogrid`` function allows to directly create vectors x
+.. **Remark** : the :func:`numpy.ogrid` function allows to directly create vectors x
 .. and y of the previous example, with two "significant dimensions"::
 
 ::
@@ -1421,12 +1421,12 @@ Oklahoma City, Amarillo, Santa Fe, Albucquerque, Flagstaff and Los Angeles)
     >>> distance = np.sqrt(x**2 + y**2)
 
     
-これからわかるように ``np.ogrid`` はネットワークの計算を扱うのにとても便利です.
-一方 ``np.mgrid`` は完全なインデクスを持つ行列を直接提供します.
+これからわかるように :func:`np.ogrid` はネットワークの計算を扱うのにとても便利です.
+一方 :func:`np.mgrid` は完全なインデクスを持つ行列を直接提供します.
 これはブロードキャストの恩恵を受けられない（もしくは受けたない）場合に使うことができます.
 
-.. So, ``np.ogrid`` is very useful as soon as we have to handle computations on a
-.. network. On the other hand, ``np.mgrid`` directly provides matrices full of
+.. So, :func:`np.ogrid` is very useful as soon as we have to handle computations on a
+.. network. On the other hand, :func:`np.mgrid` directly provides matrices full of
 .. indices for cases where we can't (or don't want to) benefit from broadcasting::
 
     >>> x, y = np.mgrid[0:4, 0:4]
@@ -1450,11 +1450,11 @@ Oklahoma City, Amarillo, Santa Fe, Albucquerque, Flagstaff and Los Angeles)
 
 有名な画像 Lena (http://www.cs.cmu.edu/~chuck/lennapg/) を使って numpy 配列の
 操作をやってみましょう.
-``scipy`` はこの画像の2次元配列を ``scipy.lena`` 関数で提供しています.
+:mod:`scipy` はこの画像の2次元配列を :func:`scipy.lena` 関数で提供しています.
 
 .. Let's do some manipulations on numpy arrays by starting with the famous image of
-.. Lena (http://www.cs.cmu.edu/~chuck/lennapg/). ``scipy`` provides a 2D array of
-.. this image with the ``scipy.lena`` function::
+.. Lena (http://www.cs.cmu.edu/~chuck/lennapg/). :mod:`scipy` provides a 2D array of
+.. this image with the :func:`scipy.lena` function::
 
 ::
 
@@ -1470,7 +1470,7 @@ Oklahoma City, Amarillo, Santa Fe, Albucquerque, Flagstaff and Los Angeles)
 .. image:: lenas.png
    :align: center
 
-* pylab の imshow 関数で画像を表示してみましょう.
+* :mod:`pylab` の :func:`imshow` 関数で画像を表示してみましょう.
 
   .. sourcecode:: ipython
       
@@ -1478,7 +1478,7 @@ Oklahoma City, Amarillo, Santa Fe, Albucquerque, Flagstaff and Los Angeles)
       In [4]: lena = scipy.lena()
       In [5]: pylab.imshow(lena)
 
-.. * Let's use the imshow function of pylab to display the image.
+.. * Let's use the :func:`imshow` function of :mod:`pylab` to display the image.
 
 ..   .. sourcecode:: ipython
       
@@ -1506,7 +1506,7 @@ Oklahoma City, Amarillo, Santa Fe, Albucquerque, Flagstaff and Los Angeles)
 
 * 中央揃えしたより幅の狭い画像を作ってみましょう：
   例として画像の境界から 30 ピクセル削ってみましょう.
-  結果を確認するためには ``imshow`` で配列を表示してみましょう.
+  結果を確認するためには :func:`imshow` で配列を表示してみましょう.
 
   .. sourcecode:: ipython
    
@@ -1514,7 +1514,7 @@ Oklahoma City, Amarillo, Santa Fe, Albucquerque, Flagstaff and Los Angeles)
 
 .. * Create an array of the image with a narrower centring : for example,
 ..   remove 30 pixels from all the borders of the image. To check the result,
-..   display this new array with ``imshow``.
+..   display this new array with :func:`imshow`.
 
 ..   .. sourcecode:: ipython
    
@@ -1562,27 +1562,26 @@ Oklahoma City, Amarillo, Santa Fe, Albucquerque, Flagstaff and Los Angeles)
 ..     * assign the value 0 to the pixels of the image corresponding to the mask.
 ..       The syntax is extremely simple and intuitive:
 
-* 副次的問題：この問題の全ての命令を ``lena_locket.py`` という名前で
+* 副次的問題：この問題の全ての命令を :file:`lena_locket.py` という名前で
   スクリプトにコピーしましょう, そして iPython で ``%run lena_locket.py`` として
   スクリプトを実行してみましょう.
 
 .. * Subsidiary question : copy all instructions of this exercise in a script
-..   called ``lena_locket.py`` then execute this script in iPython with ``%run
+..   called :file:`lena_locket.py` then execute this script in iPython with ``%run
 ..   lena_locket.py``.
 
 .. topic:: 結び : numpy の配列を使い始めるに当って何が必要なのか?
 
-    * 配列の作り方を知る： ``array``, ``arange``, ``ones``, ``zeros``
-
-    * ``array.shape`` を使って配列のシェイプを知る, スライスを使って配列の異なる
-      ビューを得る（例： ``array[::2]`` 等） ``reshape`` を使って配列のシェイプを変更する.
+    * 配列の作り方を知る： :func:`array`, :func:`arange`, :func:`ones`, :func:`zeros`
+    * :attr:`array.shape` を使って配列のシェイプを知る, スライスを使って配列の異なる
+      ビューを得る（例： ``array[::2]`` 等） :meth:`reshape` を使って配列のシェイプを変更する.
 
     * 配列の一部の要素をマスクを使って得る, 変更する::
  
           >>> a[a<0] = 0
 
-    * 配列に対する様々な操作を知る, 例えば平均値や最大値を求める (``array.max()``,
-      ``array.mean()``).
+    * 配列に対する様々な操作を知る, 例えば平均値や最大値を求める (:func:`array.max()`,
+      :func:`array.mean()`).
       全てを覚える必要はありません, ただしドキュメントを探すときに影響がでます
       （ :ref:`help` をみましょう ）!!
 
@@ -1592,12 +1591,12 @@ Oklahoma City, Amarillo, Santa Fe, Albucquerque, Flagstaff and Los Angeles)
 
 .. .. topic:: Conclusion : what do you need to know about numpy arrays to start?
 
-..     * Know how to create arrays : ``array``, ``arange``, ``ones``,
-..       ``zeros``.
+..     * Know how to create arrays : :func:`array`, :func:`arange`, :func:`ones`,
+..       :func:`zeros`.
 
-..     * Know the shape of the array with ``array.shape``, then use slicing
+..     * Know the shape of the array with :attr:`array.shape`, then use slicing
 ..       to obtain different views of the array: ``array[::2]``,
-..       etc. Change the shape of the array using ``reshape``.
+..       etc. Change the shape of the array using :meth:`reshape`.
 
 ..     * Obtain a subset of the elements of an array and/or modify their values
 ..       with masks::
@@ -1605,7 +1604,7 @@ Oklahoma City, Amarillo, Santa Fe, Albucquerque, Flagstaff and Los Angeles)
 ..   >>> a[a<0] = 0
 
 ..     * Know miscellaneous operations on arrays, like finding the mean or max
-..       (``array.max()``, ``array.mean()``). No need to retain everything, but
+..       (:func:`array.max()`, :func:`array.mean()`). No need to retain everything, but
 ..       have the reflex to search in the documentation (see :ref:`help`) !!
 
 ..     * For advanced use: master the indexing with arrays of integers, as well as

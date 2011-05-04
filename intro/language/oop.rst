@@ -39,24 +39,24 @@ OOP のゴールは：
     >>> anna.set_age(21)
     >>> anna.set_major('physics')
 
-上の例では, Student クラスは ``__init__``, ``set_age`` そして ``set_major`` メソッドを持っています.
-属性 は ``name``, ``age`` そして ``major`` です.
+上の例では, :class:`Student` クラスは :meth:`~Student.__init__`, :meth:`~Student.set_age` そして :meth:`~Student.set_major` メソッドを持っています.
+属性 は :attr:`name`, :attr:`age` そして :attr:`major` です.
 メソッドと属性は以下の記法で呼び出すことができます：
 ``classinstance.method`` または ``classinstance.attribute``.
-``__init__`` コンストラクタは特別なメソッドで ``MyClass(初期化のためのパラメータ)`` のようにして呼びます.
+:meth:`__init__` コンストラクタは特別なメソッドで ``MyClass(初期化のためのパラメータ)`` のようにして呼びます.
 
-.. In the previous example, the Student class has ``__init__``, ``set_age`` and
-.. ``set_major`` methods. Its attributes are ``name``, ``age`` and ``major``. We
+.. In the previous example, the :class:`Student` class has :meth:`~Student.__init__`, :meth:`~Student.set_age` and
+.. :meth:`~Student.set_major` methods. Its attributes are :attr:`name`, :attr:`age` and :attr:`major`. We
 .. can call these methods and attributes with the following notation:
-.. ``classinstance.method`` or  ``classinstance.attribute``.  The ``__init__``
+.. ``classinstance.method`` or  ``classinstance.attribute``.  The :meth:`__init__`
 .. constructor is a special method we call with: ``MyClass(init parameters if
 .. any)``.
 
-さて, さきほどのクラスと新しい同じメソッドと属性を持った新しいクラス MasterStudent を作りたいとします,
+さて, さきほどのクラスと新しい同じメソッドと属性を持った新しいクラス :class:`MasterStudent` を作りたいとします,
 しかし新しいクラスには ``internship`` 属性が加えられます.
 **継承 (inherit)** することで, さきほどのクラスをコピーペーストする必要はなくなります.
 
-.. Now, suppose we want to create a new class MasterStudent with the same
+.. Now, suppose we want to create a new class :class:`MasterStudent` with the same
 .. methods and attributes as the previous one, but with an additional
 .. ``internship`` attribute. We won't copy the previous class, but
 .. **inherit** from it::
@@ -73,21 +73,21 @@ OOP のゴールは：
     >>> james.age
     23
 
-MasterStudent クラスは Student から属性とメソッドを継承しています.
+:class:`MasterStudent` クラスは :class:`Student` から属性とメソッドを継承しています.
 
-.. The MasterStudent class inherited from the Student attributes and methods.
+.. The :class:`MasterStudent` class inherited from the :class:`Student` attributes and methods.
 
 クラスとオブジェクト指向プログラミングの恩恵を受けることで,
-我々が遭遇する様々なオブジェクトに対応して
-独自のメソッドや属性を持った, 様々なクラスにコードをまとめることができます,
+我々が遭遇する様々なオブジェクト（ :class:`Experiment`, :class:`Image`, :class:`Flow` など）に対応して
+独自のメソッドや属性を持った, 様々なクラスにコードをまとめることができます.
 さらに継承を使うことで基底クラスを中心とした変種を考える, コードを **再利用** できます.
-例：Flow 基底クラスから, StokesFlow, TurbulentFlow, PotentialFlow を作るなど.
+例： :class:`Flow` 基底クラスから, :class:`StokesFlow`, :class:`TurbulentFlow`, :class:`PotentialFlow` を作るなど.
 
 .. Thanks to classes and object-oriented programming, we can organize code
 .. with different classes corresponding to different objects we encounter
-.. (an Experiment class, an Image class, a Flow class, etc.), with their own
+.. (an :class:`Experiment` class, an :class:`Image` class, a :class:`Flow` class, etc.), with their own
 .. methods and attributes. Then we can use inheritance to consider
-.. variations around a base class and **re-use** code. Ex : from a Flow
-.. base class, we can create derived StokesFlow, TurbulentFlow,
-.. PotentialFlow, etc.
+.. variations around a base class and **re-use** code. Ex : from a :class:`Flow`
+.. base class, we can create derived :class:`StokesFlow`, :class:`TurbulentFlow`,
+.. :class:`PotentialFlow`, etc.
 

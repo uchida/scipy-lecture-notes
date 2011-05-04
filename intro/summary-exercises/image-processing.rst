@@ -18,11 +18,11 @@
 .. Statement of the problem
 .. ..........................
 
-1. MV_HFV_012.jpg を開いて表示しましょう.
-   ``imshow`` のドキュメンテーション文字列を眺めて右方向 ("right" orientation) に開きましょう
+1. :file:`MV_HFV_012.jpg` を開いて表示しましょう.
+   :func:`imshow` のドキュメンテーション文字列を眺めて右方向 ("right" orientation) に開きましょう
 
-.. 1. Open the image file MV_HFV_012.jpg and display it. Browse through the
-.. keyword arguments in the docstring of ``imshow`` to display the image
+.. 1. Open the image file :file:`MV_HFV_012.jpg` and display it. Browse through the
+.. keyword arguments in the docstring of :func:`imshow` to display the image
 .. with the "right" orientation (origin in the bottom left corner, and not
 .. the upper left corner as for standard arrays).
 
@@ -63,11 +63,11 @@
 .. 6. Use mathematical morphology to clean the different phases.
 
 7. 全ての泡と砂粒にラベルをつけ, そして10ピクセルより小さい砂粒のマスクを取り除きなさい.
-   そうしたら, ``ndimage.sum`` か ``np.bincount`` を使って粒の大きさを計算しなさい.
+   そうしたら, :func:`ndimage.sum` か :func:`np.bincount` を使って粒の大きさを計算しなさい.
 
 .. 7. Attribute labels to all bubbles and sand grains, and remove from the
 .. sand mask grains that are smaller than 10 pixels. To do so, use
-.. ``ndimage.sum`` or ``np.bincount`` to compute the grain sizes.
+.. :func:`ndimage.sum` or :func:`np.bincount` to compute the grain sizes.
 
 8. 泡の平均的大きさを計算しなさい.
 

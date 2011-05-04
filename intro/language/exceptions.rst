@@ -232,7 +232,7 @@ try/finally
 ..     In [20]: x
 ..     Out[20]: 0.9990234375
 
-**出会った状況を知らせてくれる例外を使いましょう（上の場合でカスタマイズしたエラーではなく StopIteration を使ったように）**
+**出会った状況を知らせてくれる例外を使いましょう** （上の場合でカスタマイズしたエラーではなく :exc:`StopIteration` を使ったように）
 
 .. **Use exceptions to notify certain conditions are met (e.g.
 .. StopIteration) or not (e.g. custom error raising)**

@@ -10,7 +10,7 @@ Pythonで科学技術計算の積み木を組む
 
 * **Python**, 包括的で現代的なプログラミング言語
 
-   * Python 言語：データ型(``string``, ``int``), 制御フロー,
+   * Python 言語：データ型(:class:`string`, :class:`int`), 制御フロー,
      データの集まり（リスト, 辞書）, パターン等
 
    * 標準ライブラリのモジュール
@@ -23,7 +23,7 @@ Pythonで科学技術計算の積み木を組む
 ..
     * **Python**, a generic and modern computing language
     
-        * Python language: data types (``string``, ``int``), flow control,
+        * Python language: data types (:class:`string`, :class:`int`), flow control,
           data collections (lists, dictionaries), patterns, etc.
     
         * Modules of the standard library.

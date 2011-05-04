@@ -48,13 +48,13 @@ return 文
     In [8]: disk_area(1.5)
     Out[8]: 7.0649999999999995
 
-.. Note:: デフォルトでは, 関数は ``None`` を返します. 
+.. Note:: デフォルトでは, 関数は :const:`None` を返します. 
 
-.. .. Note:: By default, functions return ``None``.
+.. .. Note:: By default, functions return :const:`None`.
 
 .. Note:: 関数定義構文の注解：
 
-    * ``def`` キーワード；
+    * :keyword:`!def` キーワード；
 
     * 続けて関数の **名前**, そして
 
@@ -62,12 +62,12 @@ return 文
 
     * 関数の本体；
 
-    * そしてオプションとして値を返すために ``return object`` する
+    * そしてオプションとして値を返すために :keyword:`return` `object` する
 
 ..
     .. Note:: Note the syntax to define a function:
     
-        * the ``def`` keyword;
+        * the :keyword:`!def` keyword;
     
         * is followed by the function's **name**, then
     
@@ -76,7 +76,7 @@ return 文
     
         * the function body ;
     
-        * and ``return object`` for optionally returning values.
+        * and :keyword:`!return` object` for optionally returning values.
 
 
 引数
@@ -314,10 +314,10 @@ Python ではこのような区別はいくぶん不自然で,
     Out[116]: 15
 
 しかし, これらのグローバル変数は関数の中で変更することはできません, 
-ただし **global** と宣言すれば可能になります. 
+ただし :keyword:`!global` と宣言すれば可能になります. 
 
 ..  but these "global" variables cannot be modified within the function,
-    unless declared **global** in the function.
+    unless declared :keyword:`!global` in the function.
 
 これは動きません：
 

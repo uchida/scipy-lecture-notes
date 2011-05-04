@@ -18,11 +18,11 @@
 
 ..  * Python Essential Reference, David Beazley, Addison-Wesley Professional
 
-``os`` モジュール：OS の機能
-----------------------------
+:mod:`os` モジュール：OS の機能
+-------------------------------
 
-.. ``os`` module: operating system functionality
-.. -----------------------------------------------
+.. :mod:`os` module: operating system functionality
+.. ------------------------------------------------
 
 *「OS 依存の機能をポータブルな方法で提供します」*
 
@@ -110,15 +110,15 @@
     In [48]: 'junk.txt' in os.listdir(os.curdir)
     Out[48]: False
 
-``os.path``: パスの操作
+:mod:`os.path`: パスの操作
 ~~~~~~~~~~~~~~~~~~~~~~~
 
-.. ``os.path``: path manipulations
-.. ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+.. :mod:`os.path`: path manipulations
+.. ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-``os.path`` はパスの名前に関する一般的な操作法を提供します.
+:mod:`os.path` はパスの名前に関する一般的な操作法を提供します.
 
-.. ``os.path`` provides common operations on pathnames.
+.. :mod:`os.path` provides common operations on pathnames.
 
 .. sourcecode:: ipython
 
@@ -178,7 +178,7 @@
 .. Walking a directory
 .. ~~~~~~~~~~~~~~~~~~~~
 
-``os.path.walk`` はディレクトリツリー以下のファイル名を生成します.
+:func:`os.path.walk` はディレクトリツリー以下のファイル名を生成します.
 
 .. sourcecode:: ipython
 
@@ -232,33 +232,33 @@
     /usr/local/lib/python2.5/site-packages/:
     /Library/Frameworks/Python.framework/Versions/2.5/lib/python2.5'
 
-``shutil``: 高レベルなファイル操作
-----------------------------------
+:mod:`shutil`: 高レベルなファイル操作
+-------------------------------------
 
-.. ``shutil``: high-level file operations
-.. ---------------------------------------
+.. :mod:`shutil`: high-level file operations
+.. -----------------------------------------
 
-``shutil`` は便利なファイル操作を提供します：
+:mod:`shutil` は便利なファイル操作を提供します：
 
-	* ``shutil.rmtree`` ： ディレクトリツリーを再帰的に削除します.
-	* ``shutil.move`` ： ファイルやディレクトリを他の場所に再帰的に移動させます.
-	* ``shutil.copy`` ： ファイルやディレクトリをコピーします.
+	* :func:`shutil.rmtree` ： ディレクトリツリーを再帰的に削除します.
+	* :func:`shutil.move` ： ファイルやディレクトリを他の場所に再帰的に移動させます.
+	* :func:`shutil.copy` ： ファイルやディレクトリをコピーします.
 
-.. The ``shutil`` provides useful file operations:
+.. The :mod:`shutil` provides useful file operations:
 
-..     * ``shutil.rmtree``: Recursively delete a directory tree.
-..     * ``shutil.move``: Recursively move a file or directory to another location.
-..     * ``shutil.copy``: Copy files or directories.
+..     * :func:`shutil.rmtree`: Recursively delete a directory tree.
+..     * :func:`shutil.move`: Recursively move a file or directory to another location.
+..     * :func:`shutil.copy`: Copy files or directories.
 
-``glob`` ： ファイル名のパターンマッチング
-------------------------------------------
+:mod:`glob` ： ファイル名のパターンマッチング
+---------------------------------------------
 
-.. ``glob``: Pattern matching on files
-.. -------------------------------------
+.. :mod:`glob`: Pattern matching on files
+.. --------------------------------------
 
-``glob`` モジュールはファイル名のパターンマッチングに便利なモジュールを提供します.
+:mod:`glob` モジュールはファイル名のパターンマッチングに便利なモジュールを提供します.
 
-.. The ``glob`` module provides convenient file pattern matching.
+.. The :mod:`glob` module provides convenient file pattern matching.
 
 ``.txt`` で終わるファイル全てを探す：
 
@@ -272,11 +272,11 @@
     Out[19]: ['holy_grail.txt', 'junk.txt', 'newfile.txt']
 
 
-``sys`` モジュール：システム固有の情報
---------------------------------------
+:mod:`sys` モジュール：システム固有の情報
+-----------------------------------------
 
-.. ``sys`` module: system-specific information
-.. --------------------------------------------
+.. :mod:`sys` module: system-specific information
+.. ----------------------------------------------
 
 Python インタプリタに関わるシステム固有の情報
 
@@ -307,10 +307,10 @@ Python インタプリタに関わるシステム固有の情報
    In [100]: sys.argv
    Out[100]: ['/Users/cburns/local/bin/ipython']
 
-``sys.path`` はモジュールの検索パスを示す文字列のリストで PYTHONPATH によって初期化されます.
+:data:`sys.path` はモジュールの検索パスを示す文字列のリストで :envvar:`PYTHONPATH` によって初期化されます.
 
-.. ``sys.path`` is a list of strings that specifies the search path for
-.. modules.  Initialized from PYTHONPATH:
+.. :data:`sys.path` is a list of strings that specifies the search path for
+.. modules.  Initialized from :envvar:`PYTHONPATH`:
 
 .. sourcecode:: ipython
 
@@ -325,10 +325,10 @@ Python インタプリタに関わるシステム固有の情報
      '/Users/cburns/local/lib/python2.5/site-packages/virtualenv-1.2-py2.5.egg',
      ...
 
-``pickle`` ： 簡単な永続化
+:mod:`pickle` ： 簡単な永続化
 --------------------------
 
-.. ``pickle``: easy persistence
+.. :mod:`pickle`: easy persistence
 .. -------------------------------
 
 任意のオブジェクトをファイルに保存するのに便利です.
@@ -350,11 +350,11 @@ Python インタプリタに関わるシステム固有の情報
 
 .. topic:: 練習問題
 
-	``site.py`` モジュールが PYTHONPATH のどこにあるか検索するプログラムを書きましょう.
+	:file:`site.py` モジュールが :envvar:`PYTHONPATH` のどこにあるか検索するプログラムを書きましょう.
 
 .. .. topic:: Exercise
 
-..     Write a program to search your PYTHONPATH for the module ``site.py``.
+..     Write a program to search your :envvar:`PYTHONPATH` for the module :file:`site.py`.
 
 :ref:`path_site`
 

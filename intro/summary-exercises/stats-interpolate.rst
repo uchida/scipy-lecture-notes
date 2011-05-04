@@ -9,14 +9,14 @@ Sprogø 気象局の最大風速予測
 練習問題の目的は50年間の最大風速を予測することです,
 ただし, 予測はそのような期間に渡る測定がされていない場合に行ないます.
 入手可能なデータはデンマークの Sprogø 気象局での21年間のデータだけです.
-まず最初に統計的な手段を与えて, scipy.interpolate モジュールから関数を描きます.
+まず最初に統計的な手段を与えて, :mod:`scipy.interpolate` モジュールから関数を描きます.
 そして最後に興味ある読者は全く異なる方法を使い結果を生データから計算することになるでしょう.
 
 .. The exercise goal is to predict the maximum wind speed occuring every
 .. 50 years even if no measure exists for such a period. The available
 .. data are only measured over 21 years at the Sprogø meteorological
 .. station located in Denmark. First, the statistical steps will be given
-.. and then illustrated with functions from the scipy.interpolate module.
+.. and then illustrated with functions from the :mod:`scipy.interpolate` module.
 .. At the end the interested readers are invited to compute results from
 .. raw data and in a slightly different approach.
 
@@ -47,7 +47,7 @@ Sprogø 気象局の最大風速予測
 後者は年間の最大値の分布関数を表わします.
 練習問題では, :math:`i` 年の累積確率 :math:`p_i` を :math:`p_i = i/(N+1)`, 測定年数 :math:`N = 21` とします.
 これで各年で測定された最大風速の累積確率を計算できます.
-scipy.interpolate モジュールを使ってこれらの測定点から分位点関数をフィットするのが有効です.
+:mod:`scipy.interpolate` モジュールを使ってこれらの測定点から分位点関数をフィットするのが有効です.
 最終的に50年の最大値は 2% 分位点の累積分布関数から評価できます.
 
 .. By definition, the quantile function is the inverse of the cumulative
@@ -109,39 +109,39 @@ UnivariateSpline による予測
 .. ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 この節では分位点関数を, 点からスプラインを表現する
-``univariatespline`` クラスを使って予測します.
+:class:`UnivariateSpline` クラスを使って予測します.
 デフォルトの挙動では3次スプラインを使い,
 点は信頼度に応じて異なる重みが与えられます.
-変種に ``InterpolatedUnivariateSpline`` と ``LSQUnivariateSpline`` があり,
+変種に :class:`InterpolatedUnivariateSpline` と :class:`LSQUnivariateSpline` があり,
 これらは誤差の抑制に違いがあります.
-2次元のスプラインが欲しい場合には ``BivariateSpline`` クラスファミリーが提供されます.
+2次元のスプラインが欲しい場合には :class:`BivariateSpline` クラスファミリーが提供されます.
 これらの1次元, 2次元スプラインは FITPACK Fortran サブルーチンを使います,
-その結果としてスプラインを表現, 評価する ``splrep``, ``splev`` を経由する低レベルライブラリーにアクセスすることができます.
+その結果としてスプラインを表現, 評価する :func:`splrep`, :func:`splev` を経由する低レベルライブラリーにアクセスすることができます.
 またより単純な目的のために FITPACK パラメータを使わない補間関数も提供されています
-（ ``interp1d``, ``interp2d``, ``barycentric_interpolate`` を見てください）.
+（ :class:`interp1d`, :class:`interp2d`, :func:`barycentric_interpolate` を見てください）.
 
 
 .. In this section the quantile function will be estimated by using the
-.. ``UnivariateSpline`` class which can represent a spline from points. The
+.. :class:`UnivariateSpline` class which can represent a spline from points. The
 .. default behavior is to build a spline of degree 3 and points can
 .. have different weights according to their reliability. Variantes are
-.. ``InterpolatedUnivariateSpline`` and ``LSQUnivariateSpline`` on which
+.. :class:`InterpolatedUnivariateSpline` and :class:`LSQUnivariateSpline` on which
 .. errors checking is going to change.  In case a 2D spline is wanted,
-.. the ``BivariateSpline`` class family is provided. All thoses classes
+.. the :class:`BivariateSpline` class family is provided. All thoses classes
 .. for 1D and 2D splines use the FITPACK Fortran subroutines, that's why a
-.. lower library access is available through the ``splrep`` and ``splev``
+.. lower library access is available through the :func:`splrep` and :func:`splev`
 .. functions for respectively representing and evaluating a spline.
 .. Moreover interpolation functions without the use of FITPACK parameters
-.. are also provided for simpler use (see ``interp1d``, ``interp2d``,
-.. ``barycentric_interpolate`` and so on).
+.. are also provided for simpler use (see :class:`interp1d`, :class:`interp2d`,
+.. :class:`barycentric_interpolate` and so on).
 
 3次スプラインでデータを正確にフィットできているようなので,
-Sprogø の最大風速のために ``UnivariateSpline`` を使います::
+Sprogø の最大風速のために :class:`UnivariateSpline` を使います::
 
     >>> from scipy.interpolate import UnivariateSpline
     >>> quantile_func = UnivariateSpline(cprob, sorted_max_speeds)
 
-.. For the Sprogø maxima wind speeds, the ``UnivariateSpline`` will be
+.. For the Sprogø maxima wind speeds, the :class:`UnivariateSpline` will be
 .. used because a spline of degree 3 seems to correctly fit the data::
 
 ..     >>> from scipy.interpolate import UnivariateSpline
@@ -221,7 +221,7 @@ Gumbell 分布での練習問題
 
 
 * 次は累積確率 :math:`p_i` に対して定義される Gumbell 分布 :math:`-\log\left(-\log(p_i)\right)`
-  を線形分位点関数のフィッティングに使ってみましょう（ ``UnvariateSpline`` の次数を定義するのを忘れないように）.
+  を線形分位点関数のフィッティングに使ってみましょう（ :class:`UnvariateSpline` の次数を定義するのを忘れないように）.
   年間の最大値と Gumbell 分布は以下のような図になるはずです.
 
   .. plot:: pyplots/gumbell_wind_speed_prediction.py
