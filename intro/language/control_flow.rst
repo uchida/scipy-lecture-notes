@@ -41,11 +41,11 @@ IPython はコラム記号 ``:`` の後に自動的にインデントを深く�
     In [2]: a = 10
     
     In [3]: if a == 1:
-       ...:     print(1)
+       ...:     print 1
        ...: elif a == 2:
-       ...:     print(2)
+       ...:     print 2
        ...: else:
-       ...:     print('A lot')
+       ...:     print 'A lot'
        ...: 
     A lot
 
@@ -70,7 +70,7 @@ for/range
 .. sourcecode:: ipython
 
     In [4]: for i in range(4):
-       ...:     print(i)
+       ...:     print i
        ...: 
     0
     1
@@ -84,7 +84,7 @@ for/range
 .. sourcecode:: ipython
 
     In [5]: for word in ('cool', 'powerful', 'readable'):
-       ...:     print('Python is %s' % word)
+       ...:     print 'Python is %s' % word
        ...: 
     Python is cool
     Python is powerful
@@ -201,7 +201,7 @@ while/break/continue
 ..     In [19]: 1 == 1.
 ..     Out[19]: True
 
-* `a` :keyword:`is` `b`
+* `a` :keyword:`!is` `b`
 
   同一性を調べる：2つのオブジェクトが同じオブジェクトかどうか
 
@@ -218,7 +218,7 @@ while/break/continue
     Out[23]: True
 
 ..
-    * `a` :keyword:`is` `b`
+    * `a` :keyword:`!is` `b`
     
       Tests identity: both objects are the same object
 
@@ -234,7 +234,7 @@ while/break/continue
 ..     In [23]: a is b
 ..     Out[23]: True
 
-* `a` :keyword:`in` `b`
+* `a` :keyword:`!in` `b`
 
   データの集まり `b` の中に `a` が含まれているか::
 
@@ -248,7 +248,7 @@ while/break/continue
   `b` が辞書の場合, 辞書のキーに `a` が含まれているか調べます.
 
 ..
-    * `a` :keyword:`in` `b`
+    * `a` :keyword:`!in` `b`
     
       For any collection `b`: `b` contains `a` ::
     
@@ -285,7 +285,7 @@ while/break/continue
 
     In [12]: for i in 'powerful':
        ....:     if i in vowels:
-       ....:         print(i),
+       ....:         print i,
        ....:         
        ....:         
     o e u
@@ -335,7 +335,7 @@ Python を使うことで, インデクスについて注意深く考えない�
   .. sourcecode:: ipython
 
     In [13]: for i in range(0, len(words)):
-       ....:     print(i, words[i])
+       ....:     print i, words[i]
        ....:     
        ....:     
     0 cool
@@ -347,7 +347,7 @@ Python を使うことで, インデクスについて注意深く考えない�
 ..   .. sourcecode:: ipython
 
 ..     In [13]: for i in range(0, len(words)):
-..        ....:     print(i, words[i])
+..        ....:     print i, words[i]
 ..        ....:     
 ..        ....:     
 ..     0 cool
@@ -391,7 +391,7 @@ Python を使うことで, インデクスについて注意深く考えない�
     In [15]: d = {'a': 1, 'b':1.2, 'c':1j}
 
     In [15]: for key, val in d.iteritems():
-       ....:     print('Key: %s has value: %s' % (key, val))
+       ....:     print 'Key: %s has value: %s' % (key, val)
        ....:     
        ....:     
     Key: a has value: 1

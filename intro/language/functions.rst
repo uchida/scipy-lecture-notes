@@ -13,7 +13,7 @@
 .. sourcecode:: ipython
 
     In [56]: def test():
-       ....:     print('in test function')
+       ....:     print 'in test function'
        ....:     
        ....:     
 
@@ -62,7 +62,7 @@ return 文
 
     * 関数の本体；
 
-    * そしてオプションとして値を返すために :keyword:`return` `object` する
+    * そしてオプションとして値を返すために :keyword:`!return` `object` する
 
 ..
     .. Note:: Note the syntax to define a function:
@@ -236,9 +236,9 @@ Python ではこのような区別はいくぶん不自然で,
     ...     x = 23
     ...     y.append(42)
     ...     z = [99] # new reference
-    ...     print(x)
-    ...     print(y)
-    ...     print(z)
+    ...     print x
+    ...     print y
+    ...     print z
     ...     
     >>> a = 77    # immutable variable
     >>> b = [99]  # mutable variable
@@ -247,11 +247,11 @@ Python ではこのような区別はいくぶん不自然で,
     23
     [99, 42]
     [99]
-    >>> print(a)
+    >>> print a
     77
-    >>> print(b)
+    >>> print b
     [99, 42]
-    >>> print(c)
+    >>> print c
     [28]
 
 ..
@@ -263,9 +263,9 @@ Python ではこのような区別はいくぶん不自然で,
         ...     x = 23
         ...     y.append(42)
         ...     z = [99] # new reference
-        ...     print(x)
-        ...     print(y)
-        ...     print(z)
+        ...     print x
+        ...     print y
+        ...     print z
         ...     
         >>> a = 77    # immutable variable
         >>> b = [99]  # mutable variable
@@ -274,11 +274,11 @@ Python ではこのような区別はいくぶん不自然で,
         23
         [99, 42]
         [99]
-        >>> print(a)
+        >>> print a
         77
-        >>> print(b)
+        >>> print b
         [99, 42]
-        >>> print(c)
+        >>> print c
         [28]
 
 関数はローカルな変数テーブルを持っています, 
@@ -327,7 +327,7 @@ Python ではこのような区別はいくぶん不自然で,
 
     In [117]: def setx(y):
        .....:     x = y
-       .....:     print('x is %d' % x)
+       .....:     print 'x is %d' % x
        .....:     
        .....:     
 
@@ -346,7 +346,7 @@ Python ではこのような区別はいくぶん不自然で,
     In [121]: def setx(y):
        .....:     global x
        .....:     x = y
-       .....:     print('x is %d' % x)
+       .....:     print 'x is %d' % x
        .....:     
        .....:     
 

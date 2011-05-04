@@ -20,6 +20,6 @@ def load_data(filename):
 if __name__ == '__main__':
     data = load_data('data.txt')
     # Python provides these basic math functions
-    print('min: %f' % min(data))
-    print('max: %f' % max(data))
-    print('sum: %f' % sum(data))
+    print 'min: %f' % min(data)
+    print 'max: %f' % max(data)
+    print 'sum: %f' % sum(data)

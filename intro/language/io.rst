@@ -36,7 +36,7 @@
 
     In [2]: s = f.read()
 
-    In [3]: print(s)
+    In [3]: print s
     This is a test 
     and another test
 

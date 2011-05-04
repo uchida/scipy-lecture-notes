@@ -74,7 +74,7 @@ try/except
      ....:         x = int(raw_input('Please enter a number: '))
      ....:         break
      ....:     except ValueError:
-     ....:         print('That was no valid number.  Try again...')
+     ....:         print 'That was no valid number.  Try again...'
      ....:         
      ....:         
     Please enter a number: a
@@ -92,7 +92,7 @@ try/finally
     In [10]: try:
      ....:    x = int(raw_input('Please enter a number: '))
      ....: finally:
-     ....:    print('Thank you for your input')
+     ....:    print 'Thank you for your input'
      ....:    
      ....:    
     Please enter a number: a
@@ -118,7 +118,7 @@ try/finally
        ....:         collection.sort()
        ....:     except AttributeError:
        ....:         pass
-       ....:     print(collection)
+       ....:     print collection
        ....:     
        ....:     
 
@@ -147,7 +147,7 @@ try/finally
          ....:	    name = name.encode('ascii')
          ....:	except UnicodeError, e:
          ....:	    if name == 'Gaël':
-         ....:		print('OK, Gaël')
+         ....:		print 'OK, Gaël'
          ....:	    else:                
          ....:		raise e
          ....:	return name
@@ -170,7 +170,7 @@ try/finally
 ..        ....:	    name = name.encode('ascii')
 ..        ....:	except UnicodeError, e:
 ..        ....:	    if name == 'Gaël':
-..        ....:		print('OK, Gaël')
+..        ....:		print 'OK, Gaël'
 ..        ....:	    else:                
 ..        ....:		raise e
 ..        ....:	return name

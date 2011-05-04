@@ -186,7 +186,7 @@ IPython を起動すると ``from pylab import *`` を行うことなく
 全ての pylab の関数やオブジェクトがインポートされます.
 このチュートリアルでは ``from pylab import *`` か
 :program:`ipython -pylab` を行なっているものとして扱います,
-その結果として :function:`pylab.function` と書かずに直接 :func:`function` と書きます.
+その結果として :func:`pylab.function` と書かずに直接 :func:`function` と書きます.
     
 .. If you launched Ipython with python(x,y), or with :program:`ipython
 .. -pylab` (under Linux), all the functions/objects of pylab are already
