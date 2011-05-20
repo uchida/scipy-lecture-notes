@@ -62,6 +62,22 @@ Python Scientific Lecture Notes
 
     印刷版のダウンロード： :download:`PythonScientific.pdf`
 
+    .. note::
+       Emmanuelle Gouillart さんたちによる Euroscipy 2010 のチュートリアルを基にした Python を科学技術計算に使うための講義ノートの翻訳です。
+       
+       翻訳のソースファイルは `uchida/scipy-lecture-notes - GitHub <http://github.com/uchida/scipy-lecture-notes>`_ から入手できます。
+       ライセンスは `CC-BY 3.0 <http://creativecommons.org/licenses/by/3.0/deed.ja>`_ です。
+       原著作者のクレジットを表示すれば、自由に複製、頒布、展示、実演し、二次著作物を作成することができます。
+   
+       - `LICENSE.txt <https://github.com/uchida/scipy-lecture-notes/blob/translation-ja/LICENSE.txt>`_
+       - `CONTRIBUTORS.txt <https://github.com/uchida/scipy-lecture-notes/blob/translation-ja/CONTRIBUTORS.txt>`_
+    
+       PDF と html そしてチュートリアルで使うデータの一式は `scipy_lecture_notes.zip <http://www.ike-dyn.ritsumei.ac.jp/~uchida/scipy-lecture-notes/scipy_lecture_notes.zip>`_ から入手できます。
+       
+       原版情報
+       
+       - `Python Scientific Lecture Notes <http://scipy-lectures.github.com/>`_
+       - `scipy-lectures/scipy-lecture-notes - GitHub <http://github.com/scipy-lectures/scipy-lecture-notes>`_
 
 
 .. toctree::
