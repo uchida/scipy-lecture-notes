@@ -11,9 +11,10 @@ PYTHON        = python
 PAPEROPT_a4     = -D latex_paper_size=a4
 PAPEROPT_letter = -D latex_paper_size=letter
 ALLSPHINXOPTS   = -d build/doctrees $(PAPEROPT_$(PAPER)) $(SPHINXOPTS) .
+I18NSPHINXOPTS  = $(SPHINXOPTS) .
 
 
-.PHONY: help clean html web pickle htmlhelp latex changes linkcheck zip
+.PHONY: help clean html web pickle htmlhelp latex changes linkcheck zip gettext
 
 help:
 	@echo "Please use \`make <target>' where <target> is one of"
@@ -103,3 +104,7 @@ install: pdf html
 	git commit -a -m 'Make install' && \
 	git push
  
+gettext:
+	$(SPHINXBUILD) -b gettext $(I18NSPHINXOPTS) build/locale
+	@echo
+	@echo "Build finished. The message catalogs are in build/locale."
