@@ -1,0 +1,1109 @@
+[main]
+host = https://www.transifex.com
+type = PO
+
+[scipy-lecture-notes-2015-3.AUTHORS]
+file_filter = locale/<lang>/LC_MESSAGES/AUTHORS.po
+source_file = build/locale/AUTHORS.pot
+source_lang = en
+
+[scipy-lecture-notes-2015-3.CHANGES]
+file_filter = locale/<lang>/LC_MESSAGES/CHANGES.po
+source_file = build/locale/CHANGES.pot
+source_lang = en
+
+[scipy-lecture-notes-2015-3.CONTRIBUTING]
+file_filter = locale/<lang>/LC_MESSAGES/CONTRIBUTING.po
+source_file = build/locale/CONTRIBUTING.pot
+source_lang = en
+
+[scipy-lecture-notes-2015-3.index]
+file_filter = locale/<lang>/LC_MESSAGES/index.po
+source_file = build/locale/index.pot
+source_lang = en
+
+[scipy-lecture-notes-2015-3.LICENSE]
+file_filter = locale/<lang>/LC_MESSAGES/LICENSE.po
+source_file = build/locale/LICENSE.pot
+source_lang = en
+
+[scipy-lecture-notes-2015-3.preface]
+file_filter = locale/<lang>/LC_MESSAGES/preface.po
+source_file = build/locale/preface.pot
+source_lang = en
+
+[scipy-lecture-notes-2015-3.README]
+file_filter = locale/<lang>/LC_MESSAGES/README.po
+source_file = build/locale/README.pot
+source_lang = en
+
+[scipy-lecture-notes-2015-3.tune_toc]
+file_filter = locale/<lang>/LC_MESSAGES/tune_toc.po
+source_file = build/locale/tune_toc.pot
+source_lang = en
+
+[scipy-lecture-notes-2015-3.advanced--index]
+file_filter = locale/<lang>/LC_MESSAGES/advanced/index.po
+source_file = build/locale/advanced/index.pot
+source_lang = en
+
+[scipy-lecture-notes-2015-3.advanced--advanced_numpy--index]
+file_filter = locale/<lang>/LC_MESSAGES/advanced/advanced_numpy/index.po
+source_file = build/locale/advanced/advanced_numpy/index.pot
+source_lang = en
+
+[scipy-lecture-notes-2015-3.advanced--advanced_numpy--auto_examples--index]
+file_filter = locale/<lang>/LC_MESSAGES/advanced/advanced_numpy/auto_examples/index.po
+source_file = build/locale/advanced/advanced_numpy/auto_examples/index.pot
+source_lang = en
+
+[scipy-lecture-notes-2015-3.advanced--advanced_numpy--auto_examples--mandelplot]
+file_filter = locale/<lang>/LC_MESSAGES/advanced/advanced_numpy/auto_examples/mandelplot.po
+source_file = build/locale/advanced/advanced_numpy/auto_examples/mandelplot.pot
+source_lang = en
+
+[scipy-lecture-notes-2015-3.advanced--advanced_numpy--auto_examples--myobject_test]
+file_filter = locale/<lang>/LC_MESSAGES/advanced/advanced_numpy/auto_examples/myobject_test.po
+source_file = build/locale/advanced/advanced_numpy/auto_examples/myobject_test.pot
+source_lang = en
+
+[scipy-lecture-notes-2015-3.advanced--advanced_numpy--auto_examples--pilbuffer-answer]
+file_filter = locale/<lang>/LC_MESSAGES/advanced/advanced_numpy/auto_examples/pilbuffer-answer.po
+source_file = build/locale/advanced/advanced_numpy/auto_examples/pilbuffer-answer.pot
+source_lang = en
+
+[scipy-lecture-notes-2015-3.advanced--advanced_numpy--auto_examples--pilbuffer]
+file_filter = locale/<lang>/LC_MESSAGES/advanced/advanced_numpy/auto_examples/pilbuffer.po
+source_file = build/locale/advanced/advanced_numpy/auto_examples/pilbuffer.pot
+source_lang = en
+
+[scipy-lecture-notes-2015-3.advanced--advanced_numpy--auto_examples--setup_myobject]
+file_filter = locale/<lang>/LC_MESSAGES/advanced/advanced_numpy/auto_examples/setup_myobject.po
+source_file = build/locale/advanced/advanced_numpy/auto_examples/setup_myobject.pot
+source_lang = en
+
+[scipy-lecture-notes-2015-3.advanced--advanced_numpy--auto_examples--stride-diagonals-answer]
+file_filter = locale/<lang>/LC_MESSAGES/advanced/advanced_numpy/auto_examples/stride-diagonals-answer.po
+source_file = build/locale/advanced/advanced_numpy/auto_examples/stride-diagonals-answer.pot
+source_lang = en
+
+[scipy-lecture-notes-2015-3.advanced--advanced_numpy--auto_examples--stride-diagonals]
+file_filter = locale/<lang>/LC_MESSAGES/advanced/advanced_numpy/auto_examples/stride-diagonals.po
+source_file = build/locale/advanced/advanced_numpy/auto_examples/stride-diagonals.pot
+source_lang = en
+
+[scipy-lecture-notes-2015-3.advanced--advanced_numpy--auto_examples--stride-fakedims]
+file_filter = locale/<lang>/LC_MESSAGES/advanced/advanced_numpy/auto_examples/stride-fakedims.po
+source_file = build/locale/advanced/advanced_numpy/auto_examples/stride-fakedims.pot
+source_lang = en
+
+[scipy-lecture-notes-2015-3.advanced--advanced_numpy--auto_examples--view-colors]
+file_filter = locale/<lang>/LC_MESSAGES/advanced/advanced_numpy/auto_examples/view-colors.po
+source_file = build/locale/advanced/advanced_numpy/auto_examples/view-colors.pot
+source_lang = en
+
+[scipy-lecture-notes-2015-3.advanced--advanced_numpy--auto_examples--wavreader]
+file_filter = locale/<lang>/LC_MESSAGES/advanced/advanced_numpy/auto_examples/wavreader.po
+source_file = build/locale/advanced/advanced_numpy/auto_examples/wavreader.pot
+source_lang = en
+
+[scipy-lecture-notes-2015-3.advanced--advanced_python--index]
+file_filter = locale/<lang>/LC_MESSAGES/advanced/advanced_python/index.po
+source_file = build/locale/advanced/advanced_python/index.pot
+source_lang = en
+
+[scipy-lecture-notes-2015-3.advanced--debugging--index]
+file_filter = locale/<lang>/LC_MESSAGES/advanced/debugging/index.po
+source_file = build/locale/advanced/debugging/index.pot
+source_lang = en
+
+[scipy-lecture-notes-2015-3.advanced--image_processing--index]
+file_filter = locale/<lang>/LC_MESSAGES/advanced/image_processing/index.po
+source_file = build/locale/advanced/image_processing/index.pot
+source_lang = en
+
+[scipy-lecture-notes-2015-3.advanced--image_processing--auto_examples--index]
+file_filter = locale/<lang>/LC_MESSAGES/advanced/image_processing/auto_examples/index.po
+source_file = build/locale/advanced/image_processing/auto_examples/index.pot
+source_lang = en
+
+[scipy-lecture-notes-2015-3.advanced--image_processing--auto_examples--plot_block_mean]
+file_filter = locale/<lang>/LC_MESSAGES/advanced/image_processing/auto_examples/plot_block_mean.po
+source_file = build/locale/advanced/image_processing/auto_examples/plot_block_mean.pot
+source_lang = en
+
+[scipy-lecture-notes-2015-3.advanced--image_processing--auto_examples--plot_blur]
+file_filter = locale/<lang>/LC_MESSAGES/advanced/image_processing/auto_examples/plot_blur.po
+source_file = build/locale/advanced/image_processing/auto_examples/plot_blur.pot
+source_lang = en
+
+[scipy-lecture-notes-2015-3.advanced--image_processing--auto_examples--plot_clean_morpho]
+file_filter = locale/<lang>/LC_MESSAGES/advanced/image_processing/auto_examples/plot_clean_morpho.po
+source_file = build/locale/advanced/image_processing/auto_examples/plot_clean_morpho.pot
+source_lang = en
+
+[scipy-lecture-notes-2015-3.advanced--image_processing--auto_examples--plot_denoising]
+file_filter = locale/<lang>/LC_MESSAGES/advanced/image_processing/auto_examples/plot_denoising.po
+source_file = build/locale/advanced/image_processing/auto_examples/plot_denoising.pot
+source_lang = en
+
+[scipy-lecture-notes-2015-3.advanced--image_processing--auto_examples--plot_display_face]
+file_filter = locale/<lang>/LC_MESSAGES/advanced/image_processing/auto_examples/plot_display_face.po
+source_file = build/locale/advanced/image_processing/auto_examples/plot_display_face.pot
+source_lang = en
+
+[scipy-lecture-notes-2015-3.advanced--image_processing--auto_examples--plot_face]
+file_filter = locale/<lang>/LC_MESSAGES/advanced/image_processing/auto_examples/plot_face.po
+source_file = build/locale/advanced/image_processing/auto_examples/plot_face.pot
+source_lang = en
+
+[scipy-lecture-notes-2015-3.advanced--image_processing--auto_examples--plot_face_denoise]
+file_filter = locale/<lang>/LC_MESSAGES/advanced/image_processing/auto_examples/plot_face_denoise.po
+source_file = build/locale/advanced/image_processing/auto_examples/plot_face_denoise.pot
+source_lang = en
+
+[scipy-lecture-notes-2015-3.advanced--image_processing--auto_examples--plot_face_tv_denoise]
+file_filter = locale/<lang>/LC_MESSAGES/advanced/image_processing/auto_examples/plot_face_tv_denoise.po
+source_file = build/locale/advanced/image_processing/auto_examples/plot_face_tv_denoise.pot
+source_lang = en
+
+[scipy-lecture-notes-2015-3.advanced--image_processing--auto_examples--plot_find_edges]
+file_filter = locale/<lang>/LC_MESSAGES/advanced/image_processing/auto_examples/plot_find_edges.po
+source_file = build/locale/advanced/image_processing/auto_examples/plot_find_edges.pot
+source_lang = en
+
+[scipy-lecture-notes-2015-3.advanced--image_processing--auto_examples--plot_find_object]
+file_filter = locale/<lang>/LC_MESSAGES/advanced/image_processing/auto_examples/plot_find_object.po
+source_file = build/locale/advanced/image_processing/auto_examples/plot_find_object.pot
+source_lang = en
+
+[scipy-lecture-notes-2015-3.advanced--image_processing--auto_examples--plot_geom_face]
+file_filter = locale/<lang>/LC_MESSAGES/advanced/image_processing/auto_examples/plot_geom_face.po
+source_file = build/locale/advanced/image_processing/auto_examples/plot_geom_face.pot
+source_lang = en
+
+[scipy-lecture-notes-2015-3.advanced--image_processing--auto_examples--plot_GMM]
+file_filter = locale/<lang>/LC_MESSAGES/advanced/image_processing/auto_examples/plot_GMM.po
+source_file = build/locale/advanced/image_processing/auto_examples/plot_GMM.pot
+source_lang = en
+
+[scipy-lecture-notes-2015-3.advanced--image_processing--auto_examples--plot_granulo]
+file_filter = locale/<lang>/LC_MESSAGES/advanced/image_processing/auto_examples/plot_granulo.po
+source_file = build/locale/advanced/image_processing/auto_examples/plot_granulo.pot
+source_lang = en
+
+[scipy-lecture-notes-2015-3.advanced--image_processing--auto_examples--plot_greyscale_dilation]
+file_filter = locale/<lang>/LC_MESSAGES/advanced/image_processing/auto_examples/plot_greyscale_dilation.po
+source_file = build/locale/advanced/image_processing/auto_examples/plot_greyscale_dilation.pot
+source_lang = en
+
+[scipy-lecture-notes-2015-3.advanced--image_processing--auto_examples--plot_histo_segmentation]
+file_filter = locale/<lang>/LC_MESSAGES/advanced/image_processing/auto_examples/plot_histo_segmentation.po
+source_file = build/locale/advanced/image_processing/auto_examples/plot_histo_segmentation.pot
+source_lang = en
+
+[scipy-lecture-notes-2015-3.advanced--image_processing--auto_examples--plot_interpolation_face]
+file_filter = locale/<lang>/LC_MESSAGES/advanced/image_processing/auto_examples/plot_interpolation_face.po
+source_file = build/locale/advanced/image_processing/auto_examples/plot_interpolation_face.pot
+source_lang = en
+
+[scipy-lecture-notes-2015-3.advanced--image_processing--auto_examples--plot_measure_data]
+file_filter = locale/<lang>/LC_MESSAGES/advanced/image_processing/auto_examples/plot_measure_data.po
+source_file = build/locale/advanced/image_processing/auto_examples/plot_measure_data.pot
+source_lang = en
+
+[scipy-lecture-notes-2015-3.advanced--image_processing--auto_examples--plot_numpy_array]
+file_filter = locale/<lang>/LC_MESSAGES/advanced/image_processing/auto_examples/plot_numpy_array.po
+source_file = build/locale/advanced/image_processing/auto_examples/plot_numpy_array.pot
+source_lang = en
+
+[scipy-lecture-notes-2015-3.advanced--image_processing--auto_examples--plot_propagation]
+file_filter = locale/<lang>/LC_MESSAGES/advanced/image_processing/auto_examples/plot_propagation.po
+source_file = build/locale/advanced/image_processing/auto_examples/plot_propagation.pot
+source_lang = en
+
+[scipy-lecture-notes-2015-3.advanced--image_processing--auto_examples--plot_radial_mean]
+file_filter = locale/<lang>/LC_MESSAGES/advanced/image_processing/auto_examples/plot_radial_mean.po
+source_file = build/locale/advanced/image_processing/auto_examples/plot_radial_mean.pot
+source_lang = en
+
+[scipy-lecture-notes-2015-3.advanced--image_processing--auto_examples--plot_sharpen]
+file_filter = locale/<lang>/LC_MESSAGES/advanced/image_processing/auto_examples/plot_sharpen.po
+source_file = build/locale/advanced/image_processing/auto_examples/plot_sharpen.pot
+source_lang = en
+
+[scipy-lecture-notes-2015-3.advanced--image_processing--auto_examples--plot_spectral_clustering]
+file_filter = locale/<lang>/LC_MESSAGES/advanced/image_processing/auto_examples/plot_spectral_clustering.po
+source_file = build/locale/advanced/image_processing/auto_examples/plot_spectral_clustering.pot
+source_lang = en
+
+[scipy-lecture-notes-2015-3.advanced--image_processing--auto_examples--plot_synthetic_data]
+file_filter = locale/<lang>/LC_MESSAGES/advanced/image_processing/auto_examples/plot_synthetic_data.po
+source_file = build/locale/advanced/image_processing/auto_examples/plot_synthetic_data.pot
+source_lang = en
+
+[scipy-lecture-notes-2015-3.advanced--image_processing--auto_examples--plot_watershed_segmentation]
+file_filter = locale/<lang>/LC_MESSAGES/advanced/image_processing/auto_examples/plot_watershed_segmentation.po
+source_file = build/locale/advanced/image_processing/auto_examples/plot_watershed_segmentation.pot
+source_lang = en
+
+[scipy-lecture-notes-2015-3.advanced--interfacing_with_c--interfacing_with_c]
+file_filter = locale/<lang>/LC_MESSAGES/advanced/interfacing_with_c/interfacing_with_c.po
+source_file = build/locale/advanced/interfacing_with_c/interfacing_with_c.pot
+source_lang = en
+
+[scipy-lecture-notes-2015-3.advanced--mathematical_optimization--index]
+file_filter = locale/<lang>/LC_MESSAGES/advanced/mathematical_optimization/index.po
+source_file = build/locale/advanced/mathematical_optimization/index.pot
+source_lang = en
+
+[scipy-lecture-notes-2015-3.advanced--mathematical_optimization--auto_examples--compare_optimizers]
+file_filter = locale/<lang>/LC_MESSAGES/advanced/mathematical_optimization/auto_examples/compare_optimizers.po
+source_file = build/locale/advanced/mathematical_optimization/auto_examples/compare_optimizers.pot
+source_lang = en
+
+[scipy-lecture-notes-2015-3.advanced--mathematical_optimization--auto_examples--compare_optimizers_plot]
+file_filter = locale/<lang>/LC_MESSAGES/advanced/mathematical_optimization/auto_examples/compare_optimizers_plot.po
+source_file = build/locale/advanced/mathematical_optimization/auto_examples/compare_optimizers_plot.pot
+source_lang = en
+
+[scipy-lecture-notes-2015-3.advanced--mathematical_optimization--auto_examples--cost_functions]
+file_filter = locale/<lang>/LC_MESSAGES/advanced/mathematical_optimization/auto_examples/cost_functions.po
+source_file = build/locale/advanced/mathematical_optimization/auto_examples/cost_functions.pot
+source_lang = en
+
+[scipy-lecture-notes-2015-3.advanced--mathematical_optimization--auto_examples--index]
+file_filter = locale/<lang>/LC_MESSAGES/advanced/mathematical_optimization/auto_examples/index.po
+source_file = build/locale/advanced/mathematical_optimization/auto_examples/index.pot
+source_lang = en
+
+[scipy-lecture-notes-2015-3.advanced--mathematical_optimization--auto_examples--plot_1d_optim]
+file_filter = locale/<lang>/LC_MESSAGES/advanced/mathematical_optimization/auto_examples/plot_1d_optim.po
+source_file = build/locale/advanced/mathematical_optimization/auto_examples/plot_1d_optim.pot
+source_lang = en
+
+[scipy-lecture-notes-2015-3.advanced--mathematical_optimization--auto_examples--plot_constraints]
+file_filter = locale/<lang>/LC_MESSAGES/advanced/mathematical_optimization/auto_examples/plot_constraints.po
+source_file = build/locale/advanced/mathematical_optimization/auto_examples/plot_constraints.pot
+source_lang = en
+
+[scipy-lecture-notes-2015-3.advanced--mathematical_optimization--auto_examples--plot_convex]
+file_filter = locale/<lang>/LC_MESSAGES/advanced/mathematical_optimization/auto_examples/plot_convex.po
+source_file = build/locale/advanced/mathematical_optimization/auto_examples/plot_convex.pot
+source_lang = en
+
+[scipy-lecture-notes-2015-3.advanced--mathematical_optimization--auto_examples--plot_curve_fit]
+file_filter = locale/<lang>/LC_MESSAGES/advanced/mathematical_optimization/auto_examples/plot_curve_fit.po
+source_file = build/locale/advanced/mathematical_optimization/auto_examples/plot_curve_fit.pot
+source_lang = en
+
+[scipy-lecture-notes-2015-3.advanced--mathematical_optimization--auto_examples--plot_exercise_flat_minimum]
+file_filter = locale/<lang>/LC_MESSAGES/advanced/mathematical_optimization/auto_examples/plot_exercise_flat_minimum.po
+source_file = build/locale/advanced/mathematical_optimization/auto_examples/plot_exercise_flat_minimum.pot
+source_lang = en
+
+[scipy-lecture-notes-2015-3.advanced--mathematical_optimization--auto_examples--plot_exercise_ill_conditioned]
+file_filter = locale/<lang>/LC_MESSAGES/advanced/mathematical_optimization/auto_examples/plot_exercise_ill_conditioned.po
+source_file = build/locale/advanced/mathematical_optimization/auto_examples/plot_exercise_ill_conditioned.pot
+source_lang = en
+
+[scipy-lecture-notes-2015-3.advanced--mathematical_optimization--auto_examples--plot_gradient_descent]
+file_filter = locale/<lang>/LC_MESSAGES/advanced/mathematical_optimization/auto_examples/plot_gradient_descent.po
+source_file = build/locale/advanced/mathematical_optimization/auto_examples/plot_gradient_descent.pot
+source_lang = en
+
+[scipy-lecture-notes-2015-3.advanced--mathematical_optimization--auto_examples--plot_noisy]
+file_filter = locale/<lang>/LC_MESSAGES/advanced/mathematical_optimization/auto_examples/plot_noisy.po
+source_file = build/locale/advanced/mathematical_optimization/auto_examples/plot_noisy.pot
+source_lang = en
+
+[scipy-lecture-notes-2015-3.advanced--mathematical_optimization--auto_examples--plot_non_bounds_constraints]
+file_filter = locale/<lang>/LC_MESSAGES/advanced/mathematical_optimization/auto_examples/plot_non_bounds_constraints.po
+source_file = build/locale/advanced/mathematical_optimization/auto_examples/plot_non_bounds_constraints.pot
+source_lang = en
+
+[scipy-lecture-notes-2015-3.advanced--mathematical_optimization--auto_examples--plot_smooth]
+file_filter = locale/<lang>/LC_MESSAGES/advanced/mathematical_optimization/auto_examples/plot_smooth.po
+source_file = build/locale/advanced/mathematical_optimization/auto_examples/plot_smooth.pot
+source_lang = en
+
+[scipy-lecture-notes-2015-3.advanced--optimizing--index]
+file_filter = locale/<lang>/LC_MESSAGES/advanced/optimizing/index.po
+source_file = build/locale/advanced/optimizing/index.pot
+source_lang = en
+
+[scipy-lecture-notes-2015-3.advanced--scipy_sparse--bsr_matrix]
+file_filter = locale/<lang>/LC_MESSAGES/advanced/scipy_sparse/bsr_matrix.po
+source_file = build/locale/advanced/scipy_sparse/bsr_matrix.pot
+source_lang = en
+
+[scipy-lecture-notes-2015-3.advanced--scipy_sparse--coo_matrix]
+file_filter = locale/<lang>/LC_MESSAGES/advanced/scipy_sparse/coo_matrix.po
+source_file = build/locale/advanced/scipy_sparse/coo_matrix.pot
+source_lang = en
+
+[scipy-lecture-notes-2015-3.advanced--scipy_sparse--csc_matrix]
+file_filter = locale/<lang>/LC_MESSAGES/advanced/scipy_sparse/csc_matrix.po
+source_file = build/locale/advanced/scipy_sparse/csc_matrix.pot
+source_lang = en
+
+[scipy-lecture-notes-2015-3.advanced--scipy_sparse--csr_matrix]
+file_filter = locale/<lang>/LC_MESSAGES/advanced/scipy_sparse/csr_matrix.po
+source_file = build/locale/advanced/scipy_sparse/csr_matrix.pot
+source_lang = en
+
+[scipy-lecture-notes-2015-3.advanced--scipy_sparse--dia_matrix]
+file_filter = locale/<lang>/LC_MESSAGES/advanced/scipy_sparse/dia_matrix.po
+source_file = build/locale/advanced/scipy_sparse/dia_matrix.pot
+source_lang = en
+
+[scipy-lecture-notes-2015-3.advanced--scipy_sparse--dok_matrix]
+file_filter = locale/<lang>/LC_MESSAGES/advanced/scipy_sparse/dok_matrix.po
+source_file = build/locale/advanced/scipy_sparse/dok_matrix.pot
+source_lang = en
+
+[scipy-lecture-notes-2015-3.advanced--scipy_sparse--index]
+file_filter = locale/<lang>/LC_MESSAGES/advanced/scipy_sparse/index.po
+source_file = build/locale/advanced/scipy_sparse/index.pot
+source_lang = en
+
+[scipy-lecture-notes-2015-3.advanced--scipy_sparse--introduction]
+file_filter = locale/<lang>/LC_MESSAGES/advanced/scipy_sparse/introduction.po
+source_file = build/locale/advanced/scipy_sparse/introduction.pot
+source_lang = en
+
+[scipy-lecture-notes-2015-3.advanced--scipy_sparse--lil_matrix]
+file_filter = locale/<lang>/LC_MESSAGES/advanced/scipy_sparse/lil_matrix.po
+source_file = build/locale/advanced/scipy_sparse/lil_matrix.pot
+source_lang = en
+
+[scipy-lecture-notes-2015-3.advanced--scipy_sparse--other_packages]
+file_filter = locale/<lang>/LC_MESSAGES/advanced/scipy_sparse/other_packages.po
+source_file = build/locale/advanced/scipy_sparse/other_packages.pot
+source_lang = en
+
+[scipy-lecture-notes-2015-3.advanced--scipy_sparse--solvers]
+file_filter = locale/<lang>/LC_MESSAGES/advanced/scipy_sparse/solvers.po
+source_file = build/locale/advanced/scipy_sparse/solvers.pot
+source_lang = en
+
+[scipy-lecture-notes-2015-3.advanced--scipy_sparse--storage_schemes]
+file_filter = locale/<lang>/LC_MESSAGES/advanced/scipy_sparse/storage_schemes.po
+source_file = build/locale/advanced/scipy_sparse/storage_schemes.pot
+source_lang = en
+
+[scipy-lecture-notes-2015-3.advanced--scipy_sparse--auto_examples--direct_solve]
+file_filter = locale/<lang>/LC_MESSAGES/advanced/scipy_sparse/auto_examples/direct_solve.po
+source_file = build/locale/advanced/scipy_sparse/auto_examples/direct_solve.pot
+source_lang = en
+
+[scipy-lecture-notes-2015-3.advanced--scipy_sparse--auto_examples--index]
+file_filter = locale/<lang>/LC_MESSAGES/advanced/scipy_sparse/auto_examples/index.po
+source_file = build/locale/advanced/scipy_sparse/auto_examples/index.pot
+source_lang = en
+
+[scipy-lecture-notes-2015-3.advanced--scipy_sparse--auto_examples--lobpcg_sakurai]
+file_filter = locale/<lang>/LC_MESSAGES/advanced/scipy_sparse/auto_examples/lobpcg_sakurai.po
+source_file = build/locale/advanced/scipy_sparse/auto_examples/lobpcg_sakurai.pot
+source_lang = en
+
+[scipy-lecture-notes-2015-3.advanced--scipy_sparse--auto_examples--pyamg_with_lobpcg]
+file_filter = locale/<lang>/LC_MESSAGES/advanced/scipy_sparse/auto_examples/pyamg_with_lobpcg.po
+source_file = build/locale/advanced/scipy_sparse/auto_examples/pyamg_with_lobpcg.pot
+source_lang = en
+
+[scipy-lecture-notes-2015-3.guide--index]
+file_filter = locale/<lang>/LC_MESSAGES/guide/index.po
+source_file = build/locale/guide/index.pot
+source_lang = en
+
+[scipy-lecture-notes-2015-3.guide--auto_examples--index]
+file_filter = locale/<lang>/LC_MESSAGES/guide/auto_examples/index.po
+source_file = build/locale/guide/auto_examples/index.pot
+source_lang = en
+
+[scipy-lecture-notes-2015-3.guide--auto_examples--plot_simple]
+file_filter = locale/<lang>/LC_MESSAGES/guide/auto_examples/plot_simple.po
+source_file = build/locale/guide/auto_examples/plot_simple.pot
+source_lang = en
+
+[scipy-lecture-notes-2015-3.includes--big_toc_css]
+file_filter = locale/<lang>/LC_MESSAGES/includes/big_toc_css.po
+source_file = build/locale/includes/big_toc_css.pot
+source_lang = en
+
+[scipy-lecture-notes-2015-3.includes--bigger_toc_css]
+file_filter = locale/<lang>/LC_MESSAGES/includes/bigger_toc_css.po
+source_file = build/locale/includes/bigger_toc_css.pot
+source_lang = en
+
+[scipy-lecture-notes-2015-3.intro--index]
+file_filter = locale/<lang>/LC_MESSAGES/intro/index.po
+source_file = build/locale/intro/index.pot
+source_lang = en
+
+[scipy-lecture-notes-2015-3.intro--intro]
+file_filter = locale/<lang>/LC_MESSAGES/intro/intro.po
+source_file = build/locale/intro/intro.pot
+source_lang = en
+
+[scipy-lecture-notes-2015-3.intro--scipy]
+file_filter = locale/<lang>/LC_MESSAGES/intro/scipy.po
+source_file = build/locale/intro/scipy.pot
+source_lang = en
+
+[scipy-lecture-notes-2015-3.intro--solutions]
+file_filter = locale/<lang>/LC_MESSAGES/intro/solutions.po
+source_file = build/locale/intro/solutions.pot
+source_lang = en
+
+[scipy-lecture-notes-2015-3.intro--help--help]
+file_filter = locale/<lang>/LC_MESSAGES/intro/help/help.po
+source_file = build/locale/intro/help/help.pot
+source_lang = en
+
+[scipy-lecture-notes-2015-3.intro--image_processing--image_processing]
+file_filter = locale/<lang>/LC_MESSAGES/intro/image_processing/image_processing.po
+source_file = build/locale/intro/image_processing/image_processing.pot
+source_lang = en
+
+[scipy-lecture-notes-2015-3.intro--language--basic_types]
+file_filter = locale/<lang>/LC_MESSAGES/intro/language/basic_types.po
+source_file = build/locale/intro/language/basic_types.pot
+source_lang = en
+
+[scipy-lecture-notes-2015-3.intro--language--control_flow]
+file_filter = locale/<lang>/LC_MESSAGES/intro/language/control_flow.po
+source_file = build/locale/intro/language/control_flow.pot
+source_lang = en
+
+[scipy-lecture-notes-2015-3.intro--language--exceptions]
+file_filter = locale/<lang>/LC_MESSAGES/intro/language/exceptions.po
+source_file = build/locale/intro/language/exceptions.pot
+source_lang = en
+
+[scipy-lecture-notes-2015-3.intro--language--first_steps]
+file_filter = locale/<lang>/LC_MESSAGES/intro/language/first_steps.po
+source_file = build/locale/intro/language/first_steps.pot
+source_lang = en
+
+[scipy-lecture-notes-2015-3.intro--language--functions]
+file_filter = locale/<lang>/LC_MESSAGES/intro/language/functions.po
+source_file = build/locale/intro/language/functions.pot
+source_lang = en
+
+[scipy-lecture-notes-2015-3.intro--language--io]
+file_filter = locale/<lang>/LC_MESSAGES/intro/language/io.po
+source_file = build/locale/intro/language/io.pot
+source_lang = en
+
+[scipy-lecture-notes-2015-3.intro--language--oop]
+file_filter = locale/<lang>/LC_MESSAGES/intro/language/oop.po
+source_file = build/locale/intro/language/oop.pot
+source_lang = en
+
+[scipy-lecture-notes-2015-3.intro--language--python_language]
+file_filter = locale/<lang>/LC_MESSAGES/intro/language/python_language.po
+source_file = build/locale/intro/language/python_language.pot
+source_lang = en
+
+[scipy-lecture-notes-2015-3.intro--language--reusing_code]
+file_filter = locale/<lang>/LC_MESSAGES/intro/language/reusing_code.po
+source_file = build/locale/intro/language/reusing_code.pot
+source_lang = en
+
+[scipy-lecture-notes-2015-3.intro--language--standard_library]
+file_filter = locale/<lang>/LC_MESSAGES/intro/language/standard_library.po
+source_file = build/locale/intro/language/standard_library.pot
+source_lang = en
+
+[scipy-lecture-notes-2015-3.intro--matplotlib--matplotlib]
+file_filter = locale/<lang>/LC_MESSAGES/intro/matplotlib/matplotlib.po
+source_file = build/locale/intro/matplotlib/matplotlib.pot
+source_lang = en
+
+[scipy-lecture-notes-2015-3.intro--matplotlib--auto_examples--index]
+file_filter = locale/<lang>/LC_MESSAGES/intro/matplotlib/auto_examples/index.po
+source_file = build/locale/intro/matplotlib/auto_examples/index.pot
+source_lang = en
+
+[scipy-lecture-notes-2015-3.intro--matplotlib--auto_examples--plot_aliased]
+file_filter = locale/<lang>/LC_MESSAGES/intro/matplotlib/auto_examples/plot_aliased.po
+source_file = build/locale/intro/matplotlib/auto_examples/plot_aliased.pot
+source_lang = en
+
+[scipy-lecture-notes-2015-3.intro--matplotlib--auto_examples--plot_alpha]
+file_filter = locale/<lang>/LC_MESSAGES/intro/matplotlib/auto_examples/plot_alpha.po
+source_file = build/locale/intro/matplotlib/auto_examples/plot_alpha.pot
+source_lang = en
+
+[scipy-lecture-notes-2015-3.intro--matplotlib--auto_examples--plot_antialiased]
+file_filter = locale/<lang>/LC_MESSAGES/intro/matplotlib/auto_examples/plot_antialiased.po
+source_file = build/locale/intro/matplotlib/auto_examples/plot_antialiased.pot
+source_lang = en
+
+[scipy-lecture-notes-2015-3.intro--matplotlib--auto_examples--plot_axes-2]
+file_filter = locale/<lang>/LC_MESSAGES/intro/matplotlib/auto_examples/plot_axes-2.po
+source_file = build/locale/intro/matplotlib/auto_examples/plot_axes-2.pot
+source_lang = en
+
+[scipy-lecture-notes-2015-3.intro--matplotlib--auto_examples--plot_axes]
+file_filter = locale/<lang>/LC_MESSAGES/intro/matplotlib/auto_examples/plot_axes.po
+source_file = build/locale/intro/matplotlib/auto_examples/plot_axes.pot
+source_lang = en
+
+[scipy-lecture-notes-2015-3.intro--matplotlib--auto_examples--plot_bad]
+file_filter = locale/<lang>/LC_MESSAGES/intro/matplotlib/auto_examples/plot_bad.po
+source_file = build/locale/intro/matplotlib/auto_examples/plot_bad.pot
+source_lang = en
+
+[scipy-lecture-notes-2015-3.intro--matplotlib--auto_examples--plot_bar]
+file_filter = locale/<lang>/LC_MESSAGES/intro/matplotlib/auto_examples/plot_bar.po
+source_file = build/locale/intro/matplotlib/auto_examples/plot_bar.pot
+source_lang = en
+
+[scipy-lecture-notes-2015-3.intro--matplotlib--auto_examples--plot_bar_ex]
+file_filter = locale/<lang>/LC_MESSAGES/intro/matplotlib/auto_examples/plot_bar_ex.po
+source_file = build/locale/intro/matplotlib/auto_examples/plot_bar_ex.pot
+source_lang = en
+
+[scipy-lecture-notes-2015-3.intro--matplotlib--auto_examples--plot_boxplot]
+file_filter = locale/<lang>/LC_MESSAGES/intro/matplotlib/auto_examples/plot_boxplot.po
+source_file = build/locale/intro/matplotlib/auto_examples/plot_boxplot.pot
+source_lang = en
+
+[scipy-lecture-notes-2015-3.intro--matplotlib--auto_examples--plot_color]
+file_filter = locale/<lang>/LC_MESSAGES/intro/matplotlib/auto_examples/plot_color.po
+source_file = build/locale/intro/matplotlib/auto_examples/plot_color.pot
+source_lang = en
+
+[scipy-lecture-notes-2015-3.intro--matplotlib--auto_examples--plot_colormaps]
+file_filter = locale/<lang>/LC_MESSAGES/intro/matplotlib/auto_examples/plot_colormaps.po
+source_file = build/locale/intro/matplotlib/auto_examples/plot_colormaps.pot
+source_lang = en
+
+[scipy-lecture-notes-2015-3.intro--matplotlib--auto_examples--plot_contour]
+file_filter = locale/<lang>/LC_MESSAGES/intro/matplotlib/auto_examples/plot_contour.po
+source_file = build/locale/intro/matplotlib/auto_examples/plot_contour.pot
+source_lang = en
+
+[scipy-lecture-notes-2015-3.intro--matplotlib--auto_examples--plot_contour_ex]
+file_filter = locale/<lang>/LC_MESSAGES/intro/matplotlib/auto_examples/plot_contour_ex.po
+source_file = build/locale/intro/matplotlib/auto_examples/plot_contour_ex.pot
+source_lang = en
+
+[scipy-lecture-notes-2015-3.intro--matplotlib--auto_examples--plot_dash_capstyle]
+file_filter = locale/<lang>/LC_MESSAGES/intro/matplotlib/auto_examples/plot_dash_capstyle.po
+source_file = build/locale/intro/matplotlib/auto_examples/plot_dash_capstyle.pot
+source_lang = en
+
+[scipy-lecture-notes-2015-3.intro--matplotlib--auto_examples--plot_dash_joinstyle]
+file_filter = locale/<lang>/LC_MESSAGES/intro/matplotlib/auto_examples/plot_dash_joinstyle.po
+source_file = build/locale/intro/matplotlib/auto_examples/plot_dash_joinstyle.pot
+source_lang = en
+
+[scipy-lecture-notes-2015-3.intro--matplotlib--auto_examples--plot_exercice_1]
+file_filter = locale/<lang>/LC_MESSAGES/intro/matplotlib/auto_examples/plot_exercice_1.po
+source_file = build/locale/intro/matplotlib/auto_examples/plot_exercice_1.pot
+source_lang = en
+
+[scipy-lecture-notes-2015-3.intro--matplotlib--auto_examples--plot_exercice_10]
+file_filter = locale/<lang>/LC_MESSAGES/intro/matplotlib/auto_examples/plot_exercice_10.po
+source_file = build/locale/intro/matplotlib/auto_examples/plot_exercice_10.pot
+source_lang = en
+
+[scipy-lecture-notes-2015-3.intro--matplotlib--auto_examples--plot_exercice_2]
+file_filter = locale/<lang>/LC_MESSAGES/intro/matplotlib/auto_examples/plot_exercice_2.po
+source_file = build/locale/intro/matplotlib/auto_examples/plot_exercice_2.pot
+source_lang = en
+
+[scipy-lecture-notes-2015-3.intro--matplotlib--auto_examples--plot_exercice_3]
+file_filter = locale/<lang>/LC_MESSAGES/intro/matplotlib/auto_examples/plot_exercice_3.po
+source_file = build/locale/intro/matplotlib/auto_examples/plot_exercice_3.pot
+source_lang = en
+
+[scipy-lecture-notes-2015-3.intro--matplotlib--auto_examples--plot_exercice_4]
+file_filter = locale/<lang>/LC_MESSAGES/intro/matplotlib/auto_examples/plot_exercice_4.po
+source_file = build/locale/intro/matplotlib/auto_examples/plot_exercice_4.pot
+source_lang = en
+
+[scipy-lecture-notes-2015-3.intro--matplotlib--auto_examples--plot_exercice_5]
+file_filter = locale/<lang>/LC_MESSAGES/intro/matplotlib/auto_examples/plot_exercice_5.po
+source_file = build/locale/intro/matplotlib/auto_examples/plot_exercice_5.pot
+source_lang = en
+
+[scipy-lecture-notes-2015-3.intro--matplotlib--auto_examples--plot_exercice_6]
+file_filter = locale/<lang>/LC_MESSAGES/intro/matplotlib/auto_examples/plot_exercice_6.po
+source_file = build/locale/intro/matplotlib/auto_examples/plot_exercice_6.pot
+source_lang = en
+
+[scipy-lecture-notes-2015-3.intro--matplotlib--auto_examples--plot_exercice_7]
+file_filter = locale/<lang>/LC_MESSAGES/intro/matplotlib/auto_examples/plot_exercice_7.po
+source_file = build/locale/intro/matplotlib/auto_examples/plot_exercice_7.pot
+source_lang = en
+
+[scipy-lecture-notes-2015-3.intro--matplotlib--auto_examples--plot_exercice_8]
+file_filter = locale/<lang>/LC_MESSAGES/intro/matplotlib/auto_examples/plot_exercice_8.po
+source_file = build/locale/intro/matplotlib/auto_examples/plot_exercice_8.pot
+source_lang = en
+
+[scipy-lecture-notes-2015-3.intro--matplotlib--auto_examples--plot_exercice_9]
+file_filter = locale/<lang>/LC_MESSAGES/intro/matplotlib/auto_examples/plot_exercice_9.po
+source_file = build/locale/intro/matplotlib/auto_examples/plot_exercice_9.pot
+source_lang = en
+
+[scipy-lecture-notes-2015-3.intro--matplotlib--auto_examples--plot_good]
+file_filter = locale/<lang>/LC_MESSAGES/intro/matplotlib/auto_examples/plot_good.po
+source_file = build/locale/intro/matplotlib/auto_examples/plot_good.pot
+source_lang = en
+
+[scipy-lecture-notes-2015-3.intro--matplotlib--auto_examples--plot_grid]
+file_filter = locale/<lang>/LC_MESSAGES/intro/matplotlib/auto_examples/plot_grid.po
+source_file = build/locale/intro/matplotlib/auto_examples/plot_grid.pot
+source_lang = en
+
+[scipy-lecture-notes-2015-3.intro--matplotlib--auto_examples--plot_grid_ex]
+file_filter = locale/<lang>/LC_MESSAGES/intro/matplotlib/auto_examples/plot_grid_ex.po
+source_file = build/locale/intro/matplotlib/auto_examples/plot_grid_ex.pot
+source_lang = en
+
+[scipy-lecture-notes-2015-3.intro--matplotlib--auto_examples--plot_gridspec]
+file_filter = locale/<lang>/LC_MESSAGES/intro/matplotlib/auto_examples/plot_gridspec.po
+source_file = build/locale/intro/matplotlib/auto_examples/plot_gridspec.pot
+source_lang = en
+
+[scipy-lecture-notes-2015-3.intro--matplotlib--auto_examples--plot_imshow]
+file_filter = locale/<lang>/LC_MESSAGES/intro/matplotlib/auto_examples/plot_imshow.po
+source_file = build/locale/intro/matplotlib/auto_examples/plot_imshow.pot
+source_lang = en
+
+[scipy-lecture-notes-2015-3.intro--matplotlib--auto_examples--plot_imshow_ex]
+file_filter = locale/<lang>/LC_MESSAGES/intro/matplotlib/auto_examples/plot_imshow_ex.po
+source_file = build/locale/intro/matplotlib/auto_examples/plot_imshow_ex.pot
+source_lang = en
+
+[scipy-lecture-notes-2015-3.intro--matplotlib--auto_examples--plot_linestyles]
+file_filter = locale/<lang>/LC_MESSAGES/intro/matplotlib/auto_examples/plot_linestyles.po
+source_file = build/locale/intro/matplotlib/auto_examples/plot_linestyles.pot
+source_lang = en
+
+[scipy-lecture-notes-2015-3.intro--matplotlib--auto_examples--plot_linewidth]
+file_filter = locale/<lang>/LC_MESSAGES/intro/matplotlib/auto_examples/plot_linewidth.po
+source_file = build/locale/intro/matplotlib/auto_examples/plot_linewidth.pot
+source_lang = en
+
+[scipy-lecture-notes-2015-3.intro--matplotlib--auto_examples--plot_markers]
+file_filter = locale/<lang>/LC_MESSAGES/intro/matplotlib/auto_examples/plot_markers.po
+source_file = build/locale/intro/matplotlib/auto_examples/plot_markers.pot
+source_lang = en
+
+[scipy-lecture-notes-2015-3.intro--matplotlib--auto_examples--plot_mec]
+file_filter = locale/<lang>/LC_MESSAGES/intro/matplotlib/auto_examples/plot_mec.po
+source_file = build/locale/intro/matplotlib/auto_examples/plot_mec.pot
+source_lang = en
+
+[scipy-lecture-notes-2015-3.intro--matplotlib--auto_examples--plot_mew]
+file_filter = locale/<lang>/LC_MESSAGES/intro/matplotlib/auto_examples/plot_mew.po
+source_file = build/locale/intro/matplotlib/auto_examples/plot_mew.pot
+source_lang = en
+
+[scipy-lecture-notes-2015-3.intro--matplotlib--auto_examples--plot_mfc]
+file_filter = locale/<lang>/LC_MESSAGES/intro/matplotlib/auto_examples/plot_mfc.po
+source_file = build/locale/intro/matplotlib/auto_examples/plot_mfc.pot
+source_lang = en
+
+[scipy-lecture-notes-2015-3.intro--matplotlib--auto_examples--plot_ms]
+file_filter = locale/<lang>/LC_MESSAGES/intro/matplotlib/auto_examples/plot_ms.po
+source_file = build/locale/intro/matplotlib/auto_examples/plot_ms.pot
+source_lang = en
+
+[scipy-lecture-notes-2015-3.intro--matplotlib--auto_examples--plot_multiplot]
+file_filter = locale/<lang>/LC_MESSAGES/intro/matplotlib/auto_examples/plot_multiplot.po
+source_file = build/locale/intro/matplotlib/auto_examples/plot_multiplot.pot
+source_lang = en
+
+[scipy-lecture-notes-2015-3.intro--matplotlib--auto_examples--plot_multiplot_ex]
+file_filter = locale/<lang>/LC_MESSAGES/intro/matplotlib/auto_examples/plot_multiplot_ex.po
+source_file = build/locale/intro/matplotlib/auto_examples/plot_multiplot_ex.pot
+source_lang = en
+
+[scipy-lecture-notes-2015-3.intro--matplotlib--auto_examples--plot_pie]
+file_filter = locale/<lang>/LC_MESSAGES/intro/matplotlib/auto_examples/plot_pie.po
+source_file = build/locale/intro/matplotlib/auto_examples/plot_pie.pot
+source_lang = en
+
+[scipy-lecture-notes-2015-3.intro--matplotlib--auto_examples--plot_pie_ex]
+file_filter = locale/<lang>/LC_MESSAGES/intro/matplotlib/auto_examples/plot_pie_ex.po
+source_file = build/locale/intro/matplotlib/auto_examples/plot_pie_ex.pot
+source_lang = en
+
+[scipy-lecture-notes-2015-3.intro--matplotlib--auto_examples--plot_plot]
+file_filter = locale/<lang>/LC_MESSAGES/intro/matplotlib/auto_examples/plot_plot.po
+source_file = build/locale/intro/matplotlib/auto_examples/plot_plot.pot
+source_lang = en
+
+[scipy-lecture-notes-2015-3.intro--matplotlib--auto_examples--plot_plot3d-2]
+file_filter = locale/<lang>/LC_MESSAGES/intro/matplotlib/auto_examples/plot_plot3d-2.po
+source_file = build/locale/intro/matplotlib/auto_examples/plot_plot3d-2.pot
+source_lang = en
+
+[scipy-lecture-notes-2015-3.intro--matplotlib--auto_examples--plot_plot3d]
+file_filter = locale/<lang>/LC_MESSAGES/intro/matplotlib/auto_examples/plot_plot3d.po
+source_file = build/locale/intro/matplotlib/auto_examples/plot_plot3d.pot
+source_lang = en
+
+[scipy-lecture-notes-2015-3.intro--matplotlib--auto_examples--plot_plot3d_ex]
+file_filter = locale/<lang>/LC_MESSAGES/intro/matplotlib/auto_examples/plot_plot3d_ex.po
+source_file = build/locale/intro/matplotlib/auto_examples/plot_plot3d_ex.pot
+source_lang = en
+
+[scipy-lecture-notes-2015-3.intro--matplotlib--auto_examples--plot_plot_ex]
+file_filter = locale/<lang>/LC_MESSAGES/intro/matplotlib/auto_examples/plot_plot_ex.po
+source_file = build/locale/intro/matplotlib/auto_examples/plot_plot_ex.pot
+source_lang = en
+
+[scipy-lecture-notes-2015-3.intro--matplotlib--auto_examples--plot_polar]
+file_filter = locale/<lang>/LC_MESSAGES/intro/matplotlib/auto_examples/plot_polar.po
+source_file = build/locale/intro/matplotlib/auto_examples/plot_polar.pot
+source_lang = en
+
+[scipy-lecture-notes-2015-3.intro--matplotlib--auto_examples--plot_polar_ex]
+file_filter = locale/<lang>/LC_MESSAGES/intro/matplotlib/auto_examples/plot_polar_ex.po
+source_file = build/locale/intro/matplotlib/auto_examples/plot_polar_ex.pot
+source_lang = en
+
+[scipy-lecture-notes-2015-3.intro--matplotlib--auto_examples--plot_quiver]
+file_filter = locale/<lang>/LC_MESSAGES/intro/matplotlib/auto_examples/plot_quiver.po
+source_file = build/locale/intro/matplotlib/auto_examples/plot_quiver.pot
+source_lang = en
+
+[scipy-lecture-notes-2015-3.intro--matplotlib--auto_examples--plot_quiver_ex]
+file_filter = locale/<lang>/LC_MESSAGES/intro/matplotlib/auto_examples/plot_quiver_ex.po
+source_file = build/locale/intro/matplotlib/auto_examples/plot_quiver_ex.pot
+source_lang = en
+
+[scipy-lecture-notes-2015-3.intro--matplotlib--auto_examples--plot_scatter]
+file_filter = locale/<lang>/LC_MESSAGES/intro/matplotlib/auto_examples/plot_scatter.po
+source_file = build/locale/intro/matplotlib/auto_examples/plot_scatter.pot
+source_lang = en
+
+[scipy-lecture-notes-2015-3.intro--matplotlib--auto_examples--plot_scatter_ex]
+file_filter = locale/<lang>/LC_MESSAGES/intro/matplotlib/auto_examples/plot_scatter_ex.po
+source_file = build/locale/intro/matplotlib/auto_examples/plot_scatter_ex.pot
+source_lang = en
+
+[scipy-lecture-notes-2015-3.intro--matplotlib--auto_examples--plot_solid_capstyle]
+file_filter = locale/<lang>/LC_MESSAGES/intro/matplotlib/auto_examples/plot_solid_capstyle.po
+source_file = build/locale/intro/matplotlib/auto_examples/plot_solid_capstyle.pot
+source_lang = en
+
+[scipy-lecture-notes-2015-3.intro--matplotlib--auto_examples--plot_solid_joinstyle]
+file_filter = locale/<lang>/LC_MESSAGES/intro/matplotlib/auto_examples/plot_solid_joinstyle.po
+source_file = build/locale/intro/matplotlib/auto_examples/plot_solid_joinstyle.pot
+source_lang = en
+
+[scipy-lecture-notes-2015-3.intro--matplotlib--auto_examples--plot_subplot-grid]
+file_filter = locale/<lang>/LC_MESSAGES/intro/matplotlib/auto_examples/plot_subplot-grid.po
+source_file = build/locale/intro/matplotlib/auto_examples/plot_subplot-grid.pot
+source_lang = en
+
+[scipy-lecture-notes-2015-3.intro--matplotlib--auto_examples--plot_subplot-horizontal]
+file_filter = locale/<lang>/LC_MESSAGES/intro/matplotlib/auto_examples/plot_subplot-horizontal.po
+source_file = build/locale/intro/matplotlib/auto_examples/plot_subplot-horizontal.pot
+source_lang = en
+
+[scipy-lecture-notes-2015-3.intro--matplotlib--auto_examples--plot_subplot-vertical]
+file_filter = locale/<lang>/LC_MESSAGES/intro/matplotlib/auto_examples/plot_subplot-vertical.po
+source_file = build/locale/intro/matplotlib/auto_examples/plot_subplot-vertical.pot
+source_lang = en
+
+[scipy-lecture-notes-2015-3.intro--matplotlib--auto_examples--plot_text]
+file_filter = locale/<lang>/LC_MESSAGES/intro/matplotlib/auto_examples/plot_text.po
+source_file = build/locale/intro/matplotlib/auto_examples/plot_text.pot
+source_lang = en
+
+[scipy-lecture-notes-2015-3.intro--matplotlib--auto_examples--plot_text_ex]
+file_filter = locale/<lang>/LC_MESSAGES/intro/matplotlib/auto_examples/plot_text_ex.po
+source_file = build/locale/intro/matplotlib/auto_examples/plot_text_ex.pot
+source_lang = en
+
+[scipy-lecture-notes-2015-3.intro--matplotlib--auto_examples--plot_ticks]
+file_filter = locale/<lang>/LC_MESSAGES/intro/matplotlib/auto_examples/plot_ticks.po
+source_file = build/locale/intro/matplotlib/auto_examples/plot_ticks.pot
+source_lang = en
+
+[scipy-lecture-notes-2015-3.intro--matplotlib--auto_examples--plot_ugly]
+file_filter = locale/<lang>/LC_MESSAGES/intro/matplotlib/auto_examples/plot_ugly.po
+source_file = build/locale/intro/matplotlib/auto_examples/plot_ugly.pot
+source_lang = en
+
+[scipy-lecture-notes-2015-3.intro--numpy--advanced_operations]
+file_filter = locale/<lang>/LC_MESSAGES/intro/numpy/advanced_operations.po
+source_file = build/locale/intro/numpy/advanced_operations.pot
+source_lang = en
+
+[scipy-lecture-notes-2015-3.intro--numpy--array_object]
+file_filter = locale/<lang>/LC_MESSAGES/intro/numpy/array_object.po
+source_file = build/locale/intro/numpy/array_object.pot
+source_lang = en
+
+[scipy-lecture-notes-2015-3.intro--numpy--elaborate_arrays]
+file_filter = locale/<lang>/LC_MESSAGES/intro/numpy/elaborate_arrays.po
+source_file = build/locale/intro/numpy/elaborate_arrays.pot
+source_lang = en
+
+[scipy-lecture-notes-2015-3.intro--numpy--exercises]
+file_filter = locale/<lang>/LC_MESSAGES/intro/numpy/exercises.po
+source_file = build/locale/intro/numpy/exercises.pot
+source_lang = en
+
+[scipy-lecture-notes-2015-3.intro--numpy--index]
+file_filter = locale/<lang>/LC_MESSAGES/intro/numpy/index.po
+source_file = build/locale/intro/numpy/index.pot
+source_lang = en
+
+[scipy-lecture-notes-2015-3.intro--numpy--operations]
+file_filter = locale/<lang>/LC_MESSAGES/intro/numpy/operations.po
+source_file = build/locale/intro/numpy/operations.pot
+source_lang = en
+
+[scipy-lecture-notes-2015-3.intro--summary-exercises--answers_image_processing]
+file_filter = locale/<lang>/LC_MESSAGES/intro/summary-exercises/answers_image_processing.po
+source_file = build/locale/intro/summary-exercises/answers_image_processing.pot
+source_lang = en
+
+[scipy-lecture-notes-2015-3.intro--summary-exercises--image-processing]
+file_filter = locale/<lang>/LC_MESSAGES/intro/summary-exercises/image-processing.po
+source_file = build/locale/intro/summary-exercises/image-processing.pot
+source_lang = en
+
+[scipy-lecture-notes-2015-3.intro--summary-exercises--optimize-fit]
+file_filter = locale/<lang>/LC_MESSAGES/intro/summary-exercises/optimize-fit.po
+source_file = build/locale/intro/summary-exercises/optimize-fit.pot
+source_lang = en
+
+[scipy-lecture-notes-2015-3.intro--summary-exercises--stats-interpolate]
+file_filter = locale/<lang>/LC_MESSAGES/intro/summary-exercises/stats-interpolate.po
+source_file = build/locale/intro/summary-exercises/stats-interpolate.pot
+source_lang = en
+
+[scipy-lecture-notes-2015-3.intro--summary-exercises--auto_examples--index]
+file_filter = locale/<lang>/LC_MESSAGES/intro/summary-exercises/auto_examples/index.po
+source_file = build/locale/intro/summary-exercises/auto_examples/index.pot
+source_lang = en
+
+[scipy-lecture-notes-2015-3.intro--summary-exercises--examples--README]
+file_filter = locale/<lang>/LC_MESSAGES/intro/summary-exercises/examples/README.po
+source_file = build/locale/intro/summary-exercises/examples/README.pot
+source_lang = en
+
+[scipy-lecture-notes-2015-3.packages--index]
+file_filter = locale/<lang>/LC_MESSAGES/packages/index.po
+source_file = build/locale/packages/index.pot
+source_lang = en
+
+[scipy-lecture-notes-2015-3.packages--sympy]
+file_filter = locale/<lang>/LC_MESSAGES/packages/sympy.po
+source_file = build/locale/packages/sympy.pot
+source_lang = en
+
+[scipy-lecture-notes-2015-3.packages--3d_plotting--index]
+file_filter = locale/<lang>/LC_MESSAGES/packages/3d_plotting/index.po
+source_file = build/locale/packages/3d_plotting/index.pot
+source_lang = en
+
+[scipy-lecture-notes-2015-3.packages--3d_plotting--interaction]
+file_filter = locale/<lang>/LC_MESSAGES/packages/3d_plotting/interaction.po
+source_file = build/locale/packages/3d_plotting/interaction.pot
+source_lang = en
+
+[scipy-lecture-notes-2015-3.packages--3d_plotting--mlab_scripting_interface]
+file_filter = locale/<lang>/LC_MESSAGES/packages/3d_plotting/mlab_scripting_interface.po
+source_file = build/locale/packages/3d_plotting/mlab_scripting_interface.pot
+source_lang = en
+
+[scipy-lecture-notes-2015-3.packages--3d_plotting--auto_examples--animate_data]
+file_filter = locale/<lang>/LC_MESSAGES/packages/3d_plotting/auto_examples/animate_data.po
+source_file = build/locale/packages/3d_plotting/auto_examples/animate_data.pot
+source_lang = en
+
+[scipy-lecture-notes-2015-3.packages--3d_plotting--auto_examples--coil_application]
+file_filter = locale/<lang>/LC_MESSAGES/packages/3d_plotting/auto_examples/coil_application.po
+source_file = build/locale/packages/3d_plotting/auto_examples/coil_application.pot
+source_lang = en
+
+[scipy-lecture-notes-2015-3.packages--3d_plotting--auto_examples--compute_field]
+file_filter = locale/<lang>/LC_MESSAGES/packages/3d_plotting/auto_examples/compute_field.po
+source_file = build/locale/packages/3d_plotting/auto_examples/compute_field.pot
+source_lang = en
+
+[scipy-lecture-notes-2015-3.packages--3d_plotting--auto_examples--generate_figures]
+file_filter = locale/<lang>/LC_MESSAGES/packages/3d_plotting/auto_examples/generate_figures.po
+source_file = build/locale/packages/3d_plotting/auto_examples/generate_figures.pot
+source_lang = en
+
+[scipy-lecture-notes-2015-3.packages--3d_plotting--auto_examples--index]
+file_filter = locale/<lang>/LC_MESSAGES/packages/3d_plotting/auto_examples/index.po
+source_file = build/locale/packages/3d_plotting/auto_examples/index.pot
+source_lang = en
+
+[scipy-lecture-notes-2015-3.packages--3d_plotting--auto_examples--mlab_dialog]
+file_filter = locale/<lang>/LC_MESSAGES/packages/3d_plotting/auto_examples/mlab_dialog.po
+source_file = build/locale/packages/3d_plotting/auto_examples/mlab_dialog.pot
+source_lang = en
+
+[scipy-lecture-notes-2015-3.packages--3d_plotting--auto_examples--mlab_interactive_dialog]
+file_filter = locale/<lang>/LC_MESSAGES/packages/3d_plotting/auto_examples/mlab_interactive_dialog.po
+source_file = build/locale/packages/3d_plotting/auto_examples/mlab_interactive_dialog.pot
+source_lang = en
+
+[scipy-lecture-notes-2015-3.packages--3d_plotting--auto_examples--simple_example]
+file_filter = locale/<lang>/LC_MESSAGES/packages/3d_plotting/auto_examples/simple_example.po
+source_file = build/locale/packages/3d_plotting/auto_examples/simple_example.pot
+source_lang = en
+
+[scipy-lecture-notes-2015-3.packages--3d_plotting--auto_examples--visualize_field]
+file_filter = locale/<lang>/LC_MESSAGES/packages/3d_plotting/auto_examples/visualize_field.po
+source_file = build/locale/packages/3d_plotting/auto_examples/visualize_field.pot
+source_lang = en
+
+[scipy-lecture-notes-2015-3.packages--3d_plotting--auto_examples--viz_volume_structure]
+file_filter = locale/<lang>/LC_MESSAGES/packages/3d_plotting/auto_examples/viz_volume_structure.po
+source_file = build/locale/packages/3d_plotting/auto_examples/viz_volume_structure.pot
+source_lang = en
+
+[scipy-lecture-notes-2015-3.packages--3d_plotting--auto_examples--viz_volume_unstructure]
+file_filter = locale/<lang>/LC_MESSAGES/packages/3d_plotting/auto_examples/viz_volume_unstructure.po
+source_file = build/locale/packages/3d_plotting/auto_examples/viz_volume_unstructure.pot
+source_lang = en
+
+[scipy-lecture-notes-2015-3.packages--scikit-image--index]
+file_filter = locale/<lang>/LC_MESSAGES/packages/scikit-image/index.po
+source_file = build/locale/packages/scikit-image/index.pot
+source_lang = en
+
+[scipy-lecture-notes-2015-3.packages--scikit-image--auto_examples--index]
+file_filter = locale/<lang>/LC_MESSAGES/packages/scikit-image/auto_examples/index.po
+source_file = build/locale/packages/scikit-image/auto_examples/index.pot
+source_lang = en
+
+[scipy-lecture-notes-2015-3.packages--scikit-image--auto_examples--plot_boundaries]
+file_filter = locale/<lang>/LC_MESSAGES/packages/scikit-image/auto_examples/plot_boundaries.po
+source_file = build/locale/packages/scikit-image/auto_examples/plot_boundaries.pot
+source_lang = en
+
+[scipy-lecture-notes-2015-3.packages--scikit-image--auto_examples--plot_camera]
+file_filter = locale/<lang>/LC_MESSAGES/packages/scikit-image/auto_examples/plot_camera.po
+source_file = build/locale/packages/scikit-image/auto_examples/plot_camera.pot
+source_lang = en
+
+[scipy-lecture-notes-2015-3.packages--scikit-image--auto_examples--plot_camera_uint]
+file_filter = locale/<lang>/LC_MESSAGES/packages/scikit-image/auto_examples/plot_camera_uint.po
+source_file = build/locale/packages/scikit-image/auto_examples/plot_camera_uint.pot
+source_lang = en
+
+[scipy-lecture-notes-2015-3.packages--scikit-image--auto_examples--plot_check]
+file_filter = locale/<lang>/LC_MESSAGES/packages/scikit-image/auto_examples/plot_check.po
+source_file = build/locale/packages/scikit-image/auto_examples/plot_check.pot
+source_lang = en
+
+[scipy-lecture-notes-2015-3.packages--scikit-image--auto_examples--plot_equalize_hist]
+file_filter = locale/<lang>/LC_MESSAGES/packages/scikit-image/auto_examples/plot_equalize_hist.po
+source_file = build/locale/packages/scikit-image/auto_examples/plot_equalize_hist.pot
+source_lang = en
+
+[scipy-lecture-notes-2015-3.packages--scikit-image--auto_examples--plot_features]
+file_filter = locale/<lang>/LC_MESSAGES/packages/scikit-image/auto_examples/plot_features.po
+source_file = build/locale/packages/scikit-image/auto_examples/plot_features.pot
+source_lang = en
+
+[scipy-lecture-notes-2015-3.packages--scikit-image--auto_examples--plot_filter_coins]
+file_filter = locale/<lang>/LC_MESSAGES/packages/scikit-image/auto_examples/plot_filter_coins.po
+source_file = build/locale/packages/scikit-image/auto_examples/plot_filter_coins.pot
+source_lang = en
+
+[scipy-lecture-notes-2015-3.packages--scikit-image--auto_examples--plot_labels]
+file_filter = locale/<lang>/LC_MESSAGES/packages/scikit-image/auto_examples/plot_labels.po
+source_file = build/locale/packages/scikit-image/auto_examples/plot_labels.pot
+source_lang = en
+
+[scipy-lecture-notes-2015-3.packages--scikit-image--auto_examples--plot_segmentations]
+file_filter = locale/<lang>/LC_MESSAGES/packages/scikit-image/auto_examples/plot_segmentations.po
+source_file = build/locale/packages/scikit-image/auto_examples/plot_segmentations.pot
+source_lang = en
+
+[scipy-lecture-notes-2015-3.packages--scikit-image--auto_examples--plot_sobel]
+file_filter = locale/<lang>/LC_MESSAGES/packages/scikit-image/auto_examples/plot_sobel.po
+source_file = build/locale/packages/scikit-image/auto_examples/plot_sobel.pot
+source_lang = en
+
+[scipy-lecture-notes-2015-3.packages--scikit-image--auto_examples--plot_threshold]
+file_filter = locale/<lang>/LC_MESSAGES/packages/scikit-image/auto_examples/plot_threshold.po
+source_file = build/locale/packages/scikit-image/auto_examples/plot_threshold.pot
+source_lang = en
+
+[scipy-lecture-notes-2015-3.packages--scikit-learn--index]
+file_filter = locale/<lang>/LC_MESSAGES/packages/scikit-learn/index.po
+source_file = build/locale/packages/scikit-learn/index.pot
+source_lang = en
+
+[scipy-lecture-notes-2015-3.packages--statistics--index]
+file_filter = locale/<lang>/LC_MESSAGES/packages/statistics/index.po
+source_file = build/locale/packages/statistics/index.pot
+source_lang = en
+
+[scipy-lecture-notes-2015-3.packages--statistics--auto_examples--index]
+file_filter = locale/<lang>/LC_MESSAGES/packages/statistics/auto_examples/index.po
+source_file = build/locale/packages/statistics/auto_examples/index.pot
+source_lang = en
+
+[scipy-lecture-notes-2015-3.packages--statistics--auto_examples--plot_airfare]
+file_filter = locale/<lang>/LC_MESSAGES/packages/statistics/auto_examples/plot_airfare.po
+source_file = build/locale/packages/statistics/auto_examples/plot_airfare.pot
+source_lang = en
+
+[scipy-lecture-notes-2015-3.packages--statistics--auto_examples--plot_iris_analysis]
+file_filter = locale/<lang>/LC_MESSAGES/packages/statistics/auto_examples/plot_iris_analysis.po
+source_file = build/locale/packages/statistics/auto_examples/plot_iris_analysis.pot
+source_lang = en
+
+[scipy-lecture-notes-2015-3.packages--statistics--auto_examples--plot_paired_boxplots]
+file_filter = locale/<lang>/LC_MESSAGES/packages/statistics/auto_examples/plot_paired_boxplots.po
+source_file = build/locale/packages/statistics/auto_examples/plot_paired_boxplots.pot
+source_lang = en
+
+[scipy-lecture-notes-2015-3.packages--statistics--auto_examples--plot_pandas]
+file_filter = locale/<lang>/LC_MESSAGES/packages/statistics/auto_examples/plot_pandas.po
+source_file = build/locale/packages/statistics/auto_examples/plot_pandas.pot
+source_lang = en
+
+[scipy-lecture-notes-2015-3.packages--statistics--auto_examples--plot_regression]
+file_filter = locale/<lang>/LC_MESSAGES/packages/statistics/auto_examples/plot_regression.po
+source_file = build/locale/packages/statistics/auto_examples/plot_regression.pot
+source_lang = en
+
+[scipy-lecture-notes-2015-3.packages--statistics--auto_examples--plot_regression_3d]
+file_filter = locale/<lang>/LC_MESSAGES/packages/statistics/auto_examples/plot_regression_3d.po
+source_file = build/locale/packages/statistics/auto_examples/plot_regression_3d.pot
+source_lang = en
+
+[scipy-lecture-notes-2015-3.packages--statistics--auto_examples--plot_wage_data]
+file_filter = locale/<lang>/LC_MESSAGES/packages/statistics/auto_examples/plot_wage_data.po
+source_file = build/locale/packages/statistics/auto_examples/plot_wage_data.pot
+source_lang = en
+
+[scipy-lecture-notes-2015-3.packages--statistics--auto_examples--plot_wage_education_gender]
+file_filter = locale/<lang>/LC_MESSAGES/packages/statistics/auto_examples/plot_wage_education_gender.po
+source_file = build/locale/packages/statistics/auto_examples/plot_wage_education_gender.pot
+source_lang = en
+
+[scipy-lecture-notes-2015-3.packages--statistics--auto_examples--solutions--plot_brain_size]
+file_filter = locale/<lang>/LC_MESSAGES/packages/statistics/auto_examples/solutions/plot_brain_size.po
+source_file = build/locale/packages/statistics/auto_examples/solutions/plot_brain_size.pot
+source_lang = en
+
+[scipy-lecture-notes-2015-3.packages--traits--index]
+file_filter = locale/<lang>/LC_MESSAGES/packages/traits/index.po
+source_file = build/locale/packages/traits/index.pot
+source_lang = en
+
