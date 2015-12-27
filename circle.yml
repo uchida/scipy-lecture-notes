@@ -1,0 +1,32 @@
+machine:
+  environment:
+    PATH: "${HOME}/miniconda/envs/scipy-lecture/bin:${HOME}/miniconda/bin:${PATH}"
+    MINICONDA_URL: "https://repo.continuum.io/miniconda/Miniconda2-3.19.0-Linux-x86_64.sh"
+    MINICONDA_SHA256SUM: "646b4d5398f8d76a0664375ee6226611c43ee3d49de3eb03efe7480e3c3b9ebf"
+
+dependencies:
+  cache_directories:
+    - "~/miniconda"
+  override:
+    - |
+      if [ ! -d "${HOME}/miniconda" ]; then
+        curl -o ~/miniconda.sh "${MINICONDA_URL}"
+        bash ~/miniconda.sh -b -p $HOME/miniconda
+        conda env create -f continuous_integration/environment.yml -q
+      fi
+    - conda env export -n scipy-lecture
+    - pip install sphinx-intl transifex-client
+    - pip install awscli
+    - pip freeze
+
+test:
+  override:
+    - sphinx-intl create-transifexrc
+    - tx pull -l ja; sphinx-build -b html -d build/doctrees -Dlanguage=ja . build/html
+
+deployment:
+  nightly:
+    branch: /2015.3-translation/
+    commands:
+      - aws s3 sync --acl public-read --storage-class REDUCED_REDUNDANCY build/html/ "s3://transl.turbare.net/"
+
