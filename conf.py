@@ -41,9 +41,10 @@ extensions = [
         'only_directives',
         'ipython_console_highlighting',
         #'matplotlib.sphinxext.only_directives',
-        'sphinx.ext.pngmath',
+        'sphinx.ext.mathjax',
         'sphinx.ext.intersphinx',
         'sphinx.ext.extlinks',
+#        'jpsupport',
 ]
 
 doctest_test_doctest_blocks = 'true'
@@ -239,6 +240,7 @@ epub_tocdup = False
 # Options for LaTeX output
 # ------------------------
 
+latex_docclass = {"manual": "jsbook"}
 # The paper size ('letter' or 'a4').
 #latex_paper_size = 'letter'
 
@@ -366,10 +368,7 @@ extlinks = {
     'compound': (_python_doc_base + '/reference/compound_stmts.html#%s', ''),
 }
 
-# -- Options for pngmath ------------------------------------------------
-
-pngmath_dvipng_args = ['-gamma 1.5', '-D 180', '-bg', 'Transparent']
-pngmath_use_preview = True
+mathjax_path = "http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"
 
 gettext_compact = False
 locale_dirs = ['locale']
