@@ -900,7 +900,7 @@ def embed_code_links(app, exception):
                 'http://pandas.pydata.org')
 
         doc_resolvers['statsmodels'] = SphinxDocLinkResolver(
-                'http://statsmodels.sourceforge.net')
+                'http://www.statsmodels.org/stable')
 
 
         example_dir = os.path.join(app.builder.srcdir, 'auto_examples')
