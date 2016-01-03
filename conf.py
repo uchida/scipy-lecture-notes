@@ -34,6 +34,7 @@ needs_sphinx = '1.0'
 # coming with Sphinx (named 'sphinx.ext.*') or your custom ones.
 extensions = [
         'gen_rst',
+        'sitemap',
         'sphinx.ext.autodoc',
         'sphinx.ext.doctest',
         #'matplotlib.sphinxext.plot_directive',
@@ -372,6 +373,8 @@ mathjax_path = "http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-
 
 gettext_compact = False
 locale_dirs = ['locale']
+
+sitemap_baseurl = 'http://www.turbare.net/transl/scipy-lecture-notes'
 
 # Add the 'copybutton' javascript, to hide/show the prompt in code
 # examples
