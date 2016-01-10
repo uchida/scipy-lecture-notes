@@ -15,7 +15,8 @@ dependencies:
         conda env create -f continuous_integration/environment.yml -q
       fi
     - conda env export -n scipy-lecture
-    - pip install sphinx-intl transifex-client
+    - pip install sphinx-intl
+    - pip install git+https://github.com/transifex/transifex-client
     - pip install awscli
     - pip freeze
 
