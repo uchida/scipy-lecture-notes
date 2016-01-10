@@ -19,9 +19,13 @@ dependencies:
     - pip install git+https://github.com/transifex/transifex-client
     - pip install awscli
     - test -d "${HOME}/locale" || mkdir -p ~/locale
+    - 'ls ~/locale/ja/LC_MESSAGES || :'
     - ln -s ~/locale locale
+    - 'ls locale/ja/LC_MESSAGES || :'
     - sphinx-intl create-transifexrc
     - tx pull -l ja
+    - 'ls locale/ja/LC_MESSAGES || :'
+    - 'ls ~/locale/ja/LC_MESSAGES || :'
   override:
     - conda env export -n scipy-lecture
     - pip freeze
