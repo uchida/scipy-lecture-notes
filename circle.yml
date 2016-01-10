@@ -23,7 +23,8 @@ dependencies:
 test:
   override:
     - sphinx-intl create-transifexrc
-    - tx pull -l ja; sphinx-build -b html -d build/doctrees -Dlanguage=ja . build/html
+    - tx pull -l ja
+    - sphinx-build -b html -d build/doctrees -Dlanguage=ja . build/html
 
 deployment:
   nightly:
