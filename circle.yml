@@ -7,23 +7,27 @@ machine:
 dependencies:
   cache_directories:
     - "~/miniconda"
-  override:
+    - "~/locale"
+  pre:
     - |
       if [ ! -d "${HOME}/miniconda" ]; then
-        curl -o ~/miniconda.sh "${MINICONDA_URL}"
-        bash ~/miniconda.sh -b -p $HOME/miniconda
-        conda env create -f continuous_integration/environment.yml -q
+        curl -o ~/miniconda.sh "${MINICONDA_URL}" || exit $?
+        bash ~/miniconda.sh -b -p $HOME/miniconda || exit $?
+        conda env create -f continuous_integration/environment.yml -q || exit $?
       fi
-    - conda env export -n scipy-lecture
     - pip install sphinx-intl
     - pip install git+https://github.com/transifex/transifex-client
     - pip install awscli
+    - test -d "${HOME}/locale" || mkdir -p ~/locale
+    - ln -s ~/locale locale
+    - sphinx-intl create-transifexrc
+    - tx pull -l ja
+  override:
+    - conda env export -n scipy-lecture
     - pip freeze
 
 test:
   override:
-    - sphinx-intl create-transifexrc
-    - tx pull -l ja
     - sphinx-build -b html -d build/doctrees -Dlanguage=ja . build/html
 
 deployment:
